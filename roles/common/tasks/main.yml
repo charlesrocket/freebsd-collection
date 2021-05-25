@@ -8,7 +8,7 @@
 
 - name: Add VIDEO group
   user:
-    name: {{ ansible_user_id }}
+    name: "{{ ansible_user_id }}"
     groups: video
     append: yes
   become: True
