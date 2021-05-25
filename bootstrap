@@ -8,7 +8,7 @@ if ! command -v sudo >/dev/null 2>&1; then
 fi
 
 if [ "$(id -u)" -eq "0" ]; then
-	>&2 echo "This script must be run as normal user"
+	>&2 echo "This script must be run as normal user (WHEEL member)"
 	exit 1
 fi
 
