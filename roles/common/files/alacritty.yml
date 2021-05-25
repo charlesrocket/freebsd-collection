@@ -176,11 +176,11 @@ window:
 #draw_bold_text_with_bright_colors: false
 
 # Colors (Tomorrow Night)
-#colors:
+colors:
   # Default colors
-  #primary:
-  #  background: '#1d1f21'
-  #  foreground: '#c5c8c6'
+  primary:
+    background: '#000000'
+    foreground: '#f8f8f8'
 
     # Bright and dim foreground colors
     #
@@ -267,15 +267,15 @@ window:
   #  background: CellForeground
 
   # Normal colors
-  #normal:
-  #  black:   '#1d1f21'
-  #  red:     '#cc6666'
-  #  green:   '#b5bd68'
-  #  yellow:  '#f0c674'
-  #  blue:    '#81a2be'
-  #  magenta: '#b294bb'
-  #  cyan:    '#8abeb7'
-  #  white:   '#c5c8c6'
+  normal:
+    black:   '#1d1f21'
+    red:     '#d62a30'
+    green:   '#4ce70e'
+    yellow:  '#f0f221'
+    blue:    '#1257ea'
+    magenta: '#c316f6'
+    cyan:    '#00f2d2'
+    white:   '#f9f9f9'
 
   # Bright colors
   #bright:
@@ -357,7 +357,7 @@ window:
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 0.7
+background_opacity: 0.8
 
 #selection:
   # This string contains all characters that are used as separators for
