@@ -1,7 +1,7 @@
 ---
 
 - name: Enable UHD driver
-  sysrc:
+  community.general.sysrc:
     name: kld_list
     value: "i915kms"
   become: True
