@@ -13,20 +13,13 @@ conky.config = {
 conky.text = [[
 
 [
-    {"full_text": "CPU: ${cpu cpu0}% ", "color":"\#cf6a4c"},
-    {"full_text": " | ", "color":"\#555555"},
-    {"full_text": "RAM: $mem","color":"\#cda869"},
-    {"full_text": " | ", "color":"\#555555"},
-    {"full_text": "LAN: ${addr em0}","color":"\#89b859"},
-    {"full_text": " | ", "color":"\#555555"},
-    {"full_text": "VPN: ${addr tun0}","color":"\#00aaaa"},
-    {"full_text": " | ", "color":"\#555555"},
-    {"full_text": "${exec hostname }", "color":"\#9b703f"},
-    {"full_text": " | ", "color":"\#555555"},
-    {"full_text": "UP: ${uptime_short} ", "color":"\#838184"},
-    {"full_text": " | ", "color":"\#555555"},
-    {"full_text": "${time %A %Y-%m-%d}", "color":"\#cccccc"},
-    {"full_text": "${time %H:%M}", "color":"\#cccccc"}
+    {"full_text": " CPU: ${cpu}% ", "color":"\#475ce6"},
+    {"full_text": " RAM: $mem ","color":"\#5c52cc"},
+    {"full_text": " LAN: ${addr em0} ","color":"\#7a42a6"},
+    {"full_text": " VPN: ${addr tun0} ","color":"\#d90026"},
+    {"full_text": " ${battery} ","color":"\#808080"},
+    {"full_text": " ${time %A %Y-%m-%d} ", "color":"\#cccccc"},
+    {"full_text": " ${time %H:%M:%S} ", "color":"\#cccccc"}
 ],
 
 ]];
