@@ -3,6 +3,7 @@
 pkgng_state: present
 
 pkgng_packages:
+  - alacritty
   - bash
   - bzip2
   - chkrootkit
@@ -10,6 +11,8 @@ pkgng_packages:
   - curl
   - diffutils
   - direnv
+  - dmenu
+  - dmenu-wayland
   - drm-kmod
   - exfat-utils
   - fdupes
