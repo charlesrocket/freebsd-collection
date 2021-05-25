@@ -1,5 +1,11 @@
 ---
 
+- name: ensure config directory exists
+  file:
+    path: ~/.config/sway
+    state: directory
+    mode: '0744'
+
 - name: copy sway config file
   copy:
     src: /usr/local/etc/sway/config
