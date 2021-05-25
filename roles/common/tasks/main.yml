@@ -6,6 +6,13 @@
     value: "i915kms"
   become: True
 
+- name: Add VIDEO group
+  user:
+    name: {{ ansible_user_id }}
+    groups: video
+    append: yes
+  become: True
+
 - name: Upgrade installed packages
   pkgng:
     name: "*"
