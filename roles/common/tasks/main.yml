@@ -4,6 +4,7 @@
   sysrc:
     name: kld_list
     value: "i915kms"
+  become: True
 
 - name: Upgrade installed packages
   pkgng:
