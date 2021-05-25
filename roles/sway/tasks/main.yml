@@ -21,7 +21,7 @@
     - "client.urgent           #8d7c7caa #be6060aa #fafafa #900000 #8d7c7caa"
     - "client.placeholder      #000000   #0c0c0c   #fafafa #000000 #000000"
 
-  - name: tune sway-bar
+- name: tune sway-bar
   blockinfile:
     path: ~/.config/sway/config
     marker: "{mark}"
