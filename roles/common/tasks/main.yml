@@ -14,6 +14,13 @@
     state: present
   become: True
 
+- name: Enable fuse
+  community.general.sysrc:
+    name: kld_list
+    value: "fuse"
+    state: value_present
+  become: True
+
 - name: Add VIDEO group
   user:
     name: "{{ ansible_user_id }}"

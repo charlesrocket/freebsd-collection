@@ -14,9 +14,9 @@ pkgng_packages:
   - dmenu
   - dmenu-wayland
   - drm-kmod
-  - exfat-utils
   - fdupes
   - figlet
+  - fusefs-exfat
   - gawk
   - gcc
   - git
