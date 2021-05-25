@@ -14,9 +14,10 @@
     state: present
   become: True
 
-- name: Add VIDEO group
+- name: Edit user
   user:
     name: "{{ ansible_user_id }}"
+    shell: /usr/local/bin/zsh
     groups: video
     append: yes
   become: True
@@ -57,3 +58,11 @@
   args:
     creates: "/home/{{ ansible_user_id }}/.oh-my-zsh"
   register: ohmyzsh
+
+- name: Copy .zshrc
+  copy:
+    src: zshrc
+    dest: ~/.zshrc
+    owner: "{{ ansible_user_id }}"
+    mode: 0644
+    force: yes
