@@ -1,0 +1,32 @@
+conky.config = {
+    background = false,
+    cpu_avg_samples = 2,
+    no_buffers = true,
+    out_to_console = true,
+    out_to_x = false,
+    own_window = false,
+    update_interval = 1,
+    short_units = true,
+    total_run_times = 0
+};
+
+conky.text = [[
+
+[
+    {"full_text": "CPU: ${cpu cpu0}% ", "color":"\#cf6a4c"},
+    {"full_text": " | ", "color":"\#555555"},
+    {"full_text": "RAM: $mem","color":"\#cda869"},
+    {"full_text": " | ", "color":"\#555555"},
+    {"full_text": "LAN: ${addr em0}","color":"\#89b859"},
+    {"full_text": " | ", "color":"\#555555"},
+    {"full_text": "VPN: ${addr tun0}","color":"\#00aaaa"},
+    {"full_text": " | ", "color":"\#555555"},
+    {"full_text": "${exec hostname }", "color":"\#9b703f"},
+    {"full_text": " | ", "color":"\#555555"},
+    {"full_text": "UP: ${uptime_short} ", "color":"\#838184"},
+    {"full_text": " | ", "color":"\#555555"},
+    {"full_text": "${time %A %Y-%m-%d}", "color":"\#cccccc"},
+    {"full_text": "${time %H:%M}", "color":"\#cccccc"}
+],
+
+]];

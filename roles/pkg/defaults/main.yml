@@ -8,6 +8,7 @@ pkgng_packages:
   - bzip2
   - chkrootkit
   - clamav
+  - conky
   - curl
   - diffutils
   - direnv

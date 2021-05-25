@@ -6,6 +6,14 @@
     state: directory
     mode: '0744'
 
+- name: copy conky config file
+  copy:
+    src: conkyrc
+    dest: ~/.conkyrc
+    owner: "{{ ansible_user_id }}"
+    group: "{{ ansible_user_id }}"
+    mode: '0755'
+
 - name: copy sway config file
   copy:
     src: /usr/local/etc/sway/config
@@ -13,6 +21,14 @@
     owner: "{{ ansible_user_id }}"
     group: "{{ ansible_user_id }}"
     mode: '0744'
+
+- name: copy sway-bar script
+  copy:
+    src: swaybar.sh
+    dest: ~/.config/sway/swaybar.sh
+    owner: "{{ ansible_user_id }}"
+    group: "{{ ansible_user_id }}"
+    mode: '0755'
 
 - name: set ui colors
   lineinfile:
@@ -39,7 +55,7 @@
           position top
           # When the status_command prints a new line to stdout, swaybar updates.
           # The default just shows the current date and time.
-          status_command while ~/.config/sway/swaybar.sh; do sleep 1; done
+          status_command ~/.config/sway/swaybar.sh
           colors {
               statusline #ffffff
               background #000000AA
