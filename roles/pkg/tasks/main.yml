@@ -1,0 +1,11 @@
+---
+
+- name: Ensure packages are installed
+  pkgng:
+    state: "{{ pkgng_state }}"
+    name: "{{ packages }}"
+    autoremove: True
+    cached: False
+  vars:
+    packages: "{{ pkgng_packages }}"
+  become: True

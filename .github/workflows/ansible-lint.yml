@@ -1,0 +1,21 @@
+name: Ansible Lint
+
+on:
+  pull_request:
+  push:
+  schedule:
+    - cron: "0 11 13 */2 *"
+
+jobs:
+  build:
+    name: Linting
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Lint Ansible Playbook
+      uses: ansible/ansible-lint-action@master
+      with:
+        targets: freebsd.yml
+        override-deps: ""
+        args: ""

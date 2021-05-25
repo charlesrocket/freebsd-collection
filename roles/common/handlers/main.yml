@@ -1,0 +1,18 @@
+---
+
+- name: Change default shell to zsh
+  user:
+    name: "{{ ansible_user_id }}"
+    shell: /bin/zsh
+  when: ohmyzsh.changed
+
+- name: Tune GPG
+  lineinfile:
+    dest: /home/{{ ansible_user_id }}/.zshrc
+    line: "{{ item }}"
+    owner: "{{ ansible_user_id }}"
+    state: present
+  with_items:
+    - "GPG_TTY=$(tty)"
+    - "export GPG_TTY"
+  when: ohmyzsh.changed

@@ -1,0 +1,43 @@
+---
+
+- name: Enable UHD driver
+  sysrc:
+    name: kld_list
+    value: "i915kms"
+
+- name: Upgrade installed packages
+  pkgng:
+    name: "*"
+    state: latest
+  become: True
+
+- name: Copy MOTD
+  copy:
+    src: motd.sh
+    dest: /etc/motd.sh
+    owner: root
+    mode: 0755
+  become: True
+
+- name: Install MOTD
+  cron:
+    name: "Update MOTD"
+    special_time: reboot
+    job: "/etc/motd.sh > /etc/motd.template"
+    user: root
+    state: present
+  become: True
+
+- name: Edit shell prompt
+  lineinfile:
+    dest: /home/{{ ansible_user_id }}/.shrc
+    line: 'export PS1="\u@\H x: "'
+    owner: "{{ ansible_user_id }}"
+    state: present
+
+- name: Install ohmyzsh
+  shell:
+    cmd: sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+  args:
+    creates: "/home/{{ ansible_user_id }}/.oh-my-zsh"
+  register: ohmyzsh
