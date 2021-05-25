@@ -9,6 +9,7 @@ pkgng_packages:
   - chkrootkit
   - clamav
   - conky
+  - crystal
   - curl
   - diffutils
   - direnv
@@ -17,16 +18,19 @@ pkgng_packages:
   - drm-kmod
   - fdupes
   - figlet
+  - firefox
   - fusefs-exfat
   - gawk
   - gcc
   - git
   - gnupg
+  - grim
   - gzip
   - htop
   - httping
   - iftop
   - less
+  - links
   - lolcat
   - lynis
   - mc
@@ -38,6 +42,7 @@ pkgng_packages:
   - pwgen
   - rkhunter
   - seatd
+  - shards
   - sudo
   - sway
   - tmux
