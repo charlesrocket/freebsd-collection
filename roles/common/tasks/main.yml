@@ -4,6 +4,14 @@
   community.general.sysrc:
     name: kld_list
     value: "i915kms"
+    state: present
+  become: True
+
+- name: Enable seatd
+  community.general.sysrc:
+    name: seatd_enable
+    value: "YES"
+    state: present
   become: True
 
 - name: Add VIDEO group
