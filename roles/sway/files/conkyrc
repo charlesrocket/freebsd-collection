@@ -18,7 +18,7 @@ conky.text = [[
     {"full_text": " DL: ${downspeed wlan0} ", "color":"\#989898"},
     {"full_text": " UL: ${upspeed wlan0} ", "color":"\#989898"},
     {"full_text": " FS: ${fs_used} ", "color":"\#989898"},
-    {"full_text": " CPU: ${cpu}% ", "color":"\#989898"},
+    {"full_text": " CPU: ${cpu cpu0}% ", "color":"\#989898"},
     {"full_text": " RAM: $mem ","color":"\#989898"},
     {"full_text": " LAN: ${addr em0} ","color":"\#0066cc"},
     {"full_text": " VPN: ${addr tun0} ","color":"\#c30022"},
