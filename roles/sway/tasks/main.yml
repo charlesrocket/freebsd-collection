@@ -1,12 +1,12 @@
 ---
 
-- name: ensure config directory exists
+- name: Ensure config directory exists
   file:
     path: ~/.config/sway
     state: directory
     mode: '0744'
 
-- name: copy conky config file
+- name: Copy conky config file
   copy:
     src: conkyrc
     dest: ~/.conkyrc
@@ -15,7 +15,7 @@
     mode: '0744'
     force: yes
 
-- name: copy sway config file
+- name: Copy sway config file
   copy:
     src: swayconfig
     dest: ~/.config/sway/config
@@ -24,7 +24,7 @@
     mode: '0744'
     force: yes
 
-- name: copy sway-bar script
+- name: Copy sway-bar script
   copy:
     src: swaybar.sh
     dest: ~/.config/sway/swaybar.sh
