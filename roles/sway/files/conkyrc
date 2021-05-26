@@ -17,7 +17,7 @@ conky.text = [[
     {"full_text": " RAM: $mem ","color":"\#5c52cc"},
     {"full_text": " LAN: ${addr em0} ","color":"\#7a42a6"},
     {"full_text": " VPN: ${addr tun0} ","color":"\#d90026"},
-    {"full_text": " ${battery} ","color":"\#808080"},
+    {"full_text": " ${battery_short} ","color":"\#808080"},
     {"full_text": " ${time %A %Y-%m-%d} ", "color":"\#cccccc"},
     {"full_text": " ${time %H:%M:%S} ", "color":"\#cccccc"}
 ],
