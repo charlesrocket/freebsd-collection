@@ -48,6 +48,8 @@ pkgng_packages:
   - shards
   - sudo
   - sway
+  - swayidle
+  - swaylock
   - tmux
   - tig
   - unzip
