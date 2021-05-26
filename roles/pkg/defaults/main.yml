@@ -35,6 +35,7 @@ pkgng_packages:
   - lolcat
   - lynis
   - mc
+  - mp3blaster
   - neofetch
   - netcat
   - nikto
