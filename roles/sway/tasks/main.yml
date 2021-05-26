@@ -12,16 +12,17 @@
     dest: ~/.conkyrc
     owner: "{{ ansible_user_id }}"
     group: "{{ ansible_user_id }}"
-    mode: '0755'
+    mode: '0744'
     force: yes
 
 - name: copy sway config file
   copy:
-    src: /usr/local/etc/sway/config
+    src: swayconfig
     dest: ~/.config/sway/config
     owner: "{{ ansible_user_id }}"
     group: "{{ ansible_user_id }}"
     mode: '0744'
+    force: yes
 
 - name: copy sway-bar script
   copy:
@@ -29,73 +30,4 @@
     dest: ~/.config/sway/swaybar.sh
     owner: "{{ ansible_user_id }}"
     group: "{{ ansible_user_id }}"
-    mode: '0755'
-
-- name: set ui colors
-  lineinfile:
-    path: ~/.config/sway/config
-    line: "{{ item }}"
-    state: present
-    insertbefore: "# Example configuration:"
-  with_items:
-    - "client.focused          #5e81acaa #5e81acaa #fafafa #cf8787 #5e81acaa"
-    - "client.focused_inactive #4c566aaa #4c566aaa #fafafa #cf8787 #4c566aaa"
-    - "client.unfocused        #4c566aaa #4c566aaa #b3b3b3 #ebbe7a #4c566aaa"
-    - "client.urgent           #8d7c7caa #be6060aa #fafafa #900000 #8d7c7caa"
-    - "client.placeholder      #000000   #0c0c0c   #fafafa #000000 #000000"
-
-- name: tune sway-bar
-  blockinfile:
-    path: ~/.config/sway/config
-    marker: "{mark}"
-    marker_begin: "# Read `man 5 sway-bar` for more information about this section."
-    marker_end: "    }"
-    state: present
-    block: |
-      bar {
-          position top
-          # When the status_command prints a new line to stdout, swaybar updates.
-          # The default just shows the current date and time.
-          status_command ~/.config/sway/swaybar.sh
-          colors {
-              statusline #ffffff
-              background #000000AA
-              focused_workspace #cc0000aa #cc0000aa #fafafa
-              inactive_workspace #2B2B2BAA #2B2B2BAA #e3e3e3
-
-- name: set wallpaper
-  lineinfile:
-    path: ~/.config/sway/config
-    regexp: 'output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill'
-    line: 'output * bg ~/pictures/hardcoding/zaki-aby-general-shot.jpg fill'
-    state: present
-
-- name: tune status bar (1/3)
-  replace:
-    path: ~/.config/sway/config
-    regexp: '        background #323232'
-    replace: '        background #000000AA'
-
-- name: tune status bar (2/3)
-  replace:
-    path: ~/.config/sway/config
-    regexp: '        inactive_workspace #32323200 #32323200 #5c5c5c'
-    replace: '        inactive_workspace #2B2B2BAA #2B2B2BAA #e3e3e3'
-
-- name: tune status bar (3/3)
-  lineinfile:
-    path: ~/.config/sway/config
-    line: "        focused_workspace #cc0000aa #cc0000aa #fafafa"
-    insertafter: "        background #000000AA"
-    state: present
-
-- name: set layout
-  lineinfile:
-    path: ~/.config/sway/config
-    line: "{{ item }}"
-    state: present
-  with_items:
-    - "set $term alacritty"
-    - "default_border none"
-    - "default_orientation auto"
-    - "gaps inner 6"
+    mode: '0744'
