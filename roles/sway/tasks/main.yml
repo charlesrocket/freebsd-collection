@@ -13,6 +13,7 @@
     owner: "{{ ansible_user_id }}"
     group: "{{ ansible_user_id }}"
     mode: '0755'
+    force: yes
 
 - name: copy sway config file
   copy:
