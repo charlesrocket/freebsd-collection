@@ -19,8 +19,8 @@ client.placeholder      #000000   #0c0c0c   #fafafa #000000 #000000
 output * bg ~/pictures/hardcoding/zaki-aby-general-shot.jpg fill
 
 exec swayidle -w \
-         timeout 265 'swaylock -f -i ~/pictures/hardcoding/zaki-aby-general-shot.jpg -s fill' \
-         timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+         timeout 421 'swaylock -f -i ~/pictures/hardcoding/zaki-aby-general-shot.jpg -s fill' \
+         timeout 650 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
          before-sleep 'swaylock -f -i ~/pictures/hardcoding/zaki-aby-general-shot.jpg -s fill'
 
 bar {
