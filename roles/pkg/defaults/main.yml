@@ -4,7 +4,6 @@ pkgng_state: present
 
 pkgng_packages:
   - alacritty
-  - bash
   - bzip2
   - chkrootkit
   - clamav
