@@ -28,6 +28,23 @@
     state: latest
   become: True
 
+- name: Check ports db status
+  stat:
+    path: /usr/ports
+  register: ports
+
+- name: Initialize ports db
+  command: portsnap --not-running-from-cron fetch extract
+  args:
+    creates: /usr/ports
+  when: not ports.stat.exists
+  become: True
+
+- name: Update ports db
+  command: portsnap --not-running-from-cron fetch update
+  when: ports.stat.exists
+  become: True
+
 - name: Copy MOTD
   copy:
     src: motd.sh
@@ -56,9 +73,8 @@
     cmd: sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
   args:
     creates: "/home/{{ ansible_user_id }}/.oh-my-zsh"
-  register: ohmyzsh
 
-- name: Copy .zshrc
+- name: Copy zsh config
   copy:
     src: zshrc
     dest: ~/.zshrc
@@ -66,7 +82,7 @@
     mode: 0644
     force: yes
 
-- name: Copy .alacritty.yml
+- name: Copy alacritty config
   copy:
     src: alacritty.yml
     dest: ~/.alacritty.yml
