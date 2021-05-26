@@ -13,13 +13,17 @@ conky.config = {
 conky.text = [[
 
 [
-    {"full_text": " CPU: ${cpu}% ", "color":"\#475ce6"},
-    {"full_text": " RAM: $mem ","color":"\#5c52cc"},
-    {"full_text": " LAN: ${addr em0} ","color":"\#7a42a6"},
+    {"full_text": " IO: ${diskio} ", "color":"\#0066cc"},
+    {"full_text": " DL: ${downspeed wlan0} ", "color":"\#0d61c2"},
+    {"full_text": " UL: ${upspeed wlan0} ", "color":"\#195cb8"},
+    {"full_text": " FS: ${fs_used} ", "color":"\#2657ad"},
+    {"full_text": " CPU: ${cpu}% ", "color":"\#3352a3"},
+    {"full_text": " RAM: $mem ","color":"\#404c99"},
+    {"full_text": " LAN: ${addr em0} ","color":"\#4d478f"},
     {"full_text": " VPN: ${addr tun0} ","color":"\#d90026"},
     {"full_text": " ${battery_short} ","color":"\#808080"},
-    {"full_text": " ${time %A %Y-%m-%d} ", "color":"\#cccccc"},
-    {"full_text": " ${time %H:%M:%S} ", "color":"\#cccccc"}
+    {"full_text": " ${time %A %Y-%m-%d} ", "color":"\#a0a0a0"},
+    {"full_text": " ${time %H:%M:%S} ", "color":"\#a0a0a0"}
 ],
 
 ]];
