@@ -26,6 +26,7 @@ pkgng_packages:
   - gnupg
   - grim
   - gzip
+  - hashcat
   - htop
   - httping
   - iftop
@@ -34,7 +35,9 @@ pkgng_packages:
   - lolcat
   - lynis
   - mc
+  - neofetch
   - netcat
+  - nikto
   - nmap
   - openssl
   - p7zip
@@ -51,4 +54,5 @@ pkgng_packages:
   - vim
   - wget
   - whois
+  - zmap
   - zsh
