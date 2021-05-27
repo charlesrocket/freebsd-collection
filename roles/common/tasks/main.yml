@@ -1,5 +1,13 @@
 ---
 
+- name: Edit user
+  user:
+    name: "{{ ansible_user_id }}"
+    shell: /usr/local/bin/zsh
+    groups: video
+    append: yes
+  become: True
+
 - name: Enable UHD driver
   community.general.sysrc:
     name: kld_list
@@ -14,12 +22,11 @@
     state: present
   become: True
 
-- name: Edit user
-  user:
-    name: "{{ ansible_user_id }}"
-    shell: /usr/local/bin/zsh
-    groups: video
-    append: yes
+- name: Enable dbus
+  community.general.sysrc:
+    name: dbus_enable
+    value: "YES"
+    state: present
   become: True
 
 - name: Upgrade installed packages
