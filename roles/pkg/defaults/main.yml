@@ -5,11 +5,13 @@ pkgng_state: present
 pkgng_packages:
   - alacritty
   - bzip2
+  - caja
   - chkrootkit
   - clamav
   - conky
   - crystal
   - curl
+  - dbus
   - diffutils
   - direnv
   - dmenu
