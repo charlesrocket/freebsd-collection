@@ -49,6 +49,7 @@ pkgng_packages:
   - pv
   - pwgen
   - rkhunter
+  - rust
   - seatd
   - shards
   - sudo
