@@ -6,3 +6,4 @@
     - { role: pkg, become: true }
     - { role: common, become: false }
     - { role: sway, become: false }
+    - { role: asus, become: true }
