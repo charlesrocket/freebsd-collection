@@ -1,0 +1,8 @@
+---
+
+- name: Enable ASUS WMI Extras
+  community.general.sysrc:
+    name: acpi_asus_wmi_load
+    state: present
+    value: "YES"
+    path: /boot/loader.conf
