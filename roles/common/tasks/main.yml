@@ -15,6 +15,12 @@
     state: present
   become: True
 
+- name: Enable ACPI video driver
+  community.general.sysrc:
+    name: kld_list
+    value: "acpi_video"
+    state: value_present
+
 - name: Enable seatd
   community.general.sysrc:
     name: seatd_enable
