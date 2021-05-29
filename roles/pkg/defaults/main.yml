@@ -36,7 +36,6 @@ pkgng_packages:
   - links
   - lolcat
   - lynis
-  - mako
   - mc
   - mp3blaster
   - mpv
