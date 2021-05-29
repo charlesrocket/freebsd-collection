@@ -29,13 +29,6 @@
     state: present
   become: True
 
-- name: Enable dbus
-  community.general.sysrc:
-    name: dbus_enable
-    value: "YES"
-    state: present
-  become: True
-
 - name: Upgrade installed packages
   pkgng:
     name: "*"
