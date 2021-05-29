@@ -20,6 +20,7 @@
     name: kld_list
     value: "acpi_video"
     state: value_present
+  become: True
 
 - name: Enable seatd
   community.general.sysrc:
