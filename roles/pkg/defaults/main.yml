@@ -3,6 +3,7 @@
 pkgng_state: present
 
 pkgng_packages:
+  - aide
   - alacritty
   - bzip2
   - caja
@@ -35,6 +36,7 @@ pkgng_packages:
   - iftop
   - less
   - links
+  - llvm
   - lolcat
   - lynis
   - mc
