@@ -52,7 +52,7 @@
     state: present
   become: True
 
-- name: Edit shell prompt
+- name: Edit sh prompt
   lineinfile:
     dest: /home/{{ ansible_user_id }}/.shrc
     line: 'export PS1="\u@\H x: "'
