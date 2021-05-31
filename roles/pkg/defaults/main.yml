@@ -37,11 +37,13 @@ pkgng_packages:
   - lolcat
   - lynis
   - mc
+  - meson
   - mp3blaster
   - mpv
   - neofetch
   - netcat
   - nikto
+  - ninja
   - nmap
   - openssl
   - p7zip
