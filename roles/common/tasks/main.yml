@@ -35,23 +35,6 @@
     state: latest
   become: True
 
-- name: Check ports db status
-  stat:
-    path: /usr/ports
-  register: ports
-
-- name: Initialize ports db
-  command: portsnap --not-running-from-cron fetch extract
-  args:
-    creates: /usr/ports
-  when: not ports.stat.exists
-  become: True
-
-- name: Update ports db
-  command: portsnap --not-running-from-cron fetch update
-  when: ports.stat.exists
-  become: True
-
 - name: Copy MOTD
   copy:
     src: motd.sh
