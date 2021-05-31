@@ -1,6 +1,8 @@
 export PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:$HOME/bin:$HOME/.cargo/bin
-export QT_QPA_PLATFORM=wayland
+export QT_QPA_PLATFORM=wayland-egl
 export QT_QPA_PLATFORMTHEME=qt5ct
+export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
+export QT_WAYLAND_FORCE_DPI=physical
 export MOZ_ENABLE_WAYLAND=1
 export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="gozilla"
