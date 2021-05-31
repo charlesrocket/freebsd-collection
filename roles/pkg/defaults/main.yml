@@ -8,6 +8,7 @@ pkgng_packages:
   - caja
   - chkrootkit
   - clamav
+  - cmake
   - conky
   - crystal
   - curl
