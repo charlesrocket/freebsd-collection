@@ -22,6 +22,7 @@ pkgng_packages:
   - figlet
   - firefox
   - fusefs-exfat
+  - fzf
   - gawk
   - gcc
   - git
