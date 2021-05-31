@@ -54,6 +54,7 @@ pkgng_packages:
   - pwgen
   - rkhunter
   - rust
+  - scdoc
   - seatd
   - shards
   - sudo
