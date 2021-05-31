@@ -29,6 +29,7 @@ pkgng_packages:
   - git
   - gnupg
   - grim
+  - gtk-arc-themes
   - gzip
   - hashcat
   - htop
