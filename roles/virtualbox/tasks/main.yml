@@ -1,0 +1,36 @@
+---
+
+- name: Add user groups
+  user:
+    name: "{{ ansible_user_id }}"
+    groups: vboxusers operator
+    append: yes
+
+- name: Enable virtualbox driver
+  community.general.sysrc:
+    name: vboxdrv_load
+    value: "YES"
+    state: present
+    path: /boot/loader.conf
+
+- name: Enable vboxnet driver
+  community.general.sysrc:
+    name: vboxnet_enable
+    state: present
+    value: "YES"
+
+- name: Add USB permissions
+  lineinfile:
+    dest: /etc/rc.conf
+    line: 'devfs_system_ruleset="system"'
+    state: present
+
+- name: Edit devfs.rules
+  blockinfile:
+    path: /etc/devfs.rules
+    block: |
+      [system=10]
+      add path 'usb/*' mode 0660 group operator
+    mode: 0644
+    owner: root
+    create: yes
