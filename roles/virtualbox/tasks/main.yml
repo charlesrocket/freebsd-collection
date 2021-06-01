@@ -3,7 +3,7 @@
 - name: Add user groups
   user:
     name: "{{ ansible_user_id }}"
-    groups: vboxusers operator
+    groups: vboxusers,operator
     append: yes
 
 - name: Enable virtualbox driver
