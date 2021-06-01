@@ -22,6 +22,7 @@ pkgng_packages:
   - fdupes
   - figlet
   - firefox
+  - font-awesome
   - fusefs-exfat
   - fzf
   - gawk
