@@ -65,6 +65,7 @@ pkgng_packages:
   - tmux
   - tig
   - unzip
+  - vagrant
   - vim
   - virtualbox-ose
   - wget
