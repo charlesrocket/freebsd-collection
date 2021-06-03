@@ -13,6 +13,7 @@ pkgng_packages:
   - conky
   - crystal
   - curl
+  - cursor-dmz-theme
   - diffutils
   - direnv
   - dmenu
