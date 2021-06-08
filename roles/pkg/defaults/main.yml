@@ -3,6 +3,7 @@
 pkgng_state: present
 
 pkgng_packages:
+  - adwaita-icon-theme
   - aide
   - alacritty
   - bzip2
@@ -19,6 +20,7 @@ pkgng_packages:
   - dmenu
   - dmenu-wayland
   - drm-kmod
+  - droid-fonts-ttf
   - dunst
   - fdupes
   - figlet
@@ -29,6 +31,8 @@ pkgng_packages:
   - gawk
   - gcc
   - git
+  - gnome-icon-theme
+  - gnome-icon-theme-extras
   - gnupg
   - grim
   - gtk-arc-themes
