@@ -29,13 +29,7 @@ bar {
     }
 }
 
-set $gnome-schema org.gnome.desktop.interface
-
-exec_always {
-    gsettings set $gnome-schema gtk-theme 'Arc-Dark'
-    gsettings set $gnome-schema icon-theme 'Adwaita'
-    gsettings set $gnome-schema cursor-theme 'DMZ'
-}
+exec_always import-gsettings
 
 exec swayidle -w \
          timeout 421 'swaylock -f -i ~/pictures/hardcoding/zaki-aby-general-shot.jpg -s fill' \
