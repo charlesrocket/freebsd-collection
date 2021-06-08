@@ -3,7 +3,7 @@ set $left h
 set $down j
 set $up k
 set $right l
-set $menu dmenu_path | dmenu | xargs swaymsg exec --
+set $menu dmenu_path | dmenu -i -sb red | xargs swaymsg exec --
 set $term alacritty
 
 default_border none
