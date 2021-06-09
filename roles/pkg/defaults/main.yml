@@ -41,6 +41,7 @@ pkgng_packages:
   - htop
   - httping
   - iftop
+  - imv
   - less
   - links
   - llvm
