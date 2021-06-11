@@ -13,7 +13,8 @@ if [ "$(id -u)" -eq "0" ]; then
 fi
 
 sudo pkg install -y git py37-ansible
-git clone https://github.com/charlesrocket/freebsd-playbook
-cd freebsd-playbook
+
+git clone https://github.com/charlesrocket/freebsd-playbook && cd freebsd-playbook
+
 ansible-galaxy collection install community.general
-ansible-playbook freebsd.yml --ask-become-pass
+ansible-playbook main.yml --ask-become-pass
