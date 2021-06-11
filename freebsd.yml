@@ -1,9 +1,0 @@
----
-
-- name: Freebsd playbook
-  hosts: localhost
-  roles:
-    - { role: pkg, become: true }
-    - { role: common, become: false }
-    - { role: virtualbox, become: true }
-    - { role: asus, become: true }

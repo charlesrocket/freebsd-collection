@@ -1,0 +1,19 @@
+---
+- name: Freebsd playbook
+  hosts: all
+
+  vars_files:
+    - default.config.yml
+
+  pre_tasks:
+    - name: Load config.yml
+      include_vars: "{{ item }}"
+      with_fileglob:
+        - "{{ playbook_dir }}/config.yml"
+      tags: ['always']
+
+  tasks:
+    - include_tasks: tasks/pkg.yml
+    - include_tasks: tasks/common.yml
+    - include_tasks: tasks/asus.yml
+    - include_tasks: tasks/virtualbox.yml
