@@ -7,6 +7,8 @@ pkgng_packages:
   - adwaita-icon-theme
   - aide
   - alacritty
+  - arduino-core
+  - arduino-mk
   - bzip2
   - caja
   - chkrootkit
@@ -72,6 +74,7 @@ pkgng_packages:
   - swaylock
   - tmux
   - tig
+  - uarduno
   - unzip
   - vagrant
   - vim
