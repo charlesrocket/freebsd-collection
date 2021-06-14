@@ -4,7 +4,7 @@
   user:
     name: "{{ ansible_user_id }}"
     shell: /usr/local/bin/zsh
-    groups: video
+    groups: dialer,video
     append: yes
   become: True
 
