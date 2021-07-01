@@ -77,6 +77,12 @@
     owner: "{{ ansible_user_id }}"
     mode: '0744'
 
+- name: Ensure mc directory exists
+  file:
+    path: ~/.config/mc
+    state: directory
+    mode: '0744'
+
 - name: Copy conky config file
   copy:
     src: conkyrc
@@ -113,6 +119,14 @@
     dest: ~/.config/gtk-3.0/settings.ini
     owner: "{{ ansible_user_id }}"
     mode: '0644'
+    force: yes
+
+- name: Copy mc config file
+  copy:
+    src: mcini
+    dest: ~/.config/mc/ini
+    owner: "{{ ansible_user_id }}"
+    mode: '0744'
     force: yes
 
 - name: Copy zsh config
