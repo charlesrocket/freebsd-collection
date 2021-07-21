@@ -78,7 +78,7 @@ pkgng_packages:
   - uarduno
   - unzip
   - vagrant
-  - vim
+  - vim-console
   - virtualbox-ose
   - wget
   - whois
