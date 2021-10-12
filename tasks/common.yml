@@ -29,6 +29,41 @@
     state: present
   become: True
 
+- name: Enable powerd
+  community.general.sysrc:
+    name: powerd_enable
+    value: "YES"
+    state: present
+  become: True
+
+- name: Tune powerd
+  community.general.sysrc:
+    name: powerd_flags
+    value: "-a hiadaptive -b adaptive"
+    state: present
+  become: True
+
+- name: Enable WiFi power saving
+  community.general.sysrc:
+    name: ifconfig_wlan0
+    value: "WPA DHCP powersave"
+    state: present
+  become: True
+
+- name: Tune C-states - performance
+  community.general.sysrc:
+    name: performance_cx_lowest
+    value: "Cmax"
+    state: present
+  become: True
+
+- name: Tune C-states - economy
+  community.general.sysrc:
+    name: economy_cx_lowest
+    value: "Cmax"
+    state: present
+  become: True
+
 - name: Upgrade installed packages
   pkgng:
     name: "*"
