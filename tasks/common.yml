@@ -78,6 +78,13 @@
     state: present
   become: True
 
+- name: Add cpuctl
+  community.general.sysrc:
+    name: cpuctl_load
+    state: present
+    value: "YES"
+    path: /boot/loader.conf
+
 - name: Set buffering latency
   community.general.sysrc:
     name: hw.snd.latency
