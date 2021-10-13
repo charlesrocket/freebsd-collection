@@ -8,6 +8,20 @@
     append: yes
   become: True
 
+- name: Enable AES-NI
+  community.general.sysrc:
+    name: aesni_load
+    state: present
+    value: "YES"
+    path: /boot/loader.conf
+
+- name: Enable H-TCP
+  community.general.sysrc:
+    name: cc_htcp_load
+    state: present
+    value: "YES"
+    path: /boot/loader.conf
+
 - name: Enable UHD driver
   community.general.sysrc:
     name: kld_list
