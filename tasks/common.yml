@@ -8,6 +8,14 @@
     append: yes
   become: True
 
+- name: Suspend on lid close
+  community.general.sysrc:
+    name: hw.acpi.lid_switch_state
+    state: present
+    value: S3
+    path: /etc/sysctl.conf
+  become: True
+
 - name: Clear /tmp
   community.general.sysrc:
     name: clear_tmp_enable
