@@ -50,6 +50,7 @@
     state: present
     value: "YES"
     path: /boot/loader.conf
+  become: True
 
 - name: Enable H-TCP
   community.general.sysrc:
@@ -57,6 +58,7 @@
     state: present
     value: "YES"
     path: /boot/loader.conf
+  become: True
 
 - name: Enable UHD driver
   community.general.sysrc:
@@ -120,6 +122,7 @@
     state: present
     value: "YES"
     path: /boot/loader.conf
+  become: True
 
 - name: Set buffering latency
   community.general.sysrc:
@@ -127,6 +130,7 @@
     state: present
     value: "7"
     path: /boot/loader.conf
+  become: True
 
 - name: Upgrade installed packages
   pkgng:
