@@ -78,6 +78,13 @@
     state: present
   become: True
 
+- name: Set buffering latency
+  community.general.sysrc:
+    name: hw.snd.latency
+    state: present
+    value: "7"
+    path: /boot/loader.conf
+
 - name: Upgrade installed packages
   pkgng:
     name: "*"
