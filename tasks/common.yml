@@ -8,6 +8,34 @@
     append: yes
   become: True
 
+- name: Clear /tmp
+  community.general.sysrc:
+    name: clear_tmp_enable
+    value: "YES"
+    state: present
+  become: True
+
+- name: Enable ntpd
+  community.general.sysrc:
+    name: ntpd_enable
+    value: "YES"
+    state: present
+  become: True
+
+- name: Tune ntpd
+  community.general.sysrc:
+    name: ntpd_flags
+    value: "-g"
+    state: present
+  become: True
+
+- name: Disable sendmail
+  community.general.sysrc:
+    name: sendmail_enable
+    value: "NONE"
+    state: present
+  become: True
+
 - name: Enable AES-NI
   community.general.sysrc:
     name: aesni_load
