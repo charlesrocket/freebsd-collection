@@ -12,7 +12,7 @@ if [ "$(id -u)" -eq "0" ]; then
 	exit 1
 fi
 
-sudo pkg install -y git py37-ansible
+sudo pkg install -y git py38-ansible
 
 git clone https://github.com/charlesrocket/freebsd-playbook && cd freebsd-playbook
 
