@@ -1,9 +1,11 @@
-freebsd_instance:
-  image_family: freebsd-13-0
-
 task:
   name: Playbook test
+
+  freebsd_instance:
+    image_family: freebsd-13-0
+
   install_script: pkg install -y sudo git py38-ansible
+
   script:
     - echo "%wheel ALL=(ALL) NOPASSWD: ALL" > /usr/local/etc/sudoers
     - pw useradd chuck -m -G wheel
