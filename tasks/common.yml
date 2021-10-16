@@ -43,6 +43,22 @@
     state: present
   become: True
 
+- name: Enable coretemp
+  community.general.sysrc:
+    name: coretemp_load
+    state: present
+    value: "YES"
+    path: /boot/loader.conf
+  become: True
+
+- name: Enable cpuctl
+  community.general.sysrc:
+    name: cpuctl_load
+    state: present
+    value: "YES"
+    path: /boot/loader.conf
+  become: True
+
 - name: Enable AES-NI
   community.general.sysrc:
     name: aesni_load
@@ -113,22 +129,6 @@
     name: economy_cx_lowest
     value: "Cmax"
     state: present
-  become: True
-
-- name: Add coretemp
-  community.general.sysrc:
-    name: coretemp_load
-    state: present
-    value: "YES"
-    path: /boot/loader.conf
-  become: True
-
-- name: Add cpuctl
-  community.general.sysrc:
-    name: cpuctl_load
-    state: present
-    value: "YES"
-    path: /boot/loader.conf
   become: True
 
 - name: Upgrade installed packages
