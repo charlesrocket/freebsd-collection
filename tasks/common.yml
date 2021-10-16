@@ -115,6 +115,14 @@
     state: present
   become: True
 
+- name: Add coretemp
+  community.general.sysrc:
+    name: coretemp_load
+    state: present
+    value: "YES"
+    path: /boot/loader.conf
+  become: True
+
 - name: Add cpuctl
   community.general.sysrc:
     name: cpuctl_load
