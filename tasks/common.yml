@@ -9,11 +9,10 @@
   become: True
 
 - name: Suspend on lid close
-  community.general.sysrc:
+  sysctl:
     name: hw.acpi.lid_switch_state
     state: present
-    value: S3
-    path: /etc/sysctl.conf
+    value: 'S3'
   become: True
 
 - name: Clear /tmp
@@ -42,6 +41,22 @@
     name: sendmail_enable
     value: "NONE"
     state: present
+  become: True
+
+- name: Enable coretemp
+  community.general.sysrc:
+    name: coretemp_load
+    state: present
+    value: "YES"
+    path: /boot/loader.conf
+  become: True
+
+- name: Enable cpuctl
+  community.general.sysrc:
+    name: cpuctl_load
+    state: present
+    value: "YES"
+    path: /boot/loader.conf
   become: True
 
 - name: Enable AES-NI
@@ -114,22 +129,6 @@
     name: economy_cx_lowest
     value: "Cmax"
     state: present
-  become: True
-
-- name: Add cpuctl
-  community.general.sysrc:
-    name: cpuctl_load
-    state: present
-    value: "YES"
-    path: /boot/loader.conf
-  become: True
-
-- name: Set buffering latency
-  community.general.sysrc:
-    name: hw.snd.latency
-    state: present
-    value: "7"
-    path: /boot/loader.conf
   become: True
 
 - name: Upgrade installed packages

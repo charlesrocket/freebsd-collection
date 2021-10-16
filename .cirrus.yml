@@ -1,0 +1,14 @@
+task:
+  name: Playbook test
+
+  freebsd_instance:
+    image_family: freebsd-13-0
+
+  install_script: pkg install -y sudo git py38-ansible
+
+  script:
+    - echo "%wheel ALL=(ALL) NOPASSWD: ALL" > /usr/local/etc/sudoers
+    - pw useradd chuck -m -G wheel
+    - git clone -b ${CIRRUS_BRANCH} https://github.com/charlesrocket/freebsd-playbook /tmp/freebsd-playbook
+    - chown -R chuck:chuck /tmp/freebsd-playbook
+    - su -l chuck -c 'cd /tmp/freebsd-playbook && ansible-galaxy collection install community.general && ansible-playbook main.yml'
