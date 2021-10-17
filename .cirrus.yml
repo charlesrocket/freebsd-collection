@@ -6,9 +6,10 @@ task:
 
   install_script: pkg install -y sudo git py38-ansible
 
+  clone_script: git clone -b ${CIRRUS_BRANCH} https://github.com/charlesrocket/freebsd-playbook /tmp/freebsd-playbook
+
   script:
     - echo "%wheel ALL=(ALL) NOPASSWD: ALL" > /usr/local/etc/sudoers
     - pw useradd chuck -m -G wheel
-    - git clone -b ${CIRRUS_BRANCH} https://github.com/charlesrocket/freebsd-playbook /tmp/freebsd-playbook
     - chown -R chuck:chuck /tmp/freebsd-playbook
     - su -l chuck -c 'cd /tmp/freebsd-playbook && ansible-galaxy collection install community.general && ansible-playbook main.yml'
