@@ -43,6 +43,14 @@
     state: present
   become: True
 
+- name: Boot in verbose mode
+  community.general.sysrc:
+    name: boot_verbose
+    state: present
+    value: "YES"
+    path: /boot/loader.conf
+  become: True
+
 - name: Enable coretemp
   community.general.sysrc:
     name: coretemp_load
