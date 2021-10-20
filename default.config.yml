@@ -25,6 +25,7 @@ pkgng_packages:
   - droid-fonts-ttf
   - dunst
   - fdupes
+  - ffuf
   - figlet
   - firefox
   - font-awesome
@@ -36,6 +37,7 @@ pkgng_packages:
   - gnome-icon-theme
   - gnome-icon-theme-extras
   - gnupg
+  - gobuster
   - grim
   - gtk-arc-themes
   - gzip
@@ -49,6 +51,7 @@ pkgng_packages:
   - llvm
   - lolcat
   - lynis
+  - masscan
   - mc
   - meson
   - mp3blaster
