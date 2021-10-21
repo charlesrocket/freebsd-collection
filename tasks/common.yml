@@ -15,6 +15,13 @@
     value: 'S3'
   become: True
 
+- name: Hide UIDs
+  sysctl:
+    name: security.bsd.see_other_uids
+    state: present
+    value: '0'
+  become: True
+
 - name: Clear /tmp
   community.general.sysrc:
     name: clear_tmp_enable
