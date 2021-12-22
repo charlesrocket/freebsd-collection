@@ -185,27 +185,27 @@
   file:
     path: ~/.config/sway/scripts
     state: directory
-    mode: '0744'
+    mode: 0744
 
 - name: Ensure GTK directory exists
   file:
     path: ~/.config/gtk-3.0
     state: directory
     owner: "{{ ansible_user_id }}"
-    mode: '0744'
+    mode: 0744
 
 - name: Ensure mc directory exists
   file:
     path: ~/.config/mc
     state: directory
-    mode: '0744'
+    mode: 0744
 
 - name: Copy conky config file
   copy:
     src: conkyrc
     dest: ~/.conkyrc
     owner: "{{ ansible_user_id }}"
-    mode: '0744'
+    mode: 0744
     force: yes
 
 - name: Copy sway config file
@@ -213,7 +213,7 @@
     src: swayconfig
     dest: ~/.config/sway/config
     owner: "{{ ansible_user_id }}"
-    mode: '0744'
+    mode: 0744
     force: yes
 
 - name: Copy sway-bar script
@@ -221,21 +221,21 @@
     src: swaybar.sh
     dest: ~/.config/sway/swaybar.sh
     owner: "{{ ansible_user_id }}"
-    mode: '0744'
+    mode: 0744
 
 - name: Copy gsettings script
   copy:
     src: import-gsettings
     dest: ~/.config/sway/scripts/import-gsettings
     owner: "{{ ansible_user_id }}"
-    mode: '0744'
+    mode: 0744
 
 - name: Copy GTK settings
   copy:
     src: settings.ini
     dest: ~/.config/gtk-3.0/settings.ini
     owner: "{{ ansible_user_id }}"
-    mode: '0644'
+    mode: 0644
     force: yes
 
 - name: Copy mc config file
@@ -243,7 +243,7 @@
     src: mcini
     dest: ~/.config/mc/ini
     owner: "{{ ansible_user_id }}"
-    mode: '0744'
+    mode: 0744
     force: yes
 
 - name: Copy zsh config
