@@ -8,6 +8,14 @@
     append: yes
   become: True
 
+- name: Set SUID for sway
+  file:
+    path: /usr/local/bin/sway
+    owner: root
+    mode: a+s
+    state: file
+  become: True
+
 - name: Suspend on lid close
   sysctl:
     name: hw.acpi.lid_switch_state
