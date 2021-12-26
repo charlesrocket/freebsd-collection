@@ -94,7 +94,7 @@
   community.general.sysrc:
     name: kld_list
     value: "i915kms"
-    state: present
+    state: value_present
   become: True
 
 - name: Enable ACPI video driver
