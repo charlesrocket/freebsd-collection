@@ -9,14 +9,14 @@
   become: True
 
 - name: Suspend on lid close
-  sysctl:
+  ansible.posix.sysctl:
     name: hw.acpi.lid_switch_state
     state: present
     value: 'S3'
   become: True
 
 - name: Hide UIDs
-  sysctl:
+  ansible.posix.sysctl:
     name: security.bsd.see_other_uids
     state: present
     value: '0'
