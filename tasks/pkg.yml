@@ -1,7 +1,7 @@
 ---
 
 - name: Ensure packages are installed
-  pkgng:
+  community.general.pkgng:
     state: "{{ pkgng_state }}"
     name: "{{ packages }}"
     autoremove: True
