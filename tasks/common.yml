@@ -147,7 +147,7 @@
   become: True
 
 - name: Upgrade installed packages
-  pkgng:
+  community.general.pkgng:
     name: "*"
     state: latest
   become: True
