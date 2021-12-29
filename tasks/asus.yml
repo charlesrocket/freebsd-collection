@@ -7,4 +7,3 @@
     value: "YES"
     path: /boot/loader.conf
   become: True
-  when: configure_asus
