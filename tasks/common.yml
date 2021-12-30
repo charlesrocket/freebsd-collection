@@ -58,6 +58,14 @@
     path: /boot/loader.conf
   become: True
 
+- name: Change loader logo
+  community.general.sysrc:
+    name: loader_logo
+    state: present
+    value: "beastie"
+    path: /boot/loader.conf
+  become: True
+
 - name: Enable coretemp
   community.general.sysrc:
     name: coretemp_load
