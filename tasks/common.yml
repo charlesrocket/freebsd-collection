@@ -188,6 +188,7 @@
     name: "*"
     state: latest
   become: True
+  when: upgrade_packages
 
 - name: Copy MOTD
   copy:

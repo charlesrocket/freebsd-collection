@@ -5,6 +5,8 @@ timezone: "America/Los_Angeles"
 configure_asus: True
 configure_virtualbox: True
 
+upgrade_packages: True
+
 pkgng_state: present
 pkgng_packages:
   - adwaita-icon-theme
