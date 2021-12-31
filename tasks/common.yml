@@ -127,6 +127,13 @@
     state: present
   become: True
 
+- name: Load DHCP client in the background
+  community.general.sysrc:
+    name: background_dhclient
+    value: "YES"
+    state: present
+  become: True
+
 - name: Enable IPv6
   community.general.sysrc:
     name: rtsold_enable
