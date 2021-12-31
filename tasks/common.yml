@@ -127,6 +127,20 @@
     state: present
   become: True
 
+- name: Enable IPv6
+  community.general.sysrc:
+    name: rtsold_enable
+    value: "YES"
+    state: present
+  become: True
+
+- name: Tune IPv6
+  community.general.sysrc:
+    name: rtsold_flags
+    value: "-aF"
+    state: present
+  become: True
+
 - name: Enable powerd
   community.general.sysrc:
     name: powerd_enable
