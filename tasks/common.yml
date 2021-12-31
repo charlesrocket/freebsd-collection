@@ -22,13 +22,6 @@
     value: '0'
   become: True
 
-- name: Set cursor type
-  community.general.sysrc:
-    name: cursor
-    value: "blink"
-    state: present
-  become: True
-
 - name: Clear /tmp
   community.general.sysrc:
     name: clear_tmp_enable
