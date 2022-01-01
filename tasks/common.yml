@@ -197,6 +197,13 @@
     state: present
   become: True
 
+- name: Disable kernel crash dumps
+  community.general.sysrc:
+    name: dumpdev
+    state: present
+    value: "NO"
+  become: True
+
 - name: Upgrade installed packages
   community.general.pkgng:
     name: "*"
