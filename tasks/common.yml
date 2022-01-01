@@ -127,6 +127,13 @@
     state: present
   become: True
 
+- name: Don't pong
+  community.general.sysrc:
+    name: icmp_bmcastecho
+    state: present
+    value: "NO"
+  become: True
+
 - name: Load DHCP client in the background
   community.general.sysrc:
     name: background_dhclient
