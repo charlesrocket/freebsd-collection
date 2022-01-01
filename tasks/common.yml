@@ -162,6 +162,13 @@
     state: present
   become: True
 
+- name: Tune syslogd
+  community.general.sysrc:
+    name: syslogd_flags
+    value: "-ss"
+    state: present
+  become: True
+
 - name: Enable WiFi power saving
   community.general.sysrc:
     name: ifconfig_wlan0
