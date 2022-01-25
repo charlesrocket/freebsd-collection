@@ -9,7 +9,6 @@ upgrade_packages: True
 
 pkgng_packages:
   - adwaita-icon-theme
-  - aide
   - alacritty
   - arduino-core
   - bzip2
