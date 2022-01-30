@@ -80,6 +80,7 @@ pkgng_packages:
   - tmux
   - tig
   - uarduno
+  - unibilium
   - unzip
   - vagrant
   - vim
