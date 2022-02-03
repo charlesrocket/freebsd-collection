@@ -1,11 +1,11 @@
-# freebsd-playbook
+# freebsd-station
 ![screenshot](screenshot.jpg)
-[![Ansible Lint](https://github.com/charlesrocket/freebsd-playbook/workflows/Ansible%20Lint/badge.svg)](https://github.com/charlesrocket/freebsd-playbook/actions)
-[![Build Status](https://api.cirrus-ci.com/github/charlesrocket/freebsd-playbook.svg?branch=master)](https://cirrus-ci.com/github/charlesrocket/freebsd-playbook)
+[![Ansible Lint](https://github.com/charlesrocket/freebsd-station/workflows/Ansible%20Lint/badge.svg)](https://github.com/charlesrocket/freebsd-station/actions)
+[![Build Status](https://api.cirrus-ci.com/github/charlesrocket/freebsd-station.svg?branch=master)](https://cirrus-ci.com/github/charlesrocket/freebsd-station)
 
 **FreeBSD** + **sway**
 
 ```sh
-curl https://raw.githubusercontent.com/charlesrocket/freebsd-playbook/master/bootstrap | sh
+curl https://raw.githubusercontent.com/charlesrocket/freebsd-station/master/bootstrap | sh
 ```
 🚧
