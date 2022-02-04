@@ -87,5 +87,6 @@ pkgng_packages:
   - virtualbox-ose
   - wget
   - whois
+  - wireguard
   - zmap
   - zsh
