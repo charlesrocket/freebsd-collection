@@ -12,4 +12,4 @@ task:
     - echo "%wheel ALL=(ALL) NOPASSWD: ALL" > /usr/local/etc/sudoers
     - pw useradd chuck -m -G wheel
     - chown -R chuck:chuck /tmp/freebsd-station
-    - su -l chuck -c 'cd /tmp/freebsd-station && ansible-galaxy install -r requirements.yml && ansible-playbook main.yml'
+    - su -l chuck -c 'cd /tmp/freebsd-station && ansible-galaxy install -r requirements.yml && ansible-playbook freebsd.yml'
