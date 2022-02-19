@@ -59,7 +59,6 @@ pkgng_packages:
   - meson
   - mp3blaster
   - mpv
-  - neofetch
   - netcat
   - nikto
   - ninja
