@@ -20,7 +20,7 @@ output * bg ~/pictures/hardcoding/zaki-aby-general-shot.jpg fill
 
 bar {
     position top
-    font "Droid Sans Bold 9"
+    font "IBM Plex Sans Bold 9"
     status_command ~/.config/sway/swaybar.sh
     colors {
         statusline #ffffff
