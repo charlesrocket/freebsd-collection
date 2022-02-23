@@ -14,14 +14,14 @@ conky.config = {
 conky.text = [[
 
 [
-    {"full_text": " ︁ ${diskio} ", "color":"\#989898"},
-    {"full_text": " ︁ ${downspeed wlan0} ", "color":"\#989898"},
-    {"full_text": " ︁ ${upspeed wlan0} ", "color":"\#989898"},
-    {"full_text": " ︁ ${cpu cpu0}% ", "color":"\#989898"},
-    {"full_text": " ︁ $mem ", "color":"\#989898"},
+    {"full_text": " ︁ ${diskio} ", "color":"\#a0a0a0"},
+    {"full_text": " ︁ ${downspeed wlan0} ", "color":"\#a0a0a0"},
+    {"full_text": " ︁ ${upspeed wlan0} ", "color":"\#a0a0a0"},
+    {"full_text": " ︁ ${cpu cpu0}% ", "color":"\#a0a0a0"},
+    {"full_text": " ︁ $mem ", "color":"\#a0a0a0"},
     {"full_text": " ︁  ${addr em0} ", "color":"\#0066cc"},
     {"full_text": " ︁  ${addr tun0} ", "color":"\#c30022"},
-    {"full_text": " ︁  ${battery_short} ", "color":"\#808080"},
+    {"full_text": " ︁  ${battery_short} ", "color":"\#a0a0a0"},
     {"full_text": " ${time %Y-%m-%d} ", "color":"\#a0a0a0"},
     {"full_text": " ${time %H:%M} ", "color":"\#a0a0a0"}
 ],
