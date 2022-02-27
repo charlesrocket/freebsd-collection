@@ -14,6 +14,7 @@
 
   tasks:
     - include_tasks: tasks/pkg.yml
+    - include_tasks: tasks/sys.yml
     - include_tasks: tasks/common.yml
     - include_tasks: tasks/asus.yml
       when: configure_asus

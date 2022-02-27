@@ -1,0 +1,197 @@
+---
+
+- name: Suspend on lid close
+  ansible.posix.sysctl:
+    name: hw.acpi.lid_switch_state
+    state: present
+    value: 'S3'
+  become: True
+
+- name: Hide UIDs
+  ansible.posix.sysctl:
+    name: security.bsd.see_other_uids
+    state: present
+    value: '0'
+  become: True
+
+- name: Clear /tmp
+  community.general.sysrc:
+    name: clear_tmp_enable
+    value: "YES"
+    state: present
+  become: True
+
+- name: Enable ntpd
+  community.general.sysrc:
+    name: ntpd_enable
+    value: "YES"
+    state: present
+  become: True
+
+- name: Tune ntpd
+  community.general.sysrc:
+    name: ntpd_flags
+    value: "-g"
+    state: present
+  become: True
+
+- name: Disable sendmail
+  community.general.sysrc:
+    name: sendmail_enable
+    value: "NONE"
+    state: present
+  become: True
+
+- name: Set autoboot delay
+  community.general.sysrc:
+    name: autoboot_delay
+    state: present
+    value: "3"
+    path: /boot/loader.conf
+  become: True
+
+- name: Boot in verbose mode
+  community.general.sysrc:
+    name: boot_verbose
+    state: present
+    value: "YES"
+    path: /boot/loader.conf
+  become: True
+
+- name: Change loader logo
+  community.general.sysrc:
+    name: loader_logo
+    state: present
+    value: "beastie"
+    path: /boot/loader.conf
+  become: True
+
+- name: Enable coretemp
+  community.general.sysrc:
+    name: coretemp_load
+    state: present
+    value: "YES"
+    path: /boot/loader.conf
+  become: True
+
+- name: Enable cpuctl
+  community.general.sysrc:
+    name: cpuctl_load
+    state: present
+    value: "YES"
+    path: /boot/loader.conf
+  become: True
+
+- name: Enable AES-NI
+  community.general.sysrc:
+    name: aesni_load
+    state: present
+    value: "YES"
+    path: /boot/loader.conf
+  become: True
+
+- name: Enable H-TCP
+  community.general.sysrc:
+    name: cc_htcp_load
+    state: present
+    value: "YES"
+    path: /boot/loader.conf
+  become: True
+
+- name: Enable UHD driver
+  community.general.sysrc:
+    name: kld_list
+    value: "i915kms"
+    state: value_present
+  become: True
+
+- name: Enable ACPI video driver
+  community.general.sysrc:
+    name: kld_list
+    value: "acpi_video"
+    state: value_present
+  become: True
+
+- name: Enable seatd
+  community.general.sysrc:
+    name: seatd_enable
+    value: "YES"
+    state: present
+  become: True
+
+- name: Don't pong
+  community.general.sysrc:
+    name: icmp_bmcastecho
+    state: present
+    value: "NO"
+  become: True
+
+- name: Load DHCP client in the background
+  community.general.sysrc:
+    name: background_dhclient
+    value: "YES"
+    state: present
+  become: True
+
+- name: Enable IPv6
+  community.general.sysrc:
+    name: rtsold_enable
+    value: "YES"
+    state: present
+  become: True
+
+- name: Tune IPv6
+  community.general.sysrc:
+    name: rtsold_flags
+    value: "-aF"
+    state: present
+  become: True
+
+- name: Enable powerd
+  community.general.sysrc:
+    name: powerd_enable
+    value: "YES"
+    state: present
+  become: True
+
+- name: Tune powerd
+  community.general.sysrc:
+    name: powerd_flags
+    value: "-a hiadaptive -b adaptive"
+    state: present
+  become: True
+
+- name: Tune syslogd
+  community.general.sysrc:
+    name: syslogd_flags
+    value: "-ss"
+    state: present
+  become: True
+
+- name: Enable WiFi power saving
+  community.general.sysrc:
+    name: ifconfig_wlan0
+    value: "WPA DHCP powersave"
+    state: present
+  become: True
+
+- name: Tune C-states - performance
+  community.general.sysrc:
+    name: performance_cx_lowest
+    value: "Cmax"
+    state: present
+  become: True
+
+- name: Tune C-states - economy
+  community.general.sysrc:
+    name: economy_cx_lowest
+    value: "Cmax"
+    state: present
+  become: True
+
+- name: Disable kernel crash dumps
+  community.general.sysrc:
+    name: dumpdev
+    state: present
+    value: "NO"
+  become: True
