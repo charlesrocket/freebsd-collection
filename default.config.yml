@@ -8,6 +8,7 @@ configure_virtualbox: True
 upgrade_packages: True
 
 pkgng_packages:
+  - apl385
   - adwaita-icon-theme
   - alacritty
   - arduino-core
