@@ -267,11 +267,19 @@
     mode: 0744
     force: yes
 
-- name: Set interfaces in conkyrc
+- name: Set interfaces (IPv4) in conkyrc
   replace:
     path: ~/.conkyrc
     regexp: 'wlan0'
     replace: "{{ ansible_facts['default_ipv4']['interface'] }}"
+  when: ansible_default_ipv4 and not ansible_default_ipv6
+
+- name: Set interfaces (IPv6) in conkyrc
+  replace:
+    path: ~/.conkyrc
+    regexp: 'wlan0'
+    replace: "{{ ansible_facts['default_ipv6']['interface'] }}"
+  when: ansible_default_ipv6 and not ansible_default_ipv4
 
 - name: Copy sway config file
   copy:
