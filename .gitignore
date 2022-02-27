@@ -1,7 +1,6 @@
 .DS_Store
 
 *.retry
-group_vars/_*.yml
 
 *.swp
 *.swo
