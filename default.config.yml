@@ -7,7 +7,7 @@ sway: True
 configure_asus: True
 configure_virtualbox: True
 
-upgrade_packages: True
+upgrade_packages: False
 
 pkgng_packages:
   - apl385
