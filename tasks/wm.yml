@@ -46,7 +46,7 @@
 - name: Copy sway-bar script
   copy:
     src: swaybar.sh
-    dest: ~/.config/sway/swaybar.sh
+    dest: ~/.config/sway/scripts/swaybar.sh
     owner: "{{ ansible_user_id }}"
     mode: 0744
 

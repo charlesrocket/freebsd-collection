@@ -21,7 +21,7 @@ output * bg ~/pictures/hardcoding/zaki-aby-general-shot.jpg fill
 bar {
     position top
     font "IBM Plex Sans Bold 9"
-    status_command ~/.config/sway/swaybar.sh
+    status_command ~/.config/sway/scripts/swaybar.sh
     colors {
         statusline #ffffff
         background #000000AA
