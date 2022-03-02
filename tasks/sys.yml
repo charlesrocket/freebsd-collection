@@ -21,6 +21,13 @@
     state: present
   become: True
 
+- name: Enable microcode updates
+  community.general.sysrc:
+    name: microcode_update_enable
+    value: "YES"
+    state: present
+  become: True
+
 - name: Enable ntpd
   community.general.sysrc:
     name: ntpd_enable
