@@ -86,7 +86,6 @@ pkgng_packages:
   - unibilium
   - unzip
   - vagrant
-  - vim
   - virtualbox-ose
   - wget
   - whois
