@@ -33,6 +33,7 @@
     dest: ~/.config/waybar/config
     owner: "{{ ansible_user_id }}"
     mode: 0744
+    force: yes
 
 - name: Copy waybar css file
   copy:
@@ -40,6 +41,7 @@
     dest: ~/.config/waybar/style.css
     owner: "{{ ansible_user_id }}"
     mode: 0744
+    force: yes
 
 - name: Copy gsettings script
   copy:
