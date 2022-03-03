@@ -6,6 +6,12 @@
     state: directory
     mode: 0744
 
+- name: Ensure waybar directory exists
+  file:
+    path: ~/.config/waybar
+    state: directory
+    mode: 0744
+
 - name: Ensure GTK directory exists
   file:
     path: ~/.config/gtk-3.0
@@ -43,10 +49,17 @@
     mode: 0744
     force: yes
 
-- name: Copy sway-bar script
+- name: Copy waybar config file
   copy:
-    src: swaybar.sh
-    dest: ~/.config/sway/scripts/swaybar.sh
+    src: waybarconfig
+    dest: ~/.config/waybar/config
+    owner: "{{ ansible_user_id }}"
+    mode: 0744
+
+- name: Copy waybar css file
+  copy:
+    src: waybar.css
+    dest: ~/.config/waybar/style.css
     owner: "{{ ansible_user_id }}"
     mode: 0744
 
