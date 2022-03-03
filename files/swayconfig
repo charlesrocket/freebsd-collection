@@ -18,18 +18,7 @@ client.placeholder      #000000   #0c0c0c   #fafafa #000000 #000000
 
 output * bg ~/pictures/hardcoding/zaki-aby-general-shot.jpg fill
 
-bar {
-    position top
-    font "IBM Plex Sans Bold 9"
-    status_command ~/.config/sway/scripts/swaybar.sh
-    colors {
-        statusline #ffffff
-        background #000000AA
-        focused_workspace #cc0000aa #cc0000aa #fafafa
-        inactive_workspace #2b2b2baa #2b2b2baa #e3e3e3
-    }
-}
-
+exec_always waybar
 exec_always import-gsettings
 
 exec swayidle -w \
