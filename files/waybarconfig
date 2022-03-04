@@ -23,7 +23,7 @@
         "format": "{}",
         "max-length": 93,
         "rewrite": {
-	   "": "  ",
+	         "": "  ",
            "(.*) - vim": " $1",
            "(.*) - zsh": " [$1]"
       }
@@ -42,7 +42,7 @@
     "cpu": {
         "format": " {usage:2}%",
         "interval": 2,
-        "max-length": 6 
+        "max-length": 6
     },
     "memory": {
         "format": " {:2}%"
