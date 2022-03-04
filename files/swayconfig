@@ -18,7 +18,10 @@ client.placeholder      #000000   #0c0c0c   #fafafa #000000 #000000
 
 output * bg ~/pictures/hardcoding/zaki-aby-general-shot.jpg fill
 
-exec_always waybar
+bar {
+    swaybar_command waybar
+}
+
 exec_always import-gsettings
 
 exec swayidle -w \
