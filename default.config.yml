@@ -68,6 +68,7 @@ pkgng_packages:
   - nmap
   - openssl
   - p7zip
+  - pavucontrol
   - plex-ttf
   - pv
   - pwgen
