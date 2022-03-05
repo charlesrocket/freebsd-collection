@@ -32,6 +32,20 @@ window#waybar {
     border-top: 2px solid red;
 }
 
+#custom-network {
+  margin: 6px 0px 0px 0px;
+  padding: 5px 5px 5px 5px;
+  background: rgba(7, 7, 7, 0.5);
+  color: #c5c8c6;
+}
+
+#custom-power {
+  margin: 6px 0px 0px 0px;
+  padding: 5px 5px 5px 5px;
+  background: rgba(7, 7, 7, 0.5);
+  color: #c5c8c6;
+}
+
 #custom-quit {
   margin: 6px 6px 0px 0px;
   padding: 5px 10px 5px 5px;

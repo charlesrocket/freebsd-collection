@@ -3,7 +3,7 @@
     "layer": "top",
     "modules-left": ["sway/workspaces"],
     "modules-center": ["sway/window"],
-    "modules-right": ["idle_inhibitor", "network", "cpu", "memory", "temperature", "pulseaudio", "sway/language", "clock", "custom/quit"],
+    "modules-right": ["idle_inhibitor", "cpu", "memory", "custom/network", "pulseaudio", "custom/power", "sway/language", "clock", "custom/quit"],
     "sway/workspaces": {
        "disable-scroll": true,
        "all-outputs": true,
@@ -66,8 +66,23 @@
         },
         "on-click": "pavucontrol"
     },
+    "custom/power": {
+        "format": "{icon}{}",
+        "return-type": "json",
+        "exec": "$HOME/.config/waybar/power.sh | jq --unbuffered --compact-output",
+        "interval": 10,
+        "format-icons": ["", "", "", "", ""],
+        "tooltip": false
+    },
     "custom/quit": {
         "format": "",
         "on-click": "swaynag -f 'IBM Plex Sans Normal'  -t warning -m 'Do you really want to exit sway?' -b 'Yes, exit sway' 'swaymsg exit'"
+    },
+    "custom/network": {
+        "format": "{icon}{}",
+        "exec": "$HOME/.config/waybar/net-if.sh",
+        "interval": 5,
+        "tooltip": false
+        } 
     }
 }
