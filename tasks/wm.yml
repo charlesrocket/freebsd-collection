@@ -43,6 +43,17 @@
     mode: 0744
     force: yes
 
+- name: Copy waybar scripts
+  copy:
+    src: {{ item }}
+    dest: ~/.config/waybar/scripts/
+    owner: "{{ ansible_user_id }}"
+    mode: 0744
+    force: yes
+  with_items:
+    - net-if.sh
+    - power.sh
+
 - name: Copy gsettings script
   copy:
     src: import-gsettings
