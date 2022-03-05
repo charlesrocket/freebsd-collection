@@ -13,14 +13,28 @@ window#waybar {
   margin: 6px 3px 0px 3px;
   padding: 5px 10px 5px 10px;
   background: rgba(7, 7, 7, 0.5);
-  border-radius: 9px;
+}
+
+#workspaces {
+    margin: 6px 6px 0px 6px;
+    padding: 0 5px;
+    background: rgba(7, 7, 7, 0.5);
+    color: #c5c8c6;
+}
+
+#workspaces button {
+    padding: 0 5px;
+    color: #c5c8c6;
+}
+
+#workspaces button.focused {
+    color: #c5c8c6;
+    border-top: 2px solid red;
 }
 
 #custom-quit {
   margin: 6px 6px 0px 0px;
   padding: 5px 10px 5px 5px;
-  border-top-right-radius: 9px;
-  border-bottom-right-radius: 9px;
   background: rgba(7, 7, 7, 0.5);
   color: #c5c8c6;
 }
@@ -30,16 +44,12 @@ window#waybar {
   background: rgba(7, 7, 7, 0.5);
   padding: 5px 5px 5px 10px;
   margin: 6px 0px 0px 3px;
-  border-top-left-radius: 9px;
-  border-bottom-left-radius: 9px;
 }
 
 #memory {
   margin: 6px 3px 0px 0px;
   padding: 5px 10px 5px 5px;
   background: rgba(7, 7, 7, 0.5);
-  border-top-right-radius: 9px;
-  border-bottom-right-radius: 9px;
   color: #c5c8c6;
 }
 
@@ -48,17 +58,11 @@ window#waybar {
   background: rgba(7, 7, 7, 0.5);
   padding: 5px 5px 5px 10px;
   margin: 6px 0px 0px 3px;
-  border-top-left-radius: 9px;
-  border-bottom-left-radius: 9px;
 }
 
 #pulseaudio {
   margin: 6px 3px 0px 3px;
   padding: 5px 10px 5px 10px;
-  border-top-right-radius: 9px;
-  border-bottom-right-radius: 9px;
-  border-top-left-radius: 9px;
-  border-bottom-left-radius: 9px;
   background: rgba(7, 7, 7, 0.5);
   color: #c5c8c6;
 }
@@ -68,10 +72,6 @@ window#waybar {
   color: #c5c8c6;
   margin: 6px 3px 0px 3px;
   padding: 5px 10px 5px 10px;
-  border-top-right-radius: 9px;
-  border-bottom-right-radius: 9px;
-  border-top-left-radius: 9px;
-  border-bottom-left-radius: 9px;
 }
 
 #clock {
