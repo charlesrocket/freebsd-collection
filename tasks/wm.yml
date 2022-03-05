@@ -45,7 +45,7 @@
 
 - name: Copy waybar scripts
   copy:
-    src: {{ item }}
+    src: "{{ item }}"
     dest: ~/.config/waybar/scripts/
     owner: "{{ ansible_user_id }}"
     mode: 0744
