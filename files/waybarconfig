@@ -69,7 +69,7 @@
     "custom/power": {
         "format": "{icon}{}",
         "return-type": "json",
-        "exec": "$HOME/.config/waybar/power.sh | jq --unbuffered --compact-output",
+        "exec": "$HOME/.config/waybar/scripts/power.sh | jq --unbuffered --compact-output",
         "interval": 10,
         "format-icons": ["", "", "", "", ""],
         "tooltip": false
@@ -80,9 +80,9 @@
     },
     "custom/network": {
         "format": "{icon}{}",
-        "exec": "$HOME/.config/waybar/net-if.sh",
+        "exec": "$HOME/.config/waybar/scripts/net-if.sh",
         "interval": 5,
         "tooltip": false
-        } 
+        }
     }
 }
