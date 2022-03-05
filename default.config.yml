@@ -53,6 +53,7 @@ pkgng_packages:
   - hwstat
   - iftop
   - imv
+  - jq
   - less
   - links
   - llvm
