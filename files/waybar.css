@@ -1,0 +1,96 @@
+* {
+  font-size: 12px;
+  font-family: IBM Plex Mono;
+  font-weight: bold;
+}
+
+window#waybar {
+  background: rgba(15, 15, 15, 0);
+}
+
+#window {
+  color: #c5c8c6;
+  margin: 6px 3px 0px 3px;
+  padding: 5px 10px 5px 10px;
+  background: rgba(7, 7, 7, 0.5);
+}
+
+#workspaces {
+    margin: 6px 6px 0px 6px;
+    padding: 0 5px;
+    background: rgba(7, 7, 7, 0.5);
+    color: #c5c8c6;
+}
+
+#workspaces button {
+    padding: 0 5px;
+    color: #c5c8c6;
+}
+
+#workspaces button.focused {
+    color: #c5c8c6;
+    border-top: 2px solid red;
+}
+
+#custom-network {
+  margin: 6px 0px 0px 0px;
+  padding: 5px 5px 5px 5px;
+  background: rgba(7, 7, 7, 0.5);
+  color: #c5c8c6;
+}
+
+#custom-power {
+  margin: 6px 0px 0px 0px;
+  padding: 5px 5px 5px 5px;
+  background: rgba(7, 7, 7, 0.5);
+  color: #c5c8c6;
+}
+
+#custom-quit {
+  margin: 6px 6px 0px 0px;
+  padding: 5px 10px 5px 5px;
+  background: rgba(7, 7, 7, 0.5);
+  color: #c5c8c6;
+}
+
+#cpu {
+  color: #c5c8c6;
+  background: rgba(7, 7, 7, 0.5);
+  padding: 5px 5px 5px 10px;
+  margin: 6px 0px 0px 3px;
+}
+
+#memory {
+  margin: 6px 3px 0px 0px;
+  padding: 5px 10px 5px 5px;
+  background: rgba(7, 7, 7, 0.5);
+  color: #c5c8c6;
+}
+
+#language {
+  color: #c5c8c6;
+  background: rgba(7, 7, 7, 0.5);
+  padding: 5px 5px 5px 10px;
+  margin: 6px 0px 0px 3px;
+}
+
+#pulseaudio {
+  margin: 6px 3px 0px 3px;
+  padding: 5px 10px 5px 10px;
+  background: rgba(7, 7, 7, 0.5);
+  color: #c5c8c6;
+}
+
+#idle_inhibitor {
+  background: rgba(7, 7, 7, 0.5);
+  color: #c5c8c6;
+  margin: 6px 3px 0px 3px;
+  padding: 5px 10px 5px 10px;
+}
+
+#clock {
+  margin: 6px 0px 0px 0px;
+  padding: 5px 5px 5px 5px;
+  background: rgba(7, 7, 7, 0.5);
+  color: #c5c8c6;
+}

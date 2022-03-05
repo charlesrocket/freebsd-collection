@@ -50,8 +50,10 @@ pkgng_packages:
   - hashcat
   - htop
   - httping
+  - hwstat
   - iftop
   - imv
+  - jq
   - less
   - links
   - llvm
@@ -68,6 +70,7 @@ pkgng_packages:
   - nmap
   - openssl
   - p7zip
+  - pavucontrol
   - plex-ttf
   - pv
   - pwgen

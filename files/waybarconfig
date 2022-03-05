@@ -1,0 +1,88 @@
+{
+    "position": "top",
+    "layer": "top",
+    "modules-left": ["sway/workspaces"],
+    "modules-center": ["sway/window"],
+    "modules-right": ["idle_inhibitor", "cpu", "memory", "custom/network", "pulseaudio", "custom/power", "sway/language", "clock", "custom/quit"],
+    "sway/workspaces": {
+       "disable-scroll": true,
+       "all-outputs": true,
+       "format": "{icon}",
+       "format-icons": {
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": "",
+            "urgent": "",
+            "focused": "",
+            "default": ""
+        },
+        "persistent_workspaces": {
+            "1": []
+        }
+    },
+    "sway/window": {
+        "format": "{}",
+        "max-length": 93,
+        "rewrite": {
+	         "": "  "
+        }
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+    "clock": {
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
+    },
+    "cpu": {
+        "format": " {usage:2}%",
+        "interval": 2,
+        "max-length": 6
+    },
+    "memory": {
+        "format": " {:2}%"
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}% {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": " {volume}%",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+    "custom/power": {
+        "format": "{icon}{}",
+        "return-type": "json",
+        "exec": "$HOME/.config/waybar/scripts/power.sh | jq --unbuffered --compact-output",
+        "interval": 10,
+        "format-icons": ["", "", "", "", ""],
+        "tooltip": false
+    },
+    "custom/quit": {
+        "format": "",
+        "on-click": "swaynag -f 'IBM Plex Sans Normal'  -t warning -m 'Do you really want to exit sway?' -b 'Yes, exit sway' 'swaymsg exit'"
+    },
+    "custom/network": {
+        "format": "{icon}{}",
+        "exec": "$HOME/.config/waybar/scripts/net-if.sh",
+        "interval": 5,
+        "tooltip": false
+        }
+    }
+}

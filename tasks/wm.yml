@@ -6,34 +6,18 @@
     state: directory
     mode: 0744
 
+- name: Ensure waybar directory exists
+  file:
+    path: ~/.config/waybar
+    state: directory
+    mode: 0744
+
 - name: Ensure GTK directory exists
   file:
     path: ~/.config/gtk-3.0
     state: directory
     owner: "{{ ansible_user_id }}"
     mode: 0744
-
-- name: Copy conky config file
-  copy:
-    src: conkyrc
-    dest: ~/.conkyrc
-    owner: "{{ ansible_user_id }}"
-    mode: 0744
-    force: yes
-
-- name: Set interfaces (IPv4) in conkyrc
-  replace:
-    path: ~/.conkyrc
-    regexp: 'wlan0'
-    replace: "{{ ansible_facts['default_ipv4']['interface'] }}"
-  when: ansible_default_ipv4 and not ansible_default_ipv6
-
-- name: Set interfaces (IPv6) in conkyrc
-  replace:
-    path: ~/.conkyrc
-    regexp: 'wlan0'
-    replace: "{{ ansible_facts['default_ipv6']['interface'] }}"
-  when: ansible_default_ipv6 and not ansible_default_ipv4
 
 - name: Copy sway config file
   copy:
@@ -43,12 +27,32 @@
     mode: 0744
     force: yes
 
-- name: Copy sway-bar script
+- name: Copy waybar config file
   copy:
-    src: swaybar.sh
-    dest: ~/.config/sway/scripts/swaybar.sh
+    src: waybarconfig
+    dest: ~/.config/waybar/config
     owner: "{{ ansible_user_id }}"
     mode: 0744
+    force: yes
+
+- name: Copy waybar css file
+  copy:
+    src: waybar.css
+    dest: ~/.config/waybar/style.css
+    owner: "{{ ansible_user_id }}"
+    mode: 0744
+    force: yes
+
+- name: Copy waybar scripts
+  copy:
+    src: "{{ item }}"
+    dest: ~/.config/waybar/scripts/
+    owner: "{{ ansible_user_id }}"
+    mode: 0744
+    force: yes
+  with_items:
+    - net-if.sh
+    - power.sh
 
 - name: Copy gsettings script
   copy:
