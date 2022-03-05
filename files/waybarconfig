@@ -17,16 +17,17 @@
             "urgent": "",
             "focused": "",
             "default": ""
+        },
+        "persistent_workspaces": {
+            "1": []
         }
     },
     "sway/window": {
         "format": "{}",
         "max-length": 93,
         "rewrite": {
-	         "": "  ",
-           "(.*) - vim": " $1",
-           "(.*) - zsh": " [$1]"
-      }
+	         "": "  "
+        }
     },
     "idle_inhibitor": {
         "format": "{icon}",
