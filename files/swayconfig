@@ -16,7 +16,7 @@ client.unfocused        #4c566aaa #4c566aaa #b3b3b3 #ebbe7a #4c566aaa
 client.urgent           #8d7c7caa #be6060aa #fafafa #900000 #8d7c7caa
 client.placeholder      #000000   #0c0c0c   #fafafa #000000 #000000
 
-output * bg ~/pictures/hardcoding/zaki-aby-general-shot.jpg fill
+output * bg ~/pictures/hardcoding/zaki-aby-fisheye-top-0-064.jpg fill
 
 bar {
     swaybar_command waybar
