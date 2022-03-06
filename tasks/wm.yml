@@ -19,6 +19,13 @@
     owner: "{{ ansible_user_id }}"
     mode: 0744
 
+- name: Ensure qt5ct directory exists
+  file:
+    path: ~/.config/qt5ct
+    state: directory
+    owner: "{{ ansible_user_id }}"
+    mode: 0744
+
 - name: Copy sway config file
   copy:
     src: swayconfig
@@ -65,6 +72,14 @@
   copy:
     src: settings.ini
     dest: ~/.config/gtk-3.0/gtk-settings.ini
+    owner: "{{ ansible_user_id }}"
+    mode: 0644
+    force: yes
+
+- name: Copy Qt settings
+  copy:
+    src: qt5ct.conf
+    dest: ~/.config/qt5ct/qt5ct.conf
     owner: "{{ ansible_user_id }}"
     mode: 0644
     force: yes
