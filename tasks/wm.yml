@@ -70,8 +70,8 @@
 
 - name: Copy GTK settings
   copy:
-    src: settings.ini
-    dest: ~/.config/gtk-3.0/gtk-settings.ini
+    src: gtk-settings.ini
+    dest: ~/.config/gtk-3.0/settings.ini
     owner: "{{ ansible_user_id }}"
     mode: 0644
     force: yes
