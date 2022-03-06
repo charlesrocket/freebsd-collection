@@ -67,12 +67,15 @@
         "on-click": "pavucontrol"
     },
     "custom/power": {
-        "format": "{icon}{}",
+        "format": "{icon}",
         "return-type": "json",
         "exec": "$HOME/.config/waybar/scripts/power.sh | jq --unbuffered --compact-output",
         "interval": 10,
-        "format-icons": ["", "", "", "", ""],
-        "tooltip": false
+        "format-icons": {
+             "ac": "",
+             "default": ["", "", "", "", ""]
+        },
+        "tooltip": true
     },
     "custom/quit": {
         "format": "",
