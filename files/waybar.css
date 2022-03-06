@@ -12,13 +12,13 @@ window#waybar {
   color: #c5c8c6;
   margin: 6px 3px 0px 3px;
   padding: 5px 10px 5px 10px;
-  background: rgba(7, 7, 7, 0.5);
+  background: rgba(7, 7, 7, 0.7);
 }
 
 #workspaces {
     margin: 6px 6px 0px 6px;
     padding: 0 5px;
-    background: rgba(7, 7, 7, 0.5);
+    background: rgba(7, 7, 7, 0.7);
     color: #c5c8c6;
 }
 
@@ -35,27 +35,27 @@ window#waybar {
 #custom-network {
   margin: 6px 0px 0px 0px;
   padding: 5px 5px 5px 5px;
-  background: rgba(7, 7, 7, 0.5);
+  background: rgba(7, 7, 7, 0.7);
   color: #c5c8c6;
 }
 
 #custom-power {
   margin: 6px 0px 0px 0px;
   padding: 5px 5px 5px 5px;
-  background: rgba(7, 7, 7, 0.5);
+  background: rgba(7, 7, 7, 0.7);
   color: #c5c8c6;
 }
 
 #custom-quit {
   margin: 6px 6px 0px 0px;
   padding: 5px 10px 5px 5px;
-  background: rgba(7, 7, 7, 0.5);
+  background: rgba(7, 7, 7, 0.7);
   color: #c5c8c6;
 }
 
 #cpu {
   color: #c5c8c6;
-  background: rgba(7, 7, 7, 0.5);
+  background: rgba(7, 7, 7, 0.7);
   padding: 5px 5px 5px 10px;
   margin: 6px 0px 0px 3px;
 }
@@ -63,13 +63,13 @@ window#waybar {
 #memory {
   margin: 6px 3px 0px 0px;
   padding: 5px 10px 5px 5px;
-  background: rgba(7, 7, 7, 0.5);
+  background: rgba(7, 7, 7, 0.7);
   color: #c5c8c6;
 }
 
 #language {
   color: #c5c8c6;
-  background: rgba(7, 7, 7, 0.5);
+  background: rgba(7, 7, 7, 0.7);
   padding: 5px 5px 5px 10px;
   margin: 6px 0px 0px 3px;
 }
@@ -77,12 +77,12 @@ window#waybar {
 #pulseaudio {
   margin: 6px 3px 0px 3px;
   padding: 5px 10px 5px 10px;
-  background: rgba(7, 7, 7, 0.5);
+  background: rgba(7, 7, 7, 0.7);
   color: #c5c8c6;
 }
 
 #idle_inhibitor {
-  background: rgba(7, 7, 7, 0.5);
+  background: rgba(7, 7, 7, 0.7);
   color: #c5c8c6;
   margin: 6px 3px 0px 3px;
   padding: 5px 10px 5px 10px;
@@ -91,6 +91,6 @@ window#waybar {
 #clock {
   margin: 6px 0px 0px 0px;
   padding: 5px 5px 5px 5px;
-  background: rgba(7, 7, 7, 0.5);
+  background: rgba(7, 7, 7, 0.7);
   color: #c5c8c6;
 }
