@@ -12,6 +12,7 @@ upgrade_packages: False
 pkgng_packages:
   - apl385
   - adwaita-icon-theme
+  - adwaita-qt5
   - alacritty
   - arduino-core
   - bzip2
@@ -74,6 +75,8 @@ pkgng_packages:
   - plex-ttf
   - pv
   - pwgen
+  - qt5-style-plugins
+  - qt5ct
   - rkhunter
   - rust
   - scdoc
