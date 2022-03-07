@@ -27,7 +27,7 @@
         "format": "{}",
         "max-length": 93,
         "rewrite": {
-	         "": "  "
+	         "": "∧ ∨ ∧"
         }
     },
     "idle_inhibitor": {
