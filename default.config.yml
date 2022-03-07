@@ -55,6 +55,7 @@ pkgng_packages:
   - iftop
   - imv
   - jq
+  - kate
   - less
   - links
   - llvm
