@@ -73,7 +73,7 @@
         "exec": "$HOME/.config/waybar/scripts/power.sh | jq --unbuffered --compact-output",
         "interval": 10,
         "format-icons": {
-             "ac": "",
+             "psu": "",
              "default": ["", "", "", "", ""]
         },
         "tooltip": true
