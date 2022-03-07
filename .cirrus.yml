@@ -1,5 +1,6 @@
 task:
   name: Playbook test
+  timeout_in: 120m
 
   freebsd_instance:
     image_family: freebsd-13-0
