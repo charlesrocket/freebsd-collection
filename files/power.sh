@@ -12,8 +12,8 @@ case $charge in
   *[0-9]*)
     source="battery"
     ;;
-  *) 
-   source="psu" 
+  *)
+   source="psu"
     ;;
 esac
 
