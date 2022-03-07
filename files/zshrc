@@ -1,4 +1,7 @@
 export PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:$HOME/bin:$HOME/.cargo/bin
+export XDG_SESSION_TYPE=wayland
+export XDG_CURRENT_DESKTOP=sway
+export XDG_PICTURES_DIR=$HOME/pictures
 export QT_QPA_PLATFORM=wayland-egl
 export QT_QPA_PLATFORMTHEME=qt5ct
 #export QT_SCALE_FACTOR=1
