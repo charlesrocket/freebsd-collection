@@ -29,6 +29,12 @@ exec swayidle -w \
          timeout 650 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
          before-sleep 'swaylock -f -i ~/pictures/hardcoding/zaki-aby-general-shot.jpg -s fill'
 
+assign [app_id="Alacritty"] workspace 2
+assign [app_id="firefox"] workspace 3
+assign [app_id="org.kde.kate"] workspace 4
+assign [app_id="org.kde.kwrite"] workspace 5
+assign [instance="caja"] workspace 6
+
 bindsym $mod+Return exec $term
 bindsym $mod+Shift+q kill
 bindsym $mod+d exec $menu
