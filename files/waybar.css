@@ -46,8 +46,16 @@ window#waybar {
   color: #c5c8c6;
 }
 
-#custom-power.ac {
+#custom-power.ac:not(.charged) {
   color: #f4c500;
+}
+
+#custom-power.critical:not(.ac) {
+    color: red;
+}
+
+#custom-power.charged {
+    color: green;
 }
 
 #custom-quit {
