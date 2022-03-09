@@ -1,6 +1,7 @@
 {
     "position": "top",
     "layer": "top",
+    "fixed-center": true,
     "modules-left": ["sway/workspaces"],
     "modules-center": ["sway/window"],
     "modules-right": ["idle_inhibitor", "cpu", "memory", "custom/network", "pulseaudio", "custom/power", "sway/language", "clock", "custom/quit"],
