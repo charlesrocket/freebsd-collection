@@ -56,6 +56,7 @@ pkgng_packages:
   - imv
   - jq
   - kate
+  - Kvantum-qt5
   - less
   - links
   - llvm
