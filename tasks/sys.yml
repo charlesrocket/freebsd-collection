@@ -126,6 +126,13 @@
     state: present
   become: True
 
+- name: Enable hald
+  community.general.sysrc:
+    name: hald_enable
+    value: "YES"
+    state: present
+  become: True
+
 - name: Don't pong
   community.general.sysrc:
     name: icmp_bmcastecho
