@@ -26,6 +26,13 @@
     owner: "{{ ansible_user_id }}"
     mode: 0744
 
+- name: Ensure Kvantum directory exists
+  file:
+    path: ~/.config/Kvantum
+    state: directory
+    owner: "{{ ansible_user_id }}"
+    mode: 0744
+
 - name: Copy sway config file
   copy:
     src: swayconfig
@@ -67,6 +74,14 @@
     dest: ~/.config/sway/scripts/import-gsettings
     owner: "{{ ansible_user_id }}"
     mode: 0744
+
+- name: Copy Kvantum config
+  copy:
+    src: kvantum.kvconfig
+    dest: ~/.config/Kvantum/kvantum.kvconfig
+    owner: "{{ ansible_user_id }}"
+    mode: 0644
+    force: yes
 
 - name: Copy GTK settings
   copy:
