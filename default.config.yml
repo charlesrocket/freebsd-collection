@@ -24,6 +24,7 @@ pkgng_packages:
   - crystal
   - curl
   - cursor-dmz-theme
+  - cxxmatrix
   - devcpu-data
   - diffutils
   - direnv
