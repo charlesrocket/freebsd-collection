@@ -12,23 +12,23 @@ fi
 
 if [ "${ifc}" == "wlan0" ]
 then
-if=""
+interface=""
 elif [ "${ifc}" == "eth0" ]
 then
-if=""
+interface=""
 elif [ "${ifc}" == "ue0" ]
 then
-if=""
+interface=""
 elif [ "${ifc}" == "re0" ]
 then
-if=""
+interface=""
 elif [ "${ifc}" == "em0" ]
 then
-if=""
+interface=""
 else
-if=""
+interface=""
 fi
 
-echo -e '{"text": "'$if'", "alt": "'$vpn'", "tooltip": "", "class": "", "percentage": "" }'
+echo -e '{"text": "'$interface'", "alt": "'$vpn'", "tooltip": "", "class": "", "percentage": "" }'
 
 exit 0
