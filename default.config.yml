@@ -19,6 +19,7 @@ pkgng_packages:
   - caja
   - chkrootkit
   - clamav
+  - claws-mail
   - cmake
   - conky
   - crystal
