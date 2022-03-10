@@ -132,6 +132,13 @@
     value: "YES"
     state: present
   become: True
+  
+- name: Enable dbus
+  community.general.sysrc:
+    name: dbus_enable
+    value: "YES"
+    state: present
+  become: True
 
 - name: Don't pong
   community.general.sysrc:
