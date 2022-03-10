@@ -65,11 +65,3 @@
     owner: "{{ ansible_user_id }}"
     mode: 0644
     force: yes
-
-- name: Copy alacritty config
-  copy:
-    src: alacritty.yml
-    dest: ~/.alacritty.yml
-    owner: "{{ ansible_user_id }}"
-    mode: 0644
-    force: yes
