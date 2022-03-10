@@ -85,7 +85,12 @@
         "on-click": "swaynag -f 'IBM Plex Sans Normal'  -t warning -m 'Do you really want to exit sway?' -b 'Yes, exit sway' 'swaymsg exit'"
     },
     "custom/network": {
-        "format": "{icon}{}",
+        "format": "{icon} {}",
+        "format-icons": {
+            "active": "",
+            "inactive": ""
+        },
+        "return-type": "json",
         "exec": "$HOME/.config/waybar/scripts/net-if.sh",
         "interval": 5,
         "tooltip": false
