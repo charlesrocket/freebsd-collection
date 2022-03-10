@@ -34,12 +34,14 @@ assign [app_id="firefox"] workspace 3
 assign [app_id="org.kde.kate"] workspace 4
 assign [app_id="org.kde.kwrite"] workspace 5
 assign [instance="caja"] workspace 6
+assign [instance="claws-mail"] workspace 7
 
 for_window [app_id="Alacritty"] workspace 2
 for_window [app_id="firefox"] workspace 3
 for_window [app_id="org.kde.kate"] workspace 4
 for_window [app_id="org.kde.kwrite"] workspace 5
 for_window [instance="caja"] workspace 6
+for_window [instance="claws-mail"] workspace 7
 
 bindsym $mod+Return exec $term
 bindsym $mod+Shift+q kill
@@ -49,6 +51,7 @@ bindsym $mod+F3 exec firefox
 bindsym $mod+F4 exec kate
 bindsym $mod+F5 exec kwrite
 bindsym $mod+F6 exec caja
+bindsym $mod+F7 exec claws-mail
 
 floating_modifier $mod normal
 
