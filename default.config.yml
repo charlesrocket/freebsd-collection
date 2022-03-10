@@ -2,8 +2,6 @@
 locale: "en_US.UTF-8"
 timezone: "America/Los_Angeles"
 
-sway: True
-
 configure_asus: True
 configure_virtualbox: True
 

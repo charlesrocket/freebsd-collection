@@ -20,7 +20,6 @@
     - include_tasks: tasks/common.yml
 
     - include_tasks: tasks/wm.yml
-      when: sway
 
     - include_tasks: tasks/asus.yml
       when: configure_asus
