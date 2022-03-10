@@ -4,21 +4,25 @@ ifc=$(ifconfig | pcregrep -M -o '^[^\t:]+:([^\n]|\n\t)*status: active' | egrep -
 
 if [ "${ifc}" == "wlan0" ]
 then
-echo ""
+if=""
 elif [ "${ifc}" == "eth0" ]
 then
-echo ""
+if=""
 elif [ "${ifc}" == "ue0" ]
 then
-echo ""
+if=""
 elif [ "${ifc}" == "re0" ]
 then
-echo ""
+if=""
 elif [ "${ifc}" == "em0" ]
 then
-echo ""
+if=""
 else
-echo ""
+if=""
 fi
+
+vpn="inactive"
+
+echo -e '{"text": "'$if'", "alt": "'$vpn'", "tooltip": "", "class": "", "percentage": "" }'
 
 exit 0
