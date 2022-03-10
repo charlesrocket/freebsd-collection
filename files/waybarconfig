@@ -27,6 +27,7 @@
     "sway/window": {
         "format": "{}",
         "max-length": 93,
+        "icon": false,
         "rewrite": {
 	         "": "∧ ∨ ∧"
         }
