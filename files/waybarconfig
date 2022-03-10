@@ -29,7 +29,7 @@
         "max-length": 93,
         "icon": false,
         "rewrite": {
-	         "": "∧ ∨ ∧"
+            "": "∧ ∨ ∧"
         }
     },
     "idle_inhibitor": {
