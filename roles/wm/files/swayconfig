@@ -22,6 +22,7 @@ bar {
     swaybar_command waybar
 }
 
+exec dsbmc-cli -a&
 exec swayidle -w \
          timeout 421 'swaylock -f -i ~/pictures/hardcoding/zaki-aby-general-shot.jpg -s fill' \
          timeout 650 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \

@@ -12,6 +12,12 @@
     state: present
     value: '0'
 
+- name: Allow usermount
+  ansible.posix.sysctl:
+    name: vfs.usermount
+    state: present
+    value: '1'
+
 - name: Clear /tmp
   community.general.sysrc:
     name: clear_tmp_enable
