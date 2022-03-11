@@ -30,6 +30,7 @@ pkgng_packages:
   - dmenu
   - dmenu-wayland
   - drm-kmod
+  - droid-fonts-ttf
   - dunst
   - fdupes
   - ffuf
