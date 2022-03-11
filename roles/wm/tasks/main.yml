@@ -68,13 +68,6 @@
     - net-if.sh
     - power.sh
 
-- name: Copy gsettings script
-  copy:
-    src: import-gsettings
-    dest: ~/.config/sway/scripts/import-gsettings
-    owner: "{{ ansible_user_id }}"
-    mode: 0744
-
 - name: Copy Kvantum config
   copy:
     src: kvantum.kvconfig
