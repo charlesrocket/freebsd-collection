@@ -1,7 +1,6 @@
 #!/bin/sh
 
 charge="$(hwstat | grep -E 'Cap remain:' | tr -cd '[[:digit:]]')"
-ac="$(hwstat | grep 'Time remain:' | sed 's/Time remain://' | tr -d '[:space:]')"
 
 charged=100
 critical=20
@@ -9,24 +8,26 @@ critical=20
 case $charge in
   *[0-9]*)
     source="battery"
-     if [ "$charge" -eq "$charged" ]
-     then
-     crw=charged
-     elif [ "$charge" -lt "$critical" ]
-     then
-     crw=critical
-     fi
-     ;;
+    time="$(acpiconf -i 0 | grep "Remaining time" | tr -d '[:space:]' | sed 's/Remainingtime://')"
+    if [ "$charge" -eq "$charged" ]
+    then
+    crw=charged
+    elif [ "$charge" -lt "$critical" ]
+    then
+    crw=critical
+    fi
+    if [ "$time" == "unknown" ]
+    then
+    stat=ac
+    time=" $charge%"
+    fi
+    ;;
   *)
-     source="psu"
-     ;;
+    source="psu"
+    time="PSU"
+    ;;
 esac
 
-if [ "$ac" == "OnAC" ]
-then
-stat=ac
-fi
-
-echo -e '{"text": "", "alt": "'$source'", "tooltip": '$charge', "class": ["'$stat'", "'$crw'"], "percentage": '$charge' }'
+echo -e '{"text": "", "alt": "'$source'", "tooltip": "'$time'", "class": ["'$stat'", "'$crw'"], "percentage": '$charge' }'
 
 exit 0
