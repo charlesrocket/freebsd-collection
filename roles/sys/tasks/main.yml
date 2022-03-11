@@ -103,6 +103,12 @@
     value: "acpi_video"
     state: value_present
 
+- name: Enable DSBMD
+  community.general.sysrc:
+    name: dsbmd_enable
+    value: "YES"
+    state: present
+
 - name: Enable seatd
   community.general.sysrc:
     name: seatd_enable
