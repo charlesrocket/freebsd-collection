@@ -39,7 +39,6 @@ pkgng_packages:
   - figlet
   - firefox
   - font-awesome
-  - fusefs-exfat
   - fzf
   - gawk
   - gcc
