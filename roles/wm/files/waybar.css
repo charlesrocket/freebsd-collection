@@ -54,7 +54,7 @@ window#waybar {
     color: red;
 }
 
-#custom-power.charged {
+#custom-power.charged.ac {
     color: green;
 }
 
