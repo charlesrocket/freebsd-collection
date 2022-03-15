@@ -193,6 +193,7 @@
     name: economy_cx_lowest
     value: "Cmax"
     state: present
+ 
 - name: Disable kernel crash dumps
   community.general.sysrc:
     name: dumpdev
