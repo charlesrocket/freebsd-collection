@@ -19,11 +19,11 @@
     - { role: wm }
 
   tasks:
+    - include_tasks: tasks/git-ports.yml
+      when: git_ports
+ 
     - include_tasks: tasks/asus.yml
       when: configure_asus
 
     - include_tasks: tasks/virtualbox.yml
       when: configure_virtualbox
-
-    - include_tasks: tasks/git-ports.yml
-      when: git_ports
