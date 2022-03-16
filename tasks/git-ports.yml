@@ -3,7 +3,7 @@
 - name: Check ports directory status
   stat:
     path: /usr/ports/.git
-  register: git_status
+  register: ports_status
 
 - name: Prepare ports directory
   file:
@@ -13,7 +13,7 @@
     group: wheel
     mode: 0755
   become: True
-  when: git_status.stat.exists is false
+  when: ports_status.stat.exists is false
   
 - name: Scan ports directory
   find:
@@ -21,7 +21,7 @@
     file_type: any
     hidden: yes
   register: ports_list
-  when: git_status.stat.exists is false
+  when: ports_status.stat.exists is false
 
 - name: Clean ports directory
   file:
@@ -31,7 +31,7 @@
   loop_control:
     label: "{{ item.path }}"
   become: True
-  when: git_status.stat.exists is false
+  when: ports_status.stat.exists is false
 
 - name: Install ports
   git:
@@ -39,4 +39,4 @@
     dest: /usr/ports
     version: main
   become: True
-  when: git_status.stat.exists is false
+  when: ports_status.stat.exists is false
