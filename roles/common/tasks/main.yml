@@ -15,16 +15,13 @@
   become: True
   when: upgrade_packages
 
-- name: Prepare ports folder
+- name: Prepare ports directory
   file:
     path: /usr/ports
-    state: "{{ item }}"
+    state: directory
     owner: root
     group: wheel
     mode: 0755
-  with_items:
-    - absent
-    - directory
   become: True
   when: git_ports
 
