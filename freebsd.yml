@@ -25,6 +25,9 @@
     - include_tasks: tasks/git-src.yml
       when: git_src
  
+    - include_tasks: tasks/git-doc.yml
+      when: git_doc
+ 
     - include_tasks: tasks/asus.yml
       when: configure_asus
 

@@ -8,7 +8,8 @@ configure_virtualbox: True
 upgrade_packages: False
 
 git_ports: True
-git_src: True 
+git_src: True
+git_doc: True
 
 pkgng_packages:
   - apl385
