@@ -22,6 +22,9 @@
     - include_tasks: tasks/git-ports.yml
       when: git_ports
  
+    - include_tasks: tasks/git-src.yml
+      when: git_src
+ 
     - include_tasks: tasks/asus.yml
       when: configure_asus
 

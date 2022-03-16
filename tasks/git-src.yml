@@ -1,0 +1,42 @@
+---
+
+- name: Check src directory status
+  stat:
+    path: /usr/src/.git
+  register: git_status
+
+- name: Prepare src directory
+  file:
+    path: /usr/src
+    state: directory
+    owner: root
+    group: wheel
+    mode: 0755
+  become: True
+  when: git_status.stat.exists is false
+  
+- name: Scan src directory
+  find:
+    path: /usr/src
+    file_type: any
+    hidden: yes
+  register: src_list
+  when: git_status.stat.exists is false
+
+- name: Clean src directory
+  file:
+    path: "{{ item.path }}"
+    state: absent
+  with_items: "{{ src_list.files }}"
+  loop_control:
+    label: "{{ item.path }}"
+  become: True
+  when: git_status.stat.exists is false
+
+- name: Install src
+  git:
+    repo: 'https://git.freebsd.org/src.git'
+    dest: /usr/src
+    version: main
+  become: True
+  when: git_status.stat.exists is false
