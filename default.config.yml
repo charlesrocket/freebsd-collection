@@ -51,7 +51,6 @@ pkgng_packages:
   - gnupg
   - gobuster
   - grim
-  - gtk-arc-themes
   - gzip
   - hashcat
   - htop
