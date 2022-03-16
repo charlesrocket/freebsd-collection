@@ -32,6 +32,7 @@
   git:
     repo: 'https://git.freebsd.org/ports.git'
     dest: /usr/ports
+    version: main
   become: True
   when: git_ports
 
