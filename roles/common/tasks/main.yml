@@ -15,6 +15,26 @@
   become: True
   when: upgrade_packages
 
+- name: Prepare ports folder
+  file:
+    path: /usr/ports
+    state: "{{ item }}"
+    owner: root
+    group: wheel
+    mode: 0755
+  with_items:
+    - absent
+    - directory
+  become: True
+  when: git_ports
+
+- name: Install ports
+  git:
+    repo: 'https://git.freebsd.org/ports.git'
+    dest: /usr/ports
+  become: True
+  when: git_ports
+
 - name: Copy MOTD
   copy:
     src: motd.sh

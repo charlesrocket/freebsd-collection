@@ -6,6 +6,7 @@ configure_asus: True
 configure_virtualbox: True
 
 upgrade_packages: False
+git_ports : True
 
 pkgng_packages:
   - apl385
