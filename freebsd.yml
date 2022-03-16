@@ -24,3 +24,6 @@
 
     - include_tasks: tasks/virtualbox.yml
       when: configure_virtualbox
+
+    - include_task: tasks/git-ports
+      when: git_ports

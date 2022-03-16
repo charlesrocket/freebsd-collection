@@ -1,0 +1,31 @@
+- name: Prepare ports directory
+  file:
+    path: /usr/ports
+    state: directory
+    owner: root
+    group: wheel
+    mode: 0755
+  become: True
+  
+- name: Scan ports directory
+  find:
+    path: /usr/ports
+    file_type: any
+    hidden: yes
+  register: ports_list
+
+- name: Clean ports directory
+  file:
+    path: "{{ item.path }}"
+    state: absent
+  with_items: "{{ ports_list.files }}"
+  loop_control:
+    label: "{{ item.path }}"
+  become: True
+
+- name: Install ports
+  git:
+    repo: 'https://git.freebsd.org/ports.git'
+    dest: /usr/ports
+    version: main
+  become: True
