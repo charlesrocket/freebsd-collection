@@ -20,7 +20,6 @@ pkgng_packages:
   - clamav
   - claws-mail
   - cmake
-  - conky
   - crystal
   - curl
   - cursor-dmz-theme
