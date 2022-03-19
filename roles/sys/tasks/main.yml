@@ -52,7 +52,7 @@
   community.general.sysrc:
     name: autoboot_delay
     state: present
-    value: "3"
+    value: "2"
     path: /boot/loader.conf
 
 - name: Boot in verbose mode
