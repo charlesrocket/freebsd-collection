@@ -97,13 +97,6 @@
     value: "YES"
     path: /boot/loader.conf
 
-- name: Enable sound drivers
-  community.general.sysrc:
-    name: snd_driver_load
-    state: present
-    value: "YES"
-    path: /boot/loader.conf
-
 - name: Enable UHD driver
   community.general.sysrc:
     name: kld_list
