@@ -14,7 +14,7 @@
     mode: 0755
   become: true
   when: doc_status.stat.exists is false
-  
+
 - name: Scan doc directory
   ansible.builtin.find:
     path: /usr/doc
