@@ -38,4 +38,5 @@
     repo: 'https://git.freebsd.org/doc.git'
     dest: /usr/doc
     version: main
-  when: doc_status.stat.exists is false  when: doc_status.stat.exists is false
+  become: true
+  when: doc_status.stat.exists is false

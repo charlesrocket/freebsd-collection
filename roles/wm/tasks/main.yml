@@ -39,6 +39,7 @@
     dest: ~/.config/sway/config
     owner: "{{ ansible_user_id }}"
     mode: 0744
+    force: true
 
 - name: Copy waybar config file
   ansible.builtin.copy:
