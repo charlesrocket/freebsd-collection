@@ -4,7 +4,7 @@
   user:
     name: "{{ ansible_user_id }}"
     groups: vboxusers,operator
-    append: yes
+    append: True
   become: True
 
 - name: Enable virtualbox driver
@@ -37,5 +37,5 @@
       add path 'usb/*' mode 0660 group operator
     mode: 0644
     owner: root
-    create: yes
+    create: True
   become: True

@@ -5,7 +5,7 @@
     name: "{{ ansible_user_id }}"
     shell: /usr/local/bin/zsh
     groups: dialer,operator,video
-    append: yes
+    append: True
   become: True
 
 - name: Upgrade installed packages
@@ -56,7 +56,7 @@
     dest: ~/.config/mc/ini
     owner: "{{ ansible_user_id }}"
     mode: 0744
-    force: yes
+    force: True
 
 - name: Copy zsh config
   copy:
@@ -64,4 +64,4 @@
     dest: ~/.zshrc
     owner: "{{ ansible_user_id }}"
     mode: 0644
-    force: yes
+    force: True

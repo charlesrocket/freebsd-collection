@@ -19,7 +19,7 @@
   find:
     path: /usr/ports
     file_type: any
-    hidden: yes
+    hidden: True
   register: ports_list
   when: ports_status.stat.exists is false
 
