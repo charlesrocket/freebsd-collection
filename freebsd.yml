@@ -13,10 +13,10 @@
       tags: ['always']
 
   roles:
-    - { role: pkg, become: true }
-    - { role: sys, become: true }
-    - { role: common }
-    - { role: wm }
+    - {role: pkg, become: true}
+    - {role: sys, become: true}
+    - {role: common}
+    - {role: wm}
 
   tasks:
     - include_tasks: tasks/git-ports.yml
