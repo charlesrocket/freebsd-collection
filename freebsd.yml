@@ -7,7 +7,7 @@
 
   pre_tasks:
     - name: Load config.yml
-      include_vars: "{{ item }}"
+      ansible.builtin.include_vars: "{{ item }}"
       with_fileglob:
         - "{{ playbook_dir }}/config.yml"
       tags: ['always']
