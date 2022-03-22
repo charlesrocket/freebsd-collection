@@ -16,4 +16,4 @@ jobs:
     - name: Lint Ansible Playbook
       uses: ansible/ansible-lint-action@main
       with:
-        args: ""
+        args: "freebsd.yml"
