@@ -1,7 +1,7 @@
 ---
 
 - name: Add user groups
-  user:
+  ansible.builtin.user:
     name: "{{ ansible_user_id }}"
     groups: vboxusers,operator
     append: True
@@ -23,14 +23,14 @@
   become: True
 
 - name: Add USB permissions
-  lineinfile:
+  ansible.builtin.lineinfile:
     dest: /etc/rc.conf
     line: 'devfs_system_ruleset="system"'
     state: present
   become: True
 
 - name: Edit devfs.rules
-  blockinfile:
+  ansible.builtin.blockinfile:
     path: /etc/devfs.rules
     block: |
       [system=10]

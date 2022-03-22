@@ -1,40 +1,40 @@
 ---
 
 - name: Ensure sway/scripts directory exists
-  file:
+  ansible.builtin.file:
     path: ~/.config/sway/scripts
     state: directory
     mode: 0744
 
 - name: Ensure waybar directory exists
-  file:
+  ansible.builtin.file:
     path: ~/.config/waybar
     state: directory
     mode: 0744
 
 - name: Ensure GTK directory exists
-  file:
+  ansible.builtin.file:
     path: ~/.config/gtk-3.0
     state: directory
     owner: "{{ ansible_user_id }}"
     mode: 0744
 
 - name: Ensure qt5ct directory exists
-  file:
+  ansible.builtin.file:
     path: ~/.config/qt5ct
     state: directory
     owner: "{{ ansible_user_id }}"
     mode: 0744
 
 - name: Ensure Kvantum directory exists
-  file:
+  ansible.builtin.file:
     path: ~/.config/Kvantum
     state: directory
     owner: "{{ ansible_user_id }}"
     mode: 0744
 
 - name: Copy sway config file
-  copy:
+  ansible.builtin.copy:
     src: swayconfig
     dest: ~/.config/sway/config
     owner: "{{ ansible_user_id }}"
@@ -42,7 +42,7 @@
     force: True
 
 - name: Copy waybar config file
-  copy:
+  ansible.builtin.copy:
     src: waybarconfig
     dest: ~/.config/waybar/config
     owner: "{{ ansible_user_id }}"
@@ -50,7 +50,7 @@
     force: True
 
 - name: Copy waybar css file
-  copy:
+  ansible.builtin.copy:
     src: waybar.css
     dest: ~/.config/waybar/style.css
     owner: "{{ ansible_user_id }}"
@@ -58,7 +58,7 @@
     force: True
 
 - name: Copy waybar scripts
-  copy:
+  ansible.builtin.copy:
     src: "{{ item }}"
     dest: ~/.config/waybar/scripts/
     owner: "{{ ansible_user_id }}"
@@ -69,7 +69,7 @@
     - power.sh
 
 - name: Copy Kvantum config
-  copy:
+  ansible.builtin.copy:
     src: kvantum.kvconfig
     dest: ~/.config/Kvantum/kvantum.kvconfig
     owner: "{{ ansible_user_id }}"
@@ -77,7 +77,7 @@
     force: True
 
 - name: Copy GTK settings
-  copy:
+  ansible.builtin.copy:
     src: gtk-settings.ini
     dest: ~/.config/gtk-3.0/settings.ini
     owner: "{{ ansible_user_id }}"
@@ -85,7 +85,7 @@
     force: True
 
 - name: Copy Qt settings
-  copy:
+  ansible.builtin.copy:
     src: qt5ct.conf
     dest: ~/.config/qt5ct/qt5ct.conf
     owner: "{{ ansible_user_id }}"
@@ -93,7 +93,7 @@
     force: True
 
 - name: Copy alacritty config
-  copy:
+  ansible.builtin.copy:
     src: alacritty.yml
     dest: ~/.alacritty.yml
     owner: "{{ ansible_user_id }}"
@@ -101,7 +101,7 @@
     force: True
 
 - name: Copy Kate config
-  copy:
+  ansible.builtin.copy:
     src: katerc
     dest: ~/.config/katerc
     owner: "{{ ansible_user_id }}"

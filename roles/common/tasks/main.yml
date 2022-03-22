@@ -1,7 +1,7 @@
 ---
 
 - name: Edit user
-  user:
+  ansible.builtin.user:
     name: "{{ ansible_user_id }}"
     shell: /usr/local/bin/zsh
     groups: dialer,operator,video
@@ -16,7 +16,7 @@
   when: upgrade_packages
 
 - name: Copy MOTD
-  copy:
+  ansible.builtin.copy:
     src: motd.sh
     dest: /etc/motd.sh
     owner: root
@@ -24,7 +24,7 @@
   become: True
 
 - name: Install MOTD
-  cron:
+  ansible.builtin.cron:
     name: "Update MOTD"
     special_time: reboot
     job: "/etc/motd.sh > /etc/motd.template"
@@ -33,13 +33,13 @@
   become: True
 
 - name: Edit sh prompt
-  lineinfile:
+  ansible.builtin.lineinfile:
     dest: /home/{{ ansible_user_id }}/.shrc
     line: 'export PS1="\u@\H x: "'
     state: present
 
 - name: Install ohmyzsh
-  shell:
+  ansible.builtin.shell:
     cmd: sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
   args:
     creates: "/home/{{ ansible_user_id }}/.oh-my-zsh"
@@ -51,7 +51,7 @@
     mode: 0744
 
 - name: Copy mc config file
-  copy:
+  ansible.builtin.copy:
     src: mcini
     dest: ~/.config/mc/ini
     owner: "{{ ansible_user_id }}"
@@ -59,7 +59,7 @@
     force: True
 
 - name: Copy zsh config
-  copy:
+  ansible.builtin.copy:
     src: zshrc
     dest: ~/.zshrc
     owner: "{{ ansible_user_id }}"
