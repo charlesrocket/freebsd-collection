@@ -45,7 +45,7 @@
     creates: "/home/{{ ansible_user_id }}/.oh-my-zsh"
 
 - name: Ensure mc directory exists
-  file:
+  ansible.builtin.file:
     path: ~/.config/mc
     state: directory
     mode: 0744
