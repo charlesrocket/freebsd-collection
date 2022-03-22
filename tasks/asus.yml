@@ -6,4 +6,4 @@
     state: present
     value: "YES"
     path: /boot/loader.conf
-  become: True
+  become: true

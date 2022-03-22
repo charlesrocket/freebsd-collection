@@ -39,7 +39,6 @@
     dest: ~/.config/sway/config
     owner: "{{ ansible_user_id }}"
     mode: 0744
-    force: True
 
 - name: Copy waybar config file
   ansible.builtin.copy:
@@ -47,7 +46,7 @@
     dest: ~/.config/waybar/config
     owner: "{{ ansible_user_id }}"
     mode: 0744
-    force: True
+    force: true
 
 - name: Copy waybar css file
   ansible.builtin.copy:
@@ -55,7 +54,7 @@
     dest: ~/.config/waybar/style.css
     owner: "{{ ansible_user_id }}"
     mode: 0744
-    force: True
+    force: true
 
 - name: Copy waybar scripts
   ansible.builtin.copy:
@@ -63,7 +62,7 @@
     dest: ~/.config/waybar/scripts/
     owner: "{{ ansible_user_id }}"
     mode: 0744
-    force: True
+    force: true
   with_items:
     - net-if.sh
     - power.sh
@@ -74,7 +73,7 @@
     dest: ~/.config/Kvantum/kvantum.kvconfig
     owner: "{{ ansible_user_id }}"
     mode: 0644
-    force: True
+    force: true
 
 - name: Copy GTK settings
   ansible.builtin.copy:
@@ -82,7 +81,7 @@
     dest: ~/.config/gtk-3.0/settings.ini
     owner: "{{ ansible_user_id }}"
     mode: 0644
-    force: True
+    force: true
 
 - name: Copy Qt settings
   ansible.builtin.copy:
@@ -90,7 +89,7 @@
     dest: ~/.config/qt5ct/qt5ct.conf
     owner: "{{ ansible_user_id }}"
     mode: 0644
-    force: True
+    force: true
 
 - name: Copy alacritty config
   ansible.builtin.copy:
@@ -98,7 +97,7 @@
     dest: ~/.alacritty.yml
     owner: "{{ ansible_user_id }}"
     mode: 0644
-    force: True
+    force: true
 
 - name: Copy Kate config
   ansible.builtin.copy:
@@ -106,4 +105,4 @@
     dest: ~/.config/katerc
     owner: "{{ ansible_user_id }}"
     mode: 0644
-    force: True
+    force: true

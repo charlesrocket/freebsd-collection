@@ -12,14 +12,14 @@
     owner: root
     group: wheel
     mode: 0755
-  become: True
+  become: true
   when: ports_status.stat.exists is false
   
 - name: Scan ports directory
   ansible.builtin.find:
     path: /usr/ports
     file_type: any
-    hidden: True
+    hidden: true
   register: ports_list
   when: ports_status.stat.exists is false
 
@@ -30,7 +30,7 @@
   with_items: "{{ ports_list.files }}"
   loop_control:
     label: "{{ item.path }}"
-  become: True
+  become: true
   when: ports_status.stat.exists is false
 
 - name: Install ports
@@ -38,5 +38,4 @@
     repo: 'https://git.freebsd.org/ports.git'
     dest: /usr/ports
     version: main
-  become: True
-  when: ports_status.stat.exists is false
+  when: ports_status.stat.exists is false  when: ports_status.stat.exists is false

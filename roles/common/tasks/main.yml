@@ -5,14 +5,14 @@
     name: "{{ ansible_user_id }}"
     shell: /usr/local/bin/zsh
     groups: dialer,operator,video
-    append: True
-  become: True
+    append: true
+  become: true
 
 - name: Upgrade installed packages
   community.general.pkgng:
     name: "*"
     state: latest
-  become: True
+  become: true
   when: upgrade_packages
 
 - name: Copy MOTD
@@ -21,7 +21,7 @@
     dest: /etc/motd.sh
     owner: root
     mode: 0755
-  become: True
+  become: true
 
 - name: Install MOTD
   ansible.builtin.cron:
@@ -30,7 +30,7 @@
     job: "/etc/motd.sh > /etc/motd.template"
     user: root
     state: present
-  become: True
+  become: true
 
 - name: Edit sh prompt
   ansible.builtin.lineinfile:
@@ -56,7 +56,7 @@
     dest: ~/.config/mc/ini
     owner: "{{ ansible_user_id }}"
     mode: 0744
-    force: True
+    force: true
 
 - name: Copy zsh config
   ansible.builtin.copy:
@@ -64,4 +64,4 @@
     dest: ~/.zshrc
     owner: "{{ ansible_user_id }}"
     mode: 0644
-    force: True
+    force: true

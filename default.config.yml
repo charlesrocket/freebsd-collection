@@ -3,16 +3,16 @@ locale: "en_US.UTF-8"
 timezone: "America/Los_Angeles"
 
 # Configurations
-configure_asus: True
-configure_virtualbox: True
+configure_asus: true
+configure_virtualbox: true
 
 # Keep packages up to date
-upgrade_packages: False
+upgrade_packages: false
 
 # Manage src/ports/doc with git
-git_ports: False
-git_src: False
-git_doc: False
+git_ports: false
+git_src: false
+git_doc: false
 
 # Packages
 pkgng_packages:

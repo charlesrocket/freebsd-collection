@@ -4,8 +4,8 @@
   ansible.builtin.user:
     name: "{{ ansible_user_id }}"
     groups: vboxusers,operator
-    append: True
-  become: True
+    append: true
+  become: true
 
 - name: Enable virtualbox driver
   community.general.sysrc:
@@ -13,21 +13,21 @@
     value: "YES"
     state: present
     path: /boot/loader.conf
-  become: True
+  become: true
 
 - name: Enable vboxnet driver
   community.general.sysrc:
     name: vboxnet_enable
     state: present
     value: "YES"
-  become: True
+  become: true
 
 - name: Add USB permissions
   ansible.builtin.lineinfile:
     dest: /etc/rc.conf
     line: 'devfs_system_ruleset="system"'
     state: present
-  become: True
+  become: true
 
 - name: Edit devfs.rules
   ansible.builtin.blockinfile:
@@ -37,5 +37,5 @@
       add path 'usb/*' mode 0660 group operator
     mode: 0644
     owner: root
-    create: True
-  become: True
+    create: true
+  become: true

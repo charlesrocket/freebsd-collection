@@ -12,14 +12,14 @@
     owner: root
     group: wheel
     mode: 0755
-  become: True
+  become: true
   when: src_status.stat.exists is false
   
 - name: Scan src directory
   ansible.builtin.find:
     path: /usr/src
     file_type: any
-    hidden: True
+    hidden: true
   register: src_list
   when: src_status.stat.exists is false
 
@@ -30,7 +30,7 @@
   with_items: "{{ src_list.files }}"
   loop_control:
     label: "{{ item.path }}"
-  become: True
+  become: true
   when: src_status.stat.exists is false
 
 - name: Install src
@@ -38,5 +38,4 @@
     repo: 'https://git.freebsd.org/src.git'
     dest: /usr/src
     version: main
-  become: True
-  when: src_status.stat.exists is false
+  when: src_status.stat.exists is false  when: src_status.stat.exists is false
