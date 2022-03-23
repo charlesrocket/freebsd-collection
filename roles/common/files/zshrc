@@ -12,6 +12,7 @@ export ECORE_EVAS_ENGINE=wayland_egl
 export ELM_ENGINE=wayland_egl
 export SDL_VIDEODRIVER=wayland
 export MOZ_ENABLE_WAYLAND=1
+export GPG_TTY=$(tty)
 export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="gozilla"
 DISABLE_AUTO_UPDATE="false"
