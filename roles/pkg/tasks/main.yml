@@ -1,5 +1,4 @@
 ---
-
 - name: Ensure packages are installed
   community.general.pkgng:
     state: present
