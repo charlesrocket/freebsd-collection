@@ -9,6 +9,19 @@ dotfiles_repo_accept_hostkey: true
 dotfiles_repo_local_destination: "~/git/dotfiles"
 dotfiles_home: "~"
 dotfiles_files:
+  - .config/Kvantum/kvantum.kvconfig
+  - .config/gtk-3.0/settings.ini
+  - .config/mc/in
+  - .config/qt5ct/qt5ct.conf
+  - .config/sway/config
+  - .config/waybar/config
+  - .config/waybar/style.css
+  - .config/waybar/scripts/net-if.sh
+  - .config/waybar/scripts/power.sh
+  - .config/katerc
+  - .alacritty.yml
+  - .bash_profile
+  - .bashrc
   - .gitconfig
   - .gitignore
   - .zshrc
