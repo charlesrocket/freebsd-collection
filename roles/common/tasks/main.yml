@@ -43,25 +43,3 @@
     cmd: sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
   args:
     creates: "/home/{{ ansible_user_id }}/.oh-my-zsh"
-
-- name: Ensure mc directory exists
-  ansible.builtin.file:
-    path: ~/.config/mc
-    state: directory
-    mode: 0744
-
-- name: Copy mc config file
-  ansible.builtin.copy:
-    src: mcini
-    dest: ~/.config/mc/ini
-    owner: "{{ ansible_user_id }}"
-    mode: 0744
-    force: true
-
-- name: Copy zsh config
-  ansible.builtin.copy:
-    src: zshrc
-    dest: ~/.zshrc
-    owner: "{{ ansible_user_id }}"
-    mode: 0644
-    force: true
