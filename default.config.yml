@@ -2,6 +2,17 @@
 locale: "en_US.UTF-8"
 timezone: "America/Los_Angeles"
 
+# dotfiles
+dotfiles_repo: "https://github.com/charlesrocket/dotfiles.git"
+dotfiles_repo_version: master
+dotfiles_repo_accept_hostkey: true
+dotfiles_repo_local_destination: "~/git/dotfiles"
+dotfiles_home: "~"
+dotfiles_files:
+  - .gitconfig
+  - .gitignore
+  - .zshrc
+
 # Configurations
 configure_asus: true
 configure_virtualbox: true
