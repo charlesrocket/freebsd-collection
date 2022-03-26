@@ -12,7 +12,7 @@ dotfiles_home: "~"
 dotfiles_files:
   - .config/Kvantum/kvantum.kvconfig
   - .config/gtk-3.0/settings.ini
-  - .config/mc/in
+  - .config/mc/ini
   - .config/qt5ct/qt5ct.conf
   - .config/sway/config
   - .config/waybar/config
