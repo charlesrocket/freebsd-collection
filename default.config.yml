@@ -3,7 +3,7 @@
 locale: "en_US.UTF-8"
 timezone: "America/Los_Angeles"
 
-# dotfiles
+# Dotfiles
 dotfiles_repo: "https://github.com/charlesrocket/dotfiles.git"
 dotfiles_repo_version: master
 dotfiles_repo_accept_hostkey: true
