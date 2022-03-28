@@ -76,6 +76,7 @@ pkgng_packages:
   - gawk
   - gcc
   - git
+  - gmake
   - gnome-icon-theme
   - gnome-icon-theme-extras
   - gnupg
