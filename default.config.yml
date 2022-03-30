@@ -47,6 +47,7 @@ pkgng_packages:
   - adwaita-qt5
   - alacritty
   - arduino-core
+  - bash
   - bzip2
   - caja
   - chkrootkit
