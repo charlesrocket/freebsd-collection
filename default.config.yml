@@ -21,8 +21,6 @@ dotfiles_files:
   - .config/waybar/scripts/power.sh
   - .config/katerc
   - .alacritty.yml
-  - .bash_profile
-  - .bashrc
   - .gitconfig
   - .gitignore
   - .zshrc
