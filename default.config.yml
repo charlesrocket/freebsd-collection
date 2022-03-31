@@ -7,6 +7,7 @@ timezone: "America/Los_Angeles"
 dotfiles_repo: "https://github.com/charlesrocket/dotfiles.git"
 dotfiles_repo_version: master
 dotfiles_repo_accept_hostkey: true
+dotfiles_repo_force: true
 dotfiles_repo_local_destination: "~/git/dotfiles"
 dotfiles_home: "~"
 dotfiles_files:
