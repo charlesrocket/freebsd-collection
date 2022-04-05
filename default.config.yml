@@ -70,7 +70,7 @@ pkgng_packages:
   - fdupes
   - ffuf
   - figlet
-  - firefox
+  - firefox-esr
   - font-awesome
   - fzf
   - gawk
