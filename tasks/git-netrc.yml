@@ -4,12 +4,13 @@
     repo: https://github.com/git/git.git
     dest: ~/git/git
     version: master
+  register: git_repo_state
 
 - name: Build git-credential-netrc
   ansible.builtin.command: gmake
   args:
     chdir: ~/git/git/contrib/credential/netrc/
-    creates: ~/git/git/contrib/credential/netrc/git-credential-netrc
+  when: git_repo_state.changed
 
 - name: Deploy git-credential-netrc
   ansible.builtin.copy:
@@ -18,3 +19,4 @@
     owner: "{{ ansible_user_id }}"
     group: "{{ ansible_user_id }}"
     mode: 0755
+  when: git_repo_state.changed
