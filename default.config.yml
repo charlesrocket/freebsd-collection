@@ -92,6 +92,7 @@ pkgng_packages:
   - imv
   - jq
   - Kvantum-qt5
+  - leafpad
   - less
   - links
   - llvm
