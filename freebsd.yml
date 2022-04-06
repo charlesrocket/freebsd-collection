@@ -19,6 +19,8 @@
     - {role: charlesrocket.dotfiles}
 
   tasks:
+    - include_tasks: tasks/git-netrc.yml
+
     - include_tasks: tasks/git-ports.yml
       when: git_ports
 
