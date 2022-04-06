@@ -75,6 +75,7 @@ pkgng_packages:
   - fzf
   - gawk
   - gcc
+  - geany
   - git
   - gmake
   - gnome-icon-theme
@@ -90,7 +91,6 @@ pkgng_packages:
   - iftop
   - imv
   - jq
-  - kate
   - Kvantum-qt5
   - less
   - links
