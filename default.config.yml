@@ -12,6 +12,12 @@ dotfiles_repo_local_destination: "~/git/dotfiles"
 dotfiles_home: "~"
 dotfiles_files:
   - .config/Kvantum/kvantum.kvconfig
+  - .config/geany/colorschemes/delt-dark.conf
+  - .config/geany/filedefs/filetypes.Crystal.conf
+  - .config/geany/plugins/filebrowser/filebrowser.conf
+  - .config/geany/filetype_extensions.conf
+  - .config/geany/geany.conf
+  - .config/geany/keybindings.conf
   - .config/gtk-3.0/settings.ini
   - .config/mc/ini
   - .config/qt5ct/qt5ct.conf
