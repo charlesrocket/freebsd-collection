@@ -26,7 +26,6 @@ dotfiles_files:
   - .config/waybar/style.css
   - .config/waybar/scripts/net-if.sh
   - .config/waybar/scripts/power.sh
-  - .config/katerc
   - .alacritty.yml
   - .gitconfig
   - .gitignore
