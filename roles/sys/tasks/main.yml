@@ -65,7 +65,7 @@
   community.general.sysrc:
     name: loader_logo
     state: present
-    value: "beastie"
+    value: "orbbw"
     path: /boot/loader.conf
 
 - name: Enable coretemp
