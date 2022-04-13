@@ -112,7 +112,7 @@ pkgng_packages:
   - nikto
   - ninja
   - nmap
-  - openssl
+# - openssl
   - p7zip
   - pavucontrol
   - plex-ttf
