@@ -22,6 +22,7 @@ dotfiles_files:
   - .config/mc/ini
   - .config/qt5ct/qt5ct.conf
   - .config/sway/config
+  - .config/transmission/settings.json
   - .config/waybar/config
   - .config/waybar/style.css
   - .config/waybar/scripts/net-if.sh
