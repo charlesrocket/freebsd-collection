@@ -100,10 +100,10 @@ pkgng_packages:
   - Kvantum-qt5
   - leafpad
   - less
-  - links
   - llvm
   - lolcat
   - lynis
+  - lynx
   - masscan
   - mc
   - meson
