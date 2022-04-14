@@ -96,6 +96,13 @@
     value: "YES"
     path: /boot/loader.conf
 
+- name: Enable libcuse
+  community.general.sysrc:
+    name: cuse_load
+    state: present
+    value: "YES"
+    path: /boot/loader.conf
+
 - name: Enable UHD driver
   community.general.sysrc:
     name: kld_list
