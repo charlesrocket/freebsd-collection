@@ -129,8 +129,9 @@ pkgng_packages:
   - sway
   - swayidle
   - swaylock
-  - tmux
   - tig
+  - tmux
+  - transmission
   - uarduno
   - unibilium
   - unzip
