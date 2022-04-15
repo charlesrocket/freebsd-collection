@@ -75,6 +75,7 @@ pkgng_packages:
   - dunst
   - emacs
   - fdupes
+  - fd-find
   - ffuf
   - figlet
   - firefox-esr
@@ -121,6 +122,7 @@ pkgng_packages:
   - pwgen
   - qt5-style-plugins
   - qt5ct
+  - ripgrep
   - rkhunter
   - rust
   - scdoc
