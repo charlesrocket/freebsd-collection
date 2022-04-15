@@ -73,6 +73,7 @@ pkgng_packages:
   - dsbmc-cli
   - dsbmd
   - dunst
+  - emacs
   - fdupes
   - ffuf
   - figlet
