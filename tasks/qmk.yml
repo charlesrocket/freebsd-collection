@@ -17,6 +17,7 @@
 - name: Add QMK ruleset
   blockinfile:
     path: /etc/devfs.rules
+    marker: ""
     block: |
       [qmk=20]
       add path 'ttyU*' mode 0660 group operator
