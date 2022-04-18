@@ -22,10 +22,10 @@
   become: true
 
 - name: Add USB permissions
-  ansible.builtin.lineinfile:
-    dest: /etc/rc.conf
-    line: 'devfs_system_ruleset="system"'
+  community.general.sysrc:
+    name: devfs_system_ruleset
     state: present
+    value: "system"
   become: true
 
 - name: Edit devfs.rules
