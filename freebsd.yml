@@ -33,5 +33,8 @@
     - include_tasks: tasks/asus.yml
       when: configure_asus
 
+    - include_tasks: tasks/qmk.yml
+      when: configure_qmk
+
     - include_tasks: tasks/virtualbox.yml
       when: configure_virtualbox

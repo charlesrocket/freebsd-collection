@@ -1,0 +1,33 @@
+---
+- name: Ensure QMK is installed
+  community.general.pkgng:
+    state: present
+    name: sysutils/py-qmk
+    autoremove: true
+    cached: false
+  become: true
+
+- name: Ensure python3 is installed
+  community.general.pkgng:
+    state: present
+    name: python3
+    cached: false
+  become: true
+
+- name: Add QMK ruleset
+  blockinfile:
+    path: /etc/devfs.rules
+    block: |
+      [qmk=20]
+      add path 'ttyU*' mode 0660 group operator
+    mode: 0644
+    owner: root
+    create: true
+  become: true
+
+- name: Enable QMK ruleset
+  community.general.sysrc:
+    name: devfs_set_rulesets
+    state: value_present
+    value: "/dev=qmk"
+  become: true
