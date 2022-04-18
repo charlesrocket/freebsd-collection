@@ -31,7 +31,7 @@
 - name: Edit devfs.rules
   ansible.builtin.blockinfile:
     path: /etc/devfs.rules
-    marker: ""
+    marker: "# {mark} VIRTUALBOX BLOCK"
     block: |
       [system=10]
       add path 'usb/*' mode 0660 group operator
