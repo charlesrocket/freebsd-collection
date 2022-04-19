@@ -1,0 +1,12 @@
+---
+- name: Pull Doom emacs
+  ansible.builtin.git:
+    repo: 'https://github.com/hlissner/doom-emacs'
+    dest: ~/.emacs.d
+    version: master
+  register: doom_emacs
+
+- name: Install Doom emacs
+  ansible.builtin.shell:
+    cmd: ~/.emacs.d/bin/doom sync
+  when: doom_emacs is changed
