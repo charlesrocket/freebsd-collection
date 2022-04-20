@@ -28,7 +28,7 @@
     value: "system"
   become: true
 
-- name: Edit devfs.rules
+- name: Add virtualbox ruleset
   ansible.builtin.blockinfile:
     path: /etc/devfs.rules
     marker: "# {mark} VIRTUALBOX BLOCK"
