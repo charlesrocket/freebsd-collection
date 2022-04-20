@@ -33,6 +33,9 @@
     - include_tasks: tasks/asus.yml
       when: configure_asus
 
+    - include_tasks: tasks/emacs.yml
+      when: configure_emacs
+
     - include_tasks: tasks/qmk.yml
       when: configure_qmk
 

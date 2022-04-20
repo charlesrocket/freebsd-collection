@@ -27,6 +27,9 @@ dotfiles_files:
   - .config/waybar/style.css
   - .config/waybar/scripts/net-if.sh
   - .config/waybar/scripts/power.sh
+  - .doom.d/config.el
+  - .doom.d/init.el
+  - .doom.d/packages.el
   - .alacritty.yml
   - .gitconfig
   - .gitignore
@@ -34,6 +37,7 @@ dotfiles_files:
 
 # Configurations
 configure_asus: true
+configure_emacs: true
 configure_qmk: true
 configure_virtualbox: true
 
