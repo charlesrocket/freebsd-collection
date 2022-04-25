@@ -98,7 +98,7 @@ pkgng_packages:
   - grim
   - gzip
   - hashcat
-  - hs-shellcheck
+  - hs-ShellCheck
   - htop
   - httping
   - hwstat
