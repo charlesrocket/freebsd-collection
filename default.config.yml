@@ -127,6 +127,7 @@ pkgng_packages:
   - pwgen
   - qt5-style-plugins
   - qt5ct
+  - racer
   - rbenv
   - ripgrep
   - rkhunter
