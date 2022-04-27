@@ -5,3 +5,5 @@
     dest: ~/.emacs.d
     version: master
   register: doom_emacs
+  notify:
+    - Sync Doom Emacs
