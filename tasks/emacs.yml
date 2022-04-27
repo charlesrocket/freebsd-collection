@@ -5,8 +5,3 @@
     dest: ~/.emacs.d
     version: master
   register: doom_emacs
-
-handlers:
-    - name: Sync Doom Emacs
-      ansible.builtin.command: ~/.emacs.d/bin/doom sync
-      when: doom_emacs is changed
