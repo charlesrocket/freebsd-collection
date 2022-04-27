@@ -43,7 +43,7 @@
   args:
     creates: "/home/{{ ansible_user_id }}/.oh-my-zsh"
 
-- name: Create home dirs
+- name: Create home directories
   ansible.builtin.file:
     path: "{{ item }}"
     owner: "{{ ansible_user_id }}"
