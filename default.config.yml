@@ -114,6 +114,7 @@ pkgng_packages:
   - lynis
   - lynx
   - masscan
+  - material-icons-ttf
   - mc
   - meson
   - mp3blaster
