@@ -92,6 +92,7 @@ pkgng_packages:
   - gmake
   - gnome-icon-theme
   - gnome-icon-theme-extras
+  - gnuls
   - gnupg
   - gobuster
   - grim
