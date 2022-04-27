@@ -6,7 +6,7 @@
     version: master
   register: doom_emacs
 
-- name: Sync Doom Emacs
-  ansible.builtin.shell:
-    cmd: ~/.emacs.d/bin/doom sync
-  when: doom_emacs is changed
+handlers:
+    - name: Sync Doom Emacs
+      ansible.builtin.command: ~/.emacs.d/bin/doom sync
+      when: doom_emacs is changed
