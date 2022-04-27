@@ -4,7 +4,6 @@
     repo: https://github.com/git/git.git
     dest: ~/git/git
     version: master
-  register: git_repo_state
   notify:
     - Build git-credential-netrc
     - Deploy git-credential-netrc

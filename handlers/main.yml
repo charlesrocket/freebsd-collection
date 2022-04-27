@@ -2,13 +2,11 @@
 handlers:
   - name: Sync Doom Emacs
     ansible.builtin.command: ~/.emacs.d/bin/doom sync
-    when: doom_emacs is changed
 
   - name: Build git-credential-netrc
     ansible.builtin.command: gmake
     args:
       chdir: ~/git/git/contrib/credential/netrc/
-    when: git_repo_state.changed
 
   - name: Deploy git-credential-netrc
     ansible.builtin.copy:
@@ -17,4 +15,3 @@ handlers:
       owner: "{{ ansible_user_id }}"
       group: "{{ ansible_user_id }}"
       mode: 0755
-    when: git_repo_state.changed

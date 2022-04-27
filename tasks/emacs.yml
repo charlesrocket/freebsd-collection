@@ -4,6 +4,5 @@
     repo: 'https://github.com/hlissner/doom-emacs'
     dest: ~/.emacs.d
     version: master
-  register: doom_emacs
   notify:
     - Sync Doom Emacs
