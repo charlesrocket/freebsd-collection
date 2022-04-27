@@ -1,0 +1,4 @@
+---
+handlers:
+  - name: Synchronize Doom Emacs
+    ansible.builtin.command: ~/.emacs.d/bin/doom sync
