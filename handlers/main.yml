@@ -1,6 +1,6 @@
 ---
 handlers:
-  - name: Sync Doom Emacs
+  - name: Synchronize Doom Emacs
     ansible.builtin.command: ~/.emacs.d/bin/doom sync
 
   - name: Build git-credential-netrc

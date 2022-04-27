@@ -5,4 +5,4 @@
     dest: ~/.emacs.d
     version: master
   notify:
-    - Sync Doom Emacs
+    - Synchronize Doom Emacs
