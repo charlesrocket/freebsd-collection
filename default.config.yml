@@ -37,7 +37,6 @@ dotfiles_files:
 
 # Configurations
 configure_asus: true
-configure_emacs: true
 configure_qmk: true
 configure_virtualbox: true
 
