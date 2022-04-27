@@ -15,7 +15,7 @@
   become: true
 
 - name: Add QMK ruleset
-  blockinfile:
+  ansible.builtin.blockinfile:
     path: /etc/devfs.rules
     marker: "# {mark} QMK BLOCK"
     block: |
