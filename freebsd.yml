@@ -17,26 +17,11 @@
     - {role: sys, become: true}
     - {role: common}
     - {role: charlesrocket.dotfiles}
-
-  tasks:
-    - include_tasks: tasks/git-netrc.yml
-
-    - include_tasks: tasks/git-ports.yml
-      when: git_ports
-
-    - include_tasks: tasks/git-src.yml
-      when: git_src
-
-    - include_tasks: tasks/git-doc.yml
-      when: git_doc
-
-    - include_tasks: tasks/asus.yml
-      when: configure_asus
-
-    - include_tasks: tasks/emacs.yml
-
-    - include_tasks: tasks/qmk.yml
-      when: configure_qmk
-
-    - include_tasks: tasks/virtualbox.yml
-      when: configure_virtualbox
+    - {role: asus, when: configure_asus}
+    - {role: emacs}
+    - {role: git_netrc}
+    - {role: git_ports, when: git_ports}
+    - {role: git_src, when: git_src}
+    - {role: git_doc, when: git_doc}
+    - {role: qmk, when: configure_qmk}
+    - {role: virtualbox, when: configure_virtualbox}
