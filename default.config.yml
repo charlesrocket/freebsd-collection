@@ -27,6 +27,8 @@ dotfiles_files:
   - .config/waybar/style.css
   - .config/waybar/scripts/net-if.sh
   - .config/waybar/scripts/power.sh
+  - .config/wlogout/layout
+  - .config/wlogout/style.css
   - .doom.d/config.el
   - .doom.d/init.el
   - .doom.d/packages.el
@@ -154,5 +156,6 @@ pkgng_packages:
   - wget
   - whois
   - wireguard
+  - wlogout
   - zmap
   - zsh
