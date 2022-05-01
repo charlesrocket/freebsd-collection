@@ -72,6 +72,7 @@ pkgng_packages:
   - dsbmc-cli
   - dsbmd
   - dunst
+  - editorconfig-core-c
   - emacs
   - fdupes
   - fd-find
