@@ -28,7 +28,6 @@ dotfiles_files:
   - .doom.d/packages.el
   - .alacritty.yml
   - .gitconfig
-  - .gitignore
   - .zshrc
 
 # Configurations
