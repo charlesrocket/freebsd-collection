@@ -123,6 +123,9 @@ pkgng_packages:
   - plex-ttf
   - pv
   - pwgen
+  - py38-isort
+  - py38-nose
+  - py38-pipenv
   - qt5-style-plugins
   - qt5ct
   - racer
