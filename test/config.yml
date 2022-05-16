@@ -1,0 +1,11 @@
+---
+
+configure_asus: true
+configure_qmk: true
+configure_virtualbox: true
+
+upgrade_packages: false
+
+git_ports: false
+git_src: false
+git_doc: false
