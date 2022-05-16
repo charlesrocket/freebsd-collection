@@ -7,9 +7,9 @@ task:
 
   install_script: pkg install -y sudo git py38-ansible
 
-  clone_script:
-    - git clone -b ${CIRRUS_BRANCH} https://github.com/charlesrocket/freebsd-station /tmp/freebsd-station
-    - cp /tmp/freebsd-station/test/config.yml /tmp/freebsd-station/config.yml
+  clone_script: |
+    git clone -b ${CIRRUS_BRANCH} https://github.com/charlesrocket/freebsd-station /tmp/freebsd-station
+    cp /tmp/freebsd-station/test/config.yml /tmp/freebsd-station/config.yml
 
   script: |
     echo "%wheel ALL=(ALL) NOPASSWD: ALL" > /usr/local/etc/sudoers
