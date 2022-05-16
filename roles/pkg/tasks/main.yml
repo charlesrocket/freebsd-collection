@@ -7,3 +7,8 @@
     cached: false
   vars:
     packages: "{{ pkgng_packages }}"
+
+- name: Gather the package facts
+  ansible.builtin.package_facts:
+    manager: auto
+    strategy: all
