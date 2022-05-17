@@ -1,4 +1,27 @@
 ---
+- name: Ensure configuration directory exists
+  ansible.builtin.file:
+    path: /usr/local/etc/pkg/repos
+    state: directory
+    owner: root
+    group: wheel
+    mode: '0755'
+
+- name: Copy configuration file
+  ansible.builtin.copy:
+    src: /etc/pkg/FreeBSD.conf
+    dest: /usr/local/etc/pkg/repos/FreeBSD.conf
+    owner: root
+    group: wheel
+    mode: '0644'
+    force: false
+
+- name: Use latest branch
+  ansible.builtin.replace:
+    path: /usr/local/etc/pkg/repos/FreeBSD.conf
+    regexp: 'quarterly'
+    replace: 'latest'
+
 - name: Ensure packages are installed
   community.general.pkgng:
     state: present
