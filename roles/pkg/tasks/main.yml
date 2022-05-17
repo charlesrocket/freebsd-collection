@@ -21,6 +21,11 @@
     path: /usr/local/etc/pkg/repos/FreeBSD.conf
     regexp: 'quarterly'
     replace: 'latest'
+  notify:
+    - Redownload repository catalogue
+
+- name: Flush handlers
+  meta: flush_handlers
 
 - name: Ensure packages are installed
   community.general.pkgng:
