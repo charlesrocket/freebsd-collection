@@ -14,6 +14,15 @@
   become: true
   when: upgrade_packages
 
+- name: Turn off pulseaudio
+  ansible.builtin.lineinfile:
+    path: /usr/local/etc/pulse/client.conf
+    regexp: '; autospawn = yes'
+    line: 'autospawn = no'
+    state: present
+  become: true
+  when: "'pulseaudio' in ansible_facts.packages"
+
 - name: Copy MOTD
   ansible.builtin.copy:
     src: motd.sh
