@@ -17,11 +17,11 @@
     - {role: sys, become: true}
     - {role: common}
     - {role: charlesrocket.dotfiles}
-    - {role: asus, when: configure_asus}
     - {role: emacs}
     - {role: netrc}
     - {role: git_ports, when: git_ports}
     - {role: git_src, when: git_src}
     - {role: git_doc, when: git_doc}
+    - {role: asus, when: configure_asus}
     - {role: qmk, when: configure_qmk}
     - {role: virtualbox, when: configure_virtualbox}
