@@ -1,5 +1,5 @@
 ---
-- name: Freebsd playbook
+- name: FreeBSD Station
   hosts: all
 
   vars_files:
