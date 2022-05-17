@@ -129,7 +129,6 @@ pkgng_packages:
   - py38-pipenv
   - qt5-style-plugins
   - qt5ct
-  - racer
   - rbenv
   - ripgrep
   - rkhunter
