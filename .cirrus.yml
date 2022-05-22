@@ -6,6 +6,7 @@ task:
     image_family: freebsd-13-0
     cpu: 8
     memory: 32G
+    use_in_memory_disk: true
 
   install_script: pkg install -y sudo git py38-ansible
 
