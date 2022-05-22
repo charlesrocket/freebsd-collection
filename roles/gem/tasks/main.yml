@@ -1,0 +1,9 @@
+---
+
+- name: Install gems
+  community.general.gem:
+    name: "{{ item.name | default(item) }}"
+    state: "{{ item.state | default('present') }}"
+    version: "{{ item.version | default(omit) }}"
+    executable: "{{ item.executable | default(omit) }}"
+  with_items: "{{ gem_packages }}"
