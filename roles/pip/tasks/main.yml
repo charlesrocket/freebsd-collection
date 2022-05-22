@@ -8,6 +8,11 @@
     cached: false
   become: true
 
+- name: Install wheel
+  ansible.builtin.pip:
+    name: wheel
+    state: present
+
 - name: Install pip packages
   ansible.builtin.pip:
     name: "{{ item.name | default(item) }}"
