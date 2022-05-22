@@ -157,3 +157,8 @@ pkgng_packages:
   - wlogout
   - zmap
   - zsh
+
+# Extra packages
+pip: true
+pip_packages:
+  - mu-repo
