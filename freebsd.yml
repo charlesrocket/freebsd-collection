@@ -22,6 +22,7 @@
     - {role: git_ports, when: git_ports}
     - {role: git_src, when: git_src}
     - {role: git_doc, when: git_doc}
+    - {role: pip, when: pip}
     - {role: asus, when: configure_asus}
     - {role: qmk, when: configure_qmk}
     - {role: virtualbox, when: configure_virtualbox}
