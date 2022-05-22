@@ -25,7 +25,7 @@
     - Redownload repository catalogue
 
 - name: Flush handlers
-  meta: flush_handlers
+  ansible.builtin.meta: flush_handlers
 
 - name: Ensure packages are installed
   community.general.pkgng:
