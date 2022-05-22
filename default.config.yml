@@ -165,3 +165,4 @@ pip_packages:
   - mu-repo
 
 gem_packages:
+  - git-lint
