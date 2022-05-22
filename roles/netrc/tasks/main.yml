@@ -4,6 +4,7 @@
     repo: https://github.com/git/git.git
     dest: ~/git/git
     version: master
+    depth: 1
   notify:
     - Build git-credential-netrc
     - Deploy git-credential-netrc
