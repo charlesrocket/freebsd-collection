@@ -6,6 +6,8 @@ configure_virtualbox: true
 
 upgrade_packages: false
 
+pip: true
+
 git_ports: false
 git_src: false
 git_doc: false
