@@ -2,6 +2,7 @@
 # Settings
 locale: "en_US.UTF-8"
 timezone: "America/Los_Angeles"
+github: charlesrocket
 
 # Dotfiles
 dotfiles_repo: "https://github.com/charlesrocket/dotfiles.git"
