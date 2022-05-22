@@ -38,3 +38,4 @@
     repo: https://github.com/charlesrocket/qmk_firmware
     dest: ~/git/qmk_firmware
     version: master
+  changed_when: false
