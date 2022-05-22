@@ -161,4 +161,5 @@ pkgng_packages:
 # Extra packages
 pip: true
 pip_packages:
+  - arjun
   - mu-repo
