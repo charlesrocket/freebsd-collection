@@ -163,3 +163,6 @@ pip: true
 pip_packages:
   - arjun
   - mu-repo
+
+gem_packages:
+  - git-lint
