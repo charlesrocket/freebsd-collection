@@ -40,6 +40,15 @@
     state: present
   become: true
 
+- name: Configure make
+  ansible.builtin.template:
+    src: make.conf.j2
+    dest: /etc/make.conf
+    owner: root
+    group: wheel
+    mode: 0644
+  become: true
+
 - name: Edit sh prompt
   ansible.builtin.lineinfile:
     dest: /home/{{ ansible_user_id }}/.shrc
