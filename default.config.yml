@@ -39,6 +39,7 @@ configure_qmk: true
 configure_virtualbox: true
 
 make_config:
+  - "DEVELOPER=yes"
 
 # Keep packages up to date
 upgrade_packages: false
