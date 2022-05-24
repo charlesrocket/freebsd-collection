@@ -20,10 +20,3 @@
     state: present
     value: "YES"
   become: true
-
-- name: Add USB permissions
-  community.general.sysrc:
-    name: devfs_system_ruleset
-    state: present
-    value: "system"
-  become: true
