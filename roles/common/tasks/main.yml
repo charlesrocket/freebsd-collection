@@ -49,12 +49,6 @@
     mode: 0644
   become: true
 
-- name: Edit sh prompt
-  ansible.builtin.lineinfile:
-    dest: /home/{{ ansible_user_id }}/.shrc
-    line: 'export PS1="\u@\H x: "'
-    state: present
-
 - name: Install ohmyzsh
   ansible.builtin.shell:
     cmd: sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
