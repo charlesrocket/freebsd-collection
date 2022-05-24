@@ -26,4 +26,4 @@
     - {role: gem}
     - {role: asus, when: configure_asus}
     - {role: qmk, when: configure_qmk}
-    - {role: virtualbox, when: configure_virtualbox}
+    - {role: virtualbox, when: configure_virtualbox, become: true}

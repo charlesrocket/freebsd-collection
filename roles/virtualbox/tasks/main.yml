@@ -4,7 +4,6 @@
     name: "{{ ansible_user_id }}"
     groups: vboxusers
     append: true
-  become: true
 
 - name: Enable virtualbox driver
   community.general.sysrc:
@@ -12,11 +11,9 @@
     value: "YES"
     state: present
     path: /boot/loader.conf
-  become: true
 
 - name: Enable vboxnet driver
   community.general.sysrc:
     name: vboxnet_enable
     state: present
     value: "YES"
-  become: true
