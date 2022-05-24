@@ -1,8 +1,8 @@
 ---
-- name: Add user groups
+- name: Add vboxusers group
   ansible.builtin.user:
     name: "{{ ansible_user_id }}"
-    groups: vboxusers,operator
+    groups: vboxusers
     append: true
   become: true
 
