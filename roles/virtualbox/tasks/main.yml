@@ -27,15 +27,3 @@
     state: present
     value: "system"
   become: true
-
-- name: Add virtualbox ruleset
-  ansible.builtin.blockinfile:
-    path: /etc/devfs.rules
-    marker: "# {mark} VIRTUALBOX BLOCK"
-    block: |
-      [system=10]
-      add path 'usb/*' mode 0660 group operator
-    mode: 0644
-    owner: root
-    create: true
-  become: true
