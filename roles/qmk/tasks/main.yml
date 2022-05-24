@@ -14,25 +14,6 @@
     cached: false
   become: true
 
-- name: Add QMK ruleset
-  ansible.builtin.blockinfile:
-    path: /etc/devfs.rules
-    marker: "# {mark} QMK BLOCK"
-    block: |
-      [qmk=20]
-      add path 'ttyU*' mode 0660 group operator
-    mode: 0644
-    owner: root
-    create: true
-  become: true
-
-- name: Enable QMK ruleset
-  community.general.sysrc:
-    name: devfs_set_rulesets
-    state: value_present
-    value: "/dev=qmk"
-  become: true
-
 - name: Clone QMK firmware
   ansible.builtin.git:
     repo: "https://github.com/{{ github }}/qmk_firmware"
