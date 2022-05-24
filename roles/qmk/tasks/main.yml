@@ -7,13 +7,6 @@
     cached: false
   become: true
 
-- name: Ensure python3 is installed
-  community.general.pkgng:
-    state: present
-    name: python3
-    cached: false
-  become: true
-
 - name: Clone QMK firmware
   ansible.builtin.git:
     repo: "https://github.com/{{ github }}/qmk_firmware"
