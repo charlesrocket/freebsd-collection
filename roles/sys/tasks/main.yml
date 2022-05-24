@@ -229,6 +229,7 @@
       add path 'usb/*'     mode 0660 group operator
       add path 'video*'    mode 0660 group operator
       add path 'cuse*'     mode 0660 group operator
+      add path 'ttyU*'     mode 0660 group operator
       add path 'lpt*'      mode 0660 group cups
       add path 'ulpt*'     mode 0660 group cups
       add path 'unlpt*'    mode 0660 group cups
