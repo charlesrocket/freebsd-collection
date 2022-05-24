@@ -205,6 +205,12 @@
     state: present
     value: "NO"
 
+- name: Enable desktop ruleset
+  community.general.sysrc:
+    name: devfs_system_ruleset
+    state: present
+    value: "desktop"
+
 - name: Configure devices
   ansible.builtin.blockinfile:
     path: /etc/devfs.rules
