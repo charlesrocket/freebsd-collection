@@ -67,7 +67,6 @@ pkgng_packages:
   - cmake
   - crystal
   - curl
-  - cursor-dmz-theme
   - cxxmatrix
   - devcpu-data
   - diffutils
