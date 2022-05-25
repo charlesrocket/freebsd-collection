@@ -16,3 +16,6 @@ task:
     pw useradd chuck -m -G wheel
     chown -R chuck:chuck /tmp/freebsd-station
     su -l chuck -c 'cd /tmp/freebsd-station && test/idempotence_test.sh'
+
+  test_script: |
+    lynis audit system --profile /usr/local/etc/lynis/desktop.prf

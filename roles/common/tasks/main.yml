@@ -49,6 +49,14 @@
     mode: 0644
   become: true
 
+- name: Copy Lynis profile
+  ansible.builtin.copy:
+    src: desktop.prf
+    dest: /usr/local/etc/lynis/desktop.prf
+    owner: root
+    mode: 0644
+  become: true
+
 - name: Install ohmyzsh
   ansible.builtin.shell:
     cmd: sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
