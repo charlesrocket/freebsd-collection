@@ -64,6 +64,7 @@ pkgng_packages:
   - chkrootkit
   - clamav
   - claws-mail
+  - claws-mail-pgp
   - cmake
   - crystal
   - curl
