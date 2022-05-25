@@ -34,7 +34,7 @@ dotfiles_files:
   - .shrc
   - .zshrc
 
-# Configurations
+# Configuration
 configure_asus: true
 configure_qmk: true
 configure_virtualbox: true
