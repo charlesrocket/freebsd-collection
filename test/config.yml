@@ -1,8 +1,8 @@
 ---
 
-configure_asus: true
-configure_qmk: true
-configure_virtualbox: true
+asus: true
+qmk: true
+virtualbox: true
 
 upgrade_packages: false
 
