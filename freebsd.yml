@@ -42,11 +42,11 @@
     - role: gem
 
     - role: asus
-      when: configure_asus
+      when: asus
 
     - role: qmk
-      when: configure_qmk
+      when: qmk
 
     - role: virtualbox
-      when: configure_virtualbox
+      when: virtualbox
       become: true

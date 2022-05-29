@@ -35,9 +35,9 @@ dotfiles_files:
   - .zshrc
 
 # Configuration
-configure_asus: true
-configure_qmk: true
-configure_virtualbox: true
+asus: true
+qmk: true
+virtualbox: true
 
 make_config:
   - "DEVELOPER=yes"
