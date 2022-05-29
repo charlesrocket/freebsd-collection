@@ -92,6 +92,7 @@ pkgng_packages:
   - gcc
   - gedit
   - git
+  - gitg
   - glslang
   - gmake
   - gnome-icon-theme
