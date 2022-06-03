@@ -159,7 +159,6 @@ pkgng_packages:
   - whois
   - wireguard
   - wlogout
-  - xmodmap
   - zmap
   - zsh
 
