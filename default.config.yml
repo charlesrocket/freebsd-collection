@@ -132,6 +132,7 @@ pkgng_packages:
   - py38-isort
   - py38-nose
   - py38-pipenv
+  - python3
   - qt5-style-plugins
   - qt5ct
   - rbenv
