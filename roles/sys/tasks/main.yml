@@ -5,6 +5,10 @@
     regexp: '(?:^|\W)secure(?:$|\W)'
     replace: ' insecure'
 
+- name: Set timezone
+  community.general.timezone:
+    name: "{{ timezone }}"
+
 - name: Suspend on lid close
   ansible.posix.sysctl:
     name: hw.acpi.lid_switch_state
