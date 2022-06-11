@@ -163,10 +163,5 @@ pkgng_packages:
   - zsh
 
 # Extra packages
-pip: true
-pip_packages:
-  - arjun
-  - mu-repo
-
 gem_packages:
   - git-lint
