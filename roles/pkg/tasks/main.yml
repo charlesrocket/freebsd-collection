@@ -23,6 +23,7 @@
     replace: 'latest'
   notify:
     - Redownload repository catalogue
+    - Upgrade packages
 
 - name: Flush handlers
   ansible.builtin.meta: flush_handlers
