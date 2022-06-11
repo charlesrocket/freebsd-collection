@@ -36,8 +36,6 @@
     - role: git_doc
       when: git_doc
 
-    - role: gem
-
     - role: asus
       when: asus
 
