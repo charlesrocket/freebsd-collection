@@ -154,6 +154,7 @@ pkgng_packages:
   - unzip
   - vagrant
   - virtualbox-ose
+  - vlc
   - waybar
   - wget
   - whois
