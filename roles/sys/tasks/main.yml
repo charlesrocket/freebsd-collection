@@ -57,6 +57,13 @@
     value: "NONE"
     state: present
 
+- name: Enable vt
+  community.general.sysrc:
+    name: kern.vty
+    state: present
+    value: "vt"
+    path: /boot/loader.conf
+
 - name: Set autoboot delay
   community.general.sysrc:
     name: autoboot_delay
