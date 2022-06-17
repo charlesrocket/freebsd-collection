@@ -113,12 +113,6 @@
     value: "YES"
     path: /boot/loader.conf
 
-- name: Enable UHD driver
-  community.general.sysrc:
-    name: kld_list
-    value: "i915kms"
-    state: value_present
-
 - name: Enable ACPI video driver
   community.general.sysrc:
     name: kld_list

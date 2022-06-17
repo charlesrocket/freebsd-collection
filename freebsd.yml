@@ -39,6 +39,9 @@
     - role: asus
       when: asus
 
+    - role: intel
+      when: intel
+
     - role: qmk
       when: qmk
 
