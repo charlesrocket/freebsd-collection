@@ -1,5 +1,5 @@
 ---
-- name: Enable Intel drivers
+- name: Enable Intel driver
   community.general.sysrc:
     name: kld_list
     value: "i915kms"
