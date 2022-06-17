@@ -1,6 +1,8 @@
 ---
 
 asus: true
+ati: true
+intel: true
 qmk: true
 virtualbox: true
 
