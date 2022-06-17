@@ -126,6 +126,7 @@ pkgng_packages:
   - ninja
   - nmap
 # - openssl
+  - pcsc-tools
   - plex-ttf
   - pv
   - pwgen
