@@ -1,0 +1,7 @@
+---
+- name: Enable ATI driver
+  community.general.sysrc:
+    name: kld_list
+    value: "radeonkms"
+    state: value_present
+  become: true
