@@ -2,9 +2,11 @@ task:
   name: Playbook test
   timeout_in: 120m
 
-  freebsd_instance:
-    image_family: freebsd-13-1
-    disk: 40
+  compute_engine_instance:
+    image_project: freebsd-org-cloud-dev
+    image: family/freebsd-13-1
+    platform: freebsd
+    disk: 100
 
   install_script: pkg install -y sudo git py38-ansible
 
