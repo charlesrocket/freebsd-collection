@@ -8,7 +8,7 @@ task:
     platform: freebsd
     disk: 100
 
-  install_script: pkg install -y sudo git py38-ansible
+  install_script: pkg install -y sudo git py39-ansible
 
   clone_script: |
     git clone -b ${CIRRUS_BRANCH} https://github.com/charlesrocket/freebsd-station /tmp/freebsd-station
