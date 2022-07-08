@@ -60,7 +60,7 @@ pkgng_packages:
   - arduino-core
   - base64
   - bash
-# - btop
+  - btop
   - bzip2
   - caja
   - chkrootkit
