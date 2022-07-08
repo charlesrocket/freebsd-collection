@@ -2,6 +2,6 @@
 - name: Enable AMD driver
   community.general.sysrc:
     name: kld_list
-    value: "radeonkms"
+    value: "amdgpu"
     state: value_present
   become: true
