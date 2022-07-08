@@ -1,5 +1,5 @@
 ---
-- name: Enable ATI driver
+- name: Enable AMD driver
   community.general.sysrc:
     name: kld_list
     value: "radeonkms"
