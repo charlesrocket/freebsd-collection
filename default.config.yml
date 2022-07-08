@@ -35,7 +35,7 @@ dotfiles_files:
 
 # Configuration
 asus: true
-ati: false
+amd: false
 intel: true
 qmk: true
 virtualbox: true

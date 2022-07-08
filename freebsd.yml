@@ -39,8 +39,8 @@
     - role: asus
       when: asus
 
-    - role: ati
-      when: ati
+    - role: amd
+      when: amd
 
     - role: intel
       when: intel
