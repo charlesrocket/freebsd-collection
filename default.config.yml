@@ -134,7 +134,6 @@ pkgng_packages:
   - plex-ttf
   - pv
   - pwgen
-# - py39-ansible-lint
   - py39-isort
   - py39-nose
   - py39-pipenv
