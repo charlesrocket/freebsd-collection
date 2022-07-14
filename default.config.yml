@@ -154,6 +154,7 @@ pkgng_packages:
   - tig
   - tmux
   - transmission
+  - tree
   - uarduno
   - unibilium
   - unzip
