@@ -132,6 +132,7 @@ pkgng_packages:
 # - openssl
   - pcsc-tools
   - plex-ttf
+  - portlint
   - pv
   - pwgen
   - py39-isort
