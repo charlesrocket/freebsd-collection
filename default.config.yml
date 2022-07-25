@@ -132,6 +132,7 @@ pkgng_packages:
 # - openssl
   - pcsc-tools
   - plex-ttf
+  - portfmt
   - portlint
   - pv
   - pwgen
