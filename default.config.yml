@@ -44,7 +44,7 @@ make_config:
   - "DEVELOPER=yes"
 
 # Keep packages up to date
-upgrade_packages: false
+upgrade_packages: true
 
 # Manage src/ports/doc with git
 git_ports: false
