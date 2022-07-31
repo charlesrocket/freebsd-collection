@@ -102,6 +102,7 @@ pkgng_packages:
   - gnome-icon-theme-extras
   - gnuls
   - gnupg
+  - gnuplot
   - gobuster
   - grim
   - gzip
