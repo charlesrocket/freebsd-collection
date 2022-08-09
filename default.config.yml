@@ -148,6 +148,7 @@ pkgng_packages:
   - rkhunter
   - rust
   - scdoc
+  - screen
   - seatd
   - shards
   - sudo
