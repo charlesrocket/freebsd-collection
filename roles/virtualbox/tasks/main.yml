@@ -1,4 +1,11 @@
 ---
+- name: Ensure VirtualBox is installed
+  community.general.pkgng:
+    state: present
+    name: virtualbox-ose
+    autoremove: true
+    cached: false
+
 - name: Add vboxusers group
   ansible.builtin.user:
     name: "{{ ansible_user_id }}"

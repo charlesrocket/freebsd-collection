@@ -163,7 +163,6 @@ pkgng_packages:
   - unibilium
   - unzip
   - vagrant
-  - virtualbox-ose
   - vlc
   - waybar
   - wget
