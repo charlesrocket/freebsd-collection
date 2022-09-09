@@ -147,6 +147,7 @@ pkgng_packages:
   - ripgrep
   - rkhunter
   - rust
+  - rust-analyzer
   - scdoc
   - screen
   - seatd
