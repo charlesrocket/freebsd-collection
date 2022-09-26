@@ -104,6 +104,7 @@ pkgng_packages:
   - gnupg
   - gnuplot
   - gobuster
+  - gomuks
   - grim
   - gzip
   - hashcat
