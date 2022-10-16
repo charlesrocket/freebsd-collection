@@ -21,11 +21,11 @@
 
     - role: common
 
+    - role: charlesrocket.git
+
     - role: charlesrocket.dotfiles
 
     - role: emacs
-
-    - role: netrc
 
     - role: git_ports
       when: git_ports

@@ -33,6 +33,11 @@ dotfiles_files:
   - .shrc
   - .zshrc
 
+# Git
+git_repo_destination: "~/git/git"
+git_helper_directory: "~/bin"
+git_netrc_helper: true
+
 # Configuration
 asus: true
 amd: false

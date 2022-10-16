@@ -4,3 +4,4 @@ collections:
 
 roles:
   - name: charlesrocket.dotfiles
+  - name: charlesrocket.git
