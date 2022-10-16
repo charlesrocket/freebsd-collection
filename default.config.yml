@@ -100,7 +100,6 @@ pkgng_packages:
   - gcc
   - gedit
   - gimp
-  - git
   - gitg
   - glslang
   - gmake
