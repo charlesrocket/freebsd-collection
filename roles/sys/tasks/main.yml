@@ -15,6 +15,12 @@
     state: present
     value: 'S3'
 
+- name: Hide GIDs
+  ansible.posix.sysctl:
+    name: security.bsd.see_other_gids
+    state: present
+    value: '0'
+
 - name: Hide UIDs
   ansible.posix.sysctl:
     name: security.bsd.see_other_uids
