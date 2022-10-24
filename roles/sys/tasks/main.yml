@@ -21,6 +21,12 @@
     state: present
     value: '0'
 
+- name: Restrict message buffer
+  ansible.posix.sysctl:
+    name: security.bsd.unprivileged_read_msgbuf
+    state: present
+    value: '0'
+
 - name: Hide GIDs
   ansible.posix.sysctl:
     name: security.bsd.see_other_gids
