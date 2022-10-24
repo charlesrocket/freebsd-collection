@@ -15,6 +15,12 @@
     state: present
     value: 'S3'
 
+- name: Restrict debugging
+  ansible.posix.sysctl:
+    name: security.bsd.unprivileged_proc_debug
+    state: present
+    value: '0'
+
 - name: Hide GIDs
   ansible.posix.sysctl:
     name: security.bsd.see_other_gids
