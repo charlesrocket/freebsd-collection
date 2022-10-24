@@ -143,6 +143,12 @@
     value: "YES"
     state: present
 
+- name: Enable hald
+  community.general.sysrc:
+    name: hald_enable
+    value: "YES"
+    state: present
+
 - name: Enable seatd
   community.general.sysrc:
     name: seatd_enable
