@@ -96,6 +96,13 @@
     value: "orbbw"
     path: /boot/loader.conf
 
+- name: Enable AIO
+  community.general.sysrc:
+    name: aio_load
+    state: present
+    value: "YES"
+    path: /boot/loader.conf
+
 - name: Enable coretemp
   community.general.sysrc:
     name: coretemp_load
