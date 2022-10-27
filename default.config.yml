@@ -80,7 +80,6 @@ pkgng_packages:
   - devcpu-data
   - diffutils
   - direnv
-  - dmenu
   - dmenu-wayland
   - drm-kmod
   - droid-fonts-ttf
