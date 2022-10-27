@@ -14,6 +14,7 @@ dotfiles_files:
   - .config/Kvantum/kvantum.kvconfig
   - .config/dunst/dunstrc
   - .config/gtk-3.0/settings.ini
+  - .config/kickoff/config.toml
   - .config/mc/ini
   - .config/qmk/qmk.ini
   - .config/qt5ct/qt5ct.conf
@@ -80,7 +81,6 @@ pkgng_packages:
   - devcpu-data
   - diffutils
   - direnv
-  - dmenu-wayland
   - drm-kmod
   - droid-fonts-ttf
   - dsbmc-cli
@@ -120,6 +120,7 @@ pkgng_packages:
   - imv
   - jq
   - Kvantum-qt5
+  - kickoff
   - less
   - llvm
   - lolcat
