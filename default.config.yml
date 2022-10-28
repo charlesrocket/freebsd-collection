@@ -119,8 +119,8 @@ pkgng_packages:
   - iftop
   - imv
   - jq
-  - Kvantum-qt5
   - kickoff
+  - Kvantum-qt5
   - less
   - llvm
   - lolcat
@@ -136,7 +136,6 @@ pkgng_packages:
   - nikto
   - ninja
   - nmap
-# - openssl
   - pcsc-tools
   - plex-ttf
   - portfmt
