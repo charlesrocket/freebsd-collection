@@ -14,11 +14,11 @@ dotfiles_files:
   - .config/Kvantum/kvantum.kvconfig
   - .config/dunst/dunstrc
   - .config/gtk-3.0/settings.ini
-  - .config/kickoff/config.toml
   - .config/mc/ini
   - .config/qmk/qmk.ini
   - .config/qt5ct/qt5ct.conf
   - .config/sway/config
+  - .config/tofi/config
   - .config/transmission/settings.json
   - .config/waybar/config
   - .config/waybar/style.css
@@ -119,7 +119,6 @@ pkgng_packages:
   - iftop
   - imv
   - jq
-  - kickoff
   - Kvantum-qt5
   - less
   - llvm
@@ -163,6 +162,7 @@ pkgng_packages:
   - swaylock
   - tig
   - tmux
+  - tofi
   - transmission
   - tree
   - uarduno
