@@ -1,0 +1,43 @@
+---
+- name: Add pf rules
+  ansible.builtin.copy:
+    src: pf.conf
+    dest: /etc/pf.conf
+    owner: root
+    mode: 0640
+
+- name: Enable pf
+  community.general.sysrc:
+    name: pf_enable
+    value: "YES"
+    state: present
+
+- name: Set flags
+  community.general.sysrc:
+    name: pf_flags
+    value: ""
+    state: present
+
+- name: Set rules
+  community.general.sysrc:
+    name: pf_rules
+    value: "/etc/pf.conf"
+    state: present
+
+- name: Enable logging
+  community.general.sysrc:
+    name: pflog_enable
+    value: "YES"
+    state: present
+
+- name: Set log file
+  community.general.sysrc:
+    name: pflog_logfile
+    value: "/var/log/pflog"
+    state: present
+
+- name: Set log flags
+  community.general.sysrc:
+    name: pflog_flags
+    value: ""
+    state: present
