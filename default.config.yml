@@ -68,6 +68,7 @@ pkgng_packages:
   - arduino-core
   - base64
   - bash
+  - brut
   - btop
   - bzip2
   - caja
