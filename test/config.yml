@@ -2,6 +2,7 @@
 
 asus: true
 amd: true
+doomemacs: true
 intel: true
 qmk: true
 virtualbox: true

@@ -43,6 +43,7 @@ git_netrc_helper: true
 # Configuration
 asus: true
 amd: false
+doomemacs: true
 intel: true
 qmk: true
 virtualbox: true

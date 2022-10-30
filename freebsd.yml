@@ -45,6 +45,9 @@
     - role: amd
       when: amd
 
+    - role: emacs
+      when: doomemacs
+
     - role: intel
       when: intel
 
