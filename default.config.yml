@@ -49,6 +49,7 @@ virtualbox: true
 
 make_config:
   - "DEVELOPER=yes"
+  - "MAKE_JOBS_NUMBER?=16"
 
 # Keep packages up to date
 upgrade_packages: true
