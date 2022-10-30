@@ -56,6 +56,9 @@
     name: microcode_update_enable
     value: "YES"
     state: present
+  notify:
+    - Update CPU firmware
+  when: microcode_update
 
 - name: Enable ntpd
   community.general.sysrc:

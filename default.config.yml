@@ -45,6 +45,7 @@ asus: true
 amd: false
 doomemacs: true
 intel: true
+microcode_update: true
 qmk: true
 virtualbox: true
 
