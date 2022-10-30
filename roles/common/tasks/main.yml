@@ -3,7 +3,7 @@
   ansible.builtin.user:
     name: "{{ ansible_user_id }}"
     shell: /usr/local/bin/zsh
-    groups: cups,dialer,operator,video
+    groups: cups,dialer,network,operator,realtime,video,wheel
     append: true
   become: true
 
