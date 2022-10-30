@@ -90,7 +90,6 @@ pkgng_packages:
   - dsbmd
   - dunst
   - editorconfig-core-c
-  - emacs
   - fdupes
   - fd-find
   - ffuf

@@ -1,4 +1,12 @@
 ---
+- name: Ensure Emacs is installed
+  community.general.pkgng:
+    state: present
+    name: emacs
+    autoremove: true
+    cached: false
+  become: true
+
 - name: Clone Doom Emacs
   ansible.builtin.git:
     repo: 'https://github.com/hlissner/doom-emacs'
