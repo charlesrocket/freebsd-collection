@@ -15,6 +15,12 @@
     state: present
     value: 'S3'
 
+- name: Randomize PID
+  ansible.posix.sysctl:
+    name: kern.randompid
+    state: present
+    value: '1'
+
 - name: Restrict debugging
   ansible.posix.sysctl:
     name: security.bsd.unprivileged_proc_debug
