@@ -34,6 +34,12 @@
     state: present
     value: '0'
 
+- name: Hide processes running in jails
+  ansible.posix.sysctl:
+    name: security.bsd.see_jail_proc
+    state: present
+    value: '0'
+
 - name: Hide GIDs
   ansible.posix.sysctl:
     name: security.bsd.see_other_gids
