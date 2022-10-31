@@ -20,6 +20,7 @@
     name: kern.randompid
     state: present
     value: '1'
+    reload: false
 
 - name: Restrict debugging
   ansible.posix.sysctl:
