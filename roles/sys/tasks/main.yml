@@ -22,6 +22,12 @@
     value: '1'
     reload: false
 
+- name: Disable coredump
+  ansible.posix.sysctl:
+    name: kern.coredump
+    state: present
+    value: '0'
+
 - name: Restrict debugging
   ansible.posix.sysctl:
     name: security.bsd.unprivileged_proc_debug
