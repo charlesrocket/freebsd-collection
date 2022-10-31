@@ -79,10 +79,28 @@
     value: "-g"
     state: present
 
-- name: Disable sendmail
+- name: Disable sendmail | incoming
   community.general.sysrc:
     name: sendmail_enable
-    value: "NONE"
+    value: "NO"
+    state: present
+
+- name: Disable sendmail | submit
+  community.general.sysrc:
+    name: sendmail_submit_enable
+    value: "NO"
+    state: present
+
+- name: Disable sendmail | outbound
+  community.general.sysrc:
+    name: sendmail_outbound_enable
+    value: "NO"
+    state: present
+
+- name: Disable sendmail | msp_queue
+  community.general.sysrc:
+    name: sendmail_msp_queue_enable
+    value: "NO"
     state: present
 
 - name: Set autoboot delay
