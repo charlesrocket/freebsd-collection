@@ -173,7 +173,7 @@ pkgng_packages:
   - unzip
   - vagrant
   - vlc
-  - waybar
+  - waybar-nopulse
   - wdisplays
   - wget
   - whois
