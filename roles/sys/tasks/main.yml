@@ -91,6 +91,12 @@
     value: "-g"
     state: present
 
+- name: Enable sndiod
+  community.general.sysrc:
+    name: sndiod_enable
+    value: "YES"
+    state: present
+
 - name: Disable sendmail | incoming
   community.general.sysrc:
     name: sendmail_enable

@@ -113,6 +113,7 @@ pkgng_packages:
   - gobuster
   - gomuks
   - grim
+  - gtk-mixer
   - gzip
   - hashcat
   - hs-ShellCheck
@@ -159,6 +160,7 @@ pkgng_packages:
   - screen
   - seatd
   - shards
+  - sndio
   - sudo
   - sway
   - swayidle
