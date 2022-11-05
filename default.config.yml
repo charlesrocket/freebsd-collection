@@ -1,8 +1,4 @@
 ---
-# Settings
-timezone: "America/Los_Angeles"
-github: charlesrocket
-
 # Dotfiles
 dotfiles_repo: "https://github.com/charlesrocket/dotfiles.git"
 dotfiles_repo_version: master
@@ -48,6 +44,9 @@ intel: true
 microcode_update: true
 qmk: true
 virtualbox: true
+
+timezone: "America/Los_Angeles"
+github: charlesrocket
 
 make_config:
   - "DEVELOPER=yes"
