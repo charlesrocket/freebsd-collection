@@ -9,3 +9,6 @@
 
 - name: Audit packages
   ansible.builtin.command: pkg audit -F
+  register: audit
+  failed_when:
+    - '"cannot fetch vulnxml" not in audit.stdout'
