@@ -14,7 +14,7 @@
   become: true
   when: upgrade_packages
   notify:
-    - pkg cleanup
+    - Cleanup
 
 - name: Copy MOTD
   ansible.builtin.copy:
