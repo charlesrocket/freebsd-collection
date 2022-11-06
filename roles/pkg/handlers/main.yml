@@ -11,4 +11,4 @@
   ansible.builtin.command: pkg audit -F
   register: audit
   failed_when:
-    - '"cannot fetch vulnxml" not in audit.stdout'
+    - '"cannot fetch vulnxml" in audit.stdout'
