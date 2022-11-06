@@ -1,0 +1,4 @@
+---
+- name: pkg cleanup
+  ansible.builtin.command: pkg clean -y && pkg autoremove -y
+  become: true

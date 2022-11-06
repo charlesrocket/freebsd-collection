@@ -13,6 +13,8 @@
     state: latest
   become: true
   when: upgrade_packages
+  notify:
+    - pkg cleanup
 
 - name: Copy MOTD
   ansible.builtin.copy:
