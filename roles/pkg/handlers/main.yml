@@ -2,6 +2,9 @@
 - name: Redownload repository catalogue
   ansible.builtin.command: pkg update -f
 
+- name: Audit packages
+  ansible.builtin.command: pkg audit -F
+
 - name: Upgrade packages
   community.general.pkgng:
     name: "*"

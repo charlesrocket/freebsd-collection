@@ -24,6 +24,7 @@
   notify:
     - Redownload repository catalogue
     - Upgrade packages
+    - Audit packages
 
 - name: Flush handlers
   ansible.builtin.meta: flush_handlers
