@@ -1,4 +1,5 @@
 ---
 - name: Cleanup
   ansible.builtin.command: pkg clean -y && pkg autoremove -y
+  changed_when: false
   become: true
