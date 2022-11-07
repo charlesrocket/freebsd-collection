@@ -90,6 +90,7 @@ pkgng_packages:
   - dsbmd
   - dunst
   - editorconfig-core-c
+  - exfat-utils
   - fdupes
   - fd-find
   - ffuf
@@ -97,6 +98,12 @@ pkgng_packages:
   - filezilla
   - firefox-esr
   - font-awesome
+  - fusefs-exfat
+  - fusefs-ext2
+  - fusefs-hfsfuse
+  - fusefs-lkl
+  - fusefs-ntfs
+  - fusefs-simple-mtpfs
   - fzf
   - gawk
   - gcc
