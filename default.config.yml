@@ -94,6 +94,7 @@ pkgng_packages:
   - fd-find
   - ffuf
   - figlet
+  - filezilla
   - firefox-esr
   - font-awesome
   - fzf
