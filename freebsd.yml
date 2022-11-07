@@ -28,8 +28,6 @@
 
     - role: charlesrocket.dotfiles
 
-    - role: emacs
-
     - role: git_ports
       when: git_ports
 
