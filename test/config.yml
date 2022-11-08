@@ -2,10 +2,10 @@
 
 asus: true
 amd: true
-doomemacs: true
+doomemacs: false
 intel: true
 microcode_update: true
-qmk: true
+qmk: false
 virtualbox: true
 
 upgrade_packages: false
