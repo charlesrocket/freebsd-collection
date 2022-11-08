@@ -91,7 +91,6 @@ pkgng_packages:
   - dunst
   - editorconfig-core-c
   - exfat-utils
-  - fdupes
   - fd-find
   - ffuf
   - figlet
