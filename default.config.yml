@@ -122,6 +122,7 @@ pkgng_packages:
   - gtk-mixer
   - gzip
   - hashcat
+  - hs-darcs
   - hs-ShellCheck
   - htop
   - httping
@@ -146,6 +147,7 @@ pkgng_packages:
   - ninja
   - nmap
   - pcsc-tools
+  - pijul
   - plex-ttf
   - portfmt
   - portlint
