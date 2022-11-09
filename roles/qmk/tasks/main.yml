@@ -12,5 +12,4 @@
     repo: "https://github.com/{{ github }}/qmk_firmware"
     dest: ~/git/qmk_firmware
     version: master
-    depth: 1
   changed_when: false
