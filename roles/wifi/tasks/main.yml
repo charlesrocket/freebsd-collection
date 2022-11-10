@@ -5,7 +5,6 @@
     name: wpa_supplicant
     autoremove: true
     cached: false
-  become: true
 
 - name: Enable Atheros driver
   community.general.sysrc:
