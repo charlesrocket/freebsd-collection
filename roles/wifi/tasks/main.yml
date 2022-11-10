@@ -14,6 +14,14 @@
     value: "YES"
     path: /boot/loader.conf
 
+- name: Enable iwm driver
+  community.general.sysrc:
+    name: if_iwn_load
+    state: present
+    value: "YES"
+    path: /boot/loader.conf
+  when: intel
+
 - name: Enable WEP
   community.general.sysrc:
     name: wlan_wep_load
