@@ -90,6 +90,7 @@ pkgng_packages:
   - dsbmd
   - dunst
   - editorconfig-core-c
+  - en-aspell
   - exfat-utils
   - fd-find
   - ffuf
