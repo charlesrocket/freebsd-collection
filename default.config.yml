@@ -44,6 +44,7 @@ intel: true
 microcode_update: true
 qmk: true
 virtualbox: true
+wifi: false
 
 timezone: "America/Los_Angeles"
 github: charlesrocket

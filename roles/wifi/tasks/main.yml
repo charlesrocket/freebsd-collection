@@ -1,0 +1,28 @@
+---
+- name: Enable Atheros
+  community.general.sysrc:
+    name: if_ath_load
+    state: present
+    value: "YES"
+    path: /boot/loader.conf
+
+- name: Enable WEP
+  community.general.sysrc:
+    name: wlan_wep_load
+    state: present
+    value: "YES"
+    path: /boot/loader.conf
+
+- name: Enable CCMP
+  community.general.sysrc:
+    name: wlan_ccmp_load
+    state: present
+    value: "YES"
+    path: /boot/loader.conf
+
+- name: Enable TKIP
+  community.general.sysrc:
+    name: wlan_tkip_load
+    state: present
+    value: "YES"
+    path: /boot/loader.conf
