@@ -1,4 +1,12 @@
 ---
+- name: Ensure wpa_supplicant is installed
+  community.general.pkgng:
+    state: present
+    name: wpa_supplicant
+    autoremove: true
+    cached: false
+  become: true
+
 - name: Enable Atheros
   community.general.sysrc:
     name: if_ath_load
