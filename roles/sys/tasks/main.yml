@@ -85,10 +85,16 @@
     value: "YES"
     state: present
 
-- name: Tune ntpd
+- name: Sync ntpd on start
   community.general.sysrc:
-    name: ntpd_flags
-    value: "-g"
+    name: ntpd_sync_on_start
+    value: "YES"
+    state: present
+
+- name: Enable ntpd OOM protection
+  community.general.sysrc:
+    name: ntpd_oomprotect
+    value: "YES"
     state: present
 
 - name: Enable sndiod
