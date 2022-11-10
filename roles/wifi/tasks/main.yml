@@ -7,7 +7,7 @@
     cached: false
   become: true
 
-- name: Enable Atheros
+- name: Enable Atheros driver
   community.general.sysrc:
     name: if_ath_load
     state: present
