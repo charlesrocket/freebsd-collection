@@ -92,6 +92,7 @@ pkgng_packages:
   - dunst
   - editorconfig-core-c
   - en-aspell
+  - epdfview
   - exfat-utils
   - fd-find
   - ffuf
