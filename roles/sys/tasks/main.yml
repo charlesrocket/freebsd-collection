@@ -256,12 +256,6 @@
     value: "-ss"
     state: present
 
-- name: Enable WiFi power saving
-  community.general.sysrc:
-    name: ifconfig_wlan0
-    value: "WPA DHCP powersave"
-    state: present
-
 - name: Tune C-states - performance
   community.general.sysrc:
     name: performance_cx_lowest
