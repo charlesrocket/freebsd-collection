@@ -53,6 +53,9 @@ make_config:
   - "DEVELOPER=yes"
   - "MAKE_JOBS_NUMBER?=16"
 
+doas_config:
+  - "permit nopass keepenv {{ ansible_user_id }}"
+
 # Keep packages up to date
 upgrade_packages: true
 
@@ -85,6 +88,7 @@ pkgng_packages:
   - devcpu-data
   - diffutils
   - direnv
+  - doas
   - drm-kmod
   - droid-fonts-ttf
   - dsbmc-cli
@@ -172,7 +176,6 @@ pkgng_packages:
   - seatd
   - shards
   - sndio
-  - sudo
   - sway
   - swayidle
   - swaylock

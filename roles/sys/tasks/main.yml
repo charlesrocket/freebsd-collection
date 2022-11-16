@@ -9,6 +9,14 @@
   community.general.timezone:
     name: "{{ timezone }}"
 
+- name: Configure doas
+  ansible.builtin.template:
+    src: doas.conf.j2
+    dest: /usr/local/etc/doas.conf
+    owner: root
+    group: wheel
+    mode: 0644
+
 - name: Suspend on lid close
   ansible.posix.sysctl:
     name: hw.acpi.lid_switch_state
