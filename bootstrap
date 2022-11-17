@@ -2,17 +2,17 @@
 
 set -eu
 
-if ! command -v sudo >/dev/null 2>&1; then
-	>&2 echo "This script requires 'sudo' binary to be installed"
+if ! command -v doas >/dev/null 2>&1; then
+	>&2 echo "This script requires 'doas' binary to be installed"
 	exit 1
 fi
 
 if [ "$(id -u)" -eq "0" ]; then
-	>&2 echo "This script must be run as normal user (WHEEL member)"
+	>&2 echo "This script must be run as normal user"
 	exit 1
 fi
 
-sudo pkg install -y git py39-ansible
+doas pkg install -y git py39-ansible
 
 git clone https://github.com/charlesrocket/freebsd-station && cd freebsd-station
 
