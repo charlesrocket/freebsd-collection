@@ -133,8 +133,8 @@ pkgng_packages:
   - hs-ShellCheck
   - htop
   - httping
-  - hyprland-devel
   - hwstat
+  - hyprland-devel
   - iftop
   - imv
   - jq
