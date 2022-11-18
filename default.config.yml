@@ -29,6 +29,7 @@ dotfiles_files:
   - .gitconfig
   - .shrc
   - .zshrc
+  - bin/hyprstart
 
 # Git
 git_repo_destination: "~/git/git"
