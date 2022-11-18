@@ -137,7 +137,6 @@ pkgng_packages:
   - hyprland-devel
   - iftop
   - imv
-  - jq
   - Kvantum-qt5
   - less
   - llvm
