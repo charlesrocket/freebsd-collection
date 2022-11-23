@@ -10,6 +10,7 @@ dotfiles_files:
   - .config/Kvantum/kvantum.kvconfig
   - .config/dunst/dunstrc
   - .config/gtk-3.0/settings.ini
+  - .config/hypr/hyprland.conf
   - .config/mc/ini
   - .config/qmk/qmk.ini
   - .config/qt5ct/qt5ct.conf
