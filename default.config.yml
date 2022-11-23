@@ -13,13 +13,8 @@ dotfiles_files:
   - .config/mc/ini
   - .config/qmk/qmk.ini
   - .config/qt5ct/qt5ct.conf
-  - .config/sway/config
   - .config/tofi/config
   - .config/transmission/settings.json
-  - .config/waybar/config
-  - .config/waybar/style.css
-  - .config/waybar/scripts/net-if.sh
-  - .config/waybar/scripts/power.sh
   - .config/wlogout/layout
   - .config/wlogout/style.css
   - .doom.d/config.el
@@ -177,7 +172,6 @@ pkgng_packages:
   - seatd
   - shards
   - sndio
-  - sway
   - swayidle
   - swaylock
   - tig
@@ -190,7 +184,6 @@ pkgng_packages:
   - unzip
   - vagrant
   - vlc
-  - waybar-nopulse
   - wdisplays
   - wget
   - whois
