@@ -173,6 +173,7 @@ pkgng_packages:
   - seatd
   - shards
   - sndio
+  - swaybg
   - swayidle
   - swaylock
   - tig
