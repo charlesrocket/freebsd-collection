@@ -8,6 +8,7 @@ dotfiles_repo_local_destination: "~/git/dotfiles"
 dotfiles_home: "~"
 dotfiles_files:
   - .config/Kvantum/kvantum.kvconfig
+  - .config/btop/btop.conf
   - .config/dunst/dunstrc
   - .config/gtk-3.0/settings.ini
   - .config/hypr/hyprland.conf
