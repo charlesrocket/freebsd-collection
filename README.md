@@ -7,6 +7,7 @@
 **FreeBSD** station
 
 ```sh
+echo "permit nopass keepenv $USER" > /usr/local/etc/doas.conf
 curl https://raw.githubusercontent.com/charlesrocket/freebsd-station/master/bootstrap | sh
 ```
 🚧
