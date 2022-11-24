@@ -93,6 +93,7 @@ pkgng_packages:
   - editorconfig-core-c
   - en-aspell
   - epdfview
+  - eww-wayland
   - exfat-utils
   - fd-find
   - ffuf
