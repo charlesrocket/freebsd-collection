@@ -131,7 +131,7 @@ pkgng_packages:
   - htop
   - httping
   - hwstat
-  - hyprland-devel
+  - hyprland
   - iftop
   - imv
   - jq
