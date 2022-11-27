@@ -9,6 +9,9 @@ dotfiles_home: "~"
 dotfiles_files:
   - .config/Kvantum/kvantum.kvconfig
   - .config/btop/btop.conf
+  - .config/doom/config.el
+  - .config/doom/init.el
+  - .config/doom/packages.el
   - .config/dunst/dunstrc
   - .config/gtk-3.0/settings.ini
   - .config/hypr/hyprland.conf
@@ -20,9 +23,6 @@ dotfiles_files:
   - .config/transmission/settings.json
   - .config/wlogout/layout
   - .config/wlogout/style.css
-  - .doom.d/config.el
-  - .doom.d/init.el
-  - .doom.d/packages.el
   - .alacritty.yml
   - .gitconfig
   - .shrc
