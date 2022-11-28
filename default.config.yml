@@ -160,9 +160,6 @@ pkgng_packages:
   - portlint
   - pv
   - pwgen
-  - py39-isort
-  - py39-nose
-  - py39-pipenv
   - python3
   - qt5-style-plugins
   - qt5ct
