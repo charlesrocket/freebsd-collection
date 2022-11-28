@@ -4,7 +4,7 @@ dotfiles_repo: "https://github.com/charlesrocket/dotfiles.git"
 dotfiles_repo_version: master
 dotfiles_repo_accept_hostkey: true
 dotfiles_repo_force: true
-dotfiles_repo_local_destination: "~/git/dotfiles"
+dotfiles_repo_local_destination: "~/src/dotfiles"
 dotfiles_home: "~"
 dotfiles_files:
   - .config/Kvantum/kvantum.kvconfig
@@ -30,7 +30,7 @@ dotfiles_files:
   - bin/hyprstart
 
 # Git
-git_repo_destination: "~/git/git"
+git_repo_destination: "~/src/git"
 git_helper_directory: "~/bin"
 git_repo_shallow: true
 git_netrc_helper: true
