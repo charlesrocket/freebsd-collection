@@ -153,6 +153,7 @@ pkgng_packages:
   - nikto
   - ninja
   - nmap
+  - noto-emoji
   - pcsc-tools
   - pijul
   - plex-ttf
