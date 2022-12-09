@@ -47,6 +47,10 @@
     - role: amd
       when: amd
 
+    - role: bastille
+      when: bastille
+      become: true
+
     - role: emacs
       when: doomemacs
 
