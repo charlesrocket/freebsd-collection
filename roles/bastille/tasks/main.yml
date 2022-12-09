@@ -1,0 +1,29 @@
+---
+- name: Ensure Bastille is installed
+  community.general.pkgng:
+    state: present
+    name: bastille
+    autoremove: true
+    cached: false
+
+- name: Check for Bastille interface
+  ansible.builtin.command: ifconfig bastille0
+  register: bastille_if
+  ignore_errors: true
+  changed_when: false
+
+- name: Add cloned interface
+  ansible.builtin.lineinfile:
+    path: /etc/rc.conf
+    regexp: "^cloned_interfaces.+$"
+    line: 'cloned_interfaces="lo1"'
+
+- name: Set lo1 interface name
+  ansible.builtin.lineinfile:
+    path: /etc/rc.conf
+    regexp: "^ifconfig_lo1_name.+$"
+    line: 'ifconfig_lo1_name="bastille0"'
+
+- name: Start Bastille interface # noqa command-instead-of-module
+  ansible.builtin.command: service netif cloneup
+  when: "bastille_if.rc != 0"

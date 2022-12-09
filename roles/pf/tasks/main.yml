@@ -1,7 +1,7 @@
 ---
 - name: Add pf rules
-  ansible.builtin.copy:
-    src: pf.conf
+  ansible.builtin.template:
+    src: "{{ bastille | ternary('pf-b.conf.j2', 'pf.conf.j2') }}"
     dest: /etc/pf.conf
     owner: root
     mode: 0640

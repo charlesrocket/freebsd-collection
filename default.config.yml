@@ -38,6 +38,7 @@ git_netrc_helper: true
 # Configuration
 asus: true
 amd: false
+bastille: true
 doomemacs: true
 intel: true
 microcode_update: true
