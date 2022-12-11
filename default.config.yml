@@ -46,6 +46,8 @@ qmk: true
 virtualbox: true
 wifi: false
 
+bastille_zfs_enable: "YES"
+bastille_zfs_zpool: "zroot"
 timezone: "America/Los_Angeles"
 github: charlesrocket
 
