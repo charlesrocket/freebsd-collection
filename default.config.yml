@@ -1,11 +1,10 @@
 ---
 # Dotfiles
-dotfiles_repo: "https://github.com/charlesrocket/dotfiles.git"
+dotfiles_repo: https://github.com/charlesrocket/dotfiles.git
 dotfiles_repo_version: master
 dotfiles_repo_accept_hostkey: true
 dotfiles_repo_force: true
-dotfiles_repo_local_destination: "~/src/dotfiles"
-dotfiles_home: "~"
+dotfiles_repo_local_destination: ~/src/dotfiles
 dotfiles_files:
   - .config/Kvantum/kvantum.kvconfig
   - .config/btop/btop.conf
@@ -30,8 +29,8 @@ dotfiles_files:
   - bin/hyprstart
 
 # Git
-git_repo_destination: "~/src/git"
-git_helper_directory: "~/bin"
+git_repo_destination: ~/src/git
+git_helper_directory: ~/bin
 git_repo_shallow: true
 git_netrc_helper: true
 
@@ -46,17 +45,17 @@ qmk: true
 virtualbox: true
 wifi: false
 
-bastille_zfs_enable: "YES"
-bastille_zfs_zpool: "zroot"
-timezone: "America/Los_Angeles"
+bastille_zfs_enable: YES
+bastille_zfs_zpool: zroot
+timezone: America/Los_Angeles
 github: charlesrocket
 
 make_config:
-  - "DEVELOPER=yes"
-  - "MAKE_JOBS_NUMBER?=16"
+  - DEVELOPER=yes
+  - MAKE_JOBS_NUMBER?=16
 
 doas_config:
-  - "permit nopass keepenv {{ ansible_user_id }}"
+  - permit nopass keepenv {{ ansible_user_id }}
 
 # Keep packages up to date
 upgrade_packages: true
