@@ -315,3 +315,14 @@
     mode: 0644
     owner: root
     create: true
+
+- name: Fix file permissions
+  ansible.builtin.file:
+    path: "{{ item.path }}"
+    owner: root
+    group: wheel
+    mode: "{{ item.mode }}"
+  loop:
+    - { path: /etc/cron.d, mode: '0700' }
+    - { path: /etc/crontab, mode: '0600' }
+    - { path: /etc/ssh/sshd_config, mode: '0600' }
