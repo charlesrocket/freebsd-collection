@@ -137,6 +137,7 @@ pkgng_packages:
   - hwstat
   - hyprland
   - iftop
+  - imhex
   - imv
   - jq
   - Kvantum-qt5
