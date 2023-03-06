@@ -6,6 +6,7 @@ dotfiles_repo_accept_hostkey: true
 dotfiles_repo_force: true
 dotfiles_repo_local_destination: ~/src/dotfiles
 dotfiles_files:
+  - .config/alacritty.yml
   - .config/Kvantum/kvantum.kvconfig
   - .config/btop/btop.conf
   - .config/doom/config.el
@@ -13,6 +14,7 @@ dotfiles_files:
   - .config/doom/packages.el
   - .config/dunst/dunstrc
   - .config/gtk-3.0/settings.ini
+  - .config/git/config
   - .config/hypr/hyprland.conf
   - .config/hypr/scripts/lowbatt.sh
   - .config/mc/ini
@@ -22,8 +24,6 @@ dotfiles_files:
   - .config/transmission/settings.json
   - .config/wlogout/layout
   - .config/wlogout/style.css
-  - .alacritty.yml
-  - .gitconfig
   - .shrc
   - .zshrc
   - bin/hyprstart
