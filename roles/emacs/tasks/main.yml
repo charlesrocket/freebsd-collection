@@ -12,5 +12,6 @@
     repo: 'https://github.com/hlissner/doom-emacs'
     dest: ~/.emacs.d
     version: master
+    depth: 1
   notify:
     - Synchronize Doom Emacs
