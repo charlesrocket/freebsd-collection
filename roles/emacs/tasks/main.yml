@@ -13,5 +13,6 @@
     dest: ~/.emacs.d
     version: master
     depth: 1
+    update: false
   notify:
     - Synchronize Doom Emacs
