@@ -2,7 +2,7 @@
 - name: Ensure QMK is installed
   community.general.pkgng:
     state: present
-    name: sysutils/py-qmk
+    name: py39-qmk
     autoremove: true
     cached: false
   become: true
