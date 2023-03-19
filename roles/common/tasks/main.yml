@@ -55,14 +55,3 @@
     cmd: sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
   args:
     creates: "/home/{{ ansible_user_id }}/.oh-my-zsh"
-
-- name: Create home directories
-  ansible.builtin.file:
-    path: "{{ item }}"
-    owner: "{{ ansible_user_id }}"
-    group: "{{ ansible_user_id }}"
-    mode: 0755
-    state: directory
-  loop:
-    - ~/bin
-    - ~/pictures
