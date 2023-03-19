@@ -15,7 +15,7 @@
     dest: /usr/local/etc/doas.conf
     owner: root
     group: wheel
-    mode: 0644
+    mode: '0644'
 
 - name: Suspend on lid close
   ansible.posix.sysctl:
@@ -312,7 +312,7 @@
       add path 'lpt*'      mode 0660 group cups
       add path 'ulpt*'     mode 0660 group cups
       add path 'unlpt*'    mode 0660 group cups
-    mode: 0644
+    mode: '0644'
     owner: root
     create: true
 

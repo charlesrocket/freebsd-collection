@@ -10,7 +10,7 @@
     state: directory
     owner: root
     group: wheel
-    mode: 0755
+    mode: '0755'
   become: true
   when: ports_status.stat.exists is false
 

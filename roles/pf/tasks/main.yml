@@ -4,7 +4,7 @@
     src: "{{ bastille | ternary('pf-b.conf.j2', 'pf.conf.j2') }}"
     dest: /etc/pf.conf
     owner: root
-    mode: 0640
+    mode: '0640'
 
 - name: Enable pf
   community.general.sysrc:

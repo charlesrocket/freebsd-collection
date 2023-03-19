@@ -11,7 +11,7 @@
     src: bastille.conf.j2
     dest: /usr/local/etc/bastille/bastille.conf
     owner: root
-    mode: 0640
+    mode: '0640'
 
 - name: Check for Bastille interface
   ansible.builtin.command: ifconfig bastille0
