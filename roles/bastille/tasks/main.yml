@@ -13,12 +13,6 @@
     owner: root
     mode: '0640'
 
-- name: Check for Bastille interface
-  ansible.builtin.command: ifconfig bastille0
-  register: bastille_if
-  ignore_errors: true
-  changed_when: false
-
 - name: Add cloned interface
   ansible.builtin.lineinfile:
     path: /etc/rc.conf
@@ -33,4 +27,5 @@
 
 - name: Start Bastille interface # noqa command-instead-of-module
   ansible.builtin.command: service netif cloneup
-  when: "bastille_if.rc != 0"
+  register: netif_output
+  changed_when: '"interface lo1 already exists" not in netif_output.stderr'
