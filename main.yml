@@ -63,3 +63,10 @@
     - role: virtualbox
       when: virtualbox
       become: true
+
+  post_tasks:
+    - name: Update pkg branch
+      ansible.builtin.include_role:
+        name: pkg_branch
+        apply:
+          become: true
