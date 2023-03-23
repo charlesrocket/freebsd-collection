@@ -16,16 +16,6 @@
     mode: '0644'
     force: false
 
-- name: Use latest branch
-  ansible.builtin.replace:
-    path: /usr/local/etc/pkg/repos/FreeBSD.conf
-    regexp: 'quarterly'
-    replace: 'latest'
-  notify:
-    - Redownload repository catalogue
-    - Upgrade packages
-    - Audit packages
-
 - name: Ensure packages are installed
   community.general.pkgng:
     state: present
@@ -34,6 +24,11 @@
     cached: false
   vars:
     packages: "{{ pkgng_packages }}"
+  notify:
+    - Use latest branch
+    - Redownload repository catalogue
+    - Upgrade packages
+    - Audit packages
 
 - name: Gather the package facts
   ansible.builtin.package_facts:

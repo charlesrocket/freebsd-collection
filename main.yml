@@ -13,6 +13,9 @@
       tags: ['always']
 
   roles:
+    - role: pkg
+      become: true
+
     - role: sys
       become: true
 
@@ -59,7 +62,4 @@
 
     - role: virtualbox
       when: virtualbox
-      become: true
-
-    - role: pkg
       become: true

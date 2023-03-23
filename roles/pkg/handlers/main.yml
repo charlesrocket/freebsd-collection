@@ -1,14 +1,20 @@
 ---
+- name: Use latest branch
+  ansible.builtin.replace:
+    path: /usr/local/etc/pkg/repos/FreeBSD.conf
+    regexp: 'quarterly'
+    replace: 'latest'
+
 - name: Redownload repository catalogue
   ansible.builtin.command: pkg update -f
+
+- name: Upgrade packages
+  community.general.pkgng:
+    name: "*"
+    state: latest
 
 - name: Audit packages
   ansible.builtin.command: pkg audit -F
   register: audit
   failed_when:
     - '"cannot fetch vulnxml" in audit.stdout'
-
-- name: Upgrade packages
-  community.general.pkgng:
-    name: "*"
-    state: latest
