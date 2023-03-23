@@ -26,9 +26,6 @@
     - Upgrade packages
     - Audit packages
 
-- name: Flush handlers
-  ansible.builtin.meta: flush_handlers
-
 - name: Ensure packages are installed
   community.general.pkgng:
     state: present
