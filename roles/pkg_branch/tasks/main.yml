@@ -11,8 +11,6 @@
 - name: Upgrade installed packages
   ansible.builtin.assert: { that: true, quiet: true }
   changed_when: true
-  when:
-    - upgrade_packages
-    - pkg_branch is changed
+  when: upgrade_packages or pkg_branch is changed
   notify:
     - Upgrade packages
