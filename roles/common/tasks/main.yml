@@ -7,15 +7,6 @@
     append: true
   become: true
 
-- name: Upgrade installed packages
-  community.general.pkgng:
-    name: "*"
-    state: latest
-  become: true
-  when: upgrade_packages
-  notify:
-    - Cleanup
-
 - name: Copy MOTD
   ansible.builtin.copy:
     src: motd.sh

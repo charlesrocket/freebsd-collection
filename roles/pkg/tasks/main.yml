@@ -24,11 +24,6 @@
     cached: false
   vars:
     packages: "{{ pkgng_packages }}"
-  notify:
-    - Use latest branch
-    - Redownload repository catalogue
-    - Upgrade packages
-    - Audit packages
 
 - name: Gather the package facts
   ansible.builtin.package_facts:
