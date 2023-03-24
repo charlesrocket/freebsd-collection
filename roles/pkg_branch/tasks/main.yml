@@ -9,7 +9,7 @@
     - Redownload repository catalogue
     - Upgrade packages
 
-- name: Upgrade installed packages
+- name: Ensure packages are upgraded to the latest version
   ansible.builtin.assert: { that: true, quiet: true }
   changed_when: true
   when: upgrade_packages
