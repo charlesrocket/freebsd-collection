@@ -57,16 +57,14 @@ make_config:
 doas_config:
   - permit nopass keepenv {{ ansible_user_id }}
 
-# Keep packages up to date
-upgrade_packages: true
-latest_branch: true
-
 # Manage src/ports/doc with git
 git_ports: false
 git_src: false
 git_doc: false
 
 # Packages
+upgrade_packages: true
+latest_branch: true
 pkgng_packages:
   - apl385
   - adwaita-icon-theme
