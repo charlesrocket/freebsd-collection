@@ -5,6 +5,7 @@
     regexp: 'quarterly'
     replace: 'latest'
   register: pkg_branch
+  when: latest_branch
   notify:
     - Redownload repository catalogue
     - Upgrade packages

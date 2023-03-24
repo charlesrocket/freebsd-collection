@@ -59,6 +59,7 @@ doas_config:
 
 # Keep packages up to date
 upgrade_packages: true
+latest_branch: true
 
 # Manage src/ports/doc with git
 git_ports: false
