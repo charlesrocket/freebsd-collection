@@ -30,9 +30,11 @@ dotfiles_files:
 
 # Git
 git_repo_destination: ~/src/git
-git_helper_directory: ~/bin
 git_repo_shallow: true
-git_netrc_helper: true
+git_helper_directory: ~/bin
+git_helper:
+  - libsecret
+  - netrc
 
 # Configuration
 asus: true
