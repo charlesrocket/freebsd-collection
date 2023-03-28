@@ -1,7 +1,4 @@
 collections:
   - name: ansible.posix
   - name: community.general
-
-roles:
-  - name: charlesrocket.dotfiles
-  - name: charlesrocket.git
+  - name: charlesrocket.essential

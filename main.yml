@@ -28,9 +28,9 @@
 
     - role: common
 
-    - role: charlesrocket.git
+    - role: charlesrocket.essential.git
 
-    - role: charlesrocket.dotfiles
+    - role: charlesrocket.essential.dotfiles
 
     - role: git_ports
       when: git_ports
