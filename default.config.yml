@@ -117,7 +117,7 @@ pkgng_packages:
   - gcc
   - gedit
   - gimp
-  - git-cliff
+# - git-cliff
   - gitg
   - glslang
   - gmake
