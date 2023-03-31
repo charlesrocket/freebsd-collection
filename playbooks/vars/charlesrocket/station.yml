@@ -38,6 +38,7 @@ git_helper:
   - netrc
 
 # Configuration
+laptop: true
 asus: true
 amd: false
 bastille: true
