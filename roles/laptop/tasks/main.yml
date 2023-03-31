@@ -1,0 +1,7 @@
+---
+
+- name: Suspend on lid close
+  ansible.posix.sysctl:
+    name: hw.acpi.lid_switch_state
+    state: present
+    value: 'S3'

@@ -25,12 +25,6 @@
     group: wheel
     mode: '0644'
 
-- name: Suspend on lid close
-  ansible.posix.sysctl:
-    name: hw.acpi.lid_switch_state
-    state: present
-    value: 'S3'
-
 - name: Randomize PID
   ansible.posix.sysctl:
     name: kern.randompid
