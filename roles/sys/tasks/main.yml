@@ -1,5 +1,12 @@
 ---
 
+- name: Set hostname
+  community.general.sysrc:
+    name: hostname
+    value: "{{ hostname }}"
+    state: present
+  when: hostname
+
 - name: Tune TTYs
   ansible.builtin.replace:
     path: /etc/ttys
