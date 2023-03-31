@@ -21,10 +21,16 @@ tags:
   - virtualbox
   - git
 
+dependencies:
+    "ansible.posix": ">=1.5.0"
+    "community.general": ">=6.5.0"
+    "charlesrocket.essential": ">=1.0.0"
+
 repository: https://github.com/charlesrocket/freebsd-collection
 documentation: https://charlesrocket.github.io/freebsd-collection/
 issues: https://github.com/charlesrocket/freebsd-collection/issues
 build_ignore:
+  - .editorconfig
   - .github
   - .gitignore
   - bootstrap
