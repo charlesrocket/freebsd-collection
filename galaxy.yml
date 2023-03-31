@@ -1,0 +1,32 @@
+---
+
+namespace: charlesrocket
+name: freebsd
+version: 0.1.0
+readme: README.md
+description: FreeBSD collection for workstations/servers
+authors:
+  - charlesrocket
+
+license:
+  - MIT
+
+tags:
+  - development
+  - freebsd
+  - pf
+  - pkg
+  - bastille
+  - emacs
+  - virtualbox
+  - git
+
+repository: https://github.com/charlesrocket/freebsd-collection
+documentation: https://charlesrocket.github.io/freebsd-collection/
+issues: https://github.com/charlesrocket/freebsd-collection/issues
+build_ignore:
+  - .github
+  - .gitignore
+  - bootstrap
+  - molecule
+  - requirements*txt
