@@ -69,12 +69,6 @@
     state: present
     value: '0'
 
-- name: Allow usermount
-  ansible.posix.sysctl:
-    name: vfs.usermount
-    state: present
-    value: '1'
-
 - name: Clear /tmp
   community.general.sysrc:
     name: clear_tmp_enable
@@ -105,12 +99,6 @@
 - name: Enable ntpd OOM protection
   community.general.sysrc:
     name: ntpd_oomprotect
-    value: "YES"
-    state: present
-
-- name: Enable sndiod
-  community.general.sysrc:
-    name: sndiod_enable
     value: "YES"
     state: present
 
@@ -193,37 +181,6 @@
     state: present
     value: "YES"
     path: /boot/loader.conf
-
-- name: Enable libcuse
-  community.general.sysrc:
-    name: cuse_load
-    state: present
-    value: "YES"
-    path: /boot/loader.conf
-
-- name: Enable ACPI video driver
-  community.general.sysrc:
-    name: kld_list
-    value: "acpi_video"
-    state: value_present
-
-- name: Enable DSBMD
-  community.general.sysrc:
-    name: dsbmd_enable
-    value: "YES"
-    state: present
-
-- name: Enable seatd
-  community.general.sysrc:
-    name: seatd_enable
-    value: "YES"
-    state: present
-
-- name: Enable dbus
-  community.general.sysrc:
-    name: dbus_enable
-    value: "YES"
-    state: present
 
 - name: Don't pong
   community.general.sysrc:
