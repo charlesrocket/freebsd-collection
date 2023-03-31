@@ -1,0 +1,53 @@
+---
+
+name: CD
+'on':
+  workflow_dispatch:
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      pages: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.10'
+
+      - name: Install build dependencies
+        run: pip3 install ansible-core antsibull-docs
+
+      - name: Build collection tarball
+        run: ansible-galaxy collection build
+
+      - name: Install collection locally
+        run: >
+          ansible-galaxy collection install
+          charlesrocket-freebsd-$(grep version galaxy.yml |
+          awk '{print $2}').tar.gz
+      - name: Install sphinx dependencies
+        run: pip3 install -r docs/requirements.txt
+
+      - name: Build intermediate rst files
+        run: >
+          antsibull-docs collection --use-current
+          --dest-dir docs charlesrocket.freebsd
+      - name: Build docsite
+        run: >
+          sphinx-build -M html docs/collections/charlesrocket/freebsd
+          docs/build -c docs -W --keep-going
+      - name: Upload artifacts
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: docs/build/html/
+
+      - name: Deploy docsite
+        uses: actions/deploy-pages@v1
