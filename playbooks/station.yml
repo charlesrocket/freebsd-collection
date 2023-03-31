@@ -1,4 +1,5 @@
 ---
+
 - name: FreeBSD Station
   hosts: "{{ target | default('all') }}"
 
