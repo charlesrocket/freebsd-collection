@@ -1,0 +1,38 @@
+---
+
+- name: Ensure packages are installed
+  community.general.pkgng:
+    state: present
+    name:
+      - poudriere
+      - ccache
+    autoremove: true
+    cached: false
+
+- name: Copy poudriere config
+  ansible.builtin.template:
+    src: poudriere.conf.j2
+    dest: /usr/local/etc/poudriere.conf
+    owner: root
+    mode: 0644
+
+- name: Create SSL directories
+  ansible.builtin.file:
+    path: "{{ item.path }}"
+    owner: root
+    group: wheel
+    mode: "{{ item.mode }}"
+    state: directory
+  loop:
+    - { path: /usr/local/etc/ssl/certs, mode: '0755' }
+    - { path: /usr/local/etc/ssl/keys, mode: '0600' }
+
+- name: Generate poudriere.key
+  ansible.builtin.command:
+    cmd: openssl genrsa -out /usr/local/etc/ssl/keys/poudriere.key 4096
+    creates: /usr/local/etc/ssl/keys/poudriere.key
+
+- name: Generate poudriere.cert
+  ansible.builtin.command:
+    cmd: openssl rsa -in /usr/local/etc/ssl/keys/poudriere.key -pubout -out /usr/local/etc/ssl/certs/poudriere.cert
+    creates: /usr/local/etc/ssl/certs/poudriere.cert

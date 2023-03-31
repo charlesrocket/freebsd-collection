@@ -1,0 +1,15 @@
+FREEBSD_HOST={{ poudriere_host }}
+BASEFS=/usr/local/poudriere
+
+{{ poudriere_zfs | ternary('', 'NO_ZFS=yes') }}
+{{ poudriere_zfs | ternary('ZPOOL=' + poudriere_zpool, '') }}
+{{ poudriere_zfs | ternary('ZROOTFS=' + poudriere_zrootfs, '') }}
+
+CCACHE_DIR=/var/cache/ccache
+
+POUDRIERE_DATA=${BASEFS}/data
+DISTFILES_CACHE={{ poudriere_distfiles }}
+CHECK_CHANGED_OPTIONS=verbose
+CHECK_CHANGED_DEPS=yes
+
+PKG_REPO_SIGNING_KEY=/usr/local/etc/ssl/keys/poudriere.key
