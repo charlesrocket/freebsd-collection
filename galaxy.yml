@@ -2,7 +2,7 @@
 
 namespace: charlesrocket
 name: freebsd
-version: 0.1.0
+version: 1.0.0
 readme: README.md
 description: FreeBSD collection for workstations/servers
 authors:
@@ -12,6 +12,7 @@ license:
   - MIT
 
 tags:
+  - infrastructure
   - development
   - freebsd
   - pf
@@ -22,9 +23,9 @@ tags:
   - git
 
 dependencies:
-    "ansible.posix": ">=1.5.0"
-    "community.general": ">=6.5.0"
-    "charlesrocket.essential": ">=1.0.0"
+  "ansible.posix": ">=1.5.0"
+  "community.general": ">=6.5.0"
+  "charlesrocket.essential": ">=1.0.0"
 
 repository: https://github.com/charlesrocket/freebsd-collection
 documentation: https://charlesrocket.github.io/freebsd-collection/
