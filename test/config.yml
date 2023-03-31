@@ -11,7 +11,7 @@ virtualbox: true
 wifi: true
 
 upgrade_packages: false
-latest_branch: true
+latest_branch: false
 
 git_ports: false
 git_src: false
