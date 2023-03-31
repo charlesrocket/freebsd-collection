@@ -255,18 +255,6 @@
     value: "-ss"
     state: present
 
-- name: Tune C-states - performance
-  community.general.sysrc:
-    name: performance_cx_lowest
-    value: "Cmax"
-    state: present
-
-- name: Tune C-states - economy
-  community.general.sysrc:
-    name: economy_cx_lowest
-    value: "Cmax"
-    state: present
-
 - name: Disable kernel crash dumps
   community.general.sysrc:
     name: dumpdev

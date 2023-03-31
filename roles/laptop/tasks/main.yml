@@ -17,3 +17,15 @@
     name: powerd_flags
     value: "-a hiadaptive -b adaptive"
     state: present
+
+- name: Tune C-states | performance
+  community.general.sysrc:
+    name: performance_cx_lowest
+    value: "Cmax"
+    state: present
+
+- name: Tune C-states | economy
+  community.general.sysrc:
+    name: economy_cx_lowest
+    value: "Cmax"
+    state: present
