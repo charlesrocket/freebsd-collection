@@ -248,18 +248,6 @@
     value: "-aF"
     state: present
 
-- name: Enable powerd
-  community.general.sysrc:
-    name: powerd_enable
-    value: "YES"
-    state: present
-
-- name: Tune powerd
-  community.general.sysrc:
-    name: powerd_flags
-    value: "-a hiadaptive -b adaptive"
-    state: present
-
 - name: Tune syslogd
   community.general.sysrc:
     name: syslogd_flags

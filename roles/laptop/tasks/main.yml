@@ -5,3 +5,15 @@
     name: hw.acpi.lid_switch_state
     state: present
     value: 'S3'
+
+- name: Enable powerd
+  community.general.sysrc:
+    name: powerd_enable
+    value: "YES"
+    state: present
+
+- name: Tune powerd
+  community.general.sysrc:
+    name: powerd_flags
+    value: "-a hiadaptive -b adaptive"
+    state: present
