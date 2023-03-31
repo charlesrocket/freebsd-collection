@@ -1,0 +1,12 @@
+---
+
+- name: Enable process accounting
+  community.general.sysrc:
+    name: accounting_enable
+    state: present
+    value: "YES"
+
+- name: Start process accounting on boot
+  ansible.builtin.service:
+    name: accounting
+    enabled: true

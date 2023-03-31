@@ -1,0 +1,14 @@
+---
+
+galaxy_info:
+  author: charlesrocket
+  description: Process accounting manager
+  role_name: accounting
+  license: "MIT"
+  min_ansible_version: "2.9"
+  platforms:
+    - name: FreeBSD
+      versions:
+        - all
+  galaxy_tags:
+    - service
