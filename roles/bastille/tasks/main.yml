@@ -9,7 +9,7 @@
 
 - name: Add Bastille config
   ansible.builtin.template:
-    src: bastille.conf.j2
+    src: conf.j2
     dest: /usr/local/etc/bastille/bastille.conf
     owner: root
     mode: '0640'

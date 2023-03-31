@@ -11,7 +11,7 @@
 
 - name: Copy poudriere config
   ansible.builtin.template:
-    src: poudriere.conf.j2
+    src: conf.j2
     dest: /usr/local/etc/poudriere.conf
     owner: root
     mode: 0644
