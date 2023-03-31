@@ -1,4 +1,5 @@
 ---
+
 - name: Check doc directory status
   ansible.builtin.stat:
     path: /usr/doc/.git

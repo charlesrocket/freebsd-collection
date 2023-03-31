@@ -1,4 +1,5 @@
 ---
+
 - name: Redownload repository catalogue
   ansible.builtin.command: pkg update -f
   register: pkg_output

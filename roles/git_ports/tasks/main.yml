@@ -1,4 +1,5 @@
 ---
+
 - name: Check ports directory status
   ansible.builtin.stat:
     path: /usr/ports/.git

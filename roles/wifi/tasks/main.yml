@@ -1,4 +1,5 @@
 ---
+
 - name: Ensure wpa_supplicant is installed
   community.general.pkgng:
     state: present

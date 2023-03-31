@@ -1,4 +1,5 @@
 ---
+
 - name: Ensure configuration directory exists
   ansible.builtin.file:
     path: /usr/local/etc/pkg/repos

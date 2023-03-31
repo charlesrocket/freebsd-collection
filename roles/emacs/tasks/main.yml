@@ -1,4 +1,5 @@
 ---
+
 - name: Ensure Emacs is installed
   community.general.pkgng:
     state: present

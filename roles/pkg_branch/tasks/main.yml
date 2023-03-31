@@ -1,4 +1,5 @@
 ---
+
 - name: Use latest branch
   ansible.builtin.replace:
     path: /usr/local/etc/pkg/repos/FreeBSD.conf

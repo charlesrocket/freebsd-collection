@@ -1,4 +1,5 @@
 ---
+
 - name: Add pf rules
   ansible.builtin.template:
     src: "{{ bastille | ternary('pf-b.conf.j2', 'pf.conf.j2') }}"

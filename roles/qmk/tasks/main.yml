@@ -1,4 +1,5 @@
 ---
+
 - name: Ensure QMK is installed
   community.general.pkgng:
     state: present

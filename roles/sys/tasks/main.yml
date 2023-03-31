@@ -1,4 +1,5 @@
 ---
+
 - name: Tune TTYs
   ansible.builtin.replace:
     path: /etc/ttys

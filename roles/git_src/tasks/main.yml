@@ -1,4 +1,5 @@
 ---
+
 - name: Check src directory status
   ansible.builtin.stat:
     path: /usr/src/.git
