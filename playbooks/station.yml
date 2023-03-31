@@ -26,6 +26,13 @@
 
     - role: common
 
+    - role: desktop
+      become: true
+
+    - role: laptop
+      become: true
+      when: laptop
+
     - role: charlesrocket.essential.git
 
     - role: charlesrocket.essential.dotfiles
