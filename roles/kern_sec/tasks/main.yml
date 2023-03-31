@@ -1,0 +1,13 @@
+---
+
+- name: Enable security levels
+  community.general.sysrc:
+    name: kern_securelevel_enable
+    state: present
+    value: "YES"
+
+- name: Set security level
+  community.general.sysrc:
+    name: kern_securelevel
+    state: present
+    value: "{{ security_level }}"
