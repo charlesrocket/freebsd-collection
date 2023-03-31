@@ -5,7 +5,7 @@
   pre_tasks:
     - name: Load profile
       ansible.builtin.include_vars:
-        file: "{{ profile }}.yml"
+        file: "{{ profile }}/station.yml"
       tags: ['always']
       when: profile is defined
 
