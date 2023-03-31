@@ -1,0 +1,80 @@
+---
+
+- name: "{{ sshd | ternary('Enable sshd', 'Disable sshd') }}"
+  community.general.sysrc:
+    name: sshd_enable
+    value: "{{ sshd | ternary('YES', 'NO') }}"
+    state: present
+
+- name: Verify packets
+  ansible.posix.sysctl:
+    name: net.inet.ip.check_interface
+    state: present
+    value: '1'
+
+- name: Random IP packet IDs
+  ansible.posix.sysctl:
+    name: net.inet.ip.random_id
+    state: present
+    value: '1'
+
+- name: Tune loopback interface
+  ansible.posix.sysctl:
+    name: net.inet.tcp.nolocaltimewait
+    state: present
+    value: '1'
+
+- name: Do not process IP options
+  ansible.posix.sysctl:
+    name: net.inet.ip.process_options
+    state: present
+    value: '0'
+
+- name: Disallow keymap changes for non-privileged users
+  ansible.posix.sysctl:
+    name: hw.kbd.keymap_restrict_change
+    state: present
+    value: '4'
+
+- name: Blackhole TCP
+  ansible.posix.sysctl:
+    name: net.inet.tcp.blackhole
+    state: present
+    value: '2'
+
+- name: Blackhole UDP
+  ansible.posix.sysctl:
+    name: net.inet.udp.blackhole
+    state: present
+    value: '1'
+
+- name: Disable PMTUD
+  ansible.posix.sysctl:
+    name: net.inet.tcp.path_mtu_discovery
+    state: present
+    value: '0'
+
+- name: Disable TCP keepalive
+  ansible.posix.sysctl:
+    name: net.inet.tcp.always_keepalive
+    state: present
+    value: '0'
+
+- name: Drop SYN/FIN packets
+  ansible.posix.sysctl:
+    name: net.inet.tcp.drop_synfin
+    state: present
+    value: '1'
+
+- name: Enable AHCI
+  community.general.sysrc:
+    name: ahci_load
+    state: present
+    value: "YES"
+    path: /boot/loader.conf
+
+- name: Disable ICMP RST
+  ansible.posix.sysctl:
+    name: net.inet.tcp.icmp_may_rst
+    state: present
+    value: '0'

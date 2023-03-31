@@ -1,0 +1,15 @@
+---
+
+galaxy_info:
+  author: charlesrocket
+  description: System tuning for servers
+  role_name: mainframe
+  license: "MIT"
+  min_ansible_version: "2.9"
+  platforms:
+    - name: FreeBSD
+      versions:
+        - all
+  galaxy_tags:
+    - freebsd
+    - system
