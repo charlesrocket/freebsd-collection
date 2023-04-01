@@ -1,6 +1,6 @@
-# freebsd-station
-[![Ansible Lint](https://github.com/charlesrocket/freebsd-station/workflows/Ansible%20Lint/badge.svg)](https://github.com/charlesrocket/freebsd-station/actions)
-[![Build Status](https://api.cirrus-ci.com/github/charlesrocket/freebsd-station.svg?branch=master)](https://cirrus-ci.com/github/charlesrocket/freebsd-station)
+# freebsd-collection
+[![Ansible Lint](https://github.com/charlesrocket/freebsd-collection/workflows/Ansible%20Lint/badge.svg)](https://github.com/charlesrocket/freebsd-collection/actions)
+[![Build Status](https://api.cirrus-ci.com/github/charlesrocket/freebsd-collection.svg?branch=master)](https://cirrus-ci.com/github/charlesrocket/freebsd-collection)
 
 ![screenshot](screenshot.png)
 
