@@ -15,6 +15,7 @@
     owner: root
     group: wheel
     mode: '0644'
+    remote_src: true
     force: false
 
 - name: Ensure packages are installed
