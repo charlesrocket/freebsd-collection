@@ -20,6 +20,7 @@ pf: true
 poudriere: false
 proc_accounting: false
 set_security_level: false
+microcode_update: true
 sshd: true
 
 bastille_zfs_enable: true
