@@ -36,9 +36,6 @@ platforms:
 provisioner:
   name: ansible
   log: true
-  inventory:
-    links:
-      group_vars: ../../playbooks/vars/charlesrocket/server.yml
   playbooks:
     converge: ${MOLECULE_PLAYBOOK:-converge.yml}
 
