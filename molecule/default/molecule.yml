@@ -38,7 +38,7 @@ provisioner:
   log: true
   inventory:
     links:
-      group_vars: ../../playbooks/vars/charlesrocket/station.yaml
+      group_vars: ../../playbooks/vars/charlesrocket/station.yml
   playbooks:
     converge: ${MOLECULE_PLAYBOOK:-converge.yml}
 
