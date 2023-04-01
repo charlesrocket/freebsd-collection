@@ -34,7 +34,7 @@ jobs:
       - name: Install collection locally
         run: >
           ansible-galaxy collection install
-          charlesrocket-essential-$(grep version galaxy.yml |
+          charlesrocket-freebsd-$(grep version galaxy.yml |
           awk '{print $2}').tar.gz
 
       - name: Install sphinx dependencies
@@ -43,11 +43,11 @@ jobs:
       - name: Build intermediate rst files
         run: >
           antsibull-docs collection --use-current
-          --dest-dir docs charlesrocket.essential
+          --dest-dir docs charlesrocket.freebsd
 
       - name: Build docsite
         run: >
-          sphinx-build -M html docs/collections/charlesrocket/essential
+          sphinx-build -M html docs/collections/charlesrocket/freebsd
           docs/build -c docs -W --keep-going
 
       - name: Upload artifacts
