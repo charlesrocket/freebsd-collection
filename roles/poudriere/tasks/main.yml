@@ -14,7 +14,7 @@
     src: conf.j2
     dest: /usr/local/etc/poudriere.conf
     owner: root
-    mode: 0644
+    mode: '0644'
 
 - name: Create SSL directories
   ansible.builtin.file:
