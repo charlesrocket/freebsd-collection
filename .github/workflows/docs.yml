@@ -1,6 +1,6 @@
 ---
 
-name: CD
+name: docs
 'on':
   workflow_dispatch:
 
