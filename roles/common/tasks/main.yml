@@ -39,6 +39,8 @@
     group: wheel
     mode: '0644'
   become: true
+  when:
+    - make_config is defined
 
 - name: Copy Lynis profile
   ansible.builtin.copy:

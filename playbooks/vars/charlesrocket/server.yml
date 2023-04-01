@@ -25,7 +25,6 @@ sshd: true
 
 bastille_zfs_enable: true
 bastille_zfs_zpool: zroot
-make_config:
 doas_config:
   - permit nopass keepenv {{ ansible_user_id }}
 
