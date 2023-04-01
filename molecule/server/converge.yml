@@ -3,6 +3,5 @@
 - name: Converge
   hosts: all
 
-  tasks:
-    - name: Include server playbook
-      ansible.builtin.import_playbook: charlesrocket.freebsd.server
+- name: Include server playbook
+  ansible.builtin.import_playbook: charlesrocket.freebsd.server
