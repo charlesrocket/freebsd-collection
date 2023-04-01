@@ -31,10 +31,10 @@
     - role: common
 
     - role: charlesrocket.essential.git
-      when: git or poudriere
+      when: (git or poudriere) or git_helper is defined
 
     - role: charlesrocket.essential.dotfiles
-      when: dotfiles
+      when: dotfiles_files is defined
 
     - role: accounting
       when: proc_accounting
