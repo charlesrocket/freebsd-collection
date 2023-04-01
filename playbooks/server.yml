@@ -1,0 +1,59 @@
+---
+
+- name: FreeBSD Server
+  hosts: "{{ target | default('all') }}"
+
+  pre_tasks:
+    - name: Load profile
+      ansible.builtin.include_vars:
+        file: "{{ profile }}/station.yml"
+      tags: ['always']
+      when: profile is defined
+
+  roles:
+    - role: pkg
+      become: true
+
+    - role: sys
+      become: true
+
+    - role: mainframe
+      become: true
+
+    - role: kern_sec
+      when: set_security_level
+      become: true
+
+    - role: pf
+      when: bastille or pf
+      become: true
+
+    - role: common
+
+    - role: charlesrocket.essential.git
+      when: git or poudriere
+
+    - role: charlesrocket.essential.dotfiles
+      when: dotfiles
+
+    - role: accounting
+      when: proc_accounting
+      become: true
+
+    - role: bastille
+      when: bastille
+      become: true
+
+    - role: poudriere
+      when: poudriere
+      become: true
+
+  post_tasks:
+    - name: Upgrade installed packages
+      community.general.pkgng:
+        name: "*"
+        state: latest
+        autoremove: true
+        cached: false
+      become: true
+      when: upgrade_packages

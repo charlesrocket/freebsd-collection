@@ -1,0 +1,65 @@
+---
+
+# Dotfiles
+dotfiles_repo: https://github.com/charlesrocket/dotfiles.git
+dotfiles_repo_version: fbsd-server
+dotfiles_repo_accept_hostkey: true
+dotfiles_repo_force: true
+dotfiles_repo_local_destination: ~/src/dotfiles
+dotfiles_files:
+  - .config/git/config
+  - .config/mc/ini
+  - .shrc
+  - .zshrc
+
+# Configuration
+bastille: true
+dotfiles: false
+git: false
+pf: true
+poudriere: false
+proc_accounting: false
+set_security_level: false
+sshd: true
+
+bastille_zfs_enable: true
+bastille_zfs_zpool: zroot
+make_config:
+poudriere_distfiles: /usr/ports/distfiles
+poudriere_host: ftp://ftp.freebsd.org
+poudriere_zfs: true
+poudriere_zpool: zroot
+poudriere_zrootfs: /usr/local/poudriere
+security_level: 3
+timezone: America/Los_Angeles
+
+# Keep packages up to date
+upgrade_packages: false
+
+# Packages
+pkgng_packages:
+  - chkrootkit
+  - clamav
+  - curl
+  - destroy
+  - devcpu-data
+  - diffutils
+  - exfat-utils
+  - figlet
+  - gawk
+  - gnupg
+  - gzip
+  - lolcat
+  - lynis
+  - mc
+  - pam_yubico
+  - pciutils
+  - pv
+  - pwgen
+  - rkhunter
+  - screen
+  - tmux
+  - unzip
+  - wget
+  - wireguard
+  - zsh
