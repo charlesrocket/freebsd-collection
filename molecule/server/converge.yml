@@ -3,5 +3,10 @@
 - name: Converge
   hosts: all
 
+  tasks:
+    - name: Include station variables
+      ansible.builtin.include_vars:
+        file: ../../playbooks/vars/charlesrocket/station.yml
+
 - name: Include server playbook
   ansible.builtin.import_playbook: charlesrocket.freebsd.server
