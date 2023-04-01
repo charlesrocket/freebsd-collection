@@ -1,0 +1,50 @@
+---
+
+dependency:
+  name: galaxy
+
+driver:
+  name: vagrant
+  provider:
+    name: virtualbox
+
+  provision: false
+  cachier: machine
+  parallel: true
+
+platforms:
+  - name: instance
+    box: "generic/${MOLECULE_DISTRO}"
+    interfaces:
+      - network_name: public_network
+        dev: "virbr0"
+        type: "bridge"
+        mode: "bridge"
+
+    instance_raw_config_args:
+      - 'vm.synced_folder ".", "/vagrant", type: "rsync"'
+      - 'vm.provision :shell, inline: "uname"'
+
+    config_options:
+      ssh.keep_alive: true
+      ssh.remote_user: 'vagrant'
+      synced_folder: true
+
+    memory: 512
+    cpus: 1
+
+provisioner:
+  name: ansible
+  log: true
+  inventory:
+    links:
+      group_vars: ../../playbooks/vars/charlesrocket/server.yaml
+  playbooks:
+    converge: ${MOLECULE_PLAYBOOK:-converge.yml}
+
+  config_options:
+    defaults:
+      verbosity: ${MOLECULE_VERBOSITY:-3}
+
+verifier:
+  name: ansible

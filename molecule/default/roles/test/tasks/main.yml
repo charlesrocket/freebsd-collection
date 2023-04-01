@@ -1,0 +1,13 @@
+---
+
+- name: "~/.config/mc/ini information"
+  ansible.builtin.stat:
+    path: "~/.config/mc/ini"
+  register: test_file
+
+- name: "Check ~/.config/mc/ini"
+  ansible.builtin.assert:
+    that:
+      - test_file.stat.exists
+      - test_file.stat.islnk
+      - test_file.stat.executable == false

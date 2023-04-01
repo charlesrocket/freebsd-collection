@@ -1,0 +1,8 @@
+---
+
+- name: Verify
+  hosts: all
+  tasks:
+    - name: Include test role
+      ansible.builtin.include_role:
+        name: "test"

@@ -1,0 +1,92 @@
+---
+
+name: CI
+'on':
+  pull_request:
+  push:
+
+concurrency:
+  group: ${{ github.ref }}
+  cancel-in-progress: false
+
+defaults:
+  run:
+    working-directory: 'freebsd-collection'
+
+jobs:
+  lint:
+    name: lint
+    if: "!startsWith(github.ref, 'refs/tags/')"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          path: 'freebsd-collection'
+          fetch-depth: 0
+      - uses: ansible-community/ansible-lint-action@main
+      - run: pip3 install yamllint
+      - run: yamllint .
+      - uses: ansible/ansible-lint-action@main
+
+  ansible-test:
+    name: ansible-test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Perform sanity testing
+        uses: ansible-community/ansible-test-gh-action@release/v1
+        with:
+          testing-type: sanity
+
+  molecule:
+    name: test ${{ matrix.scenario }}
+    runs-on: macos-12
+    strategy:
+      matrix:
+        scenario:
+          - default
+          - server
+
+    steps:
+      - name: Check out the codebase
+        uses: actions/checkout@v3
+        with:
+          path: 'freebsd-collection'
+
+      - name: Set up Python3
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+          cache: 'pip'
+          cache-dependency-path: '**/requirements-dev.txt'
+          check-latest: true
+
+      - name: Install dependencies
+        run: pip install -r requirements-dev.txt
+
+      - name: Cache Vagrant boxes
+        uses: actions/cache@v3
+        with:
+          path: ~/.vagrant.d/boxes
+          key: ${{ runner.os }}-vagrant-${{ matrix.scenario }}
+          restore-keys: |
+            ${{ runner.os }}-vagrant-${{ matrix.scenario }}
+
+      - name: Run Molecule
+        run: molecule test -s ${{ matrix.scenario }}
+        env:
+          PY_COLORS: '1'
+          ANSIBLE_FORCE_COLOR: '1'
+          MOLECULE_DISTRO: freebsd13
+
+  release:
+    needs: [ansible-test, molecule]
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    if: |
+      github.repository_owner == 'charlesrocket' &&
+      startsWith(github.ref, 'refs/tags/')
+    uses: ./.github/workflows/cd.yml
+    secrets:
+      GALAXY_API_KEY: ${{ secrets.GALAXY_API_KEY }}
