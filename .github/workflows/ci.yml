@@ -23,7 +23,11 @@ jobs:
         with:
           path: 'freebsd-collection'
           fetch-depth: 0
-      - uses: ansible-community/ansible-lint-action@main
+      - run: ansible-galaxy collection build
+      - run: >
+          ansible-galaxy collection install
+          charlesrocket-freebsd-$(grep version galaxy.yml |
+          awk '{print $2}').tar.gz
       - run: pip3 install yamllint
       - run: yamllint .
       - uses: ansible/ansible-lint-action@main
