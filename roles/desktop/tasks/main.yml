@@ -1,5 +1,19 @@
 ---
 
+- name: Edit user
+  ansible.builtin.user:
+    name: "{{ ansible_user_id }}"
+    shell: /usr/local/bin/zsh
+    groups: cups,dialer,network,operator,realtime,video,wheel
+    append: true
+
+- name: Install ohmyzsh
+  ansible.builtin.shell:
+    cmd: sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+  args:
+    creates: "/home/{{ ansible_user_id }}/.oh-my-zsh"
+  become: false
+
 - name: Allow usermount
   ansible.posix.sysctl:
     name: vfs.usermount

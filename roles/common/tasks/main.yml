@@ -10,7 +10,7 @@
 
 - name: Copy MOTD
   ansible.builtin.copy:
-    src: motd.sh
+    src: "{{ (ansible_play_name == 'FreeBSD Server') | ternary('motd-server', 'motd') }}.sh"
     dest: /etc/motd.sh
     owner: root
     mode: '0700'
@@ -36,14 +36,8 @@
 
 - name: Copy Lynis profile
   ansible.builtin.copy:
-    src: desktop.prf
-    dest: /usr/local/etc/lynis/desktop.prf
+    src: "{{ (ansible_play_name == 'FreeBSD Station') | ternary('desktop', 'server') }}.prf"
+    dest: /usr/local/etc/lynis/custom.prf
     owner: root
     mode: '0644'
   become: true
-
-- name: Install ohmyzsh
-  ansible.builtin.shell:
-    cmd: sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
-  args:
-    creates: "/home/{{ ansible_user_id }}/.oh-my-zsh"
