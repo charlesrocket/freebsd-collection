@@ -10,12 +10,13 @@
 
 - name: Copy MOTD
   ansible.builtin.copy:
-    src: >
-      "{{ (ansible_play_name == 'FreeBSD Server')
-      | ternary('motd-server', 'motd') }}.sh"
+    src: >-
+      {{ (ansible_play_name == 'FreeBSD Server')
+      | ternary('motd-server', 'motd') }}.sh
     dest: /etc/motd.sh
     owner: root
     mode: '0700'
+    remote_src: false
   become: true
 
 - name: Install MOTD
@@ -38,10 +39,11 @@
 
 - name: Copy Lynis profile
   ansible.builtin.copy:
-    src: >
-      "{{ (ansible_play_name == 'FreeBSD Station')
-      | ternary('desktop', 'server') }}.prf"
+    src: >-
+      {{ (ansible_play_name == 'FreeBSD Station')
+      | ternary('desktop', 'server') }}.prf
     dest: /usr/local/etc/lynis/custom.prf
     owner: root
     mode: '0644'
+    remote_src: false
   become: true
