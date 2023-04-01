@@ -11,14 +11,13 @@ task:
   install_script: pkg install -y doas git py39-ansible
 
   clone_script: |
-    git clone -b ${CIRRUS_BRANCH} https://github.com/charlesrocket/freebsd-station /tmp/freebsd-station
-    cp /tmp/freebsd-station/test/config.yml /tmp/freebsd-station/config.yml
+    git clone -b ${CIRRUS_BRANCH} https://github.com/charlesrocket/freebsd-collection /tmp/freebsd-collection
 
   script: |
     echo "permit nopass keepenv chuck" > /usr/local/etc/doas.conf
     pw useradd chuck -m -G wheel
-    chown -R chuck:chuck /tmp/freebsd-station
-    su -l chuck -c 'cd /tmp/freebsd-station && test/idempotence_test.sh'
+    chown -R chuck:chuck /tmp/freebsd-collection
+    su -l chuck -c 'cd /tmp/freebsd-collection && test/idempotence_test.sh'
 
   test_script: |
-    lynis audit system --profile /usr/local/etc/lynis/desktop.prf
+    lynis audit system --profile /usr/local/etc/lynis/custom.prf
