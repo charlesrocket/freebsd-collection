@@ -4,8 +4,11 @@
   ansible.builtin.user:
     name: "{{ ansible_user_id }}"
     shell: /usr/local/bin/zsh
-    groups: cups,dialer,network,operator,realtime,video,wheel
+    groups: "{{ user_groups }}"
     append: true
+  when:
+    - user_groups is defined
+    - user_groups != ''
   become: true
 
 - name: Copy MOTD

@@ -61,6 +61,15 @@ make_config:
 doas_config:
   - permit nopass keepenv {{ ansible_user_id }}
 
+user_groups:
+  - cups
+  - dialer
+  - network
+  - operator
+  - realtime
+  - video
+  - wheel
+
 # Manage src/ports/doc with git
 git_ports: false
 git_src: false
