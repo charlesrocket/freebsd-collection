@@ -24,8 +24,8 @@
     mode: "{{ item.mode }}"
     state: directory
   loop:
-    - { path: /usr/local/etc/ssl/certs, mode: '0755' }
-    - { path: /usr/local/etc/ssl/keys, mode: '0600' }
+    - {path: /usr/local/etc/ssl/certs, mode: '0755'}
+    - {path: /usr/local/etc/ssl/keys, mode: '0600'}
 
 - name: Generate poudriere.key
   ansible.builtin.command:
@@ -34,5 +34,7 @@
 
 - name: Generate poudriere.cert
   ansible.builtin.command:
-    cmd: openssl rsa -in /usr/local/etc/ssl/keys/poudriere.key -pubout -out /usr/local/etc/ssl/certs/poudriere.cert
+    cmd: >
+      openssl rsa -in /usr/local/etc/ssl/keys/poudriere.key -pubout
+      -out /usr/local/etc/ssl/certs/poudriere.cert
     creates: /usr/local/etc/ssl/certs/poudriere.cert

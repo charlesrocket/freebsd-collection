@@ -225,6 +225,6 @@
     group: wheel
     mode: "{{ item.mode }}"
   loop:
-    - { path: /etc/cron.d, mode: '0700' }
-    - { path: /etc/crontab, mode: '0600' }
-    - { path: /etc/ssh/sshd_config, mode: '0600' }
+    - {path: /etc/cron.d, mode: '0700'}
+    - {path: /etc/crontab, mode: '0600'}
+    - {path: /etc/ssh/sshd_config, mode: '0600'}

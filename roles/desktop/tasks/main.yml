@@ -9,7 +9,9 @@
 
 - name: Install ohmyzsh
   ansible.builtin.shell:
-    cmd: sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+    cmd: >
+      sh -c "$(curl -fsSL https://raw.githubusercontent.com
+      /ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
   args:
     creates: "/home/{{ ansible_user_id }}/.oh-my-zsh"
   become: false

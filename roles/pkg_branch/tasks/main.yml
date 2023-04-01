@@ -12,7 +12,7 @@
     - Upgrade packages
 
 - name: Ensure packages are upgraded to the latest version
-  ansible.builtin.assert: { that: true, quiet: true }
+  ansible.builtin.assert: {that: true, quiet: true}
   changed_when: true
   when: upgrade_packages
   notify:

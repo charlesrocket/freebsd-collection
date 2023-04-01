@@ -26,7 +26,7 @@
     regexp: "^ifconfig_lo1_name.+$"
     line: 'ifconfig_lo1_name="bastille0"'
 
-- name: Start Bastille interface # noqa command-instead-of-module
+- name: Start Bastille interface  # noqa command-instead-of-module
   ansible.builtin.command: service netif cloneup
   register: netif_output
   changed_when: '"interface lo1 already exists" not in netif_output.stderr'
