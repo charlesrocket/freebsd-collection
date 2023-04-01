@@ -14,7 +14,6 @@ fi
 
 doas pkg install -y git py39-ansible
 
-git clone https://github.com/charlesrocket/freebsd-station && cd freebsd-station
-
-ansible-galaxy install -r requirements.yml
-ansible-playbook main.yml
+ansible-galaxy collection install charlesrocket.freebsd
+ansible-playbook charlesrocket.freebsd.station -c local -i "localhost," \
+	-e "profile=charlesrocket"
