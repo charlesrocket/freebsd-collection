@@ -4,9 +4,9 @@
   hosts: all
 
   tasks:
-    - name: Include station variables
+    - name: Include server variables
       ansible.builtin.include_vars:
-        file: ../../playbooks/vars/charlesrocket/station.yml
+        file: ../../playbooks/vars/charlesrocket/server.yml
 
 - name: Include server playbook
   ansible.builtin.import_playbook: charlesrocket.freebsd.server
