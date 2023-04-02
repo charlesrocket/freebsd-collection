@@ -1,3 +1,3 @@
 # desktop
 
-Roles for desktop targets
+Tasks for desktop targets

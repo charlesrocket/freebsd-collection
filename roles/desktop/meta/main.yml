@@ -2,7 +2,7 @@
 
 galaxy_info:
   author: charlesrocket
-  description: Roles for desktop targets
+  description: Tasks for desktop targets
   role_name: desktop
   license: "MIT"
   min_ansible_version: "2.9"
