@@ -1,7 +1,7 @@
 ---
 
 - name: Gather pkg facts
-  package_facts:
+  ansible.builtin.package_facts:
     strategy: all
     manager: "auto"
 
