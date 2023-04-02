@@ -1,0 +1,14 @@
+---
+
+galaxy_info:
+  author: charlesrocket
+  description: Ports branch manager
+  role_name: pkg_branch
+  license: "MIT"
+  min_ansible_version: "2.10"
+  platforms:
+    - name: FreeBSD
+      versions:
+        - all
+  galaxy_tags:
+    - pkg
