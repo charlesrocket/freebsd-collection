@@ -77,7 +77,7 @@ git_doc: false
 
 # Packages
 upgrade_packages: true
-latest_branch: true
+pkg_latest_branch: true
 pkgng_packages:
   - apl385
   - adwaita-icon-theme

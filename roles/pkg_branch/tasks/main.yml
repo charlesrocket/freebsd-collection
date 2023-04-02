@@ -1,20 +1,21 @@
 ---
 
 - name: >-
-    Set ports branch | {{ (latest_branch == true) |
+    Set ports branch | {{ (pkg_latest_branch == true) |
     ternary('latest', 'quarterly') }}
   ansible.builtin.replace:
     path: /usr/local/etc/pkg/repos/FreeBSD.conf
-    regexp: "{{ (latest_branch == true) | ternary('quarterly', 'latest') }}"
-    replace: "{{ (latest_branch == true) | ternary('latest', 'quarterly') }}"
-  register: pkg_branch
+    regexp: "{{ (pkg_latest_branch == true) | ternary('quarterly', 'latest') }}"
+    replace:
+      "{{ (pkg_latest_branch == true) | ternary('latest', 'quarterly') }}"
+    register: pkg_branch
 
 - name: Redownload repository catalogue
   ansible.builtin.command: pkg update -f
   register: pkg_output
   changed_when:
     - '"need to re-create database" in pkg_output.stderr'
-  when: latest_branch
+  when: pkg_latest_branch
 
 - name: Upgrade installed packages
   community.general.pkgng:
@@ -22,4 +23,4 @@
     state: latest
     autoremove: true
     cached: false
-  when: upgrade_packages or latest_branch
+  when: upgrade_packages or pkg_latest_branch
