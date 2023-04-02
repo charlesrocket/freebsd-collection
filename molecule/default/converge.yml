@@ -8,5 +8,8 @@
       ansible.builtin.include_vars:
         file: ../../playbooks/vars/charlesrocket/station.yml
 
+    - name: Add test variables
+      ansible.builtin.include_vars: test.yml
+
 - name: Include station playbook
   ansible.builtin.import_playbook: charlesrocket.freebsd.station
