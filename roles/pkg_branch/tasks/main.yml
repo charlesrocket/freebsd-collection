@@ -8,7 +8,6 @@
     regexp: "{{ (pkg_latest_branch == true) | ternary('quarterly', 'latest') }}"
     replace:
       "{{ (pkg_latest_branch == true) | ternary('latest', 'quarterly') }}"
-    register: pkg_branch
 
 - name: Redownload repository catalogue
   ansible.builtin.command: pkg update -f
