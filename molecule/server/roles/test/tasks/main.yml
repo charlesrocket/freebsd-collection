@@ -1,13 +1,13 @@
 ---
 
-- name: "~/.config/mc/ini information"
-  ansible.builtin.stat:
-    path: "~/.config/mc/ini"
-  register: test_file
+- name: Gather pkg facts
+  package_facts:
+    strategy: all
+    manager: "auto"
 
-- name: "Check ~/.config/mc/ini"
+- name: Check installed packages
   ansible.builtin.assert:
     that:
-      - test_file.stat.exists
-      - test_file.stat.islnk
-      - test_file.stat.executable == false
+      - "'pam_yubico' in ansible_facts.packages"
+      - "'lynis' in ansible_facts.packages"
+      - "'rkhunter' in ansible_facts.packages"
