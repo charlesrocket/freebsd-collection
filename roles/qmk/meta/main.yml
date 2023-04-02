@@ -1,0 +1,14 @@
+---
+
+galaxy_info:
+  author: charlesrocket
+  description: Deploy QMK tools
+  role_name: qmk
+  license: "MIT"
+  min_ansible_version: "2.9"
+  platforms:
+    - name: FreeBSD
+      versions:
+        - all
+  galaxy_tags:
+    - qmk

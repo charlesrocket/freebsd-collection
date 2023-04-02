@@ -1,0 +1,15 @@
+---
+
+galaxy_info:
+  author: charlesrocket
+  description: Deploy FreeBSD ports source with git
+  role_name: git_ports
+  license: "MIT"
+  min_ansible_version: "2.9"
+  platforms:
+    - name: FreeBSD
+      versions:
+        - all
+  galaxy_tags:
+    - ports
+    - git

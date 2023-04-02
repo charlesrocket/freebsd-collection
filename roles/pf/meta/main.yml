@@ -1,0 +1,14 @@
+---
+
+galaxy_info:
+  author: charlesrocket
+  description: Manage pf settings
+  role_name: pf
+  license: "MIT"
+  min_ansible_version: "2.9"
+  platforms:
+    - name: FreeBSD
+      versions:
+        - all
+  galaxy_tags:
+    - pf
