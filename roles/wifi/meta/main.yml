@@ -3,7 +3,7 @@
 galaxy_info:
   author: charlesrocket
   description: Manage WiFi
-  role_name: amd
+  role_name: wifi
   license: "MIT"
   min_ansible_version: "2.9"
   platforms:
