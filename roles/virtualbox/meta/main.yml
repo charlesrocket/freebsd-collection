@@ -2,8 +2,8 @@
 
 galaxy_info:
   author: charlesrocket
-  description: Manage AMD drivers
-  role_name: amd
+  description: Deploy VirtualBox
+  role_name: virtualbox
   license: "MIT"
   min_ansible_version: "2.9"
   platforms:
@@ -11,4 +11,4 @@ galaxy_info:
       versions:
         - all
   galaxy_tags:
-    - amd
+    - virtualbox
