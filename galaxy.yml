@@ -37,3 +37,4 @@ build_ignore:
   - bootstrap
   - molecule
   - requirements*txt
+  - assets/screenshot.png
