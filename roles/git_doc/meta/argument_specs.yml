@@ -1,0 +1,10 @@
+---
+
+argument_specs:
+  main:
+    short_description: Deploy FreeBSD doc source
+    description:
+      - Deploy FreeBSD doc source with git.
+
+    author:
+      - charlesrocket

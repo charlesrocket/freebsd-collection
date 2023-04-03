@@ -1,0 +1,16 @@
+---
+
+argument_specs:
+  main:
+    short_description: System tuning for servers
+    description:
+      - Adjust the system for server applications.
+
+    author:
+      - charlesrocket
+
+    options:
+      sshd:
+        description: Activates or deactivates C(sshd) service.
+        type: bool
+        required: true

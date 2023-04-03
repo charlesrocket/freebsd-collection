@@ -1,0 +1,18 @@
+---
+
+argument_specs:
+  main:
+    short_description: Install MOTD configuration files
+    description:
+      - >-
+        Install MOTD and deploy configuration files
+        for C(make), C(lynis).
+
+    author:
+      - charlesrocket
+
+    options:
+      make_config:
+        description: List of C(make) options.
+        type: list
+        elements: str

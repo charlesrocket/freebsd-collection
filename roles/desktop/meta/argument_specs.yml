@@ -1,0 +1,13 @@
+---
+
+argument_specs:
+  main:
+    short_description: Desktop tunings
+    description:
+      - >-
+        Tasks for desktop configuration.
+        Install C(ohmyzsh), setup required services
+        and adjust user gropus.
+
+    author:
+      - charlesrocket

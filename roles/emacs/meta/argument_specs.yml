@@ -1,0 +1,10 @@
+---
+
+argument_specs:
+  main:
+    short_description: Install Doom Emacs
+    description:
+      - Build and deploy Doom Emacs using local configuration.
+
+    author:
+      - charlesrocket

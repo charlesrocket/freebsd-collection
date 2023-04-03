@@ -1,0 +1,10 @@
+---
+
+argument_specs:
+  main:
+    short_description: Process accounting manager
+    description:
+      - Deploy process accounting service.
+
+    author:
+      - charlesrocket

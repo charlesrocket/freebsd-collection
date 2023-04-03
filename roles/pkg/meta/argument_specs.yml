@@ -1,0 +1,17 @@
+---
+
+argument_specs:
+  main:
+    short_description: Package manager
+    description:
+      - Install and upgrade packages.
+
+    author:
+      - charlesrocket
+
+    options:
+      pkgng_packages:
+        description: List of packages to manage.
+        type: list
+        elements: str
+        required: true

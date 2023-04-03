@@ -1,0 +1,10 @@
+---
+
+argument_specs:
+  main:
+    short_description: Deploy FreeBSD ports source
+    description:
+      - Deploy FreeBSD ports source with git.
+
+    author:
+      - charlesrocket

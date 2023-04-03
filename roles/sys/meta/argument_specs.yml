@@ -1,0 +1,17 @@
+---
+
+argument_specs:
+  main:
+    short_description: Manage system settings
+    description:
+      - System tunings and hardening.
+
+    author:
+      - charlesrocket
+
+    options:
+      doas_config:
+        description: List of C(doas) options.
+        type: list
+        elements: str
+        required: true

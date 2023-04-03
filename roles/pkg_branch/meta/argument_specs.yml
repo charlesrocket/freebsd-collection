@@ -1,0 +1,16 @@
+---
+
+argument_specs:
+  main:
+    short_description: Ports branch manager
+    description:
+      - Switch to C(latest)/C(quarterly) branch.
+
+    author:
+      - charlesrocket
+
+    options:
+      pkg_latest_branch:
+        description: Use C(latest) branch.
+        type: bool
+        required: true
