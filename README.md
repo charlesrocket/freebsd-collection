@@ -7,7 +7,7 @@ Ansible collection for FreeBSD servers and desktops.
 
 `requirements.yml`:
 
-```
+```yaml
 collections:
   - name: charlesrocket.freebsd
 ```
