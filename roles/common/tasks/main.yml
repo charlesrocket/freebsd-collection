@@ -30,6 +30,18 @@
     state: present
   become: true
 
+- name: Ensure MOTD dependencies are installed
+  community.general.pkgng:
+    state: present
+    name: "{{ motd_deps }}"
+    autoremove: true
+    cached: false
+  vars:
+    motd_deps:
+      - figlet
+      - lolcat
+  become: true
+
 - name: Configure make
   ansible.builtin.template:
     src: make.conf.j2
