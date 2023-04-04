@@ -8,7 +8,6 @@
     append: true
   when:
     - user_groups is defined
-    - user_groups != ''
   become: true
 
 - name: Copy MOTD
