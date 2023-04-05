@@ -1,5 +1,3 @@
-.. _charlesrocket.freebsd.docsite.station_guide:
-
 Station
 =======
 

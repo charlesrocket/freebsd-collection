@@ -1,5 +1,3 @@
-.. _charlesrocket.freebsd.docsite.server_guide:
-
 Server
 ======
 
