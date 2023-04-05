@@ -1,0 +1,7 @@
+---
+
+sections:
+  - title: Guides
+    toctree:
+      - station_guide
+      - server_guide
