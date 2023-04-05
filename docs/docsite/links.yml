@@ -2,5 +2,5 @@
 
 edit_on_github:
   repository: charlesrocket/freebsd-collection
-  branch: master
+  branch: trunk
   path_prefix: ''
