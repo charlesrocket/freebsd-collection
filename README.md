@@ -4,7 +4,7 @@
 
 Ansible collection for FreeBSD servers and desktops.
 
-### Install
+### Installation
 
 `requirements.yml`:
 
