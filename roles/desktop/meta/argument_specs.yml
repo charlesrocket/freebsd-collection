@@ -11,3 +11,5 @@ argument_specs:
 
     author:
       - charlesrocket
+
+    options: {}

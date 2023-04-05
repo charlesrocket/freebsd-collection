@@ -8,3 +8,14 @@ argument_specs:
 
     author:
       - charlesrocket
+
+    options:
+      security_level:
+        description: Set kernel security level.
+        type: str
+        default: -1
+        choices:
+          - -1
+          - 1
+          - 2
+          - 3
