@@ -1,0 +1,12 @@
+---
+
+argument_specs:
+  main:
+    short_description: Manage AMD drivers
+    description:
+      - Enable AMD GPU drivers
+
+    author:
+      - charlesrocket
+
+    options: {}
