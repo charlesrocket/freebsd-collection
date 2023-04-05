@@ -16,24 +16,30 @@ collections:
 ### Usage
 
 ```yaml
-- name: Example playbook
+- name: Workstation playbook
   hosts: all
 
 - name: Include playbook - station
   ansible.builtin.import_playbook: charlesrocket.freebsd.station
 ```
 
-[example variables](https://github.com/charlesrocket/freebsd-collection/tree/master/playbooks/vars/charlesrocket)
+```yaml
+- name: Server playbook
+  hosts: all
+
+- name: Include playbook - server
+  ansible.builtin.import_playbook: charlesrocket.freebsd.server
+```
+
+[example variables](https://github.com/charlesrocket/freebsd-collection/tree/trunk/playbooks/vars/charlesrocket)
 
 ## Example
-
-**FreeBSD** station
 
 <img src="assets/screenshot.png" alt="screenshot" width="900"/>
 
 ```sh
-# configure doas
-echo "permit nopass keepenv $USER" > /usr/local/etc/doas.conf
 # run as user
-curl https://raw.githubusercontent.com/charlesrocket/freebsd-station/master/bootstrap | sh
+ansible-galaxy collection install charlesrocket.freebsd
+ansible-playbook charlesrocket.freebsd.station -c \
+    local -i "localhost," -e "profile=charlesrocket"
 ```
