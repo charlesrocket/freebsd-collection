@@ -4,3 +4,7 @@ edit_on_github:
   repository: charlesrocket/freebsd-collection
   branch: trunk
   path_prefix: ''
+
+extra_links:
+  - description: Report an issue
+    url: https://github.com/charlesrocket/freebsd-collection/issues/new
