@@ -9,10 +9,6 @@ concurrency:
   group: ${{ github.ref }}
   cancel-in-progress: false
 
-defaults:
-  run:
-    working-directory: 'freebsd-collection'
-
 jobs:
   lint:
     name: lint
@@ -21,10 +17,15 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          path: 'freebsd-collection'
           fetch-depth: 0
       - run: pip3 install yamllint
       - run: yamllint .
+      - run: ansible-galaxy collection build
+      - run: >-
+          ansible-galaxy collection install
+          charlesrocket-freebsd-$(grep version galaxy.yml |
+          awk '{print $2}').tar.gz
+      - uses: ansible/ansible-lint-action@main
 
   ansible-test:
     name: ansible-test
@@ -47,8 +48,6 @@ jobs:
     steps:
       - name: Check out the codebase
         uses: actions/checkout@v3
-        with:
-          path: 'freebsd-collection'
 
       - name: Set up Python3
         uses: actions/setup-python@v4
