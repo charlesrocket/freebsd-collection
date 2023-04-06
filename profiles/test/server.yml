@@ -10,7 +10,7 @@ poudriere: true
 hostname: test
 sshd: true
 set_security_level: true
-security_level: 3
+security_level: "3"
 timezone: America/Los_Angeles
 make_config:
   - MAKE_JOBS_NUMBER?=3

@@ -21,7 +21,7 @@ poudriere_host: ftp://ftp.freebsd.org
 poudriere_zfs: true
 poudriere_zpool: zroot
 poudriere_zrootfs: /usr/local/poudriere
-security_level: 2
+security_level: "2"
 timezone: America/Los_Angeles
 
 # Keep packages up to date
