@@ -34,7 +34,7 @@ build_ignore:
   - .editorconfig
   - .github
   - .gitignore
-  - bootstrap
+  - assets
+  - profiles
   - molecule
   - requirements*txt
-  - assets/screenshot.png
