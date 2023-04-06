@@ -2,7 +2,7 @@
 
 argument_specs:
   main:
-    short_description: Manage pf settings
+    short_description: pf manager
     description:
       - Deploy C(pf) configurations.
 

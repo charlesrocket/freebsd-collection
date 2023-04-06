@@ -2,7 +2,7 @@
 
 argument_specs:
   main:
-    short_description: Deploy Bastille
+    short_description: Bastille installer
     description:
       - Deploy Bastille service.
 

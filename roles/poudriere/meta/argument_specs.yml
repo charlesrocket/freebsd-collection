@@ -2,7 +2,7 @@
 
 argument_specs:
   main:
-    short_description: Deploy poudriere
+    short_description: poudriere installer
     description:
       - Install and configure poudriere service.
 

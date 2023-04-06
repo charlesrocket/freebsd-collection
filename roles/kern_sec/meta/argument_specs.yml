@@ -2,7 +2,7 @@
 
 argument_specs:
   main:
-    short_description: Manage kernel security level
+    short_description: Security level manager
     description:
       - Enable and adjust kernel security level.
 

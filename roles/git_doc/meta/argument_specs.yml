@@ -2,7 +2,7 @@
 
 argument_specs:
   main:
-    short_description: Deploy FreeBSD doc source
+    short_description: doc source manager
     description:
       - Deploy FreeBSD doc source with git.
 
