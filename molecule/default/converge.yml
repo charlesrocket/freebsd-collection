@@ -4,12 +4,13 @@
   hosts: all
 
   tasks:
-    - name: Include station variables
+    - name: Include variables
       ansible.builtin.include_vars:
         file: ../../profiles/charlesrocket/station.yml
 
-    - name: Add test variables
-      ansible.builtin.include_vars: test.yml
+    - name: Include test variables
+      ansible.builtin.include_vars:
+        file: ../../profiles/test/station.yml
 
 - name: Include station playbook
   ansible.builtin.import_playbook: charlesrocket.freebsd.station

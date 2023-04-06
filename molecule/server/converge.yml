@@ -8,5 +8,9 @@
       ansible.builtin.include_vars:
         file: ../../profiles/charlesrocket/server.yml
 
+    - name: Include test variables
+      ansible.builtin.include_vars:
+        file: ../../profiles/test/server.yml
+
 - name: Include server playbook
   ansible.builtin.import_playbook: charlesrocket.freebsd.server
