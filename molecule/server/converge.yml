@@ -6,7 +6,7 @@
   tasks:
     - name: Include server variables
       ansible.builtin.include_vars:
-        file: ../../playbooks/vars/charlesrocket/server.yml
+        file: ../../profiles/charlesrocket/server.yml
 
 - name: Include server playbook
   ansible.builtin.import_playbook: charlesrocket.freebsd.server

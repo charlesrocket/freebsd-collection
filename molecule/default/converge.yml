@@ -6,7 +6,7 @@
   tasks:
     - name: Include station variables
       ansible.builtin.include_vars:
-        file: ../../playbooks/vars/charlesrocket/station.yml
+        file: ../../profiles/charlesrocket/station.yml
 
     - name: Add test variables
       ansible.builtin.include_vars: test.yml
