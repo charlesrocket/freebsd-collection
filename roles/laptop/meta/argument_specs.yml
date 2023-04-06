@@ -2,7 +2,7 @@
 
 argument_specs:
   main:
-    short_description: Tasks for laptop targets
+    short_description: Laptop tunings
     description:
       - Tasks and tunings for laptops.
 
