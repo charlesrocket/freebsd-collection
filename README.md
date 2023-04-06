@@ -31,7 +31,7 @@ collections:
   ansible.builtin.import_playbook: charlesrocket.freebsd.server
 ```
 
-[example variables](https://github.com/charlesrocket/freebsd-collection/tree/trunk/playbooks/vars/charlesrocket)
+[example variables](https://github.com/charlesrocket/freebsd-collection/tree/trunk/profiles/charlesrocket)
 
 ## Example
 

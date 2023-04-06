@@ -19,4 +19,4 @@ Usage
 Variables
 ---------
 
-`Example variables <https://github.com/charlesrocket/freebsd-collection/blob/trunk/playbooks/vars/charlesrocket/station.yml>`_
+`Example variables <https://github.com/charlesrocket/freebsd-collection/blob/trunk/profiles/charlesrocket/station.yml>`_
