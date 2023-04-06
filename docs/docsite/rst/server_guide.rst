@@ -13,7 +13,7 @@ Usage
     - name: Server playbook
       hosts: all
 
-    - name: Include playbook - server
+    - name: Include playbook | server
       ansible.builtin.import_playbook: charlesrocket.freebsd.server
 
 Variables

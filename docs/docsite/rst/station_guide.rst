@@ -13,7 +13,7 @@ Usage
     - name: Workstation playbook
       hosts: all
 
-    - name: Include playbook - station
+    - name: Include playbook | station
       ansible.builtin.import_playbook: charlesrocket.freebsd.station
 
 Variables
