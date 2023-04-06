@@ -12,6 +12,10 @@ wifi: true
 
 laptop: false
 
+make_config:
+  - DEVELOPER=yes
+  - MAKE_JOBS_NUMBER?=16
+
 upgrade_packages: false
 pkg_latest_branch: false
 
