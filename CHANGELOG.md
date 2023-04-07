@@ -2,6 +2,66 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.1] - 2023-04-07
+
+### Bug Fixes
+
+- Drop old SSH option
+- Edit user groups task
+- Ensure MOTD dependencies are installed
+- Add default security level
+- Download profiles from source
+- Use explicit variable declaration
+- Fix argument validation
+
+### CI/CD
+
+- Drop docs.yml
+- Add ansible-lint
+
+### Documentation
+
+- Fix docsite files
+- Update header
+- Update instructions
+- Update branch
+- Add extra links
+- Add argument_specs.yml for `amd`
+- Add extra documentation
+- Fix docsite references
+- Fix README.md
+- Fix example variables
+- Edit descriptions
+- Add documentation for user profiles
+- Update short descriptions
+- Move `profiles`
+
+### Miscellaneous tasks
+
+- Version bump
+- Change security level
+- Fix formatting
+
+### Styling
+
+- Edit usage
+- Update descriptions
+
+### Testing
+
+- Fix molecule
+- Add test profiles
+- Use test profiles
+- Add `make_config` to desktop tests
+
+### Build
+
+- Update filter
+
+### Revert
+
+- Don't use explicit variable declaration
+
 ## [1.0.0] - 2023-04-03
 
 ### Bug Fixes
