@@ -2,9 +2,9 @@
 
 argument_specs:
   main:
-    short_description: Bastille installer
+    short_description: bastille installer
     description:
-      - Deploy Bastille service.
+      - Deploy C(bastille) service.
 
     author:
       - charlesrocket

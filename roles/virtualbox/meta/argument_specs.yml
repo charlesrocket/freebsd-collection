@@ -2,7 +2,7 @@
 
 argument_specs:
   main:
-    short_description: VirtualBox installer
+    short_description: virtualbox installer
     description:
       - Install and configure VirtualBox.
 

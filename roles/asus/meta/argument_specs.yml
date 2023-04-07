@@ -2,7 +2,7 @@
 
 argument_specs:
   main:
-    short_description: Asus driver manager
+    short_description: asus driver manager
     description:
       - Enable ASUS WMI Extras
 

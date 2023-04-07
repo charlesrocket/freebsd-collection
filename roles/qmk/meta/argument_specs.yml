@@ -2,7 +2,7 @@
 
 argument_specs:
   main:
-    short_description: QMK installer
+    short_description: qmk installer
     description:
       - Deploy QMK source and tools.
 

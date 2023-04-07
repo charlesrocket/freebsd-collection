@@ -2,7 +2,7 @@
 
 argument_specs:
   main:
-    short_description: Wi-Fi manager
+    short_description: wifi manager
     description:
       - Setup and manage Wi-Fi.
 

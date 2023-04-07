@@ -2,7 +2,7 @@
 
 argument_specs:
   main:
-    short_description: System settings
+    short_description: system settings
     description:
       - System tunings and hardening.
 

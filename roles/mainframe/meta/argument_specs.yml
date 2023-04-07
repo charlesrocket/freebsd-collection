@@ -2,7 +2,7 @@
 
 argument_specs:
   main:
-    short_description: Server tunings
+    short_description: server tunings
     description:
       - Adjust the system for server applications.
 

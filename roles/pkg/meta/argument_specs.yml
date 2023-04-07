@@ -2,7 +2,7 @@
 
 argument_specs:
   main:
-    short_description: Package manager
+    short_description: package manager
     description:
       - Install and upgrade packages.
 

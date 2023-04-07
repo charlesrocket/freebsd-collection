@@ -2,7 +2,7 @@
 
 argument_specs:
   main:
-    short_description: Process accounting manager
+    short_description: process accounting manager
     description:
       - Deploy process accounting service.
 
