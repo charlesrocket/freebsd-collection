@@ -4,31 +4,11 @@
   hosts: "{{ target | default('all') }}"
 
   pre_tasks:
-    - name: "Preparing profile | {{ profile }}"
-      ansible.builtin.tempfile:
-        state: file
-        prefix: temp
-      register: user_profile
-      changed_when: false
-      tags: ['always']
-      delegate_to: 127.0.0.1
-      when: profile is defined
-
-    - name: Downloading profile
-      ansible.builtin.uri:
+    - name: "Activating profile | {{ profile }}"
+      charlesrocket.essential.remote_vars:
         url:
           "https://raw.githubusercontent.com/charlesrocket/\
           freebsd-collection/trunk/profiles/{{ profile }}/station.yml"
-        dest: "{{ user_profile.path }}"
-        mode: '0400'
-      tags: ['always']
-      changed_when: false
-      delegate_to: 127.0.0.1
-      when: profile is defined
-
-    - name: Activating profile
-      ansible.builtin.include_vars:
-        file: "{{ user_profile.path }}"
       tags: ['always']
       when: profile is defined
 
