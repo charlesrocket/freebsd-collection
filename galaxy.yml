@@ -2,7 +2,7 @@
 
 namespace: charlesrocket
 name: freebsd
-version: 1.0.2
+version: 1.1.0
 readme: README.md
 description: FreeBSD collection for workstations/servers
 authors:
