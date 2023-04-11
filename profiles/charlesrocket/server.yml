@@ -23,6 +23,7 @@ poudriere_zpool: zroot
 poudriere_zrootfs: /usr/local/poudriere
 security_level: 2
 timezone: America/Los_Angeles
+motd_layout: status
 
 # Keep packages up to date
 upgrade_packages: false

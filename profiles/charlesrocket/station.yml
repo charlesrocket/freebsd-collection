@@ -53,6 +53,7 @@ bastille_zfs_zpool: zroot
 timezone: America/Los_Angeles
 github: charlesrocket
 
+lynis_profile: desktop
 make_config:
   - DEVELOPER=yes
   - MAKE_JOBS_NUMBER?=16
