@@ -12,7 +12,23 @@ argument_specs:
       - charlesrocket
 
     options:
+      lynis_profile:
+        description: Lynis profile to deploy.
+        type: str
+        default: server
+        choices:
+          - server
+          - desktop
+
       make_config:
         description: List of C(make) options.
         type: list
         elements: str
+
+      motd_layout:
+        description: MOTD layout.
+        type: str
+        default: default
+        choices:
+          - default
+          - status
