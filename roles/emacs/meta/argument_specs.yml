@@ -2,7 +2,7 @@
 
 argument_specs:
   main:
-    short_description: emacs installer
+    short_description: Installs Emacs
     description:
       - Build and deploy Doom Emacs using local configuration.
 

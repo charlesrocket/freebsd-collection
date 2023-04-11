@@ -2,7 +2,7 @@
 
 argument_specs:
   main:
-    short_description: desktop tunings
+    short_description: Deploys desktop tunings
     description:
       - >-
         Tasks for desktop configuration.

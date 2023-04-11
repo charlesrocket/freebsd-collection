@@ -2,7 +2,7 @@
 
 argument_specs:
   main:
-    short_description: amd driver manager
+    short_description: Manages AMD drivers
     description:
       - Enable AMD GPU drivers
 

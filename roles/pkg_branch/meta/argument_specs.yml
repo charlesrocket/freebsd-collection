@@ -2,7 +2,7 @@
 
 argument_specs:
   main:
-    short_description: ports branch manager
+    short_description: Manages ports/pkg branch
     description:
       - Switch to C(latest)/C(quarterly) branch.
 
