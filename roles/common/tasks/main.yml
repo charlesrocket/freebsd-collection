@@ -10,11 +10,10 @@
     - user_groups is defined
   become: true
 
-- name: Copy MOTD
+- name: "Copy MOTD | {{ motd_layout }}"
   ansible.builtin.copy:
     src: >-
-      {{ (ansible_play_name == 'FreeBSD Server')
-      | ternary('motd-server', 'motd') }}.sh
+      motd-{{ motd_layout }}.sh
     dest: /etc/motd.sh
     owner: root
     mode: '0700'
@@ -53,11 +52,10 @@
   when:
     - make_config is defined
 
-- name: Copy Lynis profile
+- name: "Copy Lynis profile | {{ lynis_profile }}"
   ansible.builtin.copy:
     src: >-
-      {{ (ansible_play_name == 'FreeBSD Station')
-      | ternary('desktop', 'server') }}.prf
+      {{ lynis_profile }}.prf
     dest: /usr/local/etc/lynis/custom.prf
     owner: root
     mode: '0644'
