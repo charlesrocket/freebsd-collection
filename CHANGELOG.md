@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.2] - 2023-04-11
+
+### Documentation
+
+- Update short descriptions
+- Update `mainframe` descriptions
+
+### Miscellaneous tasks
+
+- Version bump
+
+### Performance
+
+- Use `remote_vars` plugin
+
 ## [1.0.1] - 2023-04-07
 
 ### Bug Fixes
@@ -41,6 +56,7 @@ All notable changes to this project will be documented in this file.
 - Version bump
 - Change security level
 - Fix formatting
+- Prepare for 1.0.1
 
 ### Styling
 
