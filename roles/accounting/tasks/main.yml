@@ -1,12 +1,8 @@
 ---
 
-- name: Enable process accounting
+- name:
+    "Process accounting | {{ proc_accounting | ternary('enable', 'disable') }}"
   community.general.sysrc:
     name: accounting_enable
     state: present
-    value: "YES"
-
-- name: Start process accounting on boot
-  ansible.builtin.service:
-    name: accounting
-    enabled: true
+    value: "{{ proc_accounting | ternary('YES', 'NO') }}"

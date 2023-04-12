@@ -42,7 +42,6 @@
       when: dotfiles_files is defined
 
     - role: accounting
-      when: proc_accounting
       become: true
 
     - role: bastille

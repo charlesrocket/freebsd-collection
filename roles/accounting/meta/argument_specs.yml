@@ -9,4 +9,11 @@ argument_specs:
     author:
       - charlesrocket
 
-    options: {}
+    options:
+      proc_accounting:
+        description: Enable/disable process accounting.
+        type: bool
+        default: true
+        choices:
+          - true
+          - false
