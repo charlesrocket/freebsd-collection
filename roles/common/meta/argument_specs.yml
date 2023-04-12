@@ -32,3 +32,8 @@ argument_specs:
         choices:
           - default
           - status
+
+      user_groups:
+        description: List of user groups.
+        type: list
+        elements: str
