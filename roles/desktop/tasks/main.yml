@@ -1,10 +1,10 @@
 ---
 
-- name: Edit user
+- name: Ensure video group is present
   ansible.builtin.user:
     name: "{{ ansible_user_id }}"
     shell: /usr/local/bin/zsh
-    groups: cups,dialer,network,operator,realtime,video,wheel
+    groups: video
     append: true
 
 - name: Install ohmyzsh
