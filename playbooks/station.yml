@@ -22,6 +22,9 @@
     - role: pf
       become: true
 
+    - role: wg
+      become: true
+
     - role: wifi
       become: true
       when: wifi

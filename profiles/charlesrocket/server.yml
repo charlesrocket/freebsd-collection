@@ -53,5 +53,4 @@ pkgng_packages:
   - tmux
   - unzip
   - wget
-  - wireguard
   - zsh

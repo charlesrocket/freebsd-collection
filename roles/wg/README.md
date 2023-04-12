@@ -1,0 +1,3 @@
+# wg
+
+Manage WireGuard

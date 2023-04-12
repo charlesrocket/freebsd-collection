@@ -206,7 +206,6 @@ pkgng_packages:
   - wdisplays
   - wget
   - whois
-  - wireguard
   - wlogout
   - ykpers
   - zmap

@@ -30,6 +30,9 @@
       when: bastille or pf
       become: true
 
+    - role: wg
+      become: true
+
     - role: common
 
     - role: charlesrocket.essential.git
