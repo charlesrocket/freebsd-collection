@@ -12,15 +12,13 @@ license:
   - MIT
 
 tags:
-  - infrastructure
+  - system
   - development
-  - freebsd
   - pf
   - pkg
   - bastille
   - emacs
   - virtualbox
-  - git
 
 dependencies:
   "ansible.posix": ">=1.5.0"
