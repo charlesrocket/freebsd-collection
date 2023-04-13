@@ -1,3 +1,4 @@
 ---
 
 pkg_latest_branch: false
+upgrade_packages: false

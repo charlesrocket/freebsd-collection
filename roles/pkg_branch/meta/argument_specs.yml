@@ -14,3 +14,8 @@ argument_specs:
         description: Use C(latest) branch.
         type: bool
         default: false
+
+      upgrade_packages:
+        description: Upgrade installed packages.
+        type: bool
+        default: false
