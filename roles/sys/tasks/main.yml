@@ -25,6 +25,7 @@
     owner: root
     group: wheel
     mode: '0644'
+  when: doas_config is defined
 
 - name: Randomize PID
   ansible.posix.sysctl:

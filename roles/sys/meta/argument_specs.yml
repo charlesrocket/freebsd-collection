@@ -14,4 +14,15 @@ argument_specs:
         description: List of C(doas) options.
         type: list
         elements: str
-        required: true
+
+      hostname:
+        description: Set hostname.
+        type: str
+
+      timezone:
+        description: Set timezone.
+        type: str
+
+      microcode_update:
+        description: Enable microcode updates.
+        type: bool
