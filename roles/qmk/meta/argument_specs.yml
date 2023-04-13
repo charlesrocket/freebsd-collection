@@ -9,4 +9,7 @@ argument_specs:
     author:
       - charlesrocket
 
-    options: {}
+    options:
+      github:
+        description: Set GitHub username.
+        type: str
