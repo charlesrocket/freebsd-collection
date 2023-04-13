@@ -21,11 +21,9 @@
 - name: Ensure packages are installed
   community.general.pkgng:
     state: present
-    name: "{{ packages }}"
+    name: "{{ pkgng_packages }}"
     autoremove: true
     cached: false
-  vars:
-    packages: "{{ pkgng_packages }}"
 
 - name: Gather the package facts
   ansible.builtin.package_facts:
