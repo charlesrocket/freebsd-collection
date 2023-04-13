@@ -9,4 +9,8 @@ argument_specs:
     author:
       - charlesrocket
 
-    options: {}
+    options:
+      wireguard:
+        description: Enable/disable WireGuard module.
+        type: bool
+        default: true

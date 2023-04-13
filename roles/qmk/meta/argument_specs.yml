@@ -13,3 +13,4 @@ argument_specs:
       github:
         description: Set GitHub username.
         type: str
+        default: qmk
