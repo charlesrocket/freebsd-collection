@@ -13,4 +13,4 @@ argument_specs:
       pkg_latest_branch:
         description: Use C(latest) branch.
         type: bool
-        required: true
+        default: false
