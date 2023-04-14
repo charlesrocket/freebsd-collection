@@ -113,7 +113,6 @@ pkgng_packages:
   - exfat-utils
   - fd-find
   - ffuf
-  - figlet
   - filezilla
   - firefox-esr
   - font-awesome
@@ -156,7 +155,6 @@ pkgng_packages:
   - Kvantum-qt5
   - less
   - llvm
-  - lolcat
   - lynis
   - lynx
   - masscan
@@ -208,5 +206,6 @@ pkgng_packages:
   - whois
   - wlogout
   - ykpers
+  - zig
   - zmap
   - zsh
