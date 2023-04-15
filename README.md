@@ -35,7 +35,7 @@ collections:
 
 ## Example
 
-<img src="assets/screenshot.png" alt="screenshot" width="900"/>
+<img src="https://github.com/charlesrocket/freebsd-collection/raw/trunk/assets/screenshot.png" alt="screenshot" width="900"/>
 
 ```sh
 # run as user
