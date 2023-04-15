@@ -11,6 +11,6 @@ argument_specs:
 
     options:
       sshd:
-        description: Activates/deactivates C(sshd) service.
+        description: Enable SSH.
         type: bool
         required: true
