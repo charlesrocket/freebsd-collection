@@ -13,4 +13,4 @@ argument_specs:
       bastille:
         description: Deploy C(pf) configuration for C(bastille).
         type: bool
-        required: true
+        default: false
