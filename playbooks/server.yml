@@ -8,7 +8,8 @@
       charlesrocket.essential.remote_vars:
         url:
           "https://raw.githubusercontent.com/charlesrocket/\
-          freebsd-collection/trunk/profiles/{{ profile }}/server.yml"
+          freebsd-collection/trunk/profiles/{{ profile }}/\
+          {{ profile_version | default('server') }}.yml"
       tags: ['always']
       when: profile is defined
 
