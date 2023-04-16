@@ -2,6 +2,50 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.0] - 2023-04-16
+
+### Bug Fixes
+
+- Add `user_groups` to argument specs
+- Update desktop user groups
+- Fix default options in argument specs
+
+### Documentation
+
+- Update argument specs
+- Fix `wireguard` description
+- Use external screenshot location
+- Update `sshd` description
+
+### Features
+
+- Add default variables
+- Add `wg` role
+- Improve `accounting`
+- Improve `sys`
+- Add defaults to `qmk`
+- Add defaults to `pkg_branch`
+- Add default `upgrade_packages`
+- Add defaults to `pf`
+
+### Miscellaneous tasks
+
+- Version bump
+- Update profiles
+- Bump `essential`
+- Update galaxy tags
+- Fix galaxy tags
+- Update pkg lists
+- Enable git-cliff package
+
+### Refactor
+
+- Drop `packages`
+
+### Testing
+
+- Update server variables
+
 ## [1.0.2] - 2023-04-11
 
 ### Documentation
@@ -12,6 +56,7 @@ All notable changes to this project will be documented in this file.
 ### Miscellaneous tasks
 
 - Version bump
+- Prepare for 1.0.2
 
 ### Performance
 
