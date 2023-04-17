@@ -1,0 +1,24 @@
+---
+
+ci:
+  - '.github/workflows/*'
+
+documentation:
+  - 'docs/**/*'
+
+playbook:
+  - 'playbooks/*'
+
+plugin:
+  - 'plugins/**/*'
+
+profile:
+  - any: ['profiles/**/*', '!profiles/test/*']
+
+role:
+  - 'roles/**/*'
+
+test:
+  - 'molecule/**/*'
+  - 'tests/**/*'
+  - 'profiles/test/*'
