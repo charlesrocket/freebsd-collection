@@ -26,3 +26,4 @@ argument_specs:
       microcode_update:
         description: Enable microcode updates.
         type: bool
+        default: false
