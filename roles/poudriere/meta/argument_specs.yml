@@ -22,7 +22,7 @@ argument_specs:
 
       poudriere_zfs:
         description: Enable ZFS.
-        type: str
+        type: bool
         default: false
 
       poudriere_zpool:
