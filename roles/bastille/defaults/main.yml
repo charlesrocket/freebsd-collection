@@ -1,0 +1,4 @@
+---
+
+bastille_zfs_enable: false
+bastille_zfs_zpool: zroot

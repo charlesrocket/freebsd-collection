@@ -13,9 +13,9 @@ argument_specs:
       bastille_zfs_enable:
         description: Enable ZFS.
         type: bool
-        required: true
+        default: false
 
       bastille_zfs_zpool:
         description: ZFS zpool name.
         type: str
-        required: true
+        default: zroot
