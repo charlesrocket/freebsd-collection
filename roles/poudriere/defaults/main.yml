@@ -1,0 +1,7 @@
+---
+
+poudriere_distfiles: /usr/ports/distfiles
+poudriere_host: ftp://ftp.freebsd.org
+poudriere_zfs: false
+poudriere_zpool: zroot
+poudriere_zrootfs: /usr/local/poudriere
