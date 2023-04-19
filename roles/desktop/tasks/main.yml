@@ -17,6 +17,8 @@
   args:
     creates: "/home/{{ ansible_user_id }}/.oh-my-zsh"
   become: false
+  when:
+    - "'zsh' in ansible_facts.packages"
 
 - name: Allow usermount
   ansible.posix.sysctl:
