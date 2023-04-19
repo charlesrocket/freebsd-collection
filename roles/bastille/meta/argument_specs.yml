@@ -9,4 +9,13 @@ argument_specs:
     author:
       - charlesrocket
 
-    options: {}
+    options:
+      bastille_zfs_enable:
+        description: Enable ZFS.
+        type: bool
+        required: true
+
+      bastille_zfs_zpool:
+        description: ZFS zpool name.
+        type: str
+        required: true
