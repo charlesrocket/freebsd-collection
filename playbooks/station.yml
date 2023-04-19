@@ -30,6 +30,10 @@
       become: true
       when: wifi
 
+    - role: kern_sec
+      when: security_level is defined
+      become: true
+
     - role: common
 
     - role: desktop

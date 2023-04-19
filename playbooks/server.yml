@@ -24,7 +24,7 @@
       become: true
 
     - role: kern_sec
-      when: set_security_level
+      when: security_level is defined
       become: true
 
     - role: pf
