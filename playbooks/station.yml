@@ -46,6 +46,7 @@
     - role: charlesrocket.essential.git
 
     - role: charlesrocket.essential.dotfiles
+      when: dotfiles_files is defined
 
     - role: git_ports
       when: git_ports
