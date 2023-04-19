@@ -1,13 +1,12 @@
 ---
 
-- name: Gather pkg facts
-  ansible.builtin.package_facts:
-    strategy: all
-    manager: "auto"
+- name: "/etc/motd.sh information"
+  ansible.builtin.stat:
+    path: "/etc/motd.sh"
+  register: test_file
 
-- name: Check installed packages
+- name: "Check ~/.config/mc/ini"
   ansible.builtin.assert:
     that:
-      - "'pam_yubico' in ansible_facts.packages"
-      - "'lynis' in ansible_facts.packages"
-      - "'rkhunter' in ansible_facts.packages"
+      - test_file.stat.exists
+      - test_file.stat.mode == '0700'

@@ -4,10 +4,6 @@
   hosts: all
 
   tasks:
-    - name: Include variables
-      ansible.builtin.include_vars:
-        file: ../../profiles/charlesrocket/station.yml
-
     - name: Include test variables
       ansible.builtin.include_vars:
         file: ../../profiles/test/station.yml

@@ -1,13 +1,14 @@
 ---
 
 bastille: true
+bastille_zfs_enable: false
 git: true
 pf: true
 poudriere: true
+motd_layout: status
 
 hostname: test
 sshd: true
-set_security_level: true
 security_level: 3
 timezone: America/Los_Angeles
 make_config:
@@ -15,3 +16,5 @@ make_config:
 
 upgrade_packages: false
 pkg_latest_branch: false
+pkgng_packages:
+  - lolcat

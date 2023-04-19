@@ -1,24 +1,37 @@
 ---
 
+laptop: false
 asus: true
 amd: true
 bastille: true
 doomemacs: false
 intel: true
-microcode_update: true
+microcode_update: false
 qmk: false
 virtualbox: true
 wifi: true
 
-laptop: false
+bastille_zfs_enable: true
+bastille_zfs_zpool: zroot
+timezone: America/Los_Angeles
 
+lynis_profile: desktop
 make_config:
   - DEVELOPER=yes
   - MAKE_JOBS_NUMBER?=16
 
-upgrade_packages: false
-pkg_latest_branch: false
+user_groups:
+  - dialer
+  - network
+  - operator
+  - realtime
+  - video
 
 git_ports: false
 git_src: false
 git_doc: false
+
+upgrade_packages: false
+pkg_latest_branch: false
+pkgng_packages:
+  - lolcat
