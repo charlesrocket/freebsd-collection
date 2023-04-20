@@ -27,7 +27,7 @@ dependencies:
   "charlesrocket.essential": ">=1.2.2"
 
 repository: https://github.com/charlesrocket/freebsd-collection
-documentation: https://charlesrocket.github.io/freebsd-collection/
+documentation: https://charlesrocket.github.io/freebsd-collection
 issues: https://github.com/charlesrocket/freebsd-collection/issues
 build_ignore:
   - .editorconfig
