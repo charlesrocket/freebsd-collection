@@ -2,6 +2,45 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.0] - 2023-04-20
+
+### Bug Fixes
+
+- Fix `bastille` argument specs
+- Check dotfiles list
+- Edit `poudriere_zfs`
+
+### CI/CD
+
+- Add pr labeler
+
+### Documentation
+
+- Update README.md
+
+### Features
+
+- Add `profile_version`
+- Add defaults to `sys`
+- Add/improve `kern_sec`
+- Add defaults to `bastille`
+- Add defaults to `poudriere`
+- Add `ipv6_support` option
+
+### Miscellaneous tasks
+
+- Version bump
+- Add pr template
+- Update dependencies
+- Don't deploy lynis profile if the binary is not installed
+- Check if ohmyzsh needs deployment
+- Enable IPv6
+- Edit documentation link
+
+### Testing
+
+- Update molecule tests
+
 ## [1.1.0] - 2023-04-16
 
 ### Bug Fixes
