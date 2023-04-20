@@ -50,6 +50,7 @@ wifi: false
 
 bastille_zfs_enable: true
 bastille_zfs_zpool: zroot
+ipv6_support: true
 timezone: America/Los_Angeles
 github: charlesrocket
 
