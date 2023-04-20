@@ -1,3 +1,4 @@
 ---
 
 microcode_update: false
+ipv6_support: false

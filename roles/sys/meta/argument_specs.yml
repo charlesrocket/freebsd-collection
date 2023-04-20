@@ -27,3 +27,8 @@ argument_specs:
         description: Enable microcode updates.
         type: bool
         default: false
+
+      ipv6_support:
+        description: Enable IPv6 (non-router nodes).
+        type: bool
+        default: false

@@ -195,17 +195,18 @@
     value: "YES"
     state: present
 
-- name: Enable IPv6
+- name: "IPv6 | {{ ipv6_support | ternary('enable', 'disable') }}"
   community.general.sysrc:
     name: rtsold_enable
-    value: "YES"
+    value: "{{ ipv6_support | ternary('YES', 'NO') }}"
     state: present
 
-- name: Tune IPv6
+- name: IPv6 | tune
   community.general.sysrc:
     name: rtsold_flags
     value: "-aF"
     state: present
+  when: ipv6_support
 
 - name: Tune syslogd
   community.general.sysrc:
