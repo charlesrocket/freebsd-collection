@@ -1,13 +1,13 @@
 ---
 
-- name: Set hostname
+- name: "Set hostname @{{ hostname }}"
   community.general.sysrc:
     name: hostname
     value: "{{ hostname }}"
     state: present
   when: hostname is defined
 
-- name: Set timezone
+- name: "Set timezone to {{ timezone }}"
   community.general.timezone:
     name: "{{ timezone }}"
   when: timezone is defined
@@ -27,50 +27,55 @@
     mode: '0644'
   when: doas_config is defined
 
-- name: Randomize PIDs
+- name: "{{ randompid | ternary('Randomize PIDs', 'Do not randomize PIDs') }}"
   ansible.posix.sysctl:
     name: kern.randompid
     state: present
     value: "{{ randompid | ternary('1', '0') }}"
     reload: false
 
-- name: Enable coredump
+- name: "{{ coredump | ternary('Enable coredump', 'Disable coredump') }}"
   ansible.posix.sysctl:
     name: kern.coredump
     state: present
     value: "{{ coredump | ternary('1', '0') }}"
 
-- name: Unrestricted debugging
+- name: >-
+    {{ unpriv_proc_debug | ternary('Unrestricted debugging',
+    'Restricted debugging') }}
   ansible.posix.sysctl:
     name: security.bsd.unprivileged_proc_debug
     state: present
     value: "{{ unpriv_proc_debug | ternary('1', '0') }}"
 
-- name: Unrestricted message buffer
+- name: >-
+    "{{ unpriv_read_msgbuf | ternary('Unrestricted message buffer',
+    'Restricted message buffer') }}"
   ansible.posix.sysctl:
     name: security.bsd.unprivileged_read_msgbuf
     state: present
     value: "{{ unpriv_read_msgbuf | ternary('1', '0') }}"
 
-- name: Show processes running in jails
+- name:
+    "Processes running in jails - {{ see_jail_proc | ternary('show', 'hide') }}"
   ansible.posix.sysctl:
     name: security.bsd.see_jail_proc
     state: present
     value: "{{ see_jail_proc | ternary('1', '0') }}"
 
-- name: Show GIDs
+- name: "{{ see_other_gids | ternary('Show GIDs', 'Hide GIDs') }}"
   ansible.posix.sysctl:
     name: security.bsd.see_other_gids
     state: present
     value: "{{ see_other_gids | ternary('1', '0') }}"
 
-- name: Show UIDs
+- name: "{{ see_other_uids | ternary('Show UIDs', 'Hide UIDs') }}"
   ansible.posix.sysctl:
     name: security.bsd.see_other_uids
     state: present
     value: "{{ see_other_uids | ternary('1', '0') }}"
 
-- name: Clear /tmp
+- name: "{{ clear_tmp | ternary('Clear /tmp', 'Do not clear /tmp') }}"
   community.general.sysrc:
     name: clear_tmp_enable
     state: present
@@ -85,43 +90,52 @@
     - Update CPU firmware
   when: microcode_update
 
-- name: Enable ntpd
+- name: "Ntpd | {{ ntpd | ternary('enable', 'disable') }}"
   community.general.sysrc:
     name: ntpd_enable
     state: present
     value: "{{ ntpd | ternary('YES', 'NO') }}"
 
-- name: Sync ntpd on start
+- name: >-
+    {{ ntpd_bootsync | ternary('Sync ntpd on start',
+    'Do not sync ntpd on start') }}
   community.general.sysrc:
     name: ntpd_sync_on_start
     state: present
     value: "{{ ntpd_bootsync | ternary('YES', 'NO') }}"
 
-- name: Enable ntpd OOM protection
+- name: >-
+    Ntpd OOM protection | {{ ntpd_oomprotect |
+    ternary('activate', 'deactivate') }}
   community.general.sysrc:
     name: ntpd_oomprotect
     state: present
     value: "{{ ntpd_oomprotect | ternary('YES', 'NO') }}"
 
-- name: Enable sendmail | incoming
+- name: "Sendmail | incoming - {{ sendmail | ternary('enable', 'disable') }}"
   community.general.sysrc:
     name: sendmail_enable
     state: present
     value: "{{ sendmail | ternary('YES', 'NO') }}"
 
-- name: Enable sendmail | submit
+- name:
+    "Sendmail | submit - {{ sendmail_submit | ternary('enable', 'disable') }}"
   community.general.sysrc:
     name: sendmail_submit_enable
     state: present
     value: "{{ sendmail_submit | ternary('YES', 'NO') }}"
 
-- name: Enable sendmail | outbound
+- name: >-
+    Sendmail | outbound - {{ sendmail_outbound |
+    ternary('enable', 'disable') }}
   community.general.sysrc:
     name: sendmail_outbound_enable
     state: present
     value: "{{ sendmail_outbound | ternary('YES', 'NO') }}"
 
-- name: Enable sendmail | msp_queue
+- name: >-
+    Sendmail | msp_queue - {{ sendmail_msp_queue |
+    ternary('enable', 'disable') }}
   community.general.sysrc:
     name: sendmail_msp_queue_enable
     state: present
@@ -134,62 +148,64 @@
     value: "2"
     path: /boot/loader.conf
 
-- name: Boot in verbose mode
+- name: "Verbose booting | {{ boot_verbose | ternary('enable', 'disable') }}"
   community.general.sysrc:
     name: boot_verbose
     state: present
     value: "{{ boot_verbose | ternary('YES', 'NO') }}"
     path: /boot/loader.conf
 
-- name: Change loader logo
+- name: "Change loader logo | {{ loader_logo }}"
   community.general.sysrc:
     name: loader_logo
     state: present
     value: "{{ loader_logo }}"
     path: /boot/loader.conf
 
-- name: Enable AIO
+- name: "{{ aio | ternary('Enable AIO', 'Disable AIO') }}"
   community.general.sysrc:
     name: aio_load
     state: present
     value: "{{ aio | ternary('YES', 'NO') }}"
     path: /boot/loader.conf
 
-- name: Enable coretemp
+- name: "{{ coretemp | ternary('Enable coretemp', 'Disable coretemp') }}"
   community.general.sysrc:
     name: coretemp_load
     state: present
     value: "{{ coretemp | ternary('YES', 'NO') }}"
     path: /boot/loader.conf
 
-- name: Enable cpuctl
+- name: "{{ cpuctl | ternary('Enable cpuctl', 'Disable cpuctl') }}"
   community.general.sysrc:
     name: cpuctl_load
     state: present
     value: "{{ cpuctl | ternary('YES', 'NO') }}"
     path: /boot/loader.conf
 
-- name: Enable AES-NI
+- name: "{{ aesni | ternary('Enable AES-NI', 'Disable AES-NI') }}"
   community.general.sysrc:
     name: aesni_load
     state: present
     value: "{{ aesni | ternary('YES', 'NO') }}"
     path: /boot/loader.conf
 
-- name: Enable H-TCP
+- name: "{{ cc_htcp | ternary('Enable H-TCP', 'Disable H-TC') }}"
   community.general.sysrc:
     name: cc_htcp_load
     state: present
     value: "{{ cc_htcp | ternary('YES', 'NO') }}"
     path: /boot/loader.conf
 
-- name: Enable ping
+- name: "{{ bmcastecho | ternary('Enable ping', 'Disable ping') }}"
   community.general.sysrc:
     name: icmp_bmcastecho
     state: present
     value: "{{ bmcastecho | ternary('YES', 'NO') }}"
 
-- name: Load DHCP client in the background
+- name: >-
+    DHCP client background start | {{ dhclient_bg |
+    ternary('enable', 'disable') }}
   community.general.sysrc:
     name: background_dhclient
     state: present
@@ -208,13 +224,13 @@
     value: "-aF"
   when: ipv6_support
 
-- name: Tune syslogd
+- name: "Syslogd flags {{ syslogd_flags }}"
   community.general.sysrc:
     name: syslogd_flags
     state: present
     value: "{{ syslogd_flags }}"
 
-- name: Enable kernel crash dumps
+- name: "Kernel crash dumps | {{ dumpdev | ternary('enable', 'disable') }}"
   community.general.sysrc:
     name: dumpdev
     state: present
