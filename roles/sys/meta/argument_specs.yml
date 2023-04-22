@@ -44,29 +44,29 @@ argument_specs:
         default: false
 
       unpriv_proc_debug:
-        description: Allow unrestricted debugging (C(unprivileged_proc_debug)).
+        description: Allow unrestricted debugging.
         type: bool
         default: false
 
       unpriv_read_msgbuf:
         description:
           - >-
-            Allow unrestricted message buffer (C(unprivileged_read_msgbuf)).
+            Allow unrestricted message buffer.
         type: bool
         default: false
 
       see_jail_proc:
-        description: Show processes running in jails (C(see_jail_proc)).
+        description: Show processes running in jails.
         type: bool
         default: false
 
       see_other_gids:
-        description: Show GIDs (C(see_other_gids)).
+        description: Show GIDs.
         type: bool
         default: false
 
       see_other_uids:
-        description: Show UIDs (C(see_other_uids)).
+        description: Show UIDs.
         type: bool
         default: false
 
@@ -91,7 +91,7 @@ argument_specs:
         default: true
 
       sendmail:
-        description: Enable C(sendmail) (incoming).
+        description: Enable C(sendmail) incoming.
         type: bool
         default: false
 
