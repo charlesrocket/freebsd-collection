@@ -32,3 +32,142 @@ argument_specs:
         description: Enable IPv6 (non-router nodes).
         type: bool
         default: false
+
+      randompid:
+        description: Randomize PIDs.
+        type: bool
+        default: true
+
+      coredump:
+        description: Enable C(coredump).
+        type: bool
+        default: false
+
+      unpriv_proc_debug:
+        description: Allow unrestricted debugging.
+        type: bool
+        default: false
+
+      unpriv_read_msgbuf:
+        description:
+          - >-
+            Allow unrestricted message buffer.
+        type: bool
+        default: false
+
+      see_jail_proc:
+        description: Show processes running in jails.
+        type: bool
+        default: false
+
+      see_other_gids:
+        description: Show GIDs.
+        type: bool
+        default: false
+
+      see_other_uids:
+        description: Show UIDs.
+        type: bool
+        default: false
+
+      clear_tmp:
+        description: Clear C(/tmp) directory.
+        type: bool
+        default: true
+
+      ntpd:
+        description: Enable C(ntpd).
+        type: bool
+        default: true
+
+      ntpd_bootsync:
+        description: Sync C(ntpd) on start.
+        type: bool
+        default: true
+
+      ntpd_oomprotect:
+        description: Enable C(ntpd) OOM protection.
+        type: bool
+        default: true
+
+      sendmail:
+        description: Enable C(sendmail) incoming.
+        type: bool
+        default: false
+
+      sendmail_submit:
+        description: Enable C(sendmail) submit.
+        type: bool
+        default: false
+
+      sendmail_outbound:
+        description: Enable C(sendmail) outbound.
+        type: bool
+        default: false
+
+      sendmail_msp_queue:
+        description: Enable C(sendmail) msp queue.
+        type: bool
+        default: false
+
+      boot_verbose:
+        description: Boot in verbose mode.
+        type: bool
+        default: false
+
+      loader_logo:
+        description: Set boot loader logo.
+        type: str
+        default: orbbw
+        choices:
+          - orbbw
+          - orb
+          - fbsdbw
+          - beastiebw
+          - beastie
+          - none
+
+      aio:
+        description: Enable asynchronous I/O.
+        type: bool
+        default: true
+
+      coretemp:
+        description: Enable C(coretemp).
+        type: bool
+        default: false
+
+      cpuctl:
+        description: Enable C(cpuctl) pseudo device.
+        type: bool
+        default: false
+
+      aesni:
+        description: Enable AES accelerator.
+        type: bool
+        default: false
+
+      cc_htcp:
+        description: Enable H-TCP congestion control.
+        type: bool
+        default: true
+
+      bmcastecho:
+        description: Enable ping.
+        type: bool
+        default: false
+
+      dhclient_bg:
+        description: Load DHCP client in the background.
+        type: bool
+        default: true
+
+      syslogd_flags:
+        description: Set C(syslogd) flags.
+        type: str
+        default: '-ss'
+
+      dumpdev:
+        description: Enable kernel crash dumps.
+        type: bool
+        default: false
