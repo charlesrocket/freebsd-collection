@@ -25,6 +25,8 @@ security_level: 2
 timezone: America/Los_Angeles
 motd_layout: status
 
+boot_verbose: true
+
 # Keep packages up to date
 upgrade_packages: false
 

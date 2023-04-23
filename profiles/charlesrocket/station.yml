@@ -54,6 +54,11 @@ ipv6_support: true
 timezone: America/Los_Angeles
 github: charlesrocket
 
+boot_verbose: true
+coretemp: true
+cpuctl: true
+aesni: true
+
 lynis_profile: desktop
 make_config:
   - DEVELOPER=yes
