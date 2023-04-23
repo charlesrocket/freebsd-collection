@@ -12,4 +12,38 @@ argument_specs:
     author:
       - charlesrocket
 
-    options: {}
+    options:
+      usermount:
+        description: Allow users to mount.
+        type: bool
+        default: true
+
+      sndiod:
+        description: Enable C(sndiod).
+        type: bool
+        default: true
+
+      cuse:
+        description: Enable C(cuse).
+        type: bool
+        default: true
+
+      acpi:
+        description: Enable ACPI driver.
+        type: bool
+        default: false
+
+      dsbmd:
+        description: Enable C(DSBMD).
+        type: bool
+        default: true
+
+      seatd:
+        description: Enable C(seatd).
+        type: bool
+        default: true
+
+      dbus:
+        description: Enable C(dbus).
+        type: bool
+        default: true

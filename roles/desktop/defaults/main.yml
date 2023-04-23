@@ -1,0 +1,9 @@
+---
+
+usermount: true
+sndiod: true
+cuse: true
+acpi: false
+dsbmd: true
+seatd: true
+dbus: true
