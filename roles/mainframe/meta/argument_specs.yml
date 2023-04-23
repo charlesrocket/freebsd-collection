@@ -13,4 +13,4 @@ argument_specs:
       sshd:
         description: Enable SSH.
         type: bool
-        required: true
+        default: true
