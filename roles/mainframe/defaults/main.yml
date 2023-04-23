@@ -1,0 +1,13 @@
+---
+
+sshd: true
+ip_check_interface: true
+ip_random_id: true
+ip_process_options: false
+nolocaltimewait: true
+net_blackhole: true
+path_mtu_discovery: false
+tcp_always_keepalive: false
+drop_synfin: true
+ahci: true
+icmp_may_rst: false

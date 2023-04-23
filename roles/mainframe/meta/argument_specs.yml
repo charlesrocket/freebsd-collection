@@ -13,4 +13,54 @@ argument_specs:
       sshd:
         description: Enable SSH.
         type: bool
-        required: true
+        default: true
+
+      ip_check_interface:
+        description: Verify packets.
+        type: bool
+        default: true
+
+      ip_random_id:
+        description: Random IP packet IDs.
+        type: bool
+        default: true
+
+      nolocaltimewait:
+        description: Tune loopback interface.
+        type: bool
+        default: true
+
+      ip_process_options:
+        description: Process IP options.
+        type: bool
+        default: false
+
+      net_blackhole:
+        description: Activate C(blackhole).
+        type: bool
+        default: true
+
+      path_mtu_discovery:
+        description: Enable PMTUD.
+        type: bool
+        default: false
+
+      tcp_always_keepalive:
+        description: Detect dead TCP connections.
+        type: bool
+        default: false
+
+      drop_synfin:
+        description: Drop SYN/FIN packets.
+        type: bool
+        default: true
+
+      ahci:
+        description: Enable AHCI.
+        type: bool
+        default: true
+
+      icmp_may_rst:
+        description: Enable ICMP RST.
+        type: bool
+        default: true
