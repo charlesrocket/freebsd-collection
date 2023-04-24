@@ -41,7 +41,7 @@ provisioner:
 
   config_options:
     defaults:
-      verbosity: ${MOLECULE_VERBOSITY:-1}
+      verbosity: ${MOLECULE_VERBOSITY:-4}
 
 verifier:
   name: ansible
