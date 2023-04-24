@@ -38,6 +38,7 @@ git_helper:
 
 # Configuration
 laptop: true
+acpi: true
 asus: true
 amd: false
 bastille: true
