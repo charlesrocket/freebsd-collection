@@ -2,7 +2,7 @@
 
 - name: Edit user
   ansible.builtin.user:
-    name: "{{ ansible_user_id }}"
+    name: "{{ ansible_user | default(ansible_user_id) }}"
     shell: /usr/local/bin/zsh
     groups: "{{ user_groups }}"
     append: true

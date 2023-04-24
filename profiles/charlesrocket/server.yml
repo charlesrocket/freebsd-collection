@@ -14,7 +14,7 @@ sshd: true
 bastille_zfs_enable: true
 bastille_zfs_zpool: zroot
 doas_config:
-  - permit nopass keepenv {{ ansible_user_id }}
+  - permit nopass keepenv {{ ansible_user | default(ansible_user_id) }}
 
 poudriere_distfiles: /usr/ports/distfiles
 poudriere_host: ftp://ftp.freebsd.org

@@ -66,7 +66,7 @@ make_config:
   - MAKE_JOBS_NUMBER?=16
 
 doas_config:
-  - permit nopass keepenv {{ ansible_user_id }}
+  - permit nopass keepenv {{ ansible_user | default(ansible_user_id) }}
 
 user_groups:
   - cups

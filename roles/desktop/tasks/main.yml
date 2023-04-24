@@ -2,7 +2,7 @@
 
 - name: Ensure video group is present
   ansible.builtin.user:
-    name: "{{ ansible_user_id }}"
+    name: "{{ ansible_user | default(ansible_user_id) }}"
     shell: /usr/local/bin/zsh
     groups: video
     append: true
@@ -15,7 +15,7 @@
       https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
       "" --unattended
   args:
-    creates: "/home/{{ ansible_user_id }}/.oh-my-zsh"
+    creates: "/home/{{ ansible_user | default(ansible_user_id) }}/.oh-my-zsh"
   become: false
   when:
     - "'zsh' in ansible_facts.packages"
