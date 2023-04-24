@@ -20,48 +20,48 @@
   when:
     - "'zsh' in ansible_facts.packages"
 
-- name: Allow usermount
+- name: "Usermount | {{ usermount | ternary('enable', 'disable') }}"
   ansible.posix.sysctl:
     name: vfs.usermount
     state: present
-    value: '1'
+    value: "{{ usermount | ternary('1', '0') }}"
 
-- name: Enable sndiod
+- name: "{{ sndiod | ternary('Enable sndio', 'Disable sndio') }}"
   community.general.sysrc:
     name: sndiod_enable
-    value: "YES"
     state: present
+    value: "{{ sndiod | ternary('YES', 'NO') }}"
 
-- name: Enable libcuse
+- name: "{{ cuse | ternary('Enable cuse', 'Disable cuse') }}"
   community.general.sysrc:
     name: cuse_load
     state: present
-    value: "YES"
+    value: "{{ cuse | ternary('YES', 'NO') }}"
     path: /boot/loader.conf
 
-- name: Enable ACPI video driver
+- name: "ACPI video driver | {{ acpi | ternary('enable', 'disable') }}"
   community.general.sysrc:
     name: kld_list
+    state: "{{ acpi | ternary('value_present', 'value_absent') }}"
     value: "acpi_video"
-    state: value_present
 
-- name: Enable DSBMD
+- name: "{{ dsbmd | ternary('Enable DSBMD', 'Disable DSBMD') }}"
   community.general.sysrc:
     name: dsbmd_enable
-    value: "YES"
     state: present
+    value: "{{ dsbmd | ternary('YES', 'NO') }}"
 
-- name: Enable seatd
+- name: "{{ seatd | ternary('Enable seatd', 'Disable seatd') }}"
   community.general.sysrc:
     name: seatd_enable
-    value: "YES"
     state: present
+    value: "{{ seatd | ternary('YES', 'NO') }}"
 
-- name: Enable dbus
+- name: "{{ dbus | ternary('Enable dbus', 'Disable dbus') }}"
   community.general.sysrc:
     name: dbus_enable
-    value: "YES"
     state: present
+    value: "{{ dbus | ternary('YES', 'NO') }}"
 
 - name: Enable desktop ruleset
   community.general.sysrc:
