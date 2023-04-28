@@ -200,6 +200,7 @@ pkgng_packages:
   - seatd
   - shards
   - sndio
+  - socat
   - swaybg
   - swayidle
   - swaylock
