@@ -6,13 +6,18 @@ dotfiles_repo_version: master
 dotfiles_repo_force: true
 dotfiles_repo_local_destination: ~/src/dotfiles
 dotfiles_files:
-  - .config/alacritty.yml
   - .config/Kvantum/kvantum.kvconfig
+  - .config/alacritty.yml
   - .config/btop/btop.conf
   - .config/doom/config.el
   - .config/doom/init.el
   - .config/doom/packages.el
   - .config/dunst/dunstrc
+  - .config/eww/eww.scss
+  - .config/eww/eww.yuck
+  - .config/eww/scripts/get-active-workspace
+  - .config/eww/scripts/get-window-title
+  - .config/eww/scripts/get-workspaces
   - .config/gtk-3.0/settings.ini
   - .config/git/config
   - .config/hypr/hyprland.conf
