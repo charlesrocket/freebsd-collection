@@ -2,6 +2,44 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.3.0] - 2023-05-01
+
+### Bug Fixes
+
+- Use `ansible_user` variable
+
+### Documentation
+
+- Edit arg spec descriptions
+
+### Features
+
+- Add more system options
+- Show var states
+- Improve `sys` (#14)
+- SSH is enabled by default
+- Add more server options
+- Improve `mainframe` (#15)
+- Add more desktop options
+- Improve `desktop` (#16)
+
+### Miscellaneous tasks
+
+- Use `molecule-plugins`
+- Version bump
+- Update profiles
+- Add `acpi`
+- Update dotfiles list
+- Add socat package
+- Add battery script
+- Add network script
+
+### Testing
+
+- Rename test tasks
+- Increase verbosity
+- Decrease verbosity
+
 ## [1.2.0] - 2023-04-20
 
 ### Bug Fixes
