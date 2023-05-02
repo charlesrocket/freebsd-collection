@@ -183,6 +183,7 @@ pkgng_packages:
   - nmap
   - noto-emoji
   - pcsc-tools
+  - perl5
   - pijul
   - plex-ttf
   - portfmt
