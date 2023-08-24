@@ -10,7 +10,6 @@
           "https://raw.githubusercontent.com/charlesrocket/\
           freebsd-collection/trunk/profiles/{{ profile }}/\
           {{ profile_version | default('server') }}.yml"
-      tags: ['always']
       when: profile is defined
 
   roles:
