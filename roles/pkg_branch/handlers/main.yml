@@ -1,0 +1,14 @@
+---
+
+- name: Redownload repository catalogue
+  ansible.builtin.command: pkg update -f
+  register: pkg_output
+  changed_when:
+    - '"need to re-create database" in pkg_output.stderr'
+
+- name: Upgrade installed packages
+  community.general.pkgng:
+    name: "*"
+    state: latest
+    autoremove: true
+    cached: false

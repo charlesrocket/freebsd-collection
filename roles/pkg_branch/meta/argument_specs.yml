@@ -10,12 +10,10 @@ argument_specs:
       - charlesrocket
 
     options:
-      pkg_latest_branch:
-        description: Use C(latest) branch.
-        type: bool
-        default: false
-
-      upgrade_packages:
-        description: Upgrade installed packages.
-        type: bool
-        default: false
+      pkg_branch:
+        description: Set C(pkg) branch.
+        type: str
+        default: quarterly
+        choices:
+          - quarterly
+          - latest
