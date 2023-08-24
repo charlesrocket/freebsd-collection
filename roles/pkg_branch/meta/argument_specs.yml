@@ -13,7 +13,7 @@ argument_specs:
       pkg_branch:
         description: Set C(pkg) branch.
         type: str
-        default: quarterly
+        default: latest
         choices:
           - quarterly
           - latest
