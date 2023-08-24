@@ -15,6 +15,5 @@ make_config:
   - MAKE_JOBS_NUMBER?=3
 
 upgrade_packages: false
-pkg_latest_branch: false
 pkgng_packages:
   - lolcat
