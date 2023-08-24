@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.4.0] - 2023-08-24
+
+### Bug Fixes
+
+- Update `pre_tasks`
+- Fix repository catalogue
+
+### Features
+
+- Update branch option
+- Change default branch
+
+### Miscellaneous tasks
+
+- Add perl5 package
+- Update dependencies
+- Drop lowbatt.sh
+- Add get-volume
+- Add dorst config
+- Update pkg options
+
 ## [1.3.0] - 2023-05-01
 
 ### Bug Fixes
@@ -26,7 +47,6 @@ All notable changes to this project will be documented in this file.
 ### Miscellaneous tasks
 
 - Use `molecule-plugins`
-- Version bump
 - Update profiles
 - Add `acpi`
 - Update dotfiles list
@@ -67,7 +87,6 @@ All notable changes to this project will be documented in this file.
 
 ### Miscellaneous tasks
 
-- Version bump
 - Add pr template
 - Update dependencies
 - Don't deploy lynis profile if the binary is not installed
