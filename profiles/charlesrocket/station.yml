@@ -90,9 +90,6 @@ git_ports: false
 git_src: false
 git_doc: false
 
-# Packages
-upgrade_packages: true
-pkg_latest_branch: true
 pkgng_packages:
   - apl385
   - adwaita-icon-theme
