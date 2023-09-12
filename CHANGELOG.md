@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.4.1] - 2023-09-12
+
+### Bug Fixes
+
+- Update microcode task
+
+### Documentation
+
+- Comment pkg list
+
+### Miscellaneous tasks
+
+- Drop devcpu-data
+- Update dependencies
+
+### Testing
+
+- Update profiles
+
 ## [1.4.0] - 2023-08-24
 
 ### Bug Fixes
