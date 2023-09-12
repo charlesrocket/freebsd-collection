@@ -1,6 +1,0 @@
----
-
-- name: Update CPU firmware
-  ansible.builtin.service:
-    name: microcode_update
-    state: started

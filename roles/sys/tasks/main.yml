@@ -81,13 +81,19 @@
     state: present
     value: "{{ clear_tmp | ternary('YES', 'NO') }}"
 
+- name: Ensure cpu-microcode is installed
+  community.general.pkgng:
+    state: present
+    name: cpu-microcode
+    autoremove: true
+    cached: false
+  when: microcode_update
+
 - name: Enable microcode updates
   community.general.sysrc:
     name: microcode_update_enable
     state: present
     value: "YES"
-  notify:
-    - Update CPU firmware
   when: microcode_update
 
 - name: "Ntpd | {{ ntpd | ternary('enable', 'disable') }}"
