@@ -36,7 +36,6 @@ pkgng_packages:
   - clamav
   - curl
   - destroy
-  - devcpu-data
   - diffutils
   - exfat-utils
   - gawk

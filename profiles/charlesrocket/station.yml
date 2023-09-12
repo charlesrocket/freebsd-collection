@@ -110,7 +110,6 @@ pkgng_packages:
   - crystal
   - curl
   - cxxmatrix
-  - devcpu-data
   - diffutils
   - direnv
   - doas
