@@ -33,7 +33,11 @@ argument_specs:
           - default
           - status
 
+      user_shell:
+        description: User’s shell.
+        type: str
+
       user_groups:
-        description: List of user groups.
+        description: List of user’s groups.
         type: list
         elements: str

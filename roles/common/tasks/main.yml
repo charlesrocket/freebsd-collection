@@ -1,9 +1,16 @@
 ---
 
-- name: Edit user
+- name: Edit user | shell
   ansible.builtin.user:
     name: "{{ ansible_user | default(ansible_user_id) }}"
-    shell: /usr/local/bin/zsh
+    shell: "{{ user_shell }}"
+  when:
+    - user_shell is defined
+  become: true
+
+- name: Edit user | groups
+  ansible.builtin.user:
+    name: "{{ ansible_user | default(ansible_user_id) }}"
     groups: "{{ user_groups }}"
     append: true
   when:
