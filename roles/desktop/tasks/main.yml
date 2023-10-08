@@ -3,7 +3,6 @@
 - name: Ensure video group is present
   ansible.builtin.user:
     name: "{{ ansible_user | default(ansible_user_id) }}"
-    shell: /usr/local/bin/zsh
     groups: video
     append: true
 
