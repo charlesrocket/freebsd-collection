@@ -1,5 +1,5 @@
 # freebsd-collection
-[![Ansible collection](https://img.shields.io/ansible/collection/2410)](https://galaxy.ansible.com/charlesrocket/freebsd)
+[![galaxy](https://img.shields.io/badge/dynamic/json?style=flat&label=galaxy&prefix=v&url=https://galaxy.ansible.com/api/v3/collections/charlesrocket/freebsd/&query=highest_version.version)](https://galaxy.ansible.com/ui/repo/published/charlesrocket/freebsd/)
 [![CI](https://github.com/charlesrocket/freebsd-collection/actions/workflows/ci.yml/badge.svg)](https://github.com/charlesrocket/freebsd-collection/actions/workflows/ci.yml)
 
 Ansible collection for FreeBSD servers and desktops.
