@@ -2,11 +2,11 @@
 
 argument_specs:
   main:
-    short_description: Installs MOTD/custom configs
+    short_description: Manages user, installs MOTD/custom configs
     description:
       - >-
-        Install MOTD and deploy configuration files
-        for C(make), C(lynis).
+        Manage user's account, install MOTD and deploy
+        configuration files for C(make), C(lynis).
 
     author:
       - charlesrocket
@@ -34,10 +34,10 @@ argument_specs:
           - status
 
       user_shell:
-        description: User’s shell.
+        description: User's shell.
         type: str
 
       user_groups:
-        description: List of user’s groups.
+        description: List of user's groups.
         type: list
         elements: str
