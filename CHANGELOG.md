@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.5.0] - 2023-10-08
+
+### Bug Fixes
+
+- Drop redundant shell change
+
+### CI/CD
+
+- Update `checkout`
+
+### Documentation
+
+- Fix galaxy badge
+- Update descriptions
+
+### Features
+
+- Add shell setting
+
 ## [1.4.1] - 2023-09-12
 
 ### Bug Fixes
