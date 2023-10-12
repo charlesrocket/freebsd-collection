@@ -98,6 +98,7 @@ pkgng_packages:
   - adwaita-qt5
   - alacritty
   - arduino-core
+  - aria2
   - base64
   - bash
   - btop
