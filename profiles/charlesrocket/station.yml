@@ -55,7 +55,7 @@ intel: true
 microcode_update: true
 qmk: true
 virtualbox: true
-wifi: false
+wifi: true
 
 bastille_zfs_enable: true
 bastille_zfs_zpool: zroot
