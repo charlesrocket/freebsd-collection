@@ -7,6 +7,7 @@ dotfiles_repo_force: true
 dotfiles_repo_local_destination: ~/src/dotfiles
 dotfiles_files:
   - .config/Kvantum/kvantum.kvconfig
+  - .config/aria2/aria2.conf
   - .config/alacritty.yml
   - .config/btop/btop.conf
   - .config/doom/config.el
