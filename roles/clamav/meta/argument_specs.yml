@@ -1,0 +1,12 @@
+---
+
+argument_specs:
+  main:
+    short_description: Installs ClamAV
+    description:
+      - Deploy and tune ClamAV.
+
+    author:
+      - charlesrocket
+
+    options: {}

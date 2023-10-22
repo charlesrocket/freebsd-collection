@@ -1,0 +1,33 @@
+---
+
+- name: Ensure ClamAV is installed
+  community.general.pkgng:
+    state: present
+    name: clamav
+    autoremove: true
+    cached: false
+
+- name: Enable ClamAV
+  community.general.sysrc:
+    name: clamav_clamd_enable
+    state: present
+    value: "YES"
+
+- name: Enable freshclam
+  community.general.sysrc:
+    name: clamav_freshclam_enable
+    state: present
+    value: "YES"
+
+- name: Create a quarantine directory
+  ansible.builtin.file:
+    path: /var/db/clamav/quarantine
+    owner: clamav
+    group: clamav
+    state: directory
+    mode: '0755'
+
+- name: Download ClamAV DB
+  ansible.builtin.command: freshclam
+  args:
+    creates: /var/db/clamav/main.cvd

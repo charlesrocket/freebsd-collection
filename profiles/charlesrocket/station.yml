@@ -49,6 +49,7 @@ laptop: true
 acpi: true
 asus: true
 amd: false
+clamav: true
 bastille: true
 doomemacs: true
 intel: true

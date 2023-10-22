@@ -3,6 +3,7 @@
 laptop: false
 asus: true
 amd: true
+clamav: true
 bastille: true
 doomemacs: false
 intel: true

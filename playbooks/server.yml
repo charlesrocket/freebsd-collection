@@ -44,6 +44,10 @@
     - role: accounting
       become: true
 
+    - role: clamav
+      when: clamav
+      become: true
+
     - role: bastille
       when: bastille
       become: true
