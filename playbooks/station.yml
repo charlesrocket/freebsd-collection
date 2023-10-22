@@ -62,6 +62,10 @@
     - role: amd
       when: amd
 
+    - role: clamav
+      when: clamav
+      become: true
+
     - role: bastille
       when: bastille
       become: true

@@ -1,6 +1,7 @@
 ---
 
 # Configuration
+clamav: false
 bastille: true
 dotfiles: false
 git: false
