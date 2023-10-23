@@ -107,7 +107,6 @@ pkgng_packages:
   - bzip2
   - caja
   - chkrootkit
-  - clamav
   - claws-mail
   - claws-mail-pgp
   - cmake
