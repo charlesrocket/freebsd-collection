@@ -33,7 +33,6 @@ dotfiles_files:
   - .config/transmission/settings.json
   - .config/wlogout/layout
   - .config/wlogout/style.css
-  - .gnupg/gpg.conf
   - .shrc
   - .zshrc
   - bin/hyprstart
