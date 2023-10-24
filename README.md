@@ -15,23 +15,7 @@ collections:
 
 ### Usage
 
-```yaml
-- name: Workstation playbook
-  hosts: all
-
-- name: Include playbook - station
-  ansible.builtin.import_playbook: charlesrocket.freebsd.station
-```
-
-```yaml
-- name: Server playbook
-  hosts: all
-
-- name: Include playbook - server
-  ansible.builtin.import_playbook: charlesrocket.freebsd.server
-```
-
-[example variables](https://github.com/charlesrocket/freebsd-collection/tree/trunk/profiles/charlesrocket)
+See [profiles](https://charlesrocket.github.io/freebsd-collection/docsite/profiles)/[variables](https://github.com/charlesrocket/freebsd-collection/tree/trunk/profiles/charlesrocket).
 
 ## Example
 
