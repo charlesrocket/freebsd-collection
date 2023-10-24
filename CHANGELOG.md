@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.6.0] - 2023-10-24
+
+### Documentation
+
+- Update usage
+
+### Features
+
+- Add clamav role
+- Add mfa role
+
+### Miscellaneous tasks
+
+- Add aria2
+- Enable wifi
+- Add aria2 config
+- Add gpg config
+- Remove redundant clamav package
+
+### Revert
+
+- Remove gpg config
+
 ## [1.5.0] - 2023-10-08
 
 ### Bug Fixes
