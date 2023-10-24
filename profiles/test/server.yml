@@ -9,6 +9,7 @@ motd_layout: status
 
 hostname: test
 sshd: true
+mfa: true
 security_level: 3
 timezone: America/Los_Angeles
 make_config:

@@ -1,0 +1,12 @@
+---
+
+argument_specs:
+  main:
+    short_description: Adds MFA support
+    description:
+      - Install and configure MFA tools.
+
+    author:
+      - charlesrocket
+
+    options: {}

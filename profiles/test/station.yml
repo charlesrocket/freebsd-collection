@@ -11,6 +11,7 @@ microcode_update: false
 qmk: false
 virtualbox: true
 wifi: true
+mfa: true
 
 bastille_zfs_enable: true
 bastille_zfs_zpool: zroot
