@@ -83,6 +83,9 @@
       when: virtualbox
       become: true
 
+    - role: mfa
+      when: mfa
+
   post_tasks:
     - name: Update pkg branch
       ansible.builtin.include_role:

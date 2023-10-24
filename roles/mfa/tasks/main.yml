@@ -1,0 +1,59 @@
+---
+
+- name: Install Yubikey tools
+  community.general.pkgng:
+    state: present
+    name:
+      - py39-yubikey-manager
+      - yubico-piv-tool
+    autoremove: true
+    cached: false
+  become: true
+
+- name: Install MFA tools
+  community.general.pkgng:
+    state: present
+    name:
+      - OpenSSH-askpass
+      - libfido2
+      - libu2f-host
+      - u2f-devd
+      - py39-fido2
+      - pcsc-lite
+      - ccid
+    autoremove: true
+    cached: false
+  become: true
+
+- name: Enable hkbd
+  community.general.sysrc:
+    name: hkbd_load
+    state: present
+    value: "YES"
+    path: /boot/loader.conf
+  become: true
+
+- name: Enable pcscd
+  community.general.sysrc:
+    name: pcscd_enable
+    state: present
+    value: "YES"
+  become: true
+
+- name: Configure scdaemon
+  ansible.builtin.lineinfile:
+    path: ~/.gnupg/scdaemon.conf
+    line: "{{ item }}"
+    state: present
+    mode: '0600'
+    create: true
+  loop:
+    - disable-ccid
+    - pcsc-shared
+
+- name: Allow u2f access
+  ansible.builtin.user:
+    name: "{{ ansible_user | default(ansible_user_id) }}"
+    groups: u2f
+    append: true
+  become: true

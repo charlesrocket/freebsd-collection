@@ -11,6 +11,7 @@ proc_accounting: false
 set_security_level: false
 microcode_update: true
 sshd: true
+mfa: false
 
 bastille_zfs_enable: true
 bastille_zfs_zpool: zroot

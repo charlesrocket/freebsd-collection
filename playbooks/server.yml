@@ -56,6 +56,9 @@
       when: poudriere
       become: true
 
+    - role: mfa
+      when: mfa
+
   post_tasks:
     - name: Upgrade installed packages
       community.general.pkgng:
