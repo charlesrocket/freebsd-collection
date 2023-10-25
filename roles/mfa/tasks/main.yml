@@ -6,7 +6,6 @@
     name:
       - py39-yubikey-manager
       - yubico-piv-tool
-      - ykpers
     autoremove: true
     cached: false
   become: true
