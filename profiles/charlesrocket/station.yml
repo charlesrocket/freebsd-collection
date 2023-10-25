@@ -106,7 +106,6 @@ pkgng_packages:
   - bash
   - btop
   - bzip2
-  - caja
   - chkrootkit
   - claws-mail
   - claws-mail-pgp
@@ -209,6 +208,7 @@ pkgng_packages:
   - swaybg
   - swayidle
   - swaylock
+  - thunar
   - tig
   - tmux
   - tofi
