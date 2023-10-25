@@ -223,7 +223,6 @@ pkgng_packages:
   - wget
   - whois
   - wlogout
-  - ykpers
   - zig
   - zmap
   - zsh
