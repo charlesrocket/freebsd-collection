@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.6.1] - 2023-10-26
+
+### Bug Fixes
+
+- Drop ykpers
+
+### Documentation
+
+- Update requirements
+
+### Miscellaneous tasks
+
+- Caja -> thunar
+
+### Refactor
+
+- Move ykpers
+
 ## [1.6.0] - 2023-10-24
 
 ### Documentation
