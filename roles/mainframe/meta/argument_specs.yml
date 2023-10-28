@@ -15,11 +15,6 @@ argument_specs:
         type: bool
         default: true
 
-      ip_check_interface:
-        description: Verify packets.
-        type: bool
-        default: true
-
       ip_random_id:
         description: Random IP packet IDs.
         type: bool

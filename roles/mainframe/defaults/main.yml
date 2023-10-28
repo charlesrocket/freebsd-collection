@@ -1,7 +1,6 @@
 ---
 
 sshd: true
-ip_check_interface: true
 ip_random_id: true
 ip_process_options: false
 nolocaltimewait: true

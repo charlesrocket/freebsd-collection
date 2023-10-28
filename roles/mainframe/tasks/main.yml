@@ -6,14 +6,6 @@
     value: "{{ sshd | ternary('YES', 'NO') }}"
     state: present
 
-- name: >-
-    {{ ip_check_interface |
-    ternary('Verify packets', 'Do not verify packets') }}
-  ansible.posix.sysctl:
-    name: net.inet.ip.check_interface
-    state: present
-    value: "{{ ip_check_interface | ternary('1', '0') }}"
-
 - name:
     "Random IP packet IDs | {{ ip_random_id | ternary('enable', 'disable') }}"
   ansible.posix.sysctl:
