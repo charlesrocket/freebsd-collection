@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.6.2] - 2023-10-28
+
+### Bug Fixes
+
+- Drop `ip_check_interface`
+
 ## [1.6.1] - 2023-10-26
 
 ### Bug Fixes
