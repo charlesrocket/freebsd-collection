@@ -6,6 +6,7 @@ amd: true
 clamav: true
 bastille: true
 doomemacs: false
+ohmyzsh: true
 intel: true
 microcode_update: false
 qmk: false
@@ -34,4 +35,5 @@ git_src: false
 git_doc: false
 
 pkgng_packages:
+  - zsh
   - lolcat
