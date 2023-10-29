@@ -33,6 +33,8 @@
       when: security_level is defined
       become: true
 
+    - role: charlesrocket.essential.git
+
     - role: common
 
     - role: desktop
@@ -41,8 +43,6 @@
     - role: laptop
       become: true
       when: laptop
-
-    - role: charlesrocket.essential.git
 
     - role: charlesrocket.essential.dotfiles
       when: dotfiles_files is defined
