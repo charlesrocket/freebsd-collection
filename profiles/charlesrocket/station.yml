@@ -53,6 +53,7 @@ amd: false
 clamav: true
 bastille: true
 doomemacs: true
+ohmyzsh: true
 intel: true
 microcode_update: true
 qmk: true

@@ -1,5 +1,6 @@
 ---
 
+ohmyzsh: false
 usermount: true
 sndiod: true
 cuse: true

@@ -13,6 +13,11 @@ argument_specs:
       - charlesrocket
 
     options:
+      ohmyzsh:
+        description: Install C(ohmyzsh).
+        type: bool
+        default: false
+
       usermount:
         description: Allow users to mount.
         type: bool
