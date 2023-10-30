@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.6.3] - 2023-10-30
+
+### Bug Fixes
+
+- Add missing `ohmyzsh` option
+- Move `essential.git`
+
 ## [1.6.2] - 2023-10-28
 
 ### Bug Fixes
