@@ -44,6 +44,9 @@
       become: true
       when: laptop
 
+    - role: tethering
+      become: true
+
     - role: charlesrocket.essential.dotfiles
       when: dotfiles_files is defined
 

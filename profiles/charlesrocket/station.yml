@@ -64,6 +64,7 @@ mfa: true
 bastille_zfs_enable: true
 bastille_zfs_zpool: zroot
 ipv6_support: true
+tethering_apple: true
 timezone: America/Los_Angeles
 github: charlesrocket
 
