@@ -11,6 +11,7 @@
           freebsd-collection/trunk/profiles/{{ profile }}/\
           {{ profile_version | default('station') }}.yml"
       when: profile is defined
+      tags: always
 
   roles:
     - role: pkg
