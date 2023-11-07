@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.7.0] - 2023-11-07
+
+### Features
+
+- Add `tethering` role
+- Add tags
+
 ## [1.6.3] - 2023-10-30
 
 ### Bug Fixes
