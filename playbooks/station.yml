@@ -15,79 +15,103 @@
   roles:
     - role: pkg
       become: true
+      tags: pkg
 
     - role: sys
       become: true
+      tags: sys
 
     - role: pf
       become: true
+      tags: pf
 
     - role: wg
       become: true
+      tags: wg
 
     - role: wifi
       become: true
       when: wifi
+      tags: wifi
 
     - role: kern_sec
       when: security_level is defined
       become: true
+      tags: kern_sec
 
     - role: charlesrocket.essential.git
+      tags: git
 
     - role: common
+      tags: common
 
     - role: desktop
       become: true
+      tags: desktop
 
     - role: laptop
       become: true
       when: laptop
+      tags: laptop
 
     - role: tethering
       become: true
+      tags: tethering
 
     - role: charlesrocket.essential.dotfiles
       when: dotfiles_files is defined
+      tags: dotfiles
 
     - role: git_ports
       when: git_ports
+      tags: git_ports
 
     - role: git_src
       when: git_src
+      tags: git_src
 
     - role: git_doc
       when: git_doc
+      tags: git_doc
 
     - role: asus
       when: asus
+      tags: asus
 
     - role: amd
       when: amd
+      tags: amd
 
     - role: clamav
       when: clamav
       become: true
+      tags: clamav
 
     - role: bastille
       when: bastille
       become: true
+      tags: bastille
 
     - role: emacs
       when: doomemacs
+      tags: emacs
 
     - role: intel
       when: intel
+      tags: intel
 
     - role: qmk
       when: qmk
+      tags: qmk
 
     - role: virtualbox
       when: virtualbox
       become: true
+      tags: virtualbox
 
     - role: mfa
       when: mfa
+      tags: mfa
 
   post_tasks:
     - name: Update pkg branch
@@ -95,3 +119,4 @@
         name: pkg_branch
         apply:
           become: true
+      tags: pkg

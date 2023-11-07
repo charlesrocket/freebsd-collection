@@ -15,49 +15,63 @@
   roles:
     - role: pkg
       become: true
+      tags: pkg
 
     - role: sys
       become: true
+      tags: sys
 
     - role: mainframe
       become: true
+      tags: mainframe
 
     - role: kern_sec
       when: security_level is defined
       become: true
+      tags: kern_sec
 
     - role: pf
       when: bastille or pf
       become: true
+      tags: pf
 
     - role: wg
       become: true
+      tags: wg
 
     - role: common
+      tags: common
 
     - role: charlesrocket.essential.git
       when: (git or poudriere) or git_helper is defined
+      tags: git
 
     - role: charlesrocket.essential.dotfiles
       when: dotfiles_files is defined
+      tags: dotfiles
 
     - role: accounting
       become: true
+      tags: accounting
 
     - role: clamav
       when: clamav
       become: true
+      tags: clamav
 
     - role: bastille
       when: bastille
       become: true
+      tags: bastille
 
     - role: poudriere
       when: poudriere
       become: true
+      tags: poudriere
 
     - role: mfa
       when: mfa
+      tags: mfa
 
   post_tasks:
     - name: Upgrade installed packages
@@ -67,4 +81,5 @@
         autoremove: true
         cached: false
       become: true
+      tags: pkg
       when: upgrade_packages
