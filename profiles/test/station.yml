@@ -16,6 +16,7 @@ mfa: true
 
 bastille_zfs_enable: true
 bastille_zfs_zpool: zroot
+tethering_apple: true
 timezone: America/Los_Angeles
 
 lynis_profile: desktop

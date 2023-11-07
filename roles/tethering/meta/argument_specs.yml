@@ -1,0 +1,16 @@
+---
+
+argument_specs:
+  main:
+    short_description: Adds USB tethering
+    description:
+      - Setup and enable USB tethering.
+
+    author:
+      - charlesrocket
+
+    options:
+      tethering_apple:
+        description: Support Apple devices.
+        type: bool
+        default: false

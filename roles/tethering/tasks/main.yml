@@ -1,0 +1,23 @@
+---
+
+- name: Enable ipheth
+  community.general.sysrc:
+    name: if_ipheth_load
+    state: present
+    value: "YES"
+    path: /boot/loader.conf
+  when: tethering_apple
+
+- name: Configure Apple devices
+  ansible.builtin.blockinfile:
+    path: /etc/devd.conf
+    block: |
+      notify 100 {
+              match "system"          "USB";
+              match "subsystem"       "DEVICE";
+              match "type"            "ATTACH";
+              match "vendor"          "0x05ac";
+              match "product"          "0x12a8";
+              action "usbconfig -d $cdev set_config 3";
+      };
+  when: tethering_apple
