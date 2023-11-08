@@ -2,7 +2,7 @@
 
 namespace: charlesrocket
 name: freebsd
-version: 1.7.0
+version: 1.7.1
 readme: README.md
 description: FreeBSD collection for workstations/servers
 authors:
@@ -22,9 +22,9 @@ tags:
   - virtualbox
 
 dependencies:
-  "ansible.posix": ">=1.5.2"
-  "community.general": ">=7.4.0"
-  "charlesrocket.essential": ">=1.2.4"
+  "ansible.posix": ">=1.5.4"
+  "community.general": ">=8.0.1"
+  "charlesrocket.essential": ">=1.2.5"
 
 repository: https://github.com/charlesrocket/freebsd-collection
 documentation: https://charlesrocket.github.io/freebsd-collection

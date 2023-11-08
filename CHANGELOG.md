@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.7.1] - 2023-11-08
+
+### Bug Fixes
+
+- Tag profile tasks
+
 ## [1.7.0] - 2023-11-07
 
 ### Features
