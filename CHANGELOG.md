@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.8.0] - 2023-12-05
+
+### Bug Fixes
+
+- Drop `sendmail` tasks
+- Reimport `fetch_vars`
+
+### Features
+
+- Use `fetch_vars`
+
+### Miscellaneous tasks
+
+- Update dependencies
+- Drop doas config
+- Cleanup
+
 ## [1.7.1] - 2023-11-08
 
 ### Bug Fixes
