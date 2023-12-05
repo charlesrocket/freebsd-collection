@@ -78,9 +78,6 @@ make_config:
   - DEVELOPER=yes
   - MAKE_JOBS_NUMBER?=16
 
-doas_config:
-  - permit nopass keepenv {{ ansible_user | default(ansible_user_id) }}
-
 user_shell: /usr/local/bin/zsh
 user_groups:
   - cups
