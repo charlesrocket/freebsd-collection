@@ -5,8 +5,10 @@
 
   pre_tasks:
     - name: "Activating profile | {{ profile }}"
-      charlesrocket.essential.fetch_vars:
-        url:
+      ansible.builtin.include_role:
+        name: "charlesrocket.essential.fetch_vars"
+      vars:
+        fetch_vars_url:
           "https://raw.githubusercontent.com/charlesrocket/\
           freebsd-collection/trunk/profiles/{{ profile }}/\
           {{ profile_version | default('server') }}.yml"
