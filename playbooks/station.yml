@@ -5,7 +5,7 @@
 
   pre_tasks:
     - name: "Activating profile | {{ profile }}"
-      charlesrocket.essential.remote_vars:
+      charlesrocket.essential.fetch_vars:
         url:
           "https://raw.githubusercontent.com/charlesrocket/\
           freebsd-collection/trunk/profiles/{{ profile }}/\
