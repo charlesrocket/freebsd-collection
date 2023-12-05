@@ -90,26 +90,6 @@ argument_specs:
         type: bool
         default: true
 
-      sendmail:
-        description: Enable C(sendmail) incoming.
-        type: bool
-        default: false
-
-      sendmail_submit:
-        description: Enable C(sendmail) submit.
-        type: bool
-        default: false
-
-      sendmail_outbound:
-        description: Enable C(sendmail) outbound.
-        type: bool
-        default: false
-
-      sendmail_msp_queue:
-        description: Enable C(sendmail) msp queue.
-        type: bool
-        default: false
-
       boot_verbose:
         description: Boot in verbose mode.
         type: bool

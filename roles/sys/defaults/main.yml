@@ -13,10 +13,6 @@ clear_tmp: true
 ntpd: true
 ntpd_bootsync: true
 ntpd_oomprotect: true
-sendmail: false
-sendmail_submit: false
-sendmail_outbound: false
-sendmail_msp_queue: false
 boot_verbose: false
 loader_logo: "orbbw"
 aio: true

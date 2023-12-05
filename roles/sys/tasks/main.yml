@@ -118,35 +118,6 @@
     state: present
     value: "{{ ntpd_oomprotect | ternary('YES', 'NO') }}"
 
-- name: "Sendmail | incoming - {{ sendmail | ternary('enable', 'disable') }}"
-  community.general.sysrc:
-    name: sendmail_enable
-    state: present
-    value: "{{ sendmail | ternary('YES', 'NO') }}"
-
-- name:
-    "Sendmail | submit - {{ sendmail_submit | ternary('enable', 'disable') }}"
-  community.general.sysrc:
-    name: sendmail_submit_enable
-    state: present
-    value: "{{ sendmail_submit | ternary('YES', 'NO') }}"
-
-- name: >-
-    Sendmail | outbound - {{ sendmail_outbound |
-    ternary('enable', 'disable') }}
-  community.general.sysrc:
-    name: sendmail_outbound_enable
-    state: present
-    value: "{{ sendmail_outbound | ternary('YES', 'NO') }}"
-
-- name: >-
-    Sendmail | msp_queue - {{ sendmail_msp_queue |
-    ternary('enable', 'disable') }}
-  community.general.sysrc:
-    name: sendmail_msp_queue_enable
-    state: present
-    value: "{{ sendmail_msp_queue | ternary('YES', 'NO') }}"
-
 - name: Set autoboot delay
   community.general.sysrc:
     name: autoboot_delay
