@@ -25,7 +25,7 @@ jobs:
           ansible-galaxy collection install
           charlesrocket-freebsd-$(grep version galaxy.yml |
           awk '{print $2}').tar.gz
-      - uses: ansible/ansible-lint-action@main
+      - uses: ansible/ansible-lint@main
 
   ansible-test:
     name: ansible-test
