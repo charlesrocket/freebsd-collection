@@ -13,4 +13,4 @@ argument_specs:
       wireguard:
         description: Enable WireGuard module.
         type: bool
-        default: true
+        default: false
