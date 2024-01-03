@@ -10,7 +10,7 @@ argument_specs:
       - charlesrocket
 
     options:
-      pkg_branch:
+      pkg_branch_name:
         description: Set C(pkg) branch.
         type: str
         default: latest

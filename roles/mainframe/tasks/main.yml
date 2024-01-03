@@ -1,33 +1,34 @@
 ---
 
-- name: "{{ sshd | ternary('Enable sshd', 'Disable sshd') }}"
+- name: "{{ mainframe_sshd | ternary('Enable sshd', 'Disable sshd') }}"
   community.general.sysrc:
     name: sshd_enable
-    value: "{{ sshd | ternary('YES', 'NO') }}"
+    value: "{{ mainframe_sshd | ternary('YES', 'NO') }}"
     state: present
 
-- name:
-    "Random IP packet IDs | {{ ip_random_id | ternary('enable', 'disable') }}"
+- name: >-
+    Random IP packet IDs | {{ mainframe_ip_random_id | ternary('enable',
+    'disable') }}
   ansible.posix.sysctl:
     name: net.inet.ip.random_id
     state: present
-    value: "{{ ip_random_id | ternary('1', '0') }}"
+    value: "{{ mainframe_ip_random_id | ternary('1', '0') }}"
 
 - name: >-
-    {{ nolocaltimewait | ternary('Tune loopback interface',
+    {{ mainframe_nolocaltimewait | ternary('Tune loopback interface',
     'Do not tune loopback interface') }}
   ansible.posix.sysctl:
     name: net.inet.tcp.nolocaltimewait
     state: present
-    value: "{{ nolocaltimewait | ternary('1', '0') }}"
+    value: "{{ mainframe_nolocaltimewait | ternary('1', '0') }}"
 
 - name: >-
-    {{ ip_process_options | ternary('Process IP options',
+    {{ mainframe_ip_process_options | ternary('Process IP options',
     'Do not process IP options') }}
   ansible.posix.sysctl:
     name: net.inet.ip.process_options
     state: present
-    value: "{{ ip_process_options | ternary('1', '0') }}"
+    value: "{{ mainframe_ip_process_options | ternary('1', '0') }}"
 
 - name: Disallow keymap changes for non-privileged users
   ansible.posix.sysctl:
@@ -40,45 +41,50 @@
     name: net.inet.tcp.blackhole
     state: present
     value: '2'
-  when: net_blackhole
+  when: mainframe_net_blackhole
 
 - name: Blackhole UDP
   ansible.posix.sysctl:
     name: net.inet.udp.blackhole
     state: present
     value: '1'
-  when: net_blackhole
+  when: mainframe_net_blackhole
 
-- name: "{{ path_mtu_discovery | ternary('Enable PMTUD', 'Disable PMTUD') }}"
+- name: >-
+    {{ mainframe_path_mtu_discovery | ternary('Enable PMTUD',
+    'Disable PMTUD') }}
   ansible.posix.sysctl:
     name: net.inet.tcp.path_mtu_discovery
     state: present
-    value: "{{ path_mtu_discovery | ternary('1', '0') }}"
+    value: >-
+      {{ mainframe_path_mtu_discovery | ternary('1',
+      '0') }}
 
-- name:
-    "TCP keepalive | {{ tcp_always_keepalive | ternary('enable', 'disable') }}"
+- name: >-
+    TCP keepalive | {{ mainframe_tcp_always_keepalive | ternary('enable',
+    'disable') }}
   ansible.posix.sysctl:
     name: net.inet.tcp.always_keepalive
     state: present
-    value: "{{ tcp_always_keepalive | ternary('1', '0') }}"
+    value: "{{ mainframe_tcp_always_keepalive | ternary('1', '0') }}"
 
 - name: >-
-    {{ drop_synfin | ternary('Drop SYN/FIN packets',
+    {{ mainframe_drop_synfin | ternary('Drop SYN/FIN packets',
     'Do not drop SYN/FIN packets') }}
   ansible.posix.sysctl:
     name: net.inet.tcp.drop_synfin
     state: present
-    value: "{{ drop_synfin | ternary('1', '0') }}"
+    value: "{{ mainframe_drop_synfin | ternary('1', '0') }}"
 
-- name: "AHCI | {{ ahci | ternary('enable', 'disable') }}"
+- name: "AHCI | {{ mainframe_ahci | ternary('enable', 'disable') }}"
   community.general.sysrc:
     name: ahci_load
     state: present
-    value: "{{ ahci | ternary('YES', 'NO') }}"
+    value: "{{ mainframe_ahci | ternary('YES', 'NO') }}"
     path: /boot/loader.conf
 
-- name: "ICMP RST | {{ icmp_may_rst | ternary('enable', 'disable') }}"
+- name: "ICMP RST | {{ mainframe_icmp_may_rst | ternary('enable', 'disable') }}"
   ansible.posix.sysctl:
     name: net.inet.tcp.icmp_may_rst
     state: present
-    value: "{{ icmp_may_rst | ternary('1', '0') }}"
+    value: "{{ mainframe_icmp_may_rst | ternary('1', '0') }}"

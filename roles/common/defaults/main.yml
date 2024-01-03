@@ -1,4 +1,4 @@
 ---
 
-lynis_profile: server
-motd_layout: default
+common_lynis_profile: server
+common_motd_layout: default

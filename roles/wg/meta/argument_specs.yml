@@ -10,7 +10,7 @@ argument_specs:
       - charlesrocket
 
     options:
-      wireguard:
+      wg_enabled:
         description: Enable WireGuard module.
         type: bool
         default: false

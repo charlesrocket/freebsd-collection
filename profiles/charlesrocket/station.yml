@@ -47,15 +47,15 @@ git_helper:
 
 # Configuration
 laptop: true
-acpi: true
+desktop_acpi: true
 asus: true
 amd: false
 clamav: true
 bastille: true
 doomemacs: true
-ohmyzsh: true
+desktop_ohmyzsh: true
 intel: true
-microcode_update: true
+sys_microcode_update: true
 qmk: true
 virtualbox: true
 wifi: true
@@ -63,17 +63,17 @@ mfa: true
 
 bastille_zfs_enable: true
 bastille_zfs_zpool: zroot
-ipv6_support: true
+sys_ipv6_support: true
 tethering_apple: true
 timezone: America/Los_Angeles
-github: charlesrocket
+qmk_github: charlesrocket
 
-boot_verbose: true
-coretemp: true
-cpuctl: true
-aesni: true
+sys_boot_verbose: true
+sys_coretemp: true
+sys_cpuctl: true
+sys_aesni: true
 
-lynis_profile: desktop
+common_lynis_profile: desktop
 make_config:
   - DEVELOPER=yes
   - MAKE_JOBS_NUMBER?=16

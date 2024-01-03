@@ -1,8 +1,9 @@
 ---
 
-- name:
-    "Process accounting | {{ proc_accounting | ternary('enable', 'disable') }}"
+- name: >-
+    Process accounting | {{ accounting_enabled | ternary('enable',
+    'disable') }}
   community.general.sysrc:
     name: accounting_enable
     state: present
-    value: "{{ proc_accounting | ternary('YES', 'NO') }}"
+    value: "{{ accounting_enabled | ternary('YES', 'NO') }}"

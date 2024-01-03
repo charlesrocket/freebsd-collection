@@ -10,7 +10,7 @@ argument_specs:
       - charlesrocket
 
     options:
-      security_level:
+      kern_sec_level:
         description: Set kernel security level.
         type: str
         default: -1

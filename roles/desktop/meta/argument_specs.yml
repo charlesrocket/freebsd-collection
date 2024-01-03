@@ -13,42 +13,42 @@ argument_specs:
       - charlesrocket
 
     options:
-      ohmyzsh:
+      desktop_ohmyzsh:
         description: Install C(ohmyzsh).
         type: bool
         default: false
 
-      usermount:
+      desktop_usermount:
         description: Allow users to mount.
         type: bool
         default: true
 
-      sndiod:
+      desktop_sndiod:
         description: Enable C(sndiod).
         type: bool
         default: true
 
-      cuse:
+      desktop_cuse:
         description: Enable C(cuse).
         type: bool
         default: true
 
-      acpi:
+      desktop_acpi:
         description: Enable ACPI driver.
         type: bool
         default: false
 
-      dsbmd:
+      desktop_dsbmd:
         description: Enable C(DSBMD).
         type: bool
         default: true
 
-      seatd:
+      desktop_seatd:
         description: Enable C(seatd).
         type: bool
         default: true
 
-      dbus:
+      desktop_dbus:
         description: Enable C(dbus).
         type: bool
         default: true

@@ -6,7 +6,7 @@ amd: true
 clamav: true
 bastille: true
 doomemacs: false
-ohmyzsh: true
+desktop_ohmyzsh: true
 intel: true
 microcode_update: false
 qmk: false
@@ -19,7 +19,7 @@ bastille_zfs_zpool: zroot
 tethering_apple: true
 timezone: America/Los_Angeles
 
-lynis_profile: desktop
+common_lynis_profile: desktop
 make_config:
   - DEVELOPER=yes
   - MAKE_JOBS_NUMBER?=16

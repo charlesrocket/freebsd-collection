@@ -27,59 +27,61 @@
     mode: '0644'
   when: doas_config is defined
 
-- name: "{{ randompid | ternary('Randomize PIDs', 'Do not randomize PIDs') }}"
+- name:
+    "{{ sys_randompid | ternary('Randomize PIDs', 'Do not randomize PIDs') }}"
   ansible.posix.sysctl:
     name: kern.randompid
     state: present
-    value: "{{ randompid | ternary('1', '0') }}"
+    value: "{{ sys_randompid | ternary('1', '0') }}"
     reload: false
 
-- name: "{{ coredump | ternary('Enable coredump', 'Disable coredump') }}"
+- name: "{{ sys_coredump | ternary('Enable coredump', 'Disable coredump') }}"
   ansible.posix.sysctl:
     name: kern.coredump
     state: present
-    value: "{{ coredump | ternary('1', '0') }}"
+    value: "{{ sys_coredump | ternary('1', '0') }}"
 
 - name: >-
-    {{ unpriv_proc_debug | ternary('Unrestricted debugging',
+    {{ sys_unpriv_proc_debug | ternary('Unrestricted debugging',
     'Restricted debugging') }}
   ansible.posix.sysctl:
     name: security.bsd.unprivileged_proc_debug
     state: present
-    value: "{{ unpriv_proc_debug | ternary('1', '0') }}"
+    value: "{{ sys_unpriv_proc_debug | ternary('1', '0') }}"
 
 - name: >-
-    "{{ unpriv_read_msgbuf | ternary('Unrestricted message buffer',
+    "{{ sys_unpriv_read_msgbuf | ternary('Unrestricted message buffer',
     'Restricted message buffer') }}"
   ansible.posix.sysctl:
     name: security.bsd.unprivileged_read_msgbuf
     state: present
-    value: "{{ unpriv_read_msgbuf | ternary('1', '0') }}"
+    value: "{{ sys_unpriv_read_msgbuf | ternary('1', '0') }}"
 
-- name:
-    "Processes running in jails - {{ see_jail_proc | ternary('show', 'hide') }}"
+- name: >-
+    Processes running in jails - {{ sys_see_jail_proc | ternary('show',
+    'hide') }}
   ansible.posix.sysctl:
     name: security.bsd.see_jail_proc
     state: present
-    value: "{{ see_jail_proc | ternary('1', '0') }}"
+    value: "{{ sys_see_jail_proc | ternary('1', '0') }}"
 
-- name: "{{ see_other_gids | ternary('Show GIDs', 'Hide GIDs') }}"
+- name: "{{ sys_see_other_gids | ternary('Show GIDs', 'Hide GIDs') }}"
   ansible.posix.sysctl:
     name: security.bsd.see_other_gids
     state: present
-    value: "{{ see_other_gids | ternary('1', '0') }}"
+    value: "{{ sys_see_other_gids | ternary('1', '0') }}"
 
-- name: "{{ see_other_uids | ternary('Show UIDs', 'Hide UIDs') }}"
+- name: "{{ sys_see_other_uids | ternary('Show UIDs', 'Hide UIDs') }}"
   ansible.posix.sysctl:
     name: security.bsd.see_other_uids
     state: present
-    value: "{{ see_other_uids | ternary('1', '0') }}"
+    value: "{{ sys_see_other_uids | ternary('1', '0') }}"
 
-- name: "{{ clear_tmp | ternary('Clear /tmp', 'Do not clear /tmp') }}"
+- name: "{{ sys_clear_tmp | ternary('Clear /tmp', 'Do not clear /tmp') }}"
   community.general.sysrc:
     name: clear_tmp_enable
     state: present
-    value: "{{ clear_tmp | ternary('YES', 'NO') }}"
+    value: "{{ sys_clear_tmp | ternary('YES', 'NO') }}"
 
 - name: Ensure cpu-microcode is installed
   community.general.pkgng:
@@ -87,36 +89,36 @@
     name: cpu-microcode
     autoremove: true
     cached: false
-  when: microcode_update
+  when: sys_microcode_update
 
 - name: Enable microcode updates
   community.general.sysrc:
     name: microcode_update_enable
     state: present
     value: "YES"
-  when: microcode_update
+  when: sys_microcode_update
 
-- name: "Ntpd | {{ ntpd | ternary('enable', 'disable') }}"
+- name: "Ntpd | {{ sys_ntpd | ternary('enable', 'disable') }}"
   community.general.sysrc:
     name: ntpd_enable
     state: present
-    value: "{{ ntpd | ternary('YES', 'NO') }}"
+    value: "{{ sys_ntpd | ternary('YES', 'NO') }}"
 
 - name: >-
-    {{ ntpd_bootsync | ternary('Sync ntpd on start',
+    {{ sys_ntpd_bootsync | ternary('Sync ntpd on start',
     'Do not sync ntpd on start') }}
   community.general.sysrc:
     name: ntpd_sync_on_start
     state: present
-    value: "{{ ntpd_bootsync | ternary('YES', 'NO') }}"
+    value: "{{ sys_ntpd_bootsync | ternary('YES', 'NO') }}"
 
 - name: >-
-    Ntpd OOM protection | {{ ntpd_oomprotect |
+    Ntpd OOM protection | {{ sys_ntpd_oomprotect |
     ternary('activate', 'deactivate') }}
   community.general.sysrc:
     name: ntpd_oomprotect
     state: present
-    value: "{{ ntpd_oomprotect | ternary('YES', 'NO') }}"
+    value: "{{ sys_ntpd_oomprotect | ternary('YES', 'NO') }}"
 
 - name: Set autoboot delay
   community.general.sysrc:
@@ -125,93 +127,94 @@
     value: "2"
     path: /boot/loader.conf
 
-- name: "Verbose booting | {{ boot_verbose | ternary('enable', 'disable') }}"
+- name:
+    "Verbose booting | {{ sys_boot_verbose | ternary('enable', 'disable') }}"
   community.general.sysrc:
     name: boot_verbose
     state: present
-    value: "{{ boot_verbose | ternary('YES', 'NO') }}"
+    value: "{{ sys_boot_verbose | ternary('YES', 'NO') }}"
     path: /boot/loader.conf
 
-- name: "Change loader logo | {{ loader_logo }}"
+- name: "Change loader logo | {{ sys_loader_logo }}"
   community.general.sysrc:
     name: loader_logo
     state: present
-    value: "{{ loader_logo }}"
+    value: "{{ sys_loader_logo }}"
     path: /boot/loader.conf
 
-- name: "{{ aio | ternary('Enable AIO', 'Disable AIO') }}"
+- name: "{{ sys_aio | ternary('Enable AIO', 'Disable AIO') }}"
   community.general.sysrc:
     name: aio_load
     state: present
-    value: "{{ aio | ternary('YES', 'NO') }}"
+    value: "{{ sys_aio | ternary('YES', 'NO') }}"
     path: /boot/loader.conf
 
-- name: "{{ coretemp | ternary('Enable coretemp', 'Disable coretemp') }}"
+- name: "{{ sys_coretemp | ternary('Enable coretemp', 'Disable coretemp') }}"
   community.general.sysrc:
     name: coretemp_load
     state: present
-    value: "{{ coretemp | ternary('YES', 'NO') }}"
+    value: "{{ sys_coretemp | ternary('YES', 'NO') }}"
     path: /boot/loader.conf
 
-- name: "{{ cpuctl | ternary('Enable cpuctl', 'Disable cpuctl') }}"
+- name: "{{ sys_cpuctl | ternary('Enable cpuctl', 'Disable cpuctl') }}"
   community.general.sysrc:
     name: cpuctl_load
     state: present
-    value: "{{ cpuctl | ternary('YES', 'NO') }}"
+    value: "{{ sys_cpuctl | ternary('YES', 'NO') }}"
     path: /boot/loader.conf
 
-- name: "{{ aesni | ternary('Enable AES-NI', 'Disable AES-NI') }}"
+- name: "{{ sys_aesni | ternary('Enable AES-NI', 'Disable AES-NI') }}"
   community.general.sysrc:
     name: aesni_load
     state: present
-    value: "{{ aesni | ternary('YES', 'NO') }}"
+    value: "{{ sys_aesni | ternary('YES', 'NO') }}"
     path: /boot/loader.conf
 
-- name: "{{ cc_htcp | ternary('Enable H-TCP', 'Disable H-TC') }}"
+- name: "{{ sys_cc_htcp | ternary('Enable H-TCP', 'Disable H-TC') }}"
   community.general.sysrc:
     name: cc_htcp_load
     state: present
-    value: "{{ cc_htcp | ternary('YES', 'NO') }}"
+    value: "{{ sys_cc_htcp | ternary('YES', 'NO') }}"
     path: /boot/loader.conf
 
-- name: "{{ bmcastecho | ternary('Enable ping', 'Disable ping') }}"
+- name: "{{ sys_bmcastecho | ternary('Enable ping', 'Disable ping') }}"
   community.general.sysrc:
     name: icmp_bmcastecho
     state: present
-    value: "{{ bmcastecho | ternary('YES', 'NO') }}"
+    value: "{{ sys_bmcastecho | ternary('YES', 'NO') }}"
 
 - name: >-
-    DHCP client background start | {{ dhclient_bg |
+    DHCP client background start | {{ sys_dhclient_bg |
     ternary('enable', 'disable') }}
   community.general.sysrc:
     name: background_dhclient
     state: present
-    value: "{{ dhclient_bg | ternary('YES', 'NO') }}"
+    value: "{{ sys_dhclient_bg | ternary('YES', 'NO') }}"
 
-- name: "IPv6 | {{ ipv6_support | ternary('enable', 'disable') }}"
+- name: "IPv6 | {{ sys_ipv6_support | ternary('enable', 'disable') }}"
   community.general.sysrc:
     name: rtsold_enable
     state: present
-    value: "{{ ipv6_support | ternary('YES', 'NO') }}"
+    value: "{{ sys_ipv6_support | ternary('YES', 'NO') }}"
 
 - name: IPv6 | tune
   community.general.sysrc:
     name: rtsold_flags
     state: present
     value: "-aF"
-  when: ipv6_support
+  when: sys_ipv6_support
 
-- name: "Syslogd flags {{ syslogd_flags }}"
+- name: "Syslogd flags {{ sys_syslogd_flags }}"
   community.general.sysrc:
     name: syslogd_flags
     state: present
-    value: "{{ syslogd_flags }}"
+    value: "{{ sys_syslogd_flags }}"
 
-- name: "Kernel crash dumps | {{ dumpdev | ternary('enable', 'disable') }}"
+- name: "Kernel crash dumps | {{ sys_dumpdev | ternary('enable', 'disable') }}"
   community.general.sysrc:
     name: dumpdev
     state: present
-    value: "{{ dumpdev | ternary('YES', 'NO') }}"
+    value: "{{ sys_dumpdev | ternary('YES', 'NO') }}"
 
 - name: Fix file permissions
   ansible.builtin.file:
