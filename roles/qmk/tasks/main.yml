@@ -10,7 +10,7 @@
 
 - name: Clone QMK firmware
   ansible.builtin.git:
-    repo: "https://github.com/{{ github }}/qmk_firmware"
+    repo: "https://github.com/{{ qmk_github }}/qmk_firmware"
     dest: ~/src/qmk_firmware
     version: master
     depth: 1

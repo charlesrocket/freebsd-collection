@@ -1,10 +1,10 @@
 ---
 
-ohmyzsh: false
-usermount: true
-sndiod: true
-cuse: true
-acpi: false
-dsbmd: true
-seatd: true
-dbus: true
+desktop_ohmyzsh: false
+desktop_usermount: true
+desktop_sndiod: true
+desktop_cuse: true
+desktop_acpi: false
+desktop_dsbmd: true
+desktop_seatd: true
+desktop_dbus: true

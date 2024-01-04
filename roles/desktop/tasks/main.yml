@@ -17,50 +17,50 @@
     creates: "/home/{{ ansible_user | default(ansible_user_id) }}/.oh-my-zsh"
   become: false
   when:
-    - "'zsh' in ansible_facts.packages and 'ohmyzsh'"
+    - "'zsh' in ansible_facts.packages and 'desktop_ohmyzsh'"
 
-- name: "Usermount | {{ usermount | ternary('enable', 'disable') }}"
+- name: "Usermount | {{ desktop_usermount | ternary('enable', 'disable') }}"
   ansible.posix.sysctl:
     name: vfs.usermount
     state: present
-    value: "{{ usermount | ternary('1', '0') }}"
+    value: "{{ desktop_usermount | ternary('1', '0') }}"
 
-- name: "{{ sndiod | ternary('Enable sndio', 'Disable sndio') }}"
+- name: "{{ desktop_sndiod | ternary('Enable sndio', 'Disable sndio') }}"
   community.general.sysrc:
     name: sndiod_enable
     state: present
-    value: "{{ sndiod | ternary('YES', 'NO') }}"
+    value: "{{ desktop_sndiod | ternary('YES', 'NO') }}"
 
-- name: "{{ cuse | ternary('Enable cuse', 'Disable cuse') }}"
+- name: "{{ desktop_cuse | ternary('Enable cuse', 'Disable cuse') }}"
   community.general.sysrc:
     name: cuse_load
     state: present
-    value: "{{ cuse | ternary('YES', 'NO') }}"
+    value: "{{ desktop_cuse | ternary('YES', 'NO') }}"
     path: /boot/loader.conf
 
-- name: "ACPI video driver | {{ acpi | ternary('enable', 'disable') }}"
+- name: "ACPI video driver | {{ desktop_acpi | ternary('enable', 'disable') }}"
   community.general.sysrc:
     name: kld_list
-    state: "{{ acpi | ternary('value_present', 'value_absent') }}"
+    state: "{{ desktop_acpi | ternary('value_present', 'value_absent') }}"
     value: "acpi_video"
 
-- name: "{{ dsbmd | ternary('Enable DSBMD', 'Disable DSBMD') }}"
+- name: "{{ desktop_dsbmd | ternary('Enable DSBMD', 'Disable DSBMD') }}"
   community.general.sysrc:
     name: dsbmd_enable
     state: present
-    value: "{{ dsbmd | ternary('YES', 'NO') }}"
+    value: "{{ desktop_dsbmd | ternary('YES', 'NO') }}"
 
-- name: "{{ seatd | ternary('Enable seatd', 'Disable seatd') }}"
+- name: "{{ desktop_seatd | ternary('Enable seatd', 'Disable seatd') }}"
   community.general.sysrc:
     name: seatd_enable
     state: present
-    value: "{{ seatd | ternary('YES', 'NO') }}"
+    value: "{{ desktop_seatd | ternary('YES', 'NO') }}"
 
-- name: "{{ dbus | ternary('Enable dbus', 'Disable dbus') }}"
+- name: "{{ desktop_dbus | ternary('Enable dbus', 'Disable dbus') }}"
   community.general.sysrc:
     name: dbus_enable
     state: present
-    value: "{{ dbus | ternary('YES', 'NO') }}"
+    value: "{{ desktop_dbus | ternary('YES', 'NO') }}"
 
 - name: Enable desktop ruleset
   community.general.sysrc:

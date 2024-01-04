@@ -10,52 +10,52 @@ argument_specs:
       - charlesrocket
 
     options:
-      sshd:
+      mainframe_sshd:
         description: Enable SSH.
         type: bool
         default: true
 
-      ip_random_id:
+      mainframe_ip_random_id:
         description: Random IP packet IDs.
         type: bool
         default: true
 
-      nolocaltimewait:
+      mainframe_nolocaltimewait:
         description: Tune loopback interface.
         type: bool
         default: true
 
-      ip_process_options:
+      mainframe_ip_process_options:
         description: Process IP options.
         type: bool
         default: false
 
-      net_blackhole:
+      mainframe_net_blackhole:
         description: Activate C(blackhole).
         type: bool
         default: true
 
-      path_mtu_discovery:
+      mainframe_path_mtu_discovery:
         description: Enable PMTUD.
         type: bool
         default: false
 
-      tcp_always_keepalive:
+      mainframe_tcp_always_keepalive:
         description: Detect dead TCP connections.
         type: bool
         default: false
 
-      drop_synfin:
+      mainframe_drop_synfin:
         description: Drop SYN/FIN packets.
         type: bool
         default: true
 
-      ahci:
+      mainframe_ahci:
         description: Enable AHCI.
         type: bool
         default: true
 
-      icmp_may_rst:
+      mainframe_icmp_may_rst:
         description: Enable ICMP RST.
         type: bool
         default: true

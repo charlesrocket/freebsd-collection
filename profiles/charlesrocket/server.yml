@@ -7,10 +7,9 @@ dotfiles: false
 git: false
 pf: true
 poudriere: false
-proc_accounting: false
-set_security_level: false
-microcode_update: true
-sshd: true
+accounting_enabled: false
+sys_microcode_update: true
+mainframe_sshd: true
 mfa: false
 
 bastille_zfs_enable: true
@@ -23,11 +22,11 @@ poudriere_host: ftp://ftp.freebsd.org
 poudriere_zfs: true
 poudriere_zpool: zroot
 poudriere_zrootfs: /usr/local/poudriere
-security_level: 2
+kern_sec_level: 2
 timezone: America/Los_Angeles
-motd_layout: status
+common_motd_layout: status
 
-boot_verbose: true
+sys_boot_verbose: true
 
 # Keep packages up to date
 upgrade_packages: false

@@ -10,7 +10,7 @@ argument_specs:
       - charlesrocket
 
     options:
-      github:
+      qmk_github:
         description: Set GitHub username.
         type: str
         default: qmk

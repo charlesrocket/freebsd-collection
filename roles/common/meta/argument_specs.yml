@@ -12,7 +12,7 @@ argument_specs:
       - charlesrocket
 
     options:
-      lynis_profile:
+      common_lynis_profile:
         description: Lynis profile to deploy.
         type: str
         default: server
@@ -25,7 +25,7 @@ argument_specs:
         type: list
         elements: str
 
-      motd_layout:
+      common_motd_layout:
         description: MOTD layout.
         type: str
         default: default

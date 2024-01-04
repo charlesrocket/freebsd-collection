@@ -10,4 +10,4 @@
   community.general.sysrc:
     name: kern_securelevel
     state: present
-    value: "{{ security_level }}"
+    value: "{{ kern_sec_level }}"

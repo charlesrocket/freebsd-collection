@@ -1,12 +1,14 @@
 ---
 
 - name: >-
-    Set pkg branch to {{ pkg_branch }}
+    Set pkg branch to {{ pkg_branch_name }}
   ansible.builtin.replace:
     path: /usr/local/etc/pkg/repos/FreeBSD.conf
-    regexp: "{{ (pkg_branch == 'latest') | ternary('quarterly', 'latest') }}"
-    replace:
-      "{{ (pkg_branch == 'latest') | ternary('latest', 'quarterly') }}"
+    regexp: >-
+      {{ (pkg_branch_name == 'latest') | ternary('quarterly',
+      'latest') }}
+    replace: >-
+      {{ (pkg_branch_name == 'latest') | ternary('latest', 'quarterly') }}
   notify:
     - Redownload repository catalogue
     - Upgrade installed packages

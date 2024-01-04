@@ -23,79 +23,79 @@ argument_specs:
         description: Set timezone.
         type: str
 
-      microcode_update:
+      sys_microcode_update:
         description: Enable microcode updates.
         type: bool
         default: false
 
-      ipv6_support:
+      sys_ipv6_support:
         description: Enable IPv6 (non-router nodes).
         type: bool
         default: false
 
-      randompid:
+      sys_randompid:
         description: Randomize PIDs.
         type: bool
         default: true
 
-      coredump:
+      sys_coredump:
         description: Enable C(coredump).
         type: bool
         default: false
 
-      unpriv_proc_debug:
+      sys_unpriv_proc_debug:
         description: Allow unrestricted debugging.
         type: bool
         default: false
 
-      unpriv_read_msgbuf:
+      sys_unpriv_read_msgbuf:
         description:
           - >-
             Allow unrestricted message buffer.
         type: bool
         default: false
 
-      see_jail_proc:
+      sys_see_jail_proc:
         description: Show processes running in jails.
         type: bool
         default: false
 
-      see_other_gids:
+      sys_see_other_gids:
         description: Show GIDs.
         type: bool
         default: false
 
-      see_other_uids:
+      sys_see_other_uids:
         description: Show UIDs.
         type: bool
         default: false
 
-      clear_tmp:
+      sys_clear_tmp:
         description: Clear C(/tmp) directory.
         type: bool
         default: true
 
-      ntpd:
+      sys_ntpd:
         description: Enable C(ntpd).
         type: bool
         default: true
 
-      ntpd_bootsync:
+      sys_ntpd_bootsync:
         description: Sync C(ntpd) on start.
         type: bool
         default: true
 
-      ntpd_oomprotect:
+      sys_ntpd_oomprotect:
         description: Enable C(ntpd) OOM protection.
         type: bool
         default: true
 
-      boot_verbose:
+      sys_boot_verbose:
         description: Boot in verbose mode.
         type: bool
         default: false
 
-      loader_logo:
+      sys_loader_logo:
         description: Set boot loader logo.
         type: str
         default: orbbw
@@ -107,47 +107,47 @@ argument_specs:
           - beastie
           - none
 
-      aio:
+      sys_aio:
         description: Enable asynchronous I/O.
         type: bool
         default: true
 
-      coretemp:
+      sys_coretemp:
         description: Enable C(coretemp).
         type: bool
         default: false
 
-      cpuctl:
+      sys_cpuctl:
         description: Enable C(cpuctl) pseudo device.
         type: bool
         default: false
 
-      aesni:
+      sys_aesni:
         description: Enable AES accelerator.
         type: bool
         default: false
 
-      cc_htcp:
+      sys_cc_htcp:
         description: Enable H-TCP congestion control.
         type: bool
         default: true
 
-      bmcastecho:
+      sys_bmcastecho:
         description: Enable ping.
         type: bool
         default: false
 
-      dhclient_bg:
+      sys_dhclient_bg:
         description: Load DHCP client in the background.
         type: bool
         default: true
 
-      syslogd_flags:
+      sys_syslogd_flags:
         description: Set C(syslogd) flags.
         type: str
         default: '-ss'
 
-      dumpdev:
+      sys_dumpdev:
         description: Enable kernel crash dumps.
         type: bool
         default: false

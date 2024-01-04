@@ -17,10 +17,10 @@
     - user_groups is defined
   become: true
 
-- name: "Copy MOTD | {{ motd_layout }}"
+- name: "Copy MOTD | {{ common_motd_layout }}"
   ansible.builtin.copy:
     src: >-
-      motd-{{ motd_layout }}.sh
+      motd-{{ common_motd_layout }}.sh
     dest: /etc/motd.sh
     owner: root
     mode: '0700'
@@ -59,10 +59,10 @@
   when:
     - make_config is defined
 
-- name: "Copy Lynis profile | {{ lynis_profile }}"
+- name: "Copy Lynis profile | {{ common_lynis_profile }}"
   ansible.builtin.copy:
     src: >-
-      {{ lynis_profile }}.prf
+      {{ common_lynis_profile }}.prf
     dest: /usr/local/etc/lynis/custom.prf
     owner: root
     mode: '0644'
