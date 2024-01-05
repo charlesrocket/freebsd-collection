@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.9.0] - 2024-01-05
+
+### Bug Fixes
+
+- Change `wg` defaults
+
+### CI/CD
+
+- Update linter
+- Bump fbsd version
+
+### Miscellaneous tasks
+
+- Bump ansible version
+- Update LICENSE
+
+### Refactor
+
+- Rename variables within roles
+
 ## [1.8.0] - 2023-12-05
 
 ### Bug Fixes
