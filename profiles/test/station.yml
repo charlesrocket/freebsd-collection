@@ -14,6 +14,8 @@ virtualbox: true
 wifi: true
 mfa: true
 
+wg_enabled: true
+
 bastille_zfs_enable: true
 bastille_zfs_zpool: zroot
 tethering_apple: true
