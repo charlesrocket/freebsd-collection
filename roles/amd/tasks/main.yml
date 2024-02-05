@@ -1,5 +1,13 @@
 ---
 
+- name: Ensure drm-kmod is installed
+  community.general.pkgng:
+    state: present
+    name: drm-kmod
+    autoremove: true
+    cached: false
+  become: true
+
 - name: Enable AMD driver
   community.general.sysrc:
     name: kld_list
