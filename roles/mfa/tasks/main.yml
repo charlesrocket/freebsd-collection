@@ -40,6 +40,13 @@
     value: "YES"
   become: true
 
+- name: Tune pcscd
+  community.general.sysrc:
+    name: pcscd_flags
+    state: present
+    value: "--disable-polkit"
+  become: true
+
 - name: Configure scdaemon
   ansible.builtin.lineinfile:
     path: ~/.gnupg/scdaemon.conf
