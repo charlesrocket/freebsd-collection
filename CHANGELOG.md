@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.12.1] - 2025-01-16
+
+### Bug Fixes
+
+- Disable `polkit`
+
+### Miscellaneous tasks
+
+- Add `zls`
+- Add `consolekit2`
+
+### Build
+
+- Bump `community.general` to 10.2.0
+
 ## [1.12.0] - 2025-01-02
 
 ### Bug Fixes
