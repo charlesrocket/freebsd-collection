@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.12.2] - 2025-01-24
+
+### Bug Fixes
+
+- Install intel bluetooth driver
+
+### Miscellaneous tasks
+
+- Update collection tags
+
 ## [1.12.1] - 2025-01-16
 
 ### Bug Fixes
