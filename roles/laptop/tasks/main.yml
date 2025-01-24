@@ -45,3 +45,11 @@
     state: present
     value: "{{ laptop_dock | ternary('YES', 'NO') }}"
     path: /boot/loader.conf
+
+- name: Install Intel Wireless 8260/8265 driver
+  community.general.pkgng:
+    state: present
+    name: iwmbt-firmware
+    autoremove: true
+    cached: false
+  when: laptop_thinkpad
