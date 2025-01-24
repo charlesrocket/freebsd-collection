@@ -20,6 +20,9 @@ tags:
   - bastille
   - emacs
   - virtualbox
+  - laptop
+  - desktop
+  - server
 
 dependencies:
   "ansible.posix": ">=2.0.0"
