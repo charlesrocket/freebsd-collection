@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.12.3] - 2025-01-26
+
+### Bug Fixes
+
+- Enforce LanguageTool deployment
+- Catch version changes
+- Prepare LanguageTool destination
+
+### Styling
+
+- Fix deployment task formatting
+
 ## [1.12.2] - 2025-01-24
 
 ### Bug Fixes
