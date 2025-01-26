@@ -8,6 +8,8 @@
     autoremove: true
     cached: false
   become: true
+  notify:
+    - Synchronize Doom Emacs
 
 - name: Clone Doom Emacs
   ansible.builtin.git:
