@@ -10,7 +10,8 @@
 - name: "Deploy LanguageTool: {{ emacs_languagetool_path }}"
   ansible.builtin.command:
     cmd: >-
-      mv -f /tmp/LanguageTool-{{ emacs_lt_tags.json[0].name | replace('v', '') }}
+      mv -f
+      /tmp/LanguageTool-{{ emacs_lt_tags.json[0].name | replace('v', '') }}
       {{ emacs_languagetool_path }}
     removes:
       "/tmp/LanguageTool-{{ emacs_lt_tags.json[0].name | replace('v', '') }}"
