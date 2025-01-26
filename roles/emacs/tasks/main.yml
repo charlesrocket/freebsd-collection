@@ -38,15 +38,7 @@
         dest: "/tmp/languagetool-\
           {{ emacs_lt_tags.json[0].name | replace('v', '') }}.zip"
         mode: '0740'
-
-    - name: Extract LanguageTool
-      ansible.builtin.unarchive:
-        src: "/tmp/languagetool-\
-          {{ emacs_lt_tags.json[0].name | replace('v', '') }}.zip"
-        dest: /tmp
-        owner: "{{ ansible_user | default(ansible_user_id) }}"
-        group: "{{ ansible_user | default(ansible_user_id) }}"
-        creates: "/tmp/LanguageTool-\
-          {{ emacs_lt_tags.json[0].name | replace('v', '') }}/"
-        remote_src: true
-      notify: "Deploy LanguageTool: {{ emacs_languagetool_path }}"
+      notify:
+        - Prepare LanguageTool destination
+        - Extract LanguageTool
+        - "Deploy LanguageTool: {{ emacs_languagetool_path }}"

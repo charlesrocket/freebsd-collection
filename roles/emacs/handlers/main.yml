@@ -7,6 +7,22 @@
     - '"No packages need to be installed" not in doom_output.stdout'
     - '"No packages need rebuilding" not in doom_output.stdout'
 
+- name: Prepare LanguageTool destination
+  ansible.builtin.file:
+    path: "{{ emacs_languagetool_path }}"
+    state: absent
+
+- name: Extract LanguageTool
+  ansible.builtin.unarchive:
+    src: "/tmp/languagetool-\
+      {{ emacs_lt_tags.json[0].name | replace('v', '') }}.zip"
+    dest: /tmp
+    owner: "{{ ansible_user | default(ansible_user_id) }}"
+    group: "{{ ansible_user | default(ansible_user_id) }}"
+    creates: "/tmp/LanguageTool-\
+      {{ emacs_lt_tags.json[0].name | replace('v', '') }}/"
+    remote_src: true
+
 - name: "Deploy LanguageTool: {{ emacs_languagetool_path }}"
   ansible.builtin.command:
     cmd: >-
