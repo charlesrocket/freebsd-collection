@@ -235,6 +235,7 @@ pkgng_packages:
   - unzip
   - vagrant
   - valgrind
+  - virtual_oss
   - vlc
   - wdisplays
   - wget
