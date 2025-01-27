@@ -197,6 +197,7 @@ pkgng_packages:
   - ninja
   - nmap
   - noto-emoji
+  - oxipng
   - pcsc-tools
   - perl5
   - pijul
