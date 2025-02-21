@@ -116,6 +116,7 @@ pkgng_packages:
   - aspell
   - base64
   - bash
+  - blender
   - btop
   - bzip2
   - chkrootkit
