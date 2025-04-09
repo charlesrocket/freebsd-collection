@@ -78,7 +78,9 @@ bastille_zfs_zpool: zroot
 sys_ipv6_support: true
 tethering_apple: true
 timezone: America/Los_Angeles
-qmk_github: charlesrocket
+
+qmk_userspace: "https://github.com/charlesrocket/qmk_userspace"
+qmk_userspace_version: "trunk"
 
 sys_boot_verbose: true
 sys_coretemp: true
