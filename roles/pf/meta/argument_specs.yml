@@ -19,3 +19,8 @@ argument_specs:
         description: Enable C(pflog).
         type: bool
         default: false
+
+      pf_pflog_flags:
+        description: Set C(pflog) flags.
+        type: str
+        default: ''

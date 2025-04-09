@@ -28,17 +28,17 @@
 - name: "{{ pf_pflog | ternary('Enable pflog', 'Disable pflog') }}"
   community.general.sysrc:
     name: pflog_enable
-    value:  "{{ pf_pflog | ternary('YES', 'NO') }}"
+    value: "{{ pf_pflog | ternary('YES', 'NO') }}"
     state: present
+
+- name: "pflog flags {{ pf_pflog_flags }}"
+  community.general.sysrc:
+    name: pflog_flags
+    state: present
+    value: "{{ pf_pflog_flags }}"
 
 - name: Set log file
   community.general.sysrc:
     name: pflog_logfile
     value: "/var/log/pflog"
-    state: present
-
-- name: Set log flags
-  community.general.sysrc:
-    name: pflog_flags
-    value: ""
     state: present

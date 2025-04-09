@@ -2,3 +2,4 @@
 
 pf_bastille: false
 pf_pflog: false
+pf_pflog_flags: ""
