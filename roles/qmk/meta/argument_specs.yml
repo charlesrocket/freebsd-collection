@@ -15,6 +15,11 @@ argument_specs:
         type: str
         default: https://github.com/qmk/qmk_userspace
 
+      qmk_userspace_version:
+        description: Userspace repository branch.
+        type: str
+        default: main
+
       qmk_userspace_location:
         description: Local userspace destination.
         type: str
