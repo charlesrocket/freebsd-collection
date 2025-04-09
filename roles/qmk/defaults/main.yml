@@ -1,3 +1,4 @@
 ---
 
-qmk_github: qmk
+qmk_userspace: "https://github.com/qmk/qmk_userspace"
+qmk_userspace_location: "~/src/qmk_userspace"

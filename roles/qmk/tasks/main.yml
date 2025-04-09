@@ -8,10 +8,8 @@
     cached: false
   become: true
 
-- name: Clone QMK firmware
+- name: Clone QMK userspace
   ansible.builtin.git:
-    repo: "https://github.com/{{ qmk_github }}/qmk_firmware"
-    dest: ~/src/qmk_firmware
-    version: master
-    depth: 1
+    repo: "{{ qmk_userspace }}"
+    dest: "{{ qmk_userspace_location }}"
   changed_when: false

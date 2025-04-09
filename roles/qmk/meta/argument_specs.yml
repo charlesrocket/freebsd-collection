@@ -10,7 +10,12 @@ argument_specs:
       - charlesrocket
 
     options:
-      qmk_github:
-        description: Set GitHub username.
+      qmk_userspace:
+        description: Userspace repository.
         type: str
-        default: qmk
+        default: https://github.com/qmk/qmk_userspace
+
+      qmk_userspace_location:
+        description: Local userspace destination.
+        type: str
+        default: ~/src/qmk_userspace
