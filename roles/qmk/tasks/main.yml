@@ -3,7 +3,7 @@
 - name: Ensure QMK is installed
   community.general.pkgng:
     state: present
-    name: py311-qmk
+    name: "py*-qmk"
     autoremove: true
     cached: false
   become: true
