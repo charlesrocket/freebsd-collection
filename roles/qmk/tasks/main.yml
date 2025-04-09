@@ -12,4 +12,3 @@
   ansible.builtin.git:
     repo: "{{ qmk_userspace }}"
     dest: "{{ qmk_userspace_location }}"
-  changed_when: false
