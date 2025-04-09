@@ -25,10 +25,10 @@
     value: "/etc/pf.conf"
     state: present
 
-- name: Enable logging
+- name: "{{ pf_pflog | ternary('Enable pflog', 'Disable pflog') }}"
   community.general.sysrc:
     name: pflog_enable
-    value: "YES"
+    value:  "{{ pf_pflog | ternary('YES', 'NO') }}"
     state: present
 
 - name: Set log file
