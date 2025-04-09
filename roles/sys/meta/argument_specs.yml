@@ -23,6 +23,11 @@ argument_specs:
         description: Set timezone.
         type: str
 
+      sys_gateway:
+        description: Enable LAN gateway mode.
+        type: bool
+        default: false
+
       sys_microcode_update:
         description: Enable microcode updates.
         type: bool

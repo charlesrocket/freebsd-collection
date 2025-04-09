@@ -216,6 +216,12 @@
     state: present
     value: "{{ sys_dumpdev | ternary('YES', 'NO') }}"
 
+- name: "LAN gateway mode | {{ sys_gateway | ternary('enable', 'disable') }}"
+  community.general.sysrc:
+    name: gateway_enable
+    state: present
+    value: "{{ sys_gateway | ternary('YES', 'NO') }}"
+
 - name: Fix file permissions
   ansible.builtin.file:
     path: "{{ item.path }}"

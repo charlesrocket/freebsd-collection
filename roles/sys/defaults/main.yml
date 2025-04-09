@@ -1,5 +1,6 @@
 ---
 
+sys_gateway: false
 sys_microcode_update: false
 sys_ipv6_support: false
 sys_randompid: true
