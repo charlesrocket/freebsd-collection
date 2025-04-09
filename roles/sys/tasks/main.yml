@@ -204,7 +204,7 @@
     value: "-aF"
   when: sys_ipv6_support
 
-- name: "Syslogd flags {{ sys_syslogd_flags }}"
+- name: "Set syslogd flags {{ sys_syslogd_flags }}"
   community.general.sysrc:
     name: syslogd_flags
     state: present

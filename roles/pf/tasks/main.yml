@@ -31,7 +31,7 @@
     value: "{{ pf_pflog | ternary('YES', 'NO') }}"
     state: present
 
-- name: "pflog flags {{ pf_pflog_flags }}"
+- name: "Set pflog flags {{ pf_pflog_flags }}"
   community.general.sysrc:
     name: pflog_flags
     state: present
