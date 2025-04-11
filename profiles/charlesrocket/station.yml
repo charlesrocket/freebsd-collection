@@ -178,6 +178,7 @@ pkgng_packages:
   - httping
   - hwstat
   - hyprland
+  - hyprlock
   - iftop
   - imhex
   - imv
@@ -227,7 +228,6 @@ pkgng_packages:
   - socat
   - swaybg
   - swayidle
-  - swaylock
   - thunar
   - tig
   - tmux
