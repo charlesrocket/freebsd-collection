@@ -29,6 +29,7 @@ dotfiles_files:
   - .config/gtk-3.0/settings.ini
   - .config/git/config
   - .config/hypr/hyprland.conf
+  - .config/hypr/hyprlock.conf
   - .config/mc/ini
   - .config/qmk/qmk.ini
   - .config/qt5ct/qt5ct.conf
