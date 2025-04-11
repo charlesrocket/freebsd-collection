@@ -2,6 +2,41 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.13.0] - 2025-04-11
+
+### Bug Fixes
+
+- Adjust task names
+- Update git task
+- Update package name
+
+### Features
+
+- Add `pflog` option
+- Add gateway mode option
+- Add `pflog` flags
+- Add userspace support
+- Add userspace version
+
+### Miscellaneous tasks
+
+- Add `virtual_oss`
+- Add `oxipng`
+- Add `blender`
+- Add qmk userspace
+- Add `hyprlock`
+- Add `hyprlock` config
+- Remove collection archive
+- Ignore archives
+
+### Operations
+
+- Drop molecule
+
+### Build
+
+- Bump `community.general` to 10.5
+
 ## [1.12.3] - 2025-01-26
 
 ### Bug Fixes
