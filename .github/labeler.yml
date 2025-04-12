@@ -20,13 +20,9 @@ plugin:
   - changed-files:
       - any-glob-to-any-file: 'plugins/*'
 
-profile:
-  - changed-files:
-      - any-glob-to-any-file: 'profiles/**/*'
-
 test:
   - changed-files:
-      - any-glob-to-any-file: ['molecule/**/*', 'tests/**/*', 'profiles/test/*']
+      - any-glob-to-any-file: ['molecule/**/*', 'tests/**/*']
 
 ops:
   - changed-files:
