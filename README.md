@@ -15,7 +15,7 @@ collections:
 
 ### Usage
 
-See [profiles](https://charlesrocket.github.io/freebsd-collection/docsite/profiles)/[variables](https://github.com/charlesrocket/freebsd-collection_profiles/tree/trunk/profiles/charlesrocket).
+See [profiles](https://charlesrocket.github.io/freebsd-collection/docsite/profiles)/[variables](https://github.com/charlesrocket/freebsd-collection_profiles/tree/trunk/charlesrocket).
 
 ## Example
 

@@ -8,7 +8,7 @@ Profiles
 Description
 -----------
 
-Playbooks will download and apply user profiles if ``profile`` variable is present. The default profile is sourced from the external `repository <https://github.com/charlesrocket/freebsd-collection_profiles/>`_ (``profiles/$USER/$PLAYBOOK``, ``trunk`` branch).
+Playbooks will download and apply user profiles if ``profile`` variable is present. The default profile is sourced from the external `repository <https://github.com/charlesrocket/freebsd-collection_profiles/>`_ (``$USER/$PLAYBOOK``, ``trunk`` branch).
 
 .. code-block:: sh
 
