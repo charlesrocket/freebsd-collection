@@ -1,5 +1,0 @@
-[submodule "profiles"]
-    path = profiles
-    url = https://github.com/charlesrocket/freebsd-collection_profiles
-    branch = trunk
-    update = rebase
