@@ -4,7 +4,20 @@
 
 Ansible collection for FreeBSD servers and desktops.
 
-### Installation
+## Installation
+### CLI
+
+``` sh
+ansible-galaxy collection install charlesrocket.freebsd
+```
+
+#### Upgrade
+
+``` sh
+ansible-galaxy collection install charlesrocket.freebsd --upgrade
+```
+
+### YAML
 
 `requirements.yml`:
 
@@ -13,7 +26,7 @@ collections:
   - name: charlesrocket.freebsd
 ```
 
-### Usage
+## Usage
 
 See [profiles](https://charlesrocket.github.io/freebsd-collection/docsite/profiles)/[variables](https://github.com/charlesrocket/freebsd-collection_profiles/tree/trunk/charlesrocket).
 
@@ -23,7 +36,6 @@ See [profiles](https://charlesrocket.github.io/freebsd-collection/docsite/profil
 
 ```sh
 # run as user
-ansible-galaxy collection install charlesrocket.freebsd
 ansible-playbook charlesrocket.freebsd.station -c \
     local -i "localhost," -e "profile=charlesrocket"
 ```
