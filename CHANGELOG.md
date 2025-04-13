@@ -2,6 +2,35 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.14.0] - 2025-04-13
+
+### Bug Fixes
+
+- Update `fetch_vars_url` link
+
+### Documentation
+
+- Link `profiles` source
+- Fix `variables` link
+- Fix profile path
+
+### Features
+
+- Move profiles
+
+### Miscellaneous tasks
+
+- Set update procedure
+- Remove submodule
+
+### Operations
+
+- Remove `profile`
+
+### Refactor
+
+- Move profiles
+
 ## [1.13.0] - 2025-04-11
 
 ### Bug Fixes
