@@ -32,7 +32,7 @@ See [profiles](https://charlesrocket.github.io/freebsd-collection/docsite/profil
 
 ## Example
 
-<img src="assets/screenshot.png" alt="screenshot" width="900"/>
+<img src="https://raw.githubusercontent.com/charlesrocket/freebsd-collection/refs/heads/trunk/assets/station.png" alt="screenshot" width="900"/>
 
 ```sh
 # run as user
