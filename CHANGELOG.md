@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.15.0] - 2025-04-18
+
+### Bug Fixes
+
+- Update profile urls
+- Fix firmware version
+
+### Documentation
+
+- Add `Upgrade`
+- Move screenshot
+
+### Features
+
+- Add firmware options
+
 ## [1.14.0] - 2025-04-13
 
 ### Bug Fixes
