@@ -13,3 +13,9 @@
     repo: "{{ qmk_userspace }}"
     dest: "{{ qmk_userspace_location }}"
     version: "{{ qmk_userspace_version }}"
+
+- name: Clone QMK firmware
+  ansible.builtin.git:
+    repo: "{{ qmk_firmware }}"
+    dest: "{{ qmk_firmware_location }}"
+    version: "{{ qmk_version_version }}"

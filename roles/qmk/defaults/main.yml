@@ -3,3 +3,6 @@
 qmk_userspace: "https://github.com/qmk/qmk_userspace"
 qmk_userspace_location: "~/src/qmk_userspace"
 qmk_userspace_version: "main"
+qmk_firmware: "https://github.com/qmk/qmk_firmware"
+qmk_firmware_location: "~/qmk_firmware"
+qmk_firmware_version: "master"

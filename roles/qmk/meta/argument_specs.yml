@@ -24,3 +24,18 @@ argument_specs:
         description: Local userspace destination.
         type: str
         default: ~/src/qmk_userspace
+
+      qmk_firmware:
+        description: Firmware repository.
+        type: str
+        default: https://github.com/qmk/qmk_firmware
+
+      qmk_firmware_version:
+        description: Firmware repository branch.
+        type: str
+        default: master
+
+      qmk_firmware_location:
+        description: Local firmware destination.
+        type: str
+        default: ~/qmk_firmware
