@@ -18,4 +18,4 @@
   ansible.builtin.git:
     repo: "{{ qmk_firmware }}"
     dest: "{{ qmk_firmware_location }}"
-    version: "{{ qmk_version_version }}"
+    version: "{{ qmk_firmware_version }}"
