@@ -1,0 +1,16 @@
+---
+
+argument_specs:
+  main:
+    short_description: Manages DRM modules
+    description:
+      - Enable DRM kernel modules
+
+    author:
+      - charlesrocket
+
+    options:
+      drm_module:
+        description: Module name.
+        type: str
+        default: drm-kmod

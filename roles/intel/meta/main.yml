@@ -12,3 +12,6 @@ galaxy_info:
         - all
   galaxy_tags:
     - intel
+
+dependencies:
+  - role: drm

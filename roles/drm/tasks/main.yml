@@ -1,0 +1,9 @@
+---
+
+- name: "Ensure DRM module is installed | {{ drm_module }}"
+  community.general.pkgng:
+    state: present
+    name: "{{ drm_module }}"
+    autoremove: true
+    cached: false
+  become: true
