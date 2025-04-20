@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.15.1] - 2025-04-20
+
+### Bug Fixes
+
+- Move drm kernel module
+
+### Documentation
+
+- Update `profiles` description
+
+### Miscellaneous tasks
+
+- Increase number of forks
+
+### Build
+
+- Bump version to 1.15.1
+
 ## [1.15.0] - 2025-04-18
 
 ### Bug Fixes
