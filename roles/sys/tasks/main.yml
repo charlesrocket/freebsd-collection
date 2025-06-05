@@ -50,8 +50,8 @@
     value: "{{ sys_unpriv_proc_debug | ternary('1', '0') }}"
 
 - name: >-
-    "{{ sys_unpriv_read_msgbuf | ternary('Unrestricted message buffer',
-    'Restricted message buffer') }}"
+    {{ sys_unpriv_read_msgbuf | ternary('Unrestricted message buffer',
+    'Restricted message buffer') }}
   ansible.posix.sysctl:
     name: security.bsd.unprivileged_read_msgbuf
     state: present
