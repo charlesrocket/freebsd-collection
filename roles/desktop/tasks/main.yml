@@ -25,7 +25,7 @@
         mode: '0700'
         checksum:
           sha256:158b2e7e1b7f6d0eec1af80a93172960dd083b652fef7589575ee984673cc468
-      notify: Install Bibata Original Classic
+      notify: Deploy Bibata Original Classic
 
 - name: Install ohmyzsh
   ansible.builtin.shell:
