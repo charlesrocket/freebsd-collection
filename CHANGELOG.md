@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.15.2] - 2025-06-07
+
+### Bug Fixes
+
+- Adjust message buffer task name
+- Rename cursor handler
+- Update security key packages
+
+### Build
+
+- Bump `community.general` to 10.7.0
+
 ## [1.15.1] - 2025-04-20
 
 ### Bug Fixes
