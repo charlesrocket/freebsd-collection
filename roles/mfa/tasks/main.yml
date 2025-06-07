@@ -4,7 +4,7 @@
   community.general.pkgng:
     state: present
     name:
-      - py311-yubikey-manager
+      - py3*-yubikey-manager
       - yubico-piv-tool
     autoremove: true
     cached: false
@@ -18,7 +18,7 @@
       - libfido2
       - libu2f-host
       - u2f-devd
-      - py311-fido2
+      - py3*-fido2
       - pcsc-lite
       - ccid
     autoremove: true
