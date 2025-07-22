@@ -96,12 +96,9 @@
       tags: mfa
 
   post_tasks:
-    - name: Upgrade installed packages
-      community.general.pkgng:
-        name: "*"
-        state: latest
-        autoremove: true
-        cached: false
-      become: true
+    - name: Update pkg branch
+      ansible.builtin.include_role:
+        name: pkg_branch
+        apply:
+          become: true
       tags: pkg
-      when: upgrade_packages
