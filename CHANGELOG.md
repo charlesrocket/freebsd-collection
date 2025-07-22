@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.15.3] - 2025-07-22
+
+### Bug Fixes
+
+- Use `pkg_branch`
+- Fix var-naming
+
+### Miscellaneous tasks
+
+- Fix yaml matches
+
+### Build
+
+- Bump `essential` to 1.4.1
+- Bump `community.general` to 11.1.0
+- Bump `ansible.posix` to 2.1.0
+
 ## [1.15.2] - 2025-06-07
 
 ### Bug Fixes
@@ -27,10 +44,6 @@ All notable changes to this project will be documented in this file.
 ### Miscellaneous tasks
 
 - Increase number of forks
-
-### Build
-
-- Bump version to 1.15.1
 
 ## [1.15.0] - 2025-04-18
 
