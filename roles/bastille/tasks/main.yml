@@ -28,5 +28,6 @@
 
 - name: Start Bastille interface  # noqa command-instead-of-module
   ansible.builtin.command: service netif cloneup
-  register: netif_output
-  changed_when: '"interface lo1 already exists" not in netif_output.stderr'
+  register: bastille_netif_output
+  changed_when:
+    '"interface lo1 already exists" not in bastille_netif_output.stderr'
