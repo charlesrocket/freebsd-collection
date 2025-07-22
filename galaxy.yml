@@ -25,7 +25,7 @@ tags:
   - server
 
 dependencies:
-  "ansible.posix": ">=2.0.0"
+  "ansible.posix": ">=2.1.0"
   "community.general": ">=11.1.0"
   "charlesrocket.essential": ">=1.4.1"
 
