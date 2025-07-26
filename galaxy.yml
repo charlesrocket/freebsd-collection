@@ -37,6 +37,5 @@ build_ignore:
   - .github
   - .gitignore
   - assets
-  - profiles
   - molecule
   - requirements*txt
