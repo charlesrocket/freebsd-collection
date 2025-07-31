@@ -10,11 +10,6 @@ argument_specs:
       - charlesrocket
 
     options:
-      pf_bastille:
-        description: Deploy C(pf) configuration for C(bastille).
-        type: bool
-        default: false
-
       pf_pflog:
         description: Enable C(pflog).
         type: bool
