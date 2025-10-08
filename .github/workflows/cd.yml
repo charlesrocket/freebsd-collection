@@ -60,6 +60,7 @@ jobs:
 
   galaxy:
     runs-on: ubuntu-latest
+    permissions: read-all
     steps:
       - name: Check out the codebase
         uses: actions/checkout@v5

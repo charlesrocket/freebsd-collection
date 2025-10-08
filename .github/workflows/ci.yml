@@ -32,6 +32,8 @@ jobs:
   test:
     name: ansible-test
     runs-on: ubuntu-latest
+    permissions: read-all
+
     steps:
       - name: Perform sanity testing
         uses: ansible-community/ansible-test-gh-action@release/v1
