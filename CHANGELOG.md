@@ -2,6 +2,32 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.15.5] - 2025-10-24
+
+### Bug Fixes
+
+- Allow `dfs`
+
+### Miscellaneous tasks
+
+- Update tags
+
+### Operations
+
+- Bump actions/checkout from 4 to 5
+- Bump actions/upload-pages-artifact from 3 to 4
+- Bump actions/labeler from 5 to 6
+- Bump actions/setup-python from 5 to 6
+- Set ci/cd permissions
+- Fix ci syntax
+- Drop `read-all`
+- Move permissions
+- Use explicit permissions
+
+### Build
+
+- Bump `essential` to 1.5.0
+
 ## [1.15.4] - 2025-07-31
 
 ### Bug Fixes
