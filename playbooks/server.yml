@@ -69,7 +69,7 @@
       tags: git
 
     - role: charlesrocket.essential.dotfiles
-      when: dotfiles_files is defined
+      when: dotfiles_files is defined or dotfiles_dfs
       tags: dotfiles
 
     - role: accounting
