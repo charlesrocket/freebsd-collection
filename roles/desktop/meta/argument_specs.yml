@@ -18,6 +18,10 @@ argument_specs:
         type: bool
         default: false
 
+      desktop_notifications_service:
+        description: Define Freedesktop notifications service.
+        type: str
+
       desktop_usermount:
         description: Allow users to mount.
         type: bool

@@ -39,6 +39,17 @@
   become: false
   when: desktop_ohmyzsh
 
+- name: Add XDG notifications service
+  become: false
+  when: desktop_notifications_service is defined
+  copy:
+    dest: "~/.local/share/dbus-1/services/org.freedesktop.Notifications.service"
+    content: |
+      [D-BUS Service]
+      Name=org.freedesktop.Notifications
+      Exec=/usr/local/bin/{{ desktop_notifications_service }}
+
+
 - name: "Usermount | {{ desktop_usermount | ternary('enable', 'disable') }}"
   ansible.posix.sysctl:
     name: vfs.usermount
