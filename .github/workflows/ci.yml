@@ -59,6 +59,7 @@ jobs:
       models: read
       packages: read
       pull-requests: read
+      artifact-metadata: read
       repository-projects: read
       statuses: read
       security-events: read
