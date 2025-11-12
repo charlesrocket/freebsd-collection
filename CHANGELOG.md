@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.16.0] - 2025-11-12
+
+### Bug Fixes
+
+- Set service file mode
+
+### Features
+
+- Add notification service
+
+### Operations
+
+- Add `artifact-metadata`
+
 ## [1.15.5] - 2025-10-24
 
 ### Bug Fixes
