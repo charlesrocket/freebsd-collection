@@ -42,8 +42,9 @@
 - name: Add XDG notifications service
   become: false
   when: desktop_notifications_service is defined
-  copy:
+  ansible.builtin.copy:
     dest: "~/.local/share/dbus-1/services/org.freedesktop.Notifications.service"
+    mode: '0644'
     content: |
       [D-BUS Service]
       Name=org.freedesktop.Notifications
