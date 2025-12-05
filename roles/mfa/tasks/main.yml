@@ -19,7 +19,7 @@
       - u2f-devd
       - py3*-fido2
       - pcsc-lite
-      - ccid
+      - libccid
     autoremove: true
     cached: false
   become: true
