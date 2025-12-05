@@ -16,7 +16,6 @@
     name:
       - OpenSSH-askpass
       - libfido2
-      - libu2f-host
       - u2f-devd
       - py3*-fido2
       - pcsc-lite
