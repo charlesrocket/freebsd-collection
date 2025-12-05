@@ -3,7 +3,7 @@
 - name: >-
     Set pkg branch to {{ pkg_branch_name }}
   ansible.builtin.replace:
-    path: /usr/local/etc/pkg/repos/FreeBSD.conf
+    path: /etc/pkg/FreeBSD.conf
     regexp: >-
       {{ (pkg_branch_name == 'latest') | ternary('quarterly',
       'latest') }}
