@@ -43,9 +43,10 @@
   become: false
   when: desktop_notifications_service is defined
   tags: dbus
-  file:
+  ansible.builtin.file:
     path: "~/.local/share/dbus-1/services"
     state: directory
+    mode: '0755'
 
 - name: Add XDG notifications service
   become: false
