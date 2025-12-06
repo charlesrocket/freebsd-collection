@@ -23,6 +23,7 @@
 
 - name: Install LanguageTool
   when: emacs_languagetool
+  tags: languagetool
   become: false
   block:
     - name: Get LanguageTool tags
