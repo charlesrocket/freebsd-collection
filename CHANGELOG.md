@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.16.1] - 2025-12-06
+
+### Bug Fixes
+
+- Use system config
+- Drop deprecated u2f library
+- Update `ccid`
+- Add D-Bus services directory
+- Change handler variables
+- Set services directory permissions
+- Add `languagetool` tag
+
+### Documentation
+
+- Add the tag list command
+
+### Operations
+
+- Bump actions/checkout from 5 to 6
+
 ## [1.16.0] - 2025-11-12
 
 ### Bug Fixes
