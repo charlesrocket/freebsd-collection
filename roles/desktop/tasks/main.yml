@@ -39,9 +39,18 @@
   become: false
   when: desktop_ohmyzsh
 
+- name: Ensures D-Bus services directory exists
+  become: false
+  when: desktop_notifications_service is defined
+  tags: dbus
+  file:
+    path: "~/.local/share/dbus-1/services"
+    state: directory
+
 - name: Add XDG notifications service
   become: false
   when: desktop_notifications_service is defined
+  tags: dbus
   ansible.builtin.copy:
     dest: "~/.local/share/dbus-1/services/org.freedesktop.Notifications.service"
     mode: '0644'
@@ -89,6 +98,7 @@
     value: "{{ desktop_seatd | ternary('YES', 'NO') }}"
 
 - name: "{{ desktop_dbus | ternary('Enable dbus', 'Disable dbus') }}"
+  tags: dbus
   community.general.sysrc:
     name: dbus_enable
     state: present
