@@ -30,6 +30,12 @@ collections:
 
 See [profiles](https://charlesrocket.github.io/freebsd-collection/docsite/profiles)/[variables](https://github.com/charlesrocket/freebsd-collection_profiles/tree/trunk/charlesrocket).
 
+A playbook's execution can be fine-tuned via tags (`station` playbook):
+
+```sh
+ansible-playbook charlesrocket.freebsd.station --list-tags
+```
+
 ## Example
 
 <img src="https://raw.githubusercontent.com/charlesrocket/freebsd-collection/refs/heads/trunk/assets/station.png" alt="screenshot" width="900"/>
