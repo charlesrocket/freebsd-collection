@@ -2,10 +2,10 @@
 
 - name: Synchronize Doom Emacs
   ansible.builtin.command: ~/.emacs.d/bin/doom sync
-  register: doom_output
+  register: emacs_d_output
   changed_when:
-    - '"No packages need to be installed" not in doom_output.stdout'
-    - '"No packages need rebuilding" not in doom_output.stdout'
+    - '"No packages need to be installed" not in emacs_d_output.stdout'
+    - '"No packages need rebuilding" not in emacs_d_output.stdout'
 
 - name: Prepare LanguageTool destination
   ansible.builtin.file:

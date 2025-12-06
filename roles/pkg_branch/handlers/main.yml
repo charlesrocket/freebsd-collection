@@ -2,9 +2,9 @@
 
 - name: Redownload repository catalogue
   ansible.builtin.command: pkg update -f
-  register: pkg_output
+  register: pkg_branch_output
   changed_when:
-    - '"need to re-create database" in pkg_output.stderr'
+    - '"need to re-create database" in pkg_branch_output.stderr'
 
 - name: Upgrade installed packages
   community.general.pkgng:
