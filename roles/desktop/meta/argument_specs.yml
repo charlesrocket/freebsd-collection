@@ -56,3 +56,8 @@ argument_specs:
         description: Enable C(dbus).
         type: bool
         default: true
+
+      desktop_hyprland:
+        description: Install Hyprland.
+        type: bool
+        default: false

@@ -138,3 +138,21 @@
     mode: '0644'
     owner: root
     create: true
+
+- name: Install Hyprland
+  when: desktop_hyprland
+  tags: hyprland
+  community.general.pkgng:
+    state: present
+    cached: false
+    name:
+      - hyprland
+      - hyprland-qt-support
+      - hyprqt6engine
+      - hyprland-protocols
+      - hyprutils
+      - hyprpaper
+      - hyprlock
+      - hyprcursor
+      - hyprpolkitagent
+      - xdg-desktop-portal-hyprland
