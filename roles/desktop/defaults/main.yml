@@ -11,3 +11,5 @@ desktop_dbus: true
 desktop_kde: false
 desktop_gnome: false
 desktop_hyprland: false
+desktop_sddm: false
+desktop_gdm: false

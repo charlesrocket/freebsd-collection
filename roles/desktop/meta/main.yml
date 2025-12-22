@@ -14,3 +14,10 @@ galaxy_info:
     - desktop
     - workstation
     - freedesktop
+    - kde
+    - gnome
+    - hyprland
+    - sddm
+    - gdm
+    - dbus
+    - zsh

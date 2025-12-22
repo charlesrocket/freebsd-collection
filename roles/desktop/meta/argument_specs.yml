@@ -43,7 +43,7 @@ argument_specs:
         default: false
 
       desktop_dsbmd:
-        description: Enable C(DSBMD).
+        description: Enable DSBMD.
         type: bool
         default: true
 
@@ -53,7 +53,7 @@ argument_specs:
         default: true
 
       desktop_dbus:
-        description: Enable C(dbus).
+        description: Enable D-BUS.
         type: bool
         default: true
 
@@ -69,5 +69,15 @@ argument_specs:
 
       desktop_hyprland:
         description: Install Hyprland.
+        type: bool
+        default: false
+
+      desktop_sddm:
+        description: Install SDDM.
+        type: bool
+        default: false
+
+      desktop_gdm:
+        description: Install GDM.
         type: bool
         default: false

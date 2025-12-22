@@ -172,3 +172,33 @@
     state: present
     name: gnome
     cached: false
+
+- name: Install SDDM
+  when: desktop_sddm
+  tags: sddm
+  community.general.pkgng:
+    state: present
+    name: sddm
+    cached: false
+
+- name: Install GDM
+  when: desktop_gdm
+  tags: gdm
+  community.general.pkgng:
+    state: present
+    name: gdm
+    cached: false
+
+- name: "{{ desktop_gdm | ternary('Enable GDM', 'Disable GDM') }}"
+  tags: gdm
+  community.general.sysrc:
+    name: gdm_enable
+    state: present
+    value: "{{ desktop_gdm | ternary('YES', 'NO') }}"
+
+- name: "{{ desktop_sddm | ternary('Enable SDDM', 'Disable SDDM') }}"
+  tags: sddm
+  community.general.sysrc:
+    name: sddm_enable
+    state: present
+    value: "{{ desktop_sddm | ternary('YES', 'NO') }}"
