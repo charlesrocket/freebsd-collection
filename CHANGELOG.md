@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.17.0] - 2025-12-22
+
+### Features
+
+- Add `hyprland`
+- Add `KDE`/`GNOME`
+- Add display managers
+- Add linux compatibility
+
+### Refactor
+
+- Move `sddm` task
+
 ## [1.16.1] - 2025-12-06
 
 ### Bug Fixes
