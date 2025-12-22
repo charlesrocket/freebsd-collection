@@ -25,3 +25,4 @@ sys_bmcastecho: false
 sys_dhclient_bg: true
 sys_syslogd_flags: "-ss"
 sys_dumpdev: false
+sys_linux: false

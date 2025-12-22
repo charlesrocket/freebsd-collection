@@ -156,3 +156,8 @@ argument_specs:
         description: Enable kernel crash dumps.
         type: bool
         default: false
+
+      sys_linux:
+        description: Enable Linux binary compatibility.
+        type: bool
+        default: false

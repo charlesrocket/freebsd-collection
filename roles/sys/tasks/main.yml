@@ -232,3 +232,9 @@
     - {path: /etc/cron.d, mode: '0700'}
     - {path: /etc/crontab, mode: '0600'}
     - {path: /etc/ssh/sshd_config, mode: '0600'}
+
+- name: "Linux compatibility | {{ sys_linux | ternary('enable', 'disable') }}"
+  community.general.sysrc:
+    name: linux_enable
+    state: present
+    value: "{{ sys_linux | ternary('YES', 'NO') }}"
