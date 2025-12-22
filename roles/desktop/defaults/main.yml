@@ -8,4 +8,6 @@ desktop_acpi: false
 desktop_dsbmd: true
 desktop_seatd: true
 desktop_dbus: true
+desktop_kde: false
+desktop_gnome: false
 desktop_hyprland: false

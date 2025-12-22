@@ -156,3 +156,19 @@
       - hyprcursor
       - hyprpolkitagent
       - xdg-desktop-portal-hyprland
+
+- name: Install KDE
+  when: desktop_kde
+  tags: kde
+  community.general.pkgng:
+    state: present
+    name: kde
+    cached: false
+
+- name: Install GNOME
+  when: desktop_gnome
+  tags: gnome
+  community.general.pkgng:
+    state: present
+    name: gnome
+    cached: false

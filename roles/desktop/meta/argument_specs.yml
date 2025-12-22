@@ -57,6 +57,16 @@ argument_specs:
         type: bool
         default: true
 
+      desktop_kde:
+        description: Install KDE.
+        type: bool
+        default: false
+
+      desktop_gnome:
+        description: Install GNOME.
+        type: bool
+        default: false
+
       desktop_hyprland:
         description: Install Hyprland.
         type: bool
