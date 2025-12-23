@@ -1,6 +1,6 @@
 ---
 
-- name: Ensure video group is present
+- name: Add video group
   ansible.builtin.user:
     name: "{{ ansible_user | default(ansible_user_id) }}"
     groups: video
@@ -60,85 +60,6 @@
       Name=org.freedesktop.Notifications
       Exec=/usr/local/bin/{{ desktop_notifications_service }}
 
-
-- name: "Usermount | {{ desktop_usermount | ternary('enable', 'disable') }}"
-  ansible.posix.sysctl:
-    name: vfs.usermount
-    state: present
-    value: "{{ desktop_usermount | ternary('1', '0') }}"
-
-- name: "{{ desktop_sndiod | ternary('Enable sndio', 'Disable sndio') }}"
-  community.general.sysrc:
-    name: sndiod_enable
-    state: present
-    value: "{{ desktop_sndiod | ternary('YES', 'NO') }}"
-
-- name: "{{ desktop_cuse | ternary('Enable cuse', 'Disable cuse') }}"
-  community.general.sysrc:
-    name: cuse_load
-    state: present
-    value: "{{ desktop_cuse | ternary('YES', 'NO') }}"
-    path: /boot/loader.conf
-
-- name: "ACPI video driver | {{ desktop_acpi | ternary('enable', 'disable') }}"
-  community.general.sysrc:
-    name: kld_list
-    state: "{{ desktop_acpi | ternary('value_present', 'value_absent') }}"
-    value: "acpi_video"
-
-- name: "{{ desktop_dsbmd | ternary('Enable DSBMD', 'Disable DSBMD') }}"
-  community.general.sysrc:
-    name: dsbmd_enable
-    state: present
-    value: "{{ desktop_dsbmd | ternary('YES', 'NO') }}"
-
-- name: "{{ desktop_seatd | ternary('Enable seatd', 'Disable seatd') }}"
-  community.general.sysrc:
-    name: seatd_enable
-    state: present
-    value: "{{ desktop_seatd | ternary('YES', 'NO') }}"
-
-- name: "{{ desktop_dbus | ternary('Enable dbus', 'Disable dbus') }}"
-  tags: dbus
-  community.general.sysrc:
-    name: dbus_enable
-    state: present
-    value: "{{ desktop_dbus | ternary('YES', 'NO') }}"
-
-- name: Enable desktop ruleset
-  community.general.sysrc:
-    name: devfs_system_ruleset
-    state: present
-    value: "desktop"
-
-- name: Configure devices
-  ansible.builtin.blockinfile:
-    path: /etc/devfs.rules
-    marker: "# {mark} DESKTOP BLOCK"
-    block: |
-      [desktop=10]
-      add path 'acd*'      mode 0660 group operator
-      add path 'cd*'       mode 0660 group operator
-      add path 'da*'       mode 0660 group operator
-      add path 'pass*'     mode 0660 group operator
-      add path 'xpt*'      mode 0660 group operator
-      add path 'fd*'       mode 0660 group operator
-      add path 'md*'       mode 0660 group operator
-      add path 'uscanner*' mode 0660 group operator
-      add path 'ugen*'     mode 0660 group operator
-      add path 'usb/*'     mode 0660 group operator
-      add path 'video*'    mode 0660 group operator
-      add path 'cuse*'     mode 0660 group operator
-      add path 'ttyU*'     mode 0660 group operator
-      add path 'dri/*'     mode 0666 group video
-      add path 'drm/*'     mode 0666 group video
-      add path 'lpt*'      mode 0660 group cups
-      add path 'ulpt*'     mode 0660 group cups
-      add path 'unlpt*'    mode 0660 group cups
-    mode: '0644'
-    owner: root
-    create: true
-
 - name: Install Hyprland
   when: desktop_hyprland
   tags: hyprland
@@ -156,6 +77,14 @@
       - hyprcursor
       - hyprpolkitagent
       - xdg-desktop-portal-hyprland
+
+- name: Install webcamd
+  when: desktop_webcamd is defined
+  tags: webcam
+  community.general.pkgng:
+    state: present
+    name: webcamd
+    cached: false
 
 - name: Install KDE
   when: desktop_kde
@@ -189,16 +118,102 @@
     name: gdm
     cached: false
 
-- name: "{{ desktop_sddm | ternary('Enable SDDM', 'Disable SDDM') }}"
+- name: "SDDM | {{ desktop_sddm | ternary('enable', 'disable') }}"
   tags: sddm
   community.general.sysrc:
     name: sddm_enable
     state: present
     value: "{{ desktop_sddm | ternary('YES', 'NO') }}"
 
-- name: "{{ desktop_gdm | ternary('Enable GDM', 'Disable GDM') }}"
+- name: "GDM | {{ desktop_gdm | ternary('enable', 'disable') }}"
   tags: gdm
   community.general.sysrc:
     name: gdm_enable
     state: present
     value: "{{ desktop_gdm | ternary('YES', 'NO') }}"
+
+- name: "webcamd | {{ desktop_webcamd | ternary('enable', 'disable') }}"
+  when: desktop_webcamd is defined
+  tags: webcam
+  community.general.sysrc:
+    name: webcamd_enable
+    state: present
+    value: "{{ desktop_webcamd | ternary('YES', 'NO') }}"
+
+- name: "usermount | {{ desktop_usermount | ternary('enable', 'disable') }}"
+  ansible.posix.sysctl:
+    name: vfs.usermount
+    state: present
+    value: "{{ desktop_usermount | ternary('1', '0') }}"
+
+- name: "sndiod | {{ desktop_sndiod | ternary('enable', 'disable') }}"
+  community.general.sysrc:
+    name: sndiod_enable
+    state: present
+    value: "{{ desktop_sndiod | ternary('YES', 'NO') }}"
+
+- name: "CUSE | {{ desktop_cuse | ternary('enable', 'disable cuse') }}"
+  community.general.sysrc:
+    name: cuse_load
+    state: present
+    value: "{{ desktop_cuse | ternary('YES', 'NO') }}"
+    path: /boot/loader.conf
+
+- name: "ACPI video driver | {{ desktop_acpi | ternary('enable', 'disable') }}"
+  community.general.sysrc:
+    name: kld_list
+    state: "{{ desktop_acpi | ternary('value_present', 'value_absent') }}"
+    value: "acpi_video"
+
+- name: "DSBMD | {{ desktop_dsbmd | ternary('enable', 'disable') }}"
+  community.general.sysrc:
+    name: dsbmd_enable
+    state: present
+    value: "{{ desktop_dsbmd | ternary('YES', 'NO') }}"
+
+- name: "seatd | {{ desktop_seatd | ternary('enable', 'disable') }}"
+  community.general.sysrc:
+    name: seatd_enable
+    state: present
+    value: "{{ desktop_seatd | ternary('YES', 'NO') }}"
+
+- name: "D-Bus | {{ desktop_dbus | ternary('enable', 'disable') }}"
+  tags: dbus
+  community.general.sysrc:
+    name: dbus_enable
+    state: present
+    value: "{{ desktop_dbus | ternary('YES', 'NO') }}"
+
+- name: Configure devices
+  ansible.builtin.blockinfile:
+    path: /etc/devfs.rules
+    marker: "# {mark} DESKTOP BLOCK"
+    block: |
+      [desktop=10]
+      add path 'acd*'      mode 0660 group operator
+      add path 'cd*'       mode 0660 group operator
+      add path 'da*'       mode 0660 group operator
+      add path 'pass*'     mode 0660 group operator
+      add path 'xpt*'      mode 0660 group operator
+      add path 'fd*'       mode 0660 group operator
+      add path 'md*'       mode 0660 group operator
+      add path 'uscanner*' mode 0660 group operator
+      add path 'ugen*'     mode 0660 group operator
+      add path 'usb/*'     mode 0660 group operator
+      add path 'video*'    mode 0660 group operator
+      add path 'cuse*'     mode 0660 group operator
+      add path 'ttyU*'     mode 0660 group operator
+      add path 'dri/*'     mode 0666 group video
+      add path 'drm/*'     mode 0666 group video
+      add path 'lpt*'      mode 0660 group cups
+      add path 'ulpt*'     mode 0660 group cups
+      add path 'unlpt*'    mode 0660 group cups
+    mode: '0644'
+    owner: root
+    create: true
+
+- name: Enable desktop ruleset
+  community.general.sysrc:
+    name: devfs_system_ruleset
+    state: present
+    value: "desktop"

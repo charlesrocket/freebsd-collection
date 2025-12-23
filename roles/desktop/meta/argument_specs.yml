@@ -81,3 +81,7 @@ argument_specs:
         description: Install GDM.
         type: bool
         default: false
+
+      desktop_webcamd:
+        description: Enable C(webcamd).
+        type: bool
