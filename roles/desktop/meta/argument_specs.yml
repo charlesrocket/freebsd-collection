@@ -82,6 +82,10 @@ argument_specs:
         type: bool
         default: false
 
+      desktop_cups:
+        description: Enable CUPS.
+        type: bool
+
       desktop_webcamd:
         description: Enable C(webcamd).
         type: bool

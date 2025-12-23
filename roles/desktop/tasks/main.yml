@@ -86,6 +86,14 @@
     name: webcamd
     cached: false
 
+- name: Install CUPS
+  when: desktop_cups is defined
+  tags: printer
+  community.general.pkgng:
+    state: present
+    name: cups
+    cached: false
+
 - name: Install KDE
   when: desktop_kde
   tags: kde
@@ -139,6 +147,14 @@
     name: webcamd_enable
     state: present
     value: "{{ desktop_webcamd | ternary('YES', 'NO') }}"
+
+- name: "CUPS | {{ desktop_cups | ternary('enable', 'disable') }}"
+  when: desktop_cups is defined
+  tags: printer
+  community.general.sysrc:
+    name: cupsd_enable
+    state: present
+    value: "{{ desktop_cups | ternary('YES', 'NO') }}"
 
 - name: "Usermount | {{ desktop_usermount | ternary('enable', 'disable') }}"
   ansible.posix.sysctl:
