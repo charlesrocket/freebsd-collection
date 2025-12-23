@@ -132,7 +132,7 @@
     state: present
     value: "{{ desktop_gdm | ternary('YES', 'NO') }}"
 
-- name: "webcamd | {{ desktop_webcamd | ternary('enable', 'disable') }}"
+- name: "Webcam | {{ desktop_webcamd | ternary('enable', 'disable') }}"
   when: desktop_webcamd is defined
   tags: webcam
   community.general.sysrc:
@@ -140,13 +140,13 @@
     state: present
     value: "{{ desktop_webcamd | ternary('YES', 'NO') }}"
 
-- name: "usermount | {{ desktop_usermount | ternary('enable', 'disable') }}"
+- name: "Usermount | {{ desktop_usermount | ternary('enable', 'disable') }}"
   ansible.posix.sysctl:
     name: vfs.usermount
     state: present
     value: "{{ desktop_usermount | ternary('1', '0') }}"
 
-- name: "sndiod | {{ desktop_sndiod | ternary('enable', 'disable') }}"
+- name: "SNDIOD | {{ desktop_sndiod | ternary('enable', 'disable') }}"
   community.general.sysrc:
     name: sndiod_enable
     state: present
@@ -171,7 +171,7 @@
     state: present
     value: "{{ desktop_dsbmd | ternary('YES', 'NO') }}"
 
-- name: "seatd | {{ desktop_seatd | ternary('enable', 'disable') }}"
+- name: "SEATD | {{ desktop_seatd | ternary('enable', 'disable') }}"
   community.general.sysrc:
     name: seatd_enable
     state: present
