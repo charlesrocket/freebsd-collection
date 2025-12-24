@@ -6,7 +6,7 @@ argument_specs:
     description:
       - >-
         Tasks for desktop configuration.
-        Install C(ohmyzsh), setup required services
+        Install C(ohmyzsh) and desktop environments, set up services,
         and adjust user gropus.
 
     author:
