@@ -12,6 +12,15 @@
     name: "{{ timezone }}"
   when: timezone is defined
 
+- name: Set login banner
+  ansible.builtin.template:
+    src: "{{ sys_login_banner }}"
+    dest: /etc/issue
+    owner: root
+    group: wheel
+    mode: "0600"
+  when: sys_login_banner is defined
+
 - name: Tune TTYs
   ansible.builtin.replace:
     path: /etc/ttys

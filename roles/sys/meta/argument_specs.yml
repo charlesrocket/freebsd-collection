@@ -1,5 +1,4 @@
 ---
-
 argument_specs:
   main:
     short_description: Adjusts system settings
@@ -22,6 +21,14 @@ argument_specs:
       timezone:
         description: Set timezone.
         type: str
+
+      sys_login_banner:
+        description: Set login prompt banner.
+        type: str
+        choices:
+          - "beastie"
+          - "fsociety"
+          - "hfs"
 
       sys_gateway:
         description: Enable LAN gateway mode.
@@ -150,7 +157,7 @@ argument_specs:
       sys_syslogd_flags:
         description: Set C(syslogd) flags.
         type: str
-        default: '-ss'
+        default: "-ss"
 
       sys_dumpdev:
         description: Enable kernel crash dumps.
