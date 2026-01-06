@@ -27,7 +27,7 @@ tags:
 
 dependencies:
   "ansible.posix": ">=2.1.0"
-  "community.general": ">=11.1.0"
+  "community.general": ">=12.2.0"
   "charlesrocket.essential": ">=1.5.0"
 
 repository: https://github.com/charlesrocket/freebsd-collection
