@@ -1,16 +1,15 @@
 ---
-
-- name: "Set hostname @{{ hostname }}"
+- name: "Set hostname @{{ sys_hostname }}"
   community.general.sysrc:
     name: hostname
-    value: "{{ hostname }}"
+    value: "{{ sys_hostname }}"
     state: present
-  when: hostname is defined
+  when: sys_hostname is defined
 
-- name: "Set timezone to {{ timezone }}"
+- name: "Set timezone to {{ sys_timezone }}"
   community.general.timezone:
-    name: "{{ timezone }}"
-  when: timezone is defined
+    name: "{{ sys_timezone }}"
+  when: sys_timezone is defined
 
 - name: Set login banner
   ansible.builtin.template:

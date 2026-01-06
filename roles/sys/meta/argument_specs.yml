@@ -9,16 +9,16 @@ argument_specs:
       - charlesrocket
 
     options:
-      doas_config:
+      sys_doas_config:
         description: List of C(doas) options.
         type: list
         elements: str
 
-      hostname:
+      sys_hostname:
         description: Set hostname.
         type: str
 
-      timezone:
+      sys_timezone:
         description: Set timezone.
         type: str
 
