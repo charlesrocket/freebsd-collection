@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.18.0] - 2026-01-06
+
+### Bug Fixes
+
+- [**breaking**] Rename variables
+
+### Features
+
+- Add `webcamd`
+- Add CUPS
+- Add login prompt banner
+
+### Refactor
+
+- Rename tasks
+- Update description
+
 ## [1.17.0] - 2025-12-22
 
 ### Features
