@@ -1,7 +1,6 @@
 ---
-
 name: CI
-'on':
+"on":
   pull_request:
   push:
 
@@ -52,6 +51,8 @@ jobs:
       id-token: write
       actions: read
       attestations: read
+      code-quality: read
+      vulnerability-alerts: read
       checks: read
       deployments: read
       discussions: read
