@@ -1,0 +1,48 @@
+---
+name: CI
+"on":
+  pull_request:
+  push:
+
+jobs:
+  lint:
+    name: Lint
+    if: forgejo.ref_type != 'tag'
+    runs-on: codeberg-small
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+
+      - name: Format
+        run: pipx run yamllint .
+      - name: Lint
+        uses: https://github.com/ansible/ansible-lint@main
+
+  release:
+    name: Create release
+    if: forgejo.ref_type == 'tag' && forgejo.repository_owner == 'charlesrocket'
+    uses: charlesrocket/reusable/.forgejo/workflows/release.yml@trunk
+    with:
+      skip-assets: true
+
+  galaxy:
+    name: Publish
+    needs: release
+    runs-on: codeberg-tiny
+    if: >-
+      forgejo.ref_type == 'tag' &&
+      forgejo.repository_owner == 'charlesrocket'
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+
+      - name: Publish to Galaxy
+        uses: https://github.com/ansible/ansible-publish-action@v1.0.0
+        with:
+          api_key: ${{ secrets.GALAXY_API_KEY }}
