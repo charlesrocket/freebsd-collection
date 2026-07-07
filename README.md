@@ -46,3 +46,7 @@ ansible-playbook charlesrocket.freebsd.station --list-tags
 ansible-playbook charlesrocket.freebsd.station -c \
     local -i "localhost," -e "profile=charlesrocket"
 ```
+
+## Contributing
+
+Patches are accepted via [Codeberg](https://codeberg.org/charlesrocket/freebsd-collection) or e-mail.
