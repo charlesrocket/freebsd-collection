@@ -1,5 +1,4 @@
 ---
-
 - name: FreeBSD Server
   hosts: "{{ target | default('all') }}"
 
@@ -16,9 +15,8 @@
         apply:
           tags: always
       vars:
-        fetch_vars_url:
-          "https://raw.githubusercontent.com/charlesrocket/\
-          freebsd-collection.profiles/trunk/{{ profile }}/\
+        fetch_vars_url: "https://codeberg.org/charlesrocket/\
+          freebsd-collection.profiles/raw/branch/trunk/{{ profile }}/\
           {{ profile_version | default('server') }}.yml"
       when: (profile is defined) and profile is not regex("^\/")
       tags: always
@@ -29,8 +27,7 @@
         apply:
           tags: always
       vars:
-        fetch_vars_url:
-          "{{ profile }}"
+        fetch_vars_url: "{{ profile }}"
       when: (profile is defined) and profile is regex("^\/")
       tags: always
 
