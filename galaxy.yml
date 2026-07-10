@@ -1,7 +1,7 @@
 ---
 namespace: charlesrocket
 name: freebsd
-version: 1.18.0
+version: 1.18.1
 readme: README.md
 description: FreeBSD collection for workstations/servers
 authors:
